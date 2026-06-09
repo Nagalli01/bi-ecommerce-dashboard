@@ -23,7 +23,14 @@ CSS = """
 *, *::before, *::after { box-sizing: border-box; }
 .stApp * { font-family: 'Inter', system-ui, sans-serif !important; }
 .stApp, .main { background-color: #080E1C; padding-top: 0 !important; }
-header[data-testid="stHeader"] { display: none !important; }
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    border: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+[data-testid="stHeader"] > * { position: absolute; z-index: 100; }
 [data-testid="stToolbar"], #MainMenu, footer,
 [data-testid="stDecoration"] { display: none !important; }
 .block-container { padding: 0 !important; max-width: 100% !important; }
@@ -38,12 +45,15 @@ header[data-testid="stHeader"] { display: none !important; }
 [data-testid="stSidebar"] > div:first-child { padding: 0 !important; }
 [data-testid="stSidebarContent"] { padding: 0 !important; overflow-y: auto !important; overflow-x: hidden !important; }
 
-/* Collapse button — SVG-safe */
+/* Collapse button — always visible */
 [data-testid="collapsedControl"],
 [data-testid="stSidebarCollapsedControl"] {
     background: #0D1422 !important;
-    border: 1px solid rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
     border-radius: 6px !important;
+    top: 14px !important;
+    left: 10px !important;
+    z-index: 200 !important;
 }
 
 /* ---------- SIDEBAR: NAV BUTTONS ---------- */
