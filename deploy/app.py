@@ -175,8 +175,7 @@ hr { border: none; border-top: 1px solid rgba(255,255,255,0.04); margin: 8px 0; 
 
 /* ---------- MAIN LAYOUT WRAPPER ---------- */
 .nexus-main {
-    padding: 20px 28px 16px 28px;
-    min-height: 100vh;
+    padding: 14px 28px 12px 28px;
 }
 
 </style>
@@ -392,7 +391,7 @@ if len(fact) == 0:
     st.markdown(f"""
     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
          height:80vh;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:16px;opacity:.3;">⚠</div>
+        <div style="font-size:2rem;margin-bottom:16px;opacity:.3;">!</div>
         <h3 style="color:{C['text']};margin:0;">Base de dados indisponivel</h3>
         <p style="color:{C['text_muted']};margin-top:8px;">
             Execute <code style="background:{C['surface']};color:{C['brand_l']};
@@ -504,7 +503,7 @@ ff = filtrar(fact)
 if len(ff) == 0:
     st.markdown(f"""
     <div style="text-align:center;padding:80px 20px;color:{C['text_muted']};">
-        <div style="font-size:1.8rem;opacity:.3;margin-bottom:12px;">∅</div>
+        <div style="font-size:1.8rem;opacity:.3;margin-bottom:12px;">--</div>
         <div style="font-size:0.9rem;">Nenhum dado para os filtros selecionados.</div>
     </div>
     """, unsafe_allow_html=True)
@@ -1006,6 +1005,6 @@ st.markdown(f"""
     </span>
     <a href="https://github.com/Nagalli01/bi-ecommerce-dashboard"
        style="font-size:0.62rem;color:{C['text_muted']};text-decoration:none;
-              opacity:.6;">GitHub ↗</a>
+              opacity:.6;">GitHub</a>
 </div>
 """, unsafe_allow_html=True)
