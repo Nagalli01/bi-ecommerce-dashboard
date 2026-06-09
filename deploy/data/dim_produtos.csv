@@ -1,0 +1,251 @@
+id_produto,nome_produto,categoria,preco_venda
+SKU-001,Nokia 717,Smartphones,7743.49
+SKU-002,Asus Vivobook 309,Notebooks,1519.41
+SKU-003,Película 860,Acessorios,7468.01
+SKU-004,Microfone 952,Audio,5533.51
+SKU-005,Multilaser 469,Tablets,3737.05
+SKU-006,Aoc Monitor 322,Monitores,4113.24
+SKU-007,Webcam 981,Perifericos,2704.76
+SKU-008,Ssd Sata 837,Armazenamento,2652.5
+SKU-009,Motorola Moto 603,Smartphones,3867.4
+SKU-010,Hp Pavilion 179,Notebooks,4950.14
+SKU-011,Capa Protetora 734,Acessorios,447.72
+SKU-012,Fone Bluetooth 410,Audio,3588.23
+SKU-013,Lenovo Tab 199,Tablets,475.63
+SKU-014,Asus Monitor 859,Monitores,7017.73
+SKU-015,Teclado 404,Perifericos,6175.03
+SKU-016,Pen Drive 369,Armazenamento,3682.57
+SKU-017,Xiaomi Redmi 223,Smartphones,7359.28
+SKU-018,Dell Inspiron 587,Notebooks,1437.92
+SKU-019,Cabo Usb 566,Acessorios,6964.84
+SKU-020,Microfone 376,Audio,229.34
+SKU-021,Lenovo Tab 320,Tablets,568.0
+SKU-022,Lg Monitor 609,Monitores,3488.28
+SKU-023,Teclado 690,Perifericos,7184.39
+SKU-024,Hd Interno 826,Armazenamento,2288.47
+SKU-025,Asus Zenfone 124,Smartphones,5386.38
+SKU-026,Hp Pavilion 806,Notebooks,3611.51
+SKU-027,Capa Protetora 994,Acessorios,4527.54
+SKU-028,Fone Com Fio 910,Audio,1890.59
+SKU-029,Multilaser 472,Tablets,752.91
+SKU-030,Lenovo Monitor 657,Monitores,1352.96
+SKU-031,Webcam 428,Perifericos,5894.8
+SKU-032,Ssd Sata 481,Armazenamento,3766.5
+SKU-033,Motorola Moto 933,Smartphones,5397.63
+SKU-034,Asus Vivobook 468,Notebooks,7693.02
+SKU-035,Carregador 440,Acessorios,7401.52
+SKU-036,Soundbar 143,Audio,2780.46
+SKU-037,Lenovo Tab 713,Tablets,2766.12
+SKU-038,Dell Monitor 971,Monitores,6399.95
+SKU-039,Hub Usb 944,Perifericos,5561.06
+SKU-040,Ssd 613,Armazenamento,4374.77
+SKU-041,Iphone 360,Smartphones,7479.32
+SKU-042,Hp Pavilion 800,Notebooks,5692.54
+SKU-043,Suporte 849,Acessorios,6699.93
+SKU-044,Amplificador 635,Audio,5272.29
+SKU-045,Philco 867,Tablets,3293.59
+SKU-046,Acer Monitor 755,Monitores,5169.02
+SKU-047,Hub Usb 833,Perifericos,54.74
+SKU-048,Ssd 607,Armazenamento,1197.63
+SKU-049,Asus Zenfone 347,Smartphones,6058.61
+SKU-050,Lenovo Thinkpad 934,Notebooks,1568.5
+SKU-051,Película 312,Acessorios,1526.43
+SKU-052,Caixa de Som 359,Audio,3648.16
+SKU-053,Philco 777,Tablets,3253.86
+SKU-054,Philips Monitor 497,Monitores,3030.58
+SKU-055,Leitor de Cartao 750,Perifericos,4937.69
+SKU-056,Hd Externo 611,Armazenamento,2591.07
+SKU-057,Nokia 981,Smartphones,6392.76
+SKU-058,Lenovo Thinkpad 532,Notebooks,5524.3
+SKU-059,Power Bank 127,Acessorios,3070.74
+SKU-060,Caixa de Som 586,Audio,2054.64
+SKU-061,Samsung Tab 565,Tablets,3069.82
+SKU-062,Lenovo Monitor 135,Monitores,2616.84
+SKU-063,Leitor de Cartao 321,Perifericos,4929.05
+SKU-064,Pen Drive 707,Armazenamento,6908.6
+SKU-065,Nokia 170,Smartphones,4041.48
+SKU-066,Asus Vivobook 920,Notebooks,7403.59
+SKU-067,Fone de Ouvido 699,Acessorios,985.47
+SKU-068,Fone Com Fio 400,Audio,6835.76
+SKU-069,Philco 536,Tablets,921.91
+SKU-070,Samsung Monitor 303,Monitores,3883.06
+SKU-071,Webcam 891,Perifericos,3044.92
+SKU-072,Ssd Nvme 986,Armazenamento,5480.11
+SKU-073,Nokia 927,Smartphones,5621.2
+SKU-074,Acer Aspire 242,Notebooks,1099.39
+SKU-075,Capa Protetora 548,Acessorios,3994.36
+SKU-076,Fone Bluetooth 825,Audio,4225.14
+SKU-077,Samsung Tab 528,Tablets,3815.58
+SKU-078,Asus Monitor 168,Monitores,568.14
+SKU-079,Headset 586,Perifericos,3240.55
+SKU-080,Pen Drive 223,Armazenamento,241.67
+SKU-081,Xiaomi Redmi 556,Smartphones,5295.9
+SKU-082,Macbook 589,Notebooks,581.21
+SKU-083,Adaptador 218,Acessorios,4499.35
+SKU-084,Microfone 236,Audio,5985.81
+SKU-085,Ipad 622,Tablets,6315.29
+SKU-086,Aoc Monitor 699,Monitores,4267.63
+SKU-087,Webcam 427,Perifericos,7369.82
+SKU-088,Cartao Sd 293,Armazenamento,5329.09
+SKU-089,Samsung Galaxy 276,Smartphones,3133.47
+SKU-090,Lenovo Thinkpad 249,Notebooks,5353.3
+SKU-091,Película 589,Acessorios,4131.41
+SKU-092,Soundbar 352,Audio,5034.18
+SKU-093,Philco 330,Tablets,6632.41
+SKU-094,Asus Monitor 143,Monitores,6971.82
+SKU-095,Hub Usb 787,Perifericos,5825.64
+SKU-096,Cartao Sd 866,Armazenamento,7264.69
+SKU-097,Oneplus 761,Smartphones,6981.38
+SKU-098,Macbook 609,Notebooks,6196.14
+SKU-099,Adaptador 167,Acessorios,4515.41
+SKU-100,Soundbar 891,Audio,5149.13
+SKU-101,Multilaser 575,Tablets,5218.83
+SKU-102,Aoc Monitor 956,Monitores,4305.56
+SKU-103,Leitor de Cartao 623,Perifericos,3927.91
+SKU-104,Pen Drive 580,Armazenamento,2729.75
+SKU-105,Lg 645,Smartphones,4160.13
+SKU-106,Macbook 377,Notebooks,7004.27
+SKU-107,Suporte 431,Acessorios,7262.38
+SKU-108,Microfone 296,Audio,6614.59
+SKU-109,Multilaser 370,Tablets,4802.2
+SKU-110,Dell Monitor 921,Monitores,6170.78
+SKU-111,Headset 829,Perifericos,4365.07
+SKU-112,Nas 695,Armazenamento,4184.9
+SKU-113,Asus Zenfone 753,Smartphones,2013.87
+SKU-114,Samsung Book 287,Notebooks,7103.82
+SKU-115,Cabo Usb 501,Acessorios,3900.53
+SKU-116,Fone Com Fio 650,Audio,2764.13
+SKU-117,Multilaser 227,Tablets,7733.78
+SKU-118,Lg Monitor 168,Monitores,1551.98
+SKU-119,Leitor de Cartao 565,Perifericos,7481.27
+SKU-120,Hd Interno 623,Armazenamento,4561.26
+SKU-121,Oneplus 743,Smartphones,7854.49
+SKU-122,Asus Vivobook 496,Notebooks,2539.48
+SKU-123,Suporte 878,Acessorios,6420.33
+SKU-124,Caixa de Som 384,Audio,904.32
+SKU-125,Samsung Tab 860,Tablets,5509.46
+SKU-126,Lg Monitor 110,Monitores,935.88
+SKU-127,Mousepad 391,Perifericos,3466.93
+SKU-128,Hd Interno 665,Armazenamento,2860.73
+SKU-129,Lg 880,Smartphones,1797.98
+SKU-130,Asus Vivobook 308,Notebooks,4356.6
+SKU-131,Película 684,Acessorios,5936.63
+SKU-132,Fone Com Fio 227,Audio,810.69
+SKU-133,Amazon Fire 570,Tablets,4896.38
+SKU-134,Acer Monitor 386,Monitores,903.73
+SKU-135,Gamepad 693,Perifericos,6894.12
+SKU-136,Cartao Sd 337,Armazenamento,847.91
+SKU-137,Nokia 553,Smartphones,1245.56
+SKU-138,Asus Vivobook 123,Notebooks,4353.05
+SKU-139,Power Bank 547,Acessorios,6327.22
+SKU-140,Fone Bluetooth 611,Audio,4085.1
+SKU-141,Amazon Fire 481,Tablets,1198.9
+SKU-142,Asus Monitor 272,Monitores,6315.16
+SKU-143,Headset 514,Perifericos,2229.43
+SKU-144,Cartao Sd 488,Armazenamento,4823.46
+SKU-145,Xiaomi Redmi 760,Smartphones,5595.77
+SKU-146,Dell Inspiron 498,Notebooks,4594.67
+SKU-147,Power Bank 546,Acessorios,5807.22
+SKU-148,Amplificador 361,Audio,2818.43
+SKU-149,Multilaser 590,Tablets,1306.88
+SKU-150,Acer Monitor 966,Monitores,338.53
+SKU-151,Hub Usb 192,Perifericos,5671.48
+SKU-152,Hd Externo 356,Armazenamento,680.08
+SKU-153,Motorola Moto 400,Smartphones,1175.99
+SKU-154,Acer Aspire 334,Notebooks,3305.24
+SKU-155,Cabo Usb 992,Acessorios,783.55
+SKU-156,Soundbar 395,Audio,4406.11
+SKU-157,Lenovo Tab 341,Tablets,186.6
+SKU-158,Samsung Monitor 168,Monitores,6194.05
+SKU-159,Webcam 646,Perifericos,1036.89
+SKU-160,Ssd Nvme 840,Armazenamento,1472.45
+SKU-161,Xiaomi Redmi 905,Smartphones,119.53
+SKU-162,Macbook 625,Notebooks,6515.78
+SKU-163,Capa Protetora 503,Acessorios,1122.85
+SKU-164,Soundbar 347,Audio,6900.42
+SKU-165,Multilaser 573,Tablets,2004.02
+SKU-166,Acer Monitor 265,Monitores,5139.08
+SKU-167,Gamepad 239,Perifericos,54.56
+SKU-168,Nas 793,Armazenamento,6046.36
+SKU-169,Oneplus 637,Smartphones,3759.63
+SKU-170,Samsung Book 905,Notebooks,4863.86
+SKU-171,Adaptador 869,Acessorios,2048.87
+SKU-172,Fone Com Fio 229,Audio,6448.47
+SKU-173,Philco 962,Tablets,2422.62
+SKU-174,Asus Monitor 484,Monitores,2431.17
+SKU-175,Hub Usb 868,Perifericos,177.53
+SKU-176,Pen Drive 560,Armazenamento,6928.32
+SKU-177,Motorola Moto 764,Smartphones,6360.4
+SKU-178,Dell Inspiron 332,Notebooks,7234.13
+SKU-179,Power Bank 829,Acessorios,3748.38
+SKU-180,Soundbar 525,Audio,7678.97
+SKU-181,Samsung Tab 402,Tablets,3023.58
+SKU-182,Asus Monitor 769,Monitores,6983.3
+SKU-183,Headset 940,Perifericos,4124.86
+SKU-184,Nas 169,Armazenamento,2852.24
+SKU-185,Motorola Moto 111,Smartphones,7937.19
+SKU-186,Macbook 161,Notebooks,246.23
+SKU-187,Suporte 124,Acessorios,3614.45
+SKU-188,Fone Com Fio 455,Audio,4993.09
+SKU-189,Samsung Tab 548,Tablets,6080.02
+SKU-190,Lg Monitor 782,Monitores,6245.5
+SKU-191,Mouse 257,Perifericos,7466.93
+SKU-192,Nas 849,Armazenamento,5794.22
+SKU-193,Xiaomi Redmi 195,Smartphones,4954.15
+SKU-194,Dell Inspiron 145,Notebooks,2458.14
+SKU-195,Adaptador 682,Acessorios,1589.63
+SKU-196,Soundbar 537,Audio,4399.09
+SKU-197,Amazon Fire 100,Tablets,7928.66
+SKU-198,Aoc Monitor 844,Monitores,3887.18
+SKU-199,Webcam 788,Perifericos,3973.18
+SKU-200,Ssd Nvme 731,Armazenamento,5836.98
+SKU-201,Asus Zenfone 690,Smartphones,4490.62
+SKU-202,Samsung Book 746,Notebooks,5336.28
+SKU-203,Fone de Ouvido 925,Acessorios,4771.11
+SKU-204,Fone Bluetooth 544,Audio,3893.0
+SKU-205,Multilaser 610,Tablets,7783.45
+SKU-206,Aoc Monitor 920,Monitores,6911.85
+SKU-207,Hub Usb 964,Perifericos,6278.64
+SKU-208,Nas 256,Armazenamento,7412.11
+SKU-209,Lg 522,Smartphones,5953.06
+SKU-210,Macbook 183,Notebooks,1977.83
+SKU-211,Película 893,Acessorios,2545.96
+SKU-212,Amplificador 934,Audio,3485.73
+SKU-213,Ipad 441,Tablets,7503.87
+SKU-214,Lenovo Monitor 603,Monitores,7426.29
+SKU-215,Gamepad 540,Perifericos,6803.13
+SKU-216,Pen Drive 444,Armazenamento,1315.58
+SKU-217,Samsung Galaxy 203,Smartphones,702.65
+SKU-218,Acer Aspire 653,Notebooks,3456.91
+SKU-219,Carregador 152,Acessorios,66.59
+SKU-220,Microfone 963,Audio,2965.8
+SKU-221,Philco 782,Tablets,4597.38
+SKU-222,Aoc Monitor 438,Monitores,844.77
+SKU-223,Teclado 729,Perifericos,51.69
+SKU-224,Pen Drive 500,Armazenamento,6602.32
+SKU-225,Asus Zenfone 730,Smartphones,6702.96
+SKU-226,Macbook 241,Notebooks,566.29
+SKU-227,Carregador 758,Acessorios,6219.8
+SKU-228,Headset Gamer 805,Audio,2305.39
+SKU-229,Lenovo Tab 811,Tablets,3807.65
+SKU-230,Aoc Monitor 400,Monitores,5245.24
+SKU-231,Hub Usb 913,Perifericos,7877.56
+SKU-232,Cartao Sd 346,Armazenamento,3717.23
+SKU-233,Samsung Galaxy 160,Smartphones,4722.08
+SKU-234,Positivo 229,Notebooks,1237.15
+SKU-235,Suporte 804,Acessorios,2593.61
+SKU-236,Amplificador 519,Audio,1024.82
+SKU-237,Multilaser 826,Tablets,1717.69
+SKU-238,Philips Monitor 260,Monitores,3156.81
+SKU-239,Teclado 961,Perifericos,6831.89
+SKU-240,Nas 574,Armazenamento,5283.72
+SKU-241,Lg 560,Smartphones,1106.58
+SKU-242,Asus Vivobook 774,Notebooks,2552.57
+SKU-243,Carregador 107,Acessorios,6959.93
+SKU-244,Amplificador 195,Audio,3920.81
+SKU-245,Ipad 243,Tablets,1958.19
+SKU-246,Aoc Monitor 307,Monitores,5780.24
+SKU-247,Teclado 746,Perifericos,2917.78
+SKU-248,Ssd Nvme 445,Armazenamento,71.76
+SKU-249,Xiaomi Redmi 316,Smartphones,1225.06
+SKU-250,Macbook 643,Notebooks,3155.99

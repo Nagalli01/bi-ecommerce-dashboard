@@ -7,7 +7,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import sqlite3
 import os
 
 st.set_page_config(page_title="BI E-Commerce", page_icon="🛒", layout="wide")
@@ -73,47 +72,19 @@ PALETTE_15 = ["#4A90D9","#50B86C","#E8A838","#E05A5A","#8B5CF6",
 # =====================================================================
 # DATABASE
 # =====================================================================
-@st.cache_resource
-def get_conn():
-    path = os.path.join(os.path.dirname(__file__), "bi_ecommerce.db")
-    if not os.path.exists(path):
-        path = os.path.join(os.path.dirname(__file__), "data", "bi_ecommerce.db")
-    if not os.path.exists(path):
-        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "bi_ecommerce.db")
+@st.cache_data(ttl=600)
+def load_csv(table):
+    data_dir = os.path.join(os.path.dirname(__file__), "data")
+    path = os.path.join(data_dir, f"{table}.csv")
+    return pd.read_csv(path)
 
-    if not os.path.exists(path):
-        path = os.path.join(os.path.dirname(__file__), "bi_ecommerce.db")
-        download_db(path)
-
-    if not os.path.exists(path):
-        return None
-
-    return sqlite3.connect(path, check_same_thread=False)
-
-def download_db(save_path):
-    try:
-        from huggingface_hub import hf_hub_download
-        hf_hub_download(
-            repo_id="Nagalli-01/bi-ecommerce-dashboard",
-            filename="bi_ecommerce.db",
-            repo_type="space",
-            local_dir=os.path.dirname(save_path),
-        )
-    except Exception:
-        pass
-
-@st.cache_data(ttl=60)
-def q(sql):
-    conn = get_conn()
-    return pd.read_sql(sql, conn) if conn else pd.DataFrame()
-
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=600)
 def load_all():
     return (
-        q("SELECT * FROM fact_vendas"),
-        q("SELECT * FROM dim_vendedores"),
-        q("SELECT * FROM dim_produtos"),
-        q("SELECT * FROM dim_calendario ORDER BY data"),
+        load_csv("fact_vendas"),
+        load_csv("dim_vendedores"),
+        load_csv("dim_produtos"),
+        load_csv("dim_calendario"),
     )
 
 # =====================================================================
