@@ -1,5 +1,5 @@
 QUALITY REPORT - BI E-COMMERCE
-Gerado em: 2026-06-09 13:38:53
+Gerado em: 2026-06-09 17:08:25
 ============================================================
 
 ========================================
@@ -10,7 +10,7 @@ Gerado em: 2026-06-09 13:38:53
   Silver Pedidos      :   8000  (esperado: > 0)
   dim_clientes        :   1500  (esperado: <= 1500)
   dim_produtos        :    250  (esperado: <= 250)
-  dim_calendario      :    731  (esperado: > 0)
+  dim_calendario      :    525  (esperado: > 0)
   dim_vendedores      :     15  (esperado: == 15)
   fact_vendas         :   8000  (esperado: <= 8000)
 
@@ -65,20 +65,20 @@ Gerado em: 2026-06-09 13:38:53
 ========================================
 4. VALIDACAO DE DATAS
 ========================================
-  Data minima: 2023-01-01
-  Data maxima: 2024-12-31
+  Data minima: 2025-01-01
+  Data maxima: 2026-06-09
   Range esperado: 2023-01-01 a 2024-12-31
   [PASS] Data minima dentro do range esperado.
-  [PASS] Data maxima dentro do range esperado.
+  [FAIL] Data maxima FORA do range esperado.
 
 ========================================
 5. METRICAS DE NEGOCIO
 ========================================
-  Faturamento Total   : R$ 179,578,466.40
+  Faturamento Total   : R$ 31,459,770.38
   Total Pedidos       : 8,000
-  Ticket Medio        : R$ 22,447.31
+  Ticket Medio        : R$ 3,932.47
   Total Vendedores    : 15
-  Clientes Ativos     : 1464
+  Clientes Ativos     : 1460
   Produtos Vendidos   : 250
   [PASS] Metricas validas.
 
@@ -87,25 +87,25 @@ Gerado em: 2026-06-09 13:38:53
 ========================================
 
   Top 5 Estados por Faturamento:
-    RJ: R$ 19,054,657.60
-    SP: R$ 18,889,708.32
-    PE: R$ 18,571,760.42
-    DF: R$ 18,289,527.44
-    BA: R$ 18,003,087.70
+    PE: R$ 3,517,676.88
+    RJ: R$ 3,186,112.58
+    AM: R$ 3,171,992.39
+    RS: R$ 3,140,587.27
+    DF: R$ 3,139,086.25
 
   Faturamento por Regiao:
-    Sudeste: R$ 55,080,054.62
-    Nordeste: R$ 53,796,590.15
-    Sul: R$ 35,375,976.65
-    Centro-Oeste: R$ 18,289,527.44
-    Norte: R$ 17,036,317.54
+    Nordeste: R$ 9,618,120.07
+    Sudeste: R$ 9,306,680.70
+    Sul: R$ 6,223,890.97
+    Norte: R$ 3,171,992.39
+    Centro-Oeste: R$ 3,139,086.25
 
   Top 5 Vendedores:
-    Juliana Alves: R$ 12,749,136.19
-    Mariana Costa: R$ 12,683,349.41
-    Roberto Nunes: R$ 12,545,957.02
-    Paulo Cesar: R$ 12,396,933.07
-    Camila Rocha: R$ 12,336,402.93
+    Paulo Cesar: R$ 2,315,217.82
+    Gustavo Barbosa: R$ 2,265,777.89
+    Carlos Mendes: R$ 2,257,374.08
+    Fernanda Lima: R$ 2,209,638.47
+    Felipe Oliveira: R$ 2,171,579.38
 
 ========================================
 RELATORIO SALVO EM: C:\dev\projetoInt\bi_ecommerce\data\quality_report.txt

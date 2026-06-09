@@ -1,8 +1,8 @@
 @echo off
-title BI E-Commerce Dashboard Web
+title Nexus Dashboard
 cd /d "%~dp0.."
 echo ========================================
-echo   BI E-Commerce - DASHBOARD WEB
+echo   NEXUS - DASHBOARD WEB
 echo ========================================
 echo.
 echo 1. Dashboard Local (http://localhost:8501)

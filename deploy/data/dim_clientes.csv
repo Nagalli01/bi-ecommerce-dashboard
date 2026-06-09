@@ -12,13 +12,13 @@ id_cliente,nome,cidade,estado,regiao
 11,Francisca Santos Souza,Ceilandia,DF,Centro-oeste
 12,Felipe Rocha Lima,Foz do Iguacu,PR,Sul
 13,Paulo Barbosa Silva,Duque de Caxias,RJ,Sudeste
-14,Fernanda Rodrigues Martins,Gama,DF,Centro-oeste
-15,Fabio Martins Gomes,Angra dos Reis,RJ,Sudeste
+14,Juliana Martins Ferreira,Fortaleza,CE,Nordeste
+15,Luana Gomes Pereira,Angra dos Reis,RJ,Sudeste
 16,Vanessa Rodrigues Rodrigues,Presidente Figueiredo,AM,Norte
 17,Raquel Nunes Alves,Maues,AM,Norte
 18,Antonio Ribeiro Silva,Campinas,SP,Sudeste
-19,Patricia Oliveira Santos,Paranagua,PR,Sul
-20,Isabela Mendes Mendes,Caxias do Sul,RS,Sul
+19,Gustavo Santos Ribeiro,Maracanau,CE,Nordeste
+20,Fabio Mendes Mendes,Caxias do Sul,RS,Sul
 21,Amanda Araujo Araujo,Paulista,PE,Nordeste
 22,Pedro Nunes Barbosa,Maracanau,CE,Nordeste
 23,Mateus Nunes Souza,Nova Iguacu,RJ,Sudeste
@@ -41,18 +41,18 @@ id_cliente,nome,cidade,estado,regiao
 40,Simone Lima Martins,Campinas,SP,Sudeste
 41,Marcos Santos Souza,Serra Talhada,PE,Nordeste
 42,Gustavo Mendes Alves,Autazes,AM,Norte
-43,Isabela Alves Martins,Duque de Caxias,RJ,Sudeste
-44,Bruno Ribeiro Carvalho,Garanhuns,PE,Nordeste
-45,Marcia Vieira Mendes,Cascavel,PR,Sul
-46,Guilherme Vieira Ribeiro,Maues,AM,Norte
-47,Sandra Rocha Vieira,Canoas,RS,Sul
-48,Lucas Costa Vieira,Igarassu,PE,Nordeste
-49,Ricardo Silva Souza,Fortaleza,CE,Nordeste
-50,Mateus Souza Barbosa,Itapipoca,CE,Nordeste
-51,Fabio Nunes Barbosa,Santa Maria,RS,Sul
-52,Lucas Lima Barbosa,Juazeiro,BA,Nordeste
-53,Carlos Pereira Carvalho,Paulista,PE,Nordeste
-54,Jose Alves Araujo,Fortaleza,CE,Nordeste
+43,Antonio Ribeiro Vieira,Coari,AM,Norte
+44,Rodrigo Gomes Nunes,Uberaba,MG,Sudeste
+45,Eduardo Silva Gomes,Quixada,CE,Nordeste
+46,Larissa Costa Ferreira,Nova Iguacu,RJ,Sudeste
+47,Pedro Rodrigues Silva,Iguatu,CE,Nordeste
+48,Rodrigo Carvalho Costa,Campos dos Goytacazes,RJ,Sudeste
+49,Rodrigo Rocha Barbosa,Juazeiro do Norte,CE,Nordeste
+50,Vanessa Vieira Ribeiro,Maues,AM,Norte
+51,Beatriz Barbosa Lima,Maracanau,CE,Nordeste
+52,Rodrigo Gomes Pereira,Petropolis,RJ,Sudeste
+53,Rodrigo Rodrigues Alves,Maues,AM,Norte
+54,Thiago Araujo Carvalho,Fortaleza,CE,Nordeste
 55,Daniel Araujo Nunes,Santa Maria,RS,Sul
 56,Daniel Ribeiro Carvalho,Sao Bernardo do Campo,SP,Sudeste
 57,Maria Oliveira Araujo,Guarapuava,PR,Sul
@@ -60,7 +60,7 @@ id_cliente,nome,cidade,estado,regiao
 59,Rafael Pereira Oliveira,Piracicaba,SP,Sudeste
 60,Andre Souza Mendes,Uberaba,MG,Sudeste
 61,Renata Souza Ferreira,Sao Jose dos Pinhais,PR,Sul
-62,Bruna Carvalho Alves,Sao Jose dos Pinhais,PR,Sul
+62,Rodrigo Alves Oliveira,Sao Jose dos Pinhais,PR,Sul
 63,Gabriela Santos Martins,Tabatinga,AM,Norte
 64,Claudia Costa Souza,Olinda,PE,Nordeste
 65,Aline Vieira Nunes,Itabuna,BA,Nordeste
@@ -76,8 +76,8 @@ id_cliente,nome,cidade,estado,regiao
 75,Ricardo Santos Rodrigues,Caxias do Sul,RS,Sul
 76,Carolina Vieira Vieira,Sobral,CE,Nordeste
 77,Sandra Mendes Vieira,Santa Maria,RS,Sul
-78,Lucas Ferreira Nunes,Itapipoca,CE,Nordeste
-79,Lucas Gomes Gomes,Samambaia,DF,Centro-oeste
+78,Paulo Nunes Oliveira,Guara,DF,Centro-oeste
+79,Luiz Gomes Barbosa,Samambaia,DF,Centro-oeste
 80,Lucas Rodrigues Lima,Sao Jose dos Pinhais,PR,Sul
 81,Leticia Souza Barbosa,Maues,AM,Norte
 82,Jose Araujo Ribeiro,Erechim,RS,Sul
@@ -88,11 +88,11 @@ id_cliente,nome,cidade,estado,regiao
 87,Carolina Costa Barbosa,Betim,MG,Sudeste
 88,Beatriz Souza Silva,Manaus,AM,Norte
 89,Lucas Souza Barbosa,Colombo,PR,Sul
-90,Thiago Costa Costa,Caruaru,PE,Nordeste
-91,Luana Rodrigues Oliveira,Curitiba,PR,Sul
-92,Claudia Mendes Mendes,Crato,CE,Nordeste
-93,Vanessa Carvalho Barbosa,Novo Hamburgo,RS,Sul
-94,Andre Carvalho Carvalho,Presidente Figueiredo,AM,Norte
+90,Andre Costa Pereira,Erechim,RS,Sul
+91,Juliana Oliveira Lima,Ribeirao Preto,SP,Sudeste
+92,Gabriela Costa Rodrigues,Camacari,BA,Nordeste
+93,Fabio Ribeiro Alves,Recife,PE,Nordeste
+94,Renata Carvalho Carvalho,Presidente Figueiredo,AM,Norte
 95,Mariana Barbosa Souza,Olinda,PE,Nordeste
 96,Marcos Ribeiro Vieira,Tefe,AM,Norte
 97,Luana Costa Nunes,Ponta Grossa,PR,Sul
@@ -102,8 +102,8 @@ id_cliente,nome,cidade,estado,regiao
 101,Joao Barbosa Gomes,Lauro de Freitas,BA,Nordeste
 102,Jessica Lima Barbosa,Nova Iguacu,RJ,Sudeste
 103,Gabriela Gomes Gomes,Piracicaba,SP,Sudeste
-104,Ana Vieira Costa,Canoas,RS,Sul
-105,Alexandre Rodrigues Souza,Gama,DF,Centro-oeste
+104,Isabela Costa Gomes,Erechim,RS,Sul
+105,Isabela Rodrigues Souza,Gama,DF,Centro-oeste
 106,Luiz Ribeiro Araujo,Camacari,BA,Nordeste
 107,Claudia Ferreira Lima,Caucaia,CE,Nordeste
 108,Patricia Carvalho Nunes,Colombo,PR,Sul
@@ -112,1390 +112,1390 @@ id_cliente,nome,cidade,estado,regiao
 111,Jose Gomes Costa,Governador Valadares,MG,Sudeste
 112,Diego Nunes Araujo,Itapipoca,CE,Nordeste
 113,Aline Santos Martins,Feira de Santana,BA,Nordeste
-114,Gustavo Martins Santos,Caucaia,CE,Nordeste
-115,Ricardo Vieira Silva,Samambaia,DF,Centro-oeste
-116,Vanessa Alves Mendes,Brasilia,DF,Centro-oeste
-117,Juliana Rodrigues Nunes,Belo Horizonte,MG,Sudeste
-118,Patricia Mendes Ribeiro,Governador Valadares,MG,Sudeste
-119,Antonio Costa Barbosa,Caninde,CE,Nordeste
-120,Ana Rocha Gomes,Iguatu,CE,Nordeste
-121,Beatriz Barbosa Oliveira,Petropolis,RJ,Sudeste
-122,Gabriela Nunes Ribeiro,Caninde,CE,Nordeste
-123,Vinicius Souza Nunes,Paulista,PE,Nordeste
-124,Diego Souza Ribeiro,Ipatinga,MG,Sudeste
-125,Antonio Oliveira Araujo,Sobradinho,DF,Centro-oeste
-126,Francisco Araujo Martins,Feira de Santana,BA,Nordeste
-127,Juliana Costa Pereira,Duque de Caxias,RJ,Sudeste
-128,Bruno Nunes Vieira,Planaltina,DF,Centro-oeste
-129,Rodrigo Gomes Ribeiro,Aguas Claras,DF,Centro-oeste
-130,Ricardo Silva Oliveira,Crato,CE,Nordeste
-131,Diego Ribeiro Mendes,Uberaba,MG,Sudeste
-132,Aline Barbosa Araujo,Ponta Grossa,PR,Sul
-133,Bruno Souza Gomes,Sao Jose dos Campos,SP,Sudeste
-134,Ana Silva Alves,Foz do Iguacu,PR,Sul
-135,Diego Araujo Ferreira,Autazes,AM,Norte
-136,Francisca Carvalho Santos,Lauro de Freitas,BA,Nordeste
-137,Renata Araujo Gomes,Uberaba,MG,Sudeste
-138,Raquel Martins Oliveira,Aguas Claras,DF,Centro-oeste
-139,Mateus Gomes Ribeiro,Parintins,AM,Norte
-140,Luana Martins Martins,Ponta Grossa,PR,Sul
-141,Simone Oliveira Ferreira,Recanto das Emas,DF,Centro-oeste
-142,Tatiane Ribeiro Rodrigues,Cascavel,PR,Sul
-143,Marcelo Oliveira Gomes,Ilheus,BA,Nordeste
-144,Mariana Oliveira Vieira,Sobradinho,DF,Centro-oeste
-145,Vinicius Mendes Alves,Belo Horizonte,MG,Sudeste
-146,Gustavo Ribeiro Oliveira,Passo Fundo,RS,Sul
-147,Carolina Ferreira Martins,Lauro de Freitas,BA,Nordeste
-148,Tatiane Ribeiro Oliveira,Cascavel,PR,Sul
-149,Carolina Rodrigues Ribeiro,Guarapuava,PR,Sul
-150,Francisca Gomes Nunes,Parintins,AM,Norte
-151,Larissa Martins Silva,Teixeira de Freitas,BA,Nordeste
-152,Carlos Rodrigues Oliveira,Manaus,AM,Norte
-153,Alexandre Vieira Rodrigues,Uberaba,MG,Sudeste
-154,Ana Araujo Martins,Bento Goncalves,RS,Sul
-155,Vinicius Costa Alves,Sobral,CE,Nordeste
-156,Jessica Ferreira Alves,Crato,CE,Nordeste
-157,Renata Rocha Souza,Caninde,CE,Nordeste
-158,Francisca Pereira Barbosa,Gravata,PE,Nordeste
-159,Antonio Martins Pereira,Juiz de Fora,MG,Sudeste
-160,Thiago Costa Rodrigues,Ribeirao Preto,SP,Sudeste
-161,Vanessa Vieira Rocha,Londrina,PR,Sul
-162,Ricardo Vieira Barbosa,Osasco,SP,Sudeste
-163,Carlos Gomes Araujo,Aguas Claras,DF,Centro-oeste
-164,Francisca Rocha Martins,Autazes,AM,Norte
-165,Andre Santos Carvalho,Volta Redonda,RJ,Sudeste
-166,Tatiane Souza Mendes,Tabatinga,AM,Norte
-167,Alexandre Barbosa Costa,Ribeirao Preto,SP,Sudeste
-168,Pedro Santos Ribeiro,Sobral,CE,Nordeste
-169,Fernanda Gomes Martins,Volta Redonda,RJ,Sudeste
-170,Isabela Barbosa Carvalho,Camacari,BA,Nordeste
-171,Isabela Araujo Oliveira,Foz do Iguacu,PR,Sul
-172,Fernando Gomes Gomes,Crato,CE,Nordeste
-173,Mateus Martins Vieira,Paulista,PE,Nordeste
-174,Priscila Ferreira Silva,Uberlandia,MG,Sudeste
-175,Amanda Martins Carvalho,Crato,CE,Nordeste
-176,Antonio Mendes Rodrigues,Ponta Grossa,PR,Sul
-177,Paulo Costa Rocha,Paranagua,PR,Sul
-178,Sandra Costa Alves,Ipatinga,MG,Sudeste
-179,Mariana Ribeiro Martins,Maringa,PR,Sul
-180,Renata Ferreira Martins,Contagem,MG,Sudeste
-181,Eduardo Mendes Martins,Duque de Caxias,RJ,Sudeste
-182,Isabela Costa Rocha,Montes Claros,MG,Sudeste
-183,Felipe Rocha Martins,Governador Valadares,MG,Sudeste
-184,Ana Souza Rocha,Itabuna,BA,Nordeste
-185,Larissa Gomes Oliveira,Betim,MG,Sudeste
-186,Larissa Ferreira Mendes,Brasilia,DF,Centro-oeste
-187,Ricardo Mendes Lima,Caninde,CE,Nordeste
-188,Sandra Costa Pereira,Santos,SP,Sudeste
-189,Felipe Alves Ribeiro,Porto Seguro,BA,Nordeste
-190,Larissa Nunes Souza,Paranagua,PR,Sul
-191,Jose Gomes Carvalho,Lauro de Freitas,BA,Nordeste
-192,Paulo Costa Rocha,Campinas,SP,Sudeste
-193,Patricia Alves Mendes,Itapipoca,CE,Nordeste
-194,Sandra Nunes Silva,Porto Seguro,BA,Nordeste
-195,Jose Mendes Nunes,Campos dos Goytacazes,RJ,Sudeste
-196,Eduardo Lima Vieira,Paulista,PE,Nordeste
-197,Amanda Rodrigues Alves,Sao Paulo,SP,Sudeste
-198,Gabriel Costa Rocha,Montes Claros,MG,Sudeste
-199,Daniel Vieira Gomes,Maues,AM,Norte
-200,Beatriz Silva Martins,Planaltina,DF,Centro-oeste
-201,Carolina Costa Lima,Guara,DF,Centro-oeste
-202,Isabela Vieira Carvalho,Ceilandia,DF,Centro-oeste
-203,Gabriel Araujo Rodrigues,Presidente Figueiredo,AM,Norte
-204,Isabela Santos Rodrigues,Caninde,CE,Nordeste
-205,Paulo Barbosa Nunes,Guara,DF,Centro-oeste
-206,Aline Nunes Gomes,Crato,CE,Nordeste
-207,Fabio Lima Gomes,Paulista,PE,Nordeste
-208,Luiz Oliveira Martins,Canoas,RS,Sul
-209,Eduardo Lima Rodrigues,Porto Alegre,RS,Sul
-210,Patricia Pereira Santos,Petropolis,RJ,Sudeste
-211,Raquel Ferreira Araujo,Ilheus,BA,Nordeste
-212,Alexandre Oliveira Mendes,Olinda,PE,Nordeste
-213,Bruna Costa Ferreira,Recanto das Emas,DF,Centro-oeste
-214,Camila Gomes Barbosa,Maues,AM,Norte
-215,Francisco Ribeiro Ferreira,Sorocaba,SP,Sudeste
-216,Simone Alves Ferreira,Tabatinga,AM,Norte
-217,Francisco Ferreira Rodrigues,Guarapuava,PR,Sul
-218,Marcos Ribeiro Gomes,Itabuna,BA,Nordeste
-219,Leticia Gomes Ferreira,Duque de Caxias,RJ,Sudeste
-220,Patricia Rodrigues Costa,Gravata,PE,Nordeste
-221,Adriana Alves Pereira,Tabatinga,AM,Norte
-222,Antonia Santos Nunes,Juiz de Fora,MG,Sudeste
-223,Leticia Souza Alves,Fortaleza,CE,Nordeste
-224,Bruno Barbosa Mendes,Sao Bernardo do Campo,SP,Sudeste
-225,Isabela Alves Mendes,Cabo Frio,RJ,Sudeste
-226,Francisca Costa Santos,Paulista,PE,Nordeste
-227,Fabio Carvalho Carvalho,Feira de Santana,BA,Nordeste
-228,Bruna Rocha Rodrigues,Caninde,CE,Nordeste
-229,Claudia Pereira Pereira,Caxias do Sul,RS,Sul
-230,Jessica Vieira Silva,Brasilia,DF,Centro-oeste
-231,Renata Santos Pereira,Manacapuru,AM,Norte
-232,Luiz Pereira Mendes,Santa Maria,RS,Sul
-233,Larissa Pereira Araujo,Gravata,PE,Nordeste
-234,Rafael Carvalho Rocha,Guarapuava,PR,Sul
-235,Beatriz Pereira Pereira,Tefe,AM,Norte
-236,Juliana Carvalho Pereira,Crato,CE,Nordeste
-237,Claudia Alves Santos,Nova Iguacu,RJ,Sudeste
-238,Vanessa Alves Costa,Canoas,RS,Sul
-239,Simone Costa Pereira,Tabatinga,AM,Norte
-240,Eduardo Martins Gomes,Caucaia,CE,Nordeste
-241,Camila Alves Martins,Belo Horizonte,MG,Sudeste
-242,Gabriela Mendes Araujo,Novo Hamburgo,RS,Sul
-243,Beatriz Nunes Ribeiro,Montes Claros,MG,Sudeste
-244,Eduardo Costa Ferreira,Campinas,SP,Sudeste
-245,Joao Araujo Rodrigues,Bento Goncalves,RS,Sul
-246,Leonardo Vieira Costa,Tefe,AM,Norte
-247,Diego Lima Nunes,Uberlandia,MG,Sudeste
-248,Patricia Alves Vieira,Jaboatao dos Guararapes,PE,Nordeste
-249,Leticia Mendes Pereira,Campos dos Goytacazes,RJ,Sudeste
-250,Andre Santos Silva,Lauro de Freitas,BA,Nordeste
-251,Raquel Santos Pereira,Curitiba,PR,Sul
-252,Aline Nunes Mendes,Erechim,RS,Sul
-253,Renata Carvalho Oliveira,Aguas Claras,DF,Centro-oeste
-254,Camila Carvalho Rodrigues,Campos dos Goytacazes,RJ,Sudeste
-255,Camila Vieira Vieira,Paranagua,PR,Sul
-256,Eduardo Carvalho Araujo,Teresopolis,RJ,Sudeste
-257,Renata Oliveira Oliveira,Paulista,PE,Nordeste
-258,Joao Gomes Barbosa,Petropolis,RJ,Sudeste
-259,Eduardo Rocha Araujo,Parintins,AM,Norte
-260,Camila Carvalho Silva,Manacapuru,AM,Norte
-261,Priscila Carvalho Ferreira,Juazeiro do Norte,CE,Nordeste
-262,Marcos Araujo Gomes,Passo Fundo,RS,Sul
-263,Leticia Souza Rodrigues,Aguas Claras,DF,Centro-oeste
-264,Bruno Vieira Rodrigues,Crato,CE,Nordeste
-265,Camila Gomes Costa,Guarapuava,PR,Sul
-266,Guilherme Alves Mendes,Maracanau,CE,Nordeste
-267,Claudia Oliveira Araujo,Maringa,PR,Sul
-268,Francisca Barbosa Vieira,Tefe,AM,Norte
-269,Rafael Nunes Vieira,Uberaba,MG,Sudeste
-270,Tatiane Carvalho Ribeiro,Ponta Grossa,PR,Sul
-271,Vanessa Mendes Mendes,Itapipoca,CE,Nordeste
-272,Amanda Silva Costa,Petropolis,RJ,Sudeste
-273,Felipe Alves Rocha,Quixada,CE,Nordeste
-274,Jose Souza Silva,Bento Goncalves,RS,Sul
-275,Camila Nunes Araujo,Governador Valadares,MG,Sudeste
-276,Leonardo Alves Barbosa,Canoas,RS,Sul
-277,Adriana Oliveira Mendes,Itabuna,BA,Nordeste
-278,Fernando Costa Rocha,Ceilandia,DF,Centro-oeste
-279,Felipe Vieira Ferreira,Montes Claros,MG,Sudeste
-280,Francisco Ferreira Martins,Taguatinga,DF,Centro-oeste
-281,Paulo Costa Nunes,Maringa,PR,Sul
-282,Felipe Vieira Santos,Novo Hamburgo,RS,Sul
-283,Beatriz Araujo Costa,Teresopolis,RJ,Sudeste
-284,Patricia Gomes Santos,Ipatinga,MG,Sudeste
-285,Simone Costa Nunes,Colombo,PR,Sul
-286,Simone Santos Barbosa,Santa Maria,RS,Sul
-287,Rafael Oliveira Barbosa,Aguas Claras,DF,Centro-oeste
-288,Adriana Alves Alves,Sao Jose dos Pinhais,PR,Sul
-289,Rodrigo Gomes Gomes,Governador Valadares,MG,Sudeste
-290,Mariana Rodrigues Rodrigues,Igarassu,PE,Nordeste
-291,Aline Araujo Carvalho,Coari,AM,Norte
-292,Amanda Barbosa Costa,Crato,CE,Nordeste
-293,Bruna Alves Araujo,Foz do Iguacu,PR,Sul
-294,Gabriela Costa Ribeiro,Campinas,SP,Sudeste
-295,Joao Araujo Alves,Londrina,PR,Sul
-296,Antonio Martins Ferreira,Jaboatao dos Guararapes,PE,Nordeste
-297,Pedro Costa Oliveira,Fortaleza,CE,Nordeste
-298,Claudia Souza Araujo,Jaboatao dos Guararapes,PE,Nordeste
-299,Rafael Gomes Rodrigues,Presidente Figueiredo,AM,Norte
-300,Marcia Barbosa Martins,Guara,DF,Centro-oeste
-301,Francisco Rodrigues Souza,Vitoria da Conquista,BA,Nordeste
-302,Antonio Pereira Nunes,Ribeirao Preto,SP,Sudeste
-303,Larissa Alves Carvalho,Iguatu,CE,Nordeste
-304,Ricardo Vieira Oliveira,Governador Valadares,MG,Sudeste
-305,Eduardo Ferreira Costa,Ribeirao Preto,SP,Sudeste
-306,Jose Carvalho Rocha,Garanhuns,PE,Nordeste
-307,Vanessa Vieira Rodrigues,Manacapuru,AM,Norte
-308,Bruna Mendes Oliveira,Caxias do Sul,RS,Sul
-309,Leonardo Vieira Santos,Santos,SP,Sudeste
-310,Andre Martins Rocha,Betim,MG,Sudeste
-311,Maria Ribeiro Araujo,Ceilandia,DF,Centro-oeste
-312,Rafael Santos Costa,Londrina,PR,Sul
-313,Antonia Pereira Rocha,Guarulhos,SP,Sudeste
-314,Carlos Ferreira Santos,Itabuna,BA,Nordeste
-315,Camila Lima Oliveira,Santos,SP,Sudeste
-316,Ana Carvalho Oliveira,Cabo Frio,RJ,Sudeste
-317,Pedro Gomes Mendes,Lauro de Freitas,BA,Nordeste
-318,Simone Alves Nunes,Sao Jose dos Campos,SP,Sudeste
-319,Thiago Silva Ribeiro,Nova Iguacu,RJ,Sudeste
-320,Jessica Costa Santos,Bento Goncalves,RS,Sul
-321,Amanda Barbosa Oliveira,Jaboatao dos Guararapes,PE,Nordeste
-322,Jessica Rodrigues Pereira,Juazeiro,BA,Nordeste
-323,Antonio Alves Rodrigues,Ipatinga,MG,Sudeste
-324,Francisco Nunes Martins,Londrina,PR,Sul
-325,Fernando Gomes Vieira,Nova Iguacu,RJ,Sudeste
-326,Jose Gomes Lima,Autazes,AM,Norte
-327,Francisco Rodrigues Souza,Novo Hamburgo,RS,Sul
-328,Tatiane Oliveira Mendes,Nova Iguacu,RJ,Sudeste
-329,Carlos Oliveira Ribeiro,Uberaba,MG,Sudeste
-330,Bruna Costa Silva,Itabuna,BA,Nordeste
-331,Felipe Rodrigues Santos,Iguatu,CE,Nordeste
-332,Antonio Lima Carvalho,Bento Goncalves,RS,Sul
-333,Adriana Martins Costa,Porto Seguro,BA,Nordeste
-334,Gabriel Vieira Pereira,Tabatinga,AM,Norte
-335,Marcia Souza Pereira,Erechim,RS,Sul
-336,Thiago Ferreira Ferreira,Brasilia,DF,Centro-oeste
-337,Gabriela Mendes Rodrigues,Maringa,PR,Sul
-338,Jose Pereira Vieira,Sorocaba,SP,Sudeste
-339,Carlos Ribeiro Ferreira,Taguatinga,DF,Centro-oeste
-340,Mariana Martins Oliveira,Ilheus,BA,Nordeste
-341,Paulo Araujo Costa,Erechim,RS,Sul
-342,Diego Gomes Rodrigues,Brasilia,DF,Centro-oeste
-343,Raquel Vieira Pereira,Feira de Santana,BA,Nordeste
-344,Gabriel Ferreira Oliveira,Canoas,RS,Sul
-345,Marcos Souza Silva,Governador Valadares,MG,Sudeste
-346,Amanda Nunes Carvalho,Ipatinga,MG,Sudeste
-347,Ana Gomes Silva,Vitoria da Conquista,BA,Nordeste
-348,Antonio Nunes Oliveira,Olinda,PE,Nordeste
-349,Marcia Santos Souza,Autazes,AM,Norte
-350,Sandra Pereira Souza,Belo Horizonte,MG,Sudeste
-351,Antonio Gomes Vieira,Pelotas,RS,Sul
-352,Antonio Costa Souza,Londrina,PR,Sul
-353,Marcia Martins Carvalho,Paranagua,PR,Sul
-354,Thiago Lima Mendes,Camacari,BA,Nordeste
-355,Gabriela Pereira Nunes,Maues,AM,Norte
-356,Beatriz Gomes Oliveira,Recanto das Emas,DF,Centro-oeste
-357,Alexandre Barbosa Ferreira,Sao Bernardo do Campo,SP,Sudeste
-358,Jessica Alves Rodrigues,Campos dos Goytacazes,RJ,Sudeste
-359,Gabriel Lima Rocha,Jaboatao dos Guararapes,PE,Nordeste
-360,Guilherme Mendes Mendes,Colombo,PR,Sul
-361,Aline Carvalho Costa,Betim,MG,Sudeste
-362,Leonardo Carvalho Santos,Sobral,CE,Nordeste
-363,Thiago Gomes Gomes,Betim,MG,Sudeste
-364,Camila Lima Araujo,Maracanau,CE,Nordeste
-365,Simone Rocha Martins,Colombo,PR,Sul
-366,Mateus Rocha Mendes,Sao Jose dos Campos,SP,Sudeste
-367,Fabio Martins Alves,Jaboatao dos Guararapes,PE,Nordeste
-368,Rafael Costa Vieira,Vitoria da Conquista,BA,Nordeste
-369,Renata Oliveira Gomes,Samambaia,DF,Centro-oeste
-370,Priscila Alves Lima,Juazeiro do Norte,CE,Nordeste
-371,Vinicius Silva Pereira,Garanhuns,PE,Nordeste
-372,Pedro Barbosa Gomes,Osasco,SP,Sudeste
-373,Claudia Martins Nunes,Angra dos Reis,RJ,Sudeste
-374,Marcos Ribeiro Lima,Pocos de Caldas,MG,Sudeste
-375,Adriana Vieira Carvalho,Sobral,CE,Nordeste
-376,Bruna Carvalho Santos,Bento Goncalves,RS,Sul
-377,Raquel Martins Rocha,Londrina,PR,Sul
-378,Marcos Nunes Ferreira,Itabuna,BA,Nordeste
-379,Gustavo Ribeiro Martins,Angra dos Reis,RJ,Sudeste
-380,Gabriela Mendes Vieira,Campos dos Goytacazes,RJ,Sudeste
-381,Jose Rodrigues Rodrigues,Montes Claros,MG,Sudeste
-382,Beatriz Ribeiro Ferreira,Sobral,CE,Nordeste
-383,Marcia Mendes Ferreira,Garanhuns,PE,Nordeste
-384,Bruna Silva Santos,Camacari,BA,Nordeste
-385,Joao Pereira Pereira,Gravata,PE,Nordeste
-386,Antonio Santos Gomes,Porto Seguro,BA,Nordeste
-387,Camila Costa Martins,Canoas,RS,Sul
-388,Joao Mendes Rocha,Petrolina,PE,Nordeste
-389,Carolina Santos Souza,Iguatu,CE,Nordeste
-390,Beatriz Rodrigues Alves,Coari,AM,Norte
-391,Juliana Araujo Souza,Niteroi,RJ,Sudeste
-392,Pedro Lima Rocha,Belo Horizonte,MG,Sudeste
-393,Pedro Costa Ribeiro,Teresopolis,RJ,Sudeste
-394,Antonio Rocha Oliveira,Cascavel,PR,Sul
-395,Thiago Ferreira Santos,Niteroi,RJ,Sudeste
-396,Carlos Ferreira Ribeiro,Juazeiro,BA,Nordeste
-397,Daniel Barbosa Lima,Uberlandia,MG,Sudeste
-398,Ana Ferreira Souza,Uberaba,MG,Sudeste
-399,Carolina Silva Rodrigues,Fortaleza,CE,Nordeste
-400,Gabriel Silva Rocha,Autazes,AM,Norte
-401,Antonia Araujo Pereira,Presidente Figueiredo,AM,Norte
-402,Fabio Ferreira Rocha,Crato,CE,Nordeste
-403,Marcos Santos Rocha,Caxias do Sul,RS,Sul
-404,Guilherme Barbosa Oliveira,Fortaleza,CE,Nordeste
-405,Jose Nunes Nunes,Autazes,AM,Norte
-406,Leticia Ribeiro Martins,Presidente Figueiredo,AM,Norte
-407,Fernando Martins Barbosa,Juazeiro,BA,Nordeste
-408,Sandra Nunes Rocha,Juazeiro do Norte,CE,Nordeste
-409,Leonardo Alves Alves,Gravatai,RS,Sul
-410,Ana Mendes Souza,Ipatinga,MG,Sudeste
-411,Ana Nunes Araujo,Taguatinga,DF,Centro-oeste
-412,Fernando Vieira Vieira,Samambaia,DF,Centro-oeste
-413,Gabriel Gomes Barbosa,Colombo,PR,Sul
-414,Raquel Nunes Alves,Juiz de Fora,MG,Sudeste
-415,Tatiane Ribeiro Souza,Coari,AM,Norte
-416,Larissa Souza Silva,Santa Maria,RS,Sul
-417,Priscila Lima Rodrigues,Manaus,AM,Norte
-418,Antonia Vieira Nunes,Bento Goncalves,RS,Sul
-419,Fernando Santos Carvalho,Ribeirao Preto,SP,Sudeste
-420,Simone Barbosa Pereira,Santa Maria,RS,Sul
-421,Fernando Oliveira Ferreira,Sao Bernardo do Campo,SP,Sudeste
-422,Juliana Ferreira Mendes,Belo Horizonte,MG,Sudeste
-423,Carolina Santos Vieira,Volta Redonda,RJ,Sudeste
-424,Paulo Rocha Oliveira,Tefe,AM,Norte
-425,Gustavo Alves Ribeiro,Sobradinho,DF,Centro-oeste
-426,Claudia Silva Souza,Sorocaba,SP,Sudeste
-427,Antonia Carvalho Lima,Camacari,BA,Nordeste
-428,Jose Gomes Alves,Pocos de Caldas,MG,Sudeste
-429,Antonio Alves Alves,Jaboatao dos Guararapes,PE,Nordeste
-430,Felipe Ribeiro Santos,Colombo,PR,Sul
-431,Patricia Lima Araujo,Salvador,BA,Nordeste
-432,Vanessa Silva Vieira,Camacari,BA,Nordeste
-433,Fernando Gomes Vieira,Recife,PE,Nordeste
-434,Lucas Rodrigues Carvalho,Salvador,BA,Nordeste
-435,Juliana Souza Santos,Autazes,AM,Norte
-436,Diego Martins Alves,Juiz de Fora,MG,Sudeste
-437,Aline Alves Souza,Maues,AM,Norte
-438,Sandra Oliveira Lima,Juazeiro,BA,Nordeste
-439,Patricia Souza Gomes,Quixada,CE,Nordeste
-440,Sandra Mendes Rodrigues,Olinda,PE,Nordeste
-441,Vinicius Pereira Araujo,Quixada,CE,Nordeste
-442,Luiz Costa Nunes,Maringa,PR,Sul
-443,Diego Oliveira Oliveira,Samambaia,DF,Centro-oeste
-444,Vanessa Nunes Costa,Planaltina,DF,Centro-oeste
-445,Marcelo Oliveira Carvalho,Taguatinga,DF,Centro-oeste
-446,Paulo Ferreira Mendes,Salvador,BA,Nordeste
-447,Patricia Oliveira Lima,Tabatinga,AM,Norte
-448,Felipe Santos Santos,Sao Jose dos Pinhais,PR,Sul
-449,Bruna Carvalho Martins,Guarapuava,PR,Sul
-450,Amanda Martins Costa,Ipatinga,MG,Sudeste
-451,Marcelo Lima Alves,Ceilandia,DF,Centro-oeste
-452,Vinicius Ribeiro Souza,Erechim,RS,Sul
-453,Jessica Silva Pereira,Pocos de Caldas,MG,Sudeste
-454,Juliana Santos Ferreira,Recanto das Emas,DF,Centro-oeste
-455,Diego Gomes Oliveira,Juazeiro do Norte,CE,Nordeste
-456,Carolina Rodrigues Mendes,Montes Claros,MG,Sudeste
-457,Francisca Pereira Carvalho,Bento Goncalves,RS,Sul
-458,Claudia Rodrigues Vieira,Autazes,AM,Norte
-459,Fernando Rodrigues Vieira,Paulista,PE,Nordeste
-460,Jessica Pereira Costa,Olinda,PE,Nordeste
-461,Lucas Oliveira Gomes,Porto Alegre,RS,Sul
-462,Maria Mendes Rocha,Gravatai,RS,Sul
-463,Carlos Araujo Mendes,Gama,DF,Centro-oeste
-464,Fernando Carvalho Alves,Montes Claros,MG,Sudeste
-465,Aline Gomes Mendes,Passo Fundo,RS,Sul
-466,Antonia Alves Rocha,Governador Valadares,MG,Sudeste
-467,Antonio Rodrigues Costa,Ponta Grossa,PR,Sul
-468,Jose Carvalho Carvalho,Brasilia,DF,Centro-oeste
-469,Leticia Silva Alves,Sobradinho,DF,Centro-oeste
-470,Carolina Ferreira Santos,Duque de Caxias,RJ,Sudeste
-471,Daniel Carvalho Mendes,Cabo Frio,RJ,Sudeste
-472,Vanessa Mendes Martins,Iguatu,CE,Nordeste
-473,Paulo Araujo Rocha,Foz do Iguacu,PR,Sul
-474,Aline Nunes Mendes,Guara,DF,Centro-oeste
-475,Simone Barbosa Barbosa,Londrina,PR,Sul
-476,Patricia Pereira Ribeiro,Ribeirao Preto,SP,Sudeste
-477,Daniel Ribeiro Oliveira,Itabuna,BA,Nordeste
-478,Diego Alves Costa,Canoas,RS,Sul
-479,Claudia Vieira Martins,Itapipoca,CE,Nordeste
-480,Vanessa Santos Costa,Planaltina,DF,Centro-oeste
-481,Alexandre Rocha Lima,Osasco,SP,Sudeste
-482,Eduardo Santos Rocha,Cabo Frio,RJ,Sudeste
-483,Joao Silva Alves,Lauro de Freitas,BA,Nordeste
-484,Marcos Pereira Lima,Ipatinga,MG,Sudeste
-485,Rodrigo Martins Martins,Taguatinga,DF,Centro-oeste
-486,Claudia Souza Lima,Pelotas,RS,Sul
-487,Joao Ferreira Araujo,Teixeira de Freitas,BA,Nordeste
-488,Mateus Mendes Santos,Santa Maria,RS,Sul
-489,Antonia Barbosa Ribeiro,Salvador,BA,Nordeste
-490,Mateus Vieira Alves,Foz do Iguacu,PR,Sul
-491,Beatriz Barbosa Oliveira,Juiz de Fora,MG,Sudeste
-492,Camila Araujo Vieira,Montes Claros,MG,Sudeste
-493,Ricardo Gomes Lima,Crato,CE,Nordeste
-494,Leticia Araujo Ferreira,Londrina,PR,Sul
-495,Francisco Souza Oliveira,Gravata,PE,Nordeste
-496,Leonardo Rodrigues Oliveira,Paranagua,PR,Sul
-497,Marcelo Ferreira Silva,Quixada,CE,Nordeste
-498,Vanessa Barbosa Rodrigues,Aguas Claras,DF,Centro-oeste
-499,Vanessa Gomes Martins,Sobral,CE,Nordeste
-500,Carlos Gomes Silva,Paranagua,PR,Sul
-501,Fabio Costa Costa,Samambaia,DF,Centro-oeste
-502,Fernanda Araujo Nunes,Garanhuns,PE,Nordeste
-503,Bruno Pereira Rocha,Coari,AM,Norte
-504,Antonio Ferreira Rodrigues,Sao Jose dos Pinhais,PR,Sul
-505,Joao Rodrigues Santos,Cascavel,PR,Sul
-506,Isabela Silva Pereira,Gravatai,RS,Sul
-507,Vinicius Costa Martins,Belo Horizonte,MG,Sudeste
-508,Francisca Nunes Costa,Campinas,SP,Sudeste
-509,Felipe Pereira Santos,Passo Fundo,RS,Sul
-510,Sandra Ribeiro Ferreira,Paranagua,PR,Sul
-511,Rafael Santos Alves,Santos,SP,Sudeste
-512,Bruna Pereira Silva,Feira de Santana,BA,Nordeste
-513,Antonio Vieira Ribeiro,Parintins,AM,Norte
-514,Gabriel Nunes Martins,Vitoria da Conquista,BA,Nordeste
-515,Beatriz Barbosa Nunes,Taguatinga,DF,Centro-oeste
-516,Diego Barbosa Lima,Itacoatiara,AM,Norte
-517,Marcos Nunes Martins,Belo Horizonte,MG,Sudeste
-518,Simone Vieira Pereira,Bento Goncalves,RS,Sul
-519,Eduardo Rodrigues Vieira,Niteroi,RJ,Sudeste
-520,Ana Rodrigues Ferreira,Caxias do Sul,RS,Sul
-521,Claudia Carvalho Costa,Sorocaba,SP,Sudeste
-522,Francisca Silva Alves,Camacari,BA,Nordeste
-523,Adriana Santos Vieira,Londrina,PR,Sul
-524,Antonia Souza Pereira,Manacapuru,AM,Norte
-525,Marcia Nunes Nunes,Iguatu,CE,Nordeste
-526,Paulo Nunes Carvalho,Guara,DF,Centro-oeste
-527,Vanessa Ribeiro Martins,Samambaia,DF,Centro-oeste
-528,Bruna Nunes Lima,Sao Paulo,SP,Sudeste
-529,Larissa Rodrigues Gomes,Salvador,BA,Nordeste
-530,Raquel Nunes Rocha,Rio de Janeiro,RJ,Sudeste
-531,Carlos Lima Martins,Londrina,PR,Sul
-532,Fabio Alves Oliveira,Ceilandia,DF,Centro-oeste
-533,Ana Mendes Carvalho,Garanhuns,PE,Nordeste
-534,Patricia Vieira Silva,Sorocaba,SP,Sudeste
-535,Camila Rocha Pereira,Recanto das Emas,DF,Centro-oeste
-536,Bruno Gomes Carvalho,Itapipoca,CE,Nordeste
-537,Aline Oliveira Carvalho,Caninde,CE,Nordeste
-538,Ricardo Mendes Alves,Caxias do Sul,RS,Sul
-539,Camila Mendes Oliveira,Juazeiro,BA,Nordeste
-540,Leonardo Silva Gomes,Fortaleza,CE,Nordeste
-541,Rafael Rodrigues Oliveira,Curitiba,PR,Sul
-542,Antonia Gomes Barbosa,Manacapuru,AM,Norte
-543,Simone Lima Nunes,Serra Talhada,PE,Nordeste
-544,Aline Ferreira Santos,Fortaleza,CE,Nordeste
-545,Marcos Martins Souza,Gravata,PE,Nordeste
-546,Gabriel Costa Vieira,Maues,AM,Norte
-547,Maria Santos Pereira,Olinda,PE,Nordeste
-548,Rafael Martins Gomes,Guarapuava,PR,Sul
-549,Aline Pereira Rodrigues,Gravata,PE,Nordeste
-550,Tatiane Pereira Araujo,Sao Jose dos Pinhais,PR,Sul
-551,Carlos Alves Rodrigues,Colombo,PR,Sul
-552,Fabio Rodrigues Mendes,Petropolis,RJ,Sudeste
-553,Juliana Silva Ribeiro,Maringa,PR,Sul
-554,Paulo Silva Vieira,Samambaia,DF,Centro-oeste
-555,Amanda Oliveira Costa,Vitoria da Conquista,BA,Nordeste
-556,Carlos Ferreira Alves,Guarapuava,PR,Sul
-557,Fernanda Alves Oliveira,Maracanau,CE,Nordeste
-558,Jose Vieira Carvalho,Manaus,AM,Norte
-559,Felipe Santos Pereira,Tefe,AM,Norte
-560,Ana Alves Gomes,Juazeiro do Norte,CE,Nordeste
-561,Fabio Santos Rocha,Parintins,AM,Norte
-562,Luana Nunes Rodrigues,Santos,SP,Sudeste
-563,Renata Alves Barbosa,Niteroi,RJ,Sudeste
-564,Tatiane Martins Oliveira,Gravata,PE,Nordeste
-565,Paulo Ribeiro Mendes,Sao Bernardo do Campo,SP,Sudeste
-566,Alexandre Barbosa Gomes,Piracicaba,SP,Sudeste
-567,Andre Costa Nunes,Erechim,RS,Sul
-568,Bruno Barbosa Oliveira,Coari,AM,Norte
-569,Claudia Alves Santos,Santos,SP,Sudeste
-570,Claudia Vieira Gomes,Olinda,PE,Nordeste
-571,Carolina Vieira Mendes,Campinas,SP,Sudeste
-572,Gustavo Carvalho Oliveira,Juazeiro do Norte,CE,Nordeste
-573,Aline Ribeiro Rocha,Brasilia,DF,Centro-oeste
-574,Tatiane Rocha Oliveira,Serra Talhada,PE,Nordeste
-575,Guilherme Vieira Martins,Maues,AM,Norte
-576,Luana Vieira Pereira,Guarulhos,SP,Sudeste
-577,Isabela Alves Vieira,Camacari,BA,Nordeste
-578,Ricardo Alves Gomes,Autazes,AM,Norte
-579,Antonia Ribeiro Ribeiro,Gravatai,RS,Sul
-580,Beatriz Costa Santos,Tabatinga,AM,Norte
-581,Jessica Santos Rocha,Sao Jose dos Campos,SP,Sudeste
-582,Adriana Martins Oliveira,Gravata,PE,Nordeste
-583,Bruna Ferreira Vieira,Guarapuava,PR,Sul
-584,Lucas Martins Barbosa,Uberlandia,MG,Sudeste
-585,Simone Alves Oliveira,Itacoatiara,AM,Norte
-586,Andre Rocha Gomes,Contagem,MG,Sudeste
-587,Rodrigo Rocha Souza,Teixeira de Freitas,BA,Nordeste
-588,Alexandre Gomes Silva,Canoas,RS,Sul
-589,Gabriel Barbosa Souza,Rio de Janeiro,RJ,Sudeste
-590,Antonia Alves Nunes,Betim,MG,Sudeste
-591,Antonio Gomes Vieira,Belo Horizonte,MG,Sudeste
-592,Ana Souza Carvalho,Uberaba,MG,Sudeste
-593,Renata Barbosa Vieira,Parintins,AM,Norte
-594,Francisca Barbosa Souza,Canoas,RS,Sul
-595,Carolina Lima Martins,Quixada,CE,Nordeste
-596,Francisco Martins Costa,Recanto das Emas,DF,Centro-oeste
-597,Bruna Souza Ribeiro,Maues,AM,Norte
-598,Patricia Vieira Pereira,Volta Redonda,RJ,Sudeste
-599,Gabriela Araujo Araujo,Uberlandia,MG,Sudeste
-600,Beatriz Souza Mendes,Juazeiro do Norte,CE,Nordeste
-601,Francisca Vieira Souza,Campinas,SP,Sudeste
-602,Luana Mendes Silva,Coari,AM,Norte
-603,Leticia Alves Alves,Paulista,PE,Nordeste
-604,Carolina Rocha Carvalho,Manaus,AM,Norte
-605,Claudia Martins Souza,Aguas Claras,DF,Centro-oeste
-606,Daniel Carvalho Carvalho,Juazeiro do Norte,CE,Nordeste
-607,Claudia Martins Araujo,Campinas,SP,Sudeste
-608,Diego Costa Araujo,Itapipoca,CE,Nordeste
-609,Leticia Rocha Araujo,Pelotas,RS,Sul
-610,Gabriela Costa Pereira,Gama,DF,Centro-oeste
-611,Gabriela Costa Martins,Pocos de Caldas,MG,Sudeste
-612,Antonio Rocha Vieira,Presidente Figueiredo,AM,Norte
-613,Luana Ribeiro Nunes,Itapipoca,CE,Nordeste
-614,Vinicius Gomes Gomes,Planaltina,DF,Centro-oeste
-615,Gabriela Ferreira Mendes,Paranagua,PR,Sul
-616,Antonio Lima Lima,Curitiba,PR,Sul
-617,Raquel Mendes Rodrigues,Passo Fundo,RS,Sul
-618,Mariana Santos Ribeiro,Iguatu,CE,Nordeste
-619,Felipe Ferreira Alves,Rio de Janeiro,RJ,Sudeste
-620,Andre Gomes Costa,Sobral,CE,Nordeste
-621,Jessica Silva Gomes,Campinas,SP,Sudeste
-622,Mariana Araujo Vieira,Duque de Caxias,RJ,Sudeste
-623,Leticia Pereira Mendes,Camacari,BA,Nordeste
-624,Claudia Oliveira Silva,Crato,CE,Nordeste
-625,Aline Alves Santos,Samambaia,DF,Centro-oeste
-626,Renata Souza Oliveira,Petropolis,RJ,Sudeste
-627,Fernando Oliveira Barbosa,Uberlandia,MG,Sudeste
-628,Bruna Carvalho Ribeiro,Caucaia,CE,Nordeste
-629,Fernanda Vieira Carvalho,Pocos de Caldas,MG,Sudeste
-630,Ricardo Souza Barbosa,Teresopolis,RJ,Sudeste
-631,Maria Costa Rodrigues,Montes Claros,MG,Sudeste
-632,Larissa Costa Costa,Porto Alegre,RS,Sul
-633,Claudia Costa Souza,Guarapuava,PR,Sul
-634,Tatiane Oliveira Martins,Ponta Grossa,PR,Sul
-635,Bruna Alves Gomes,Angra dos Reis,RJ,Sudeste
-636,Pedro Silva Mendes,Coari,AM,Norte
-637,Claudia Barbosa Silva,Sao Bernardo do Campo,SP,Sudeste
-638,Ricardo Rocha Barbosa,Rio de Janeiro,RJ,Sudeste
-639,Joao Costa Vieira,Belo Horizonte,MG,Sudeste
-640,Antonia Barbosa Vieira,Angra dos Reis,RJ,Sudeste
-641,Patricia Oliveira Alves,Teresopolis,RJ,Sudeste
-642,Thiago Alves Santos,Duque de Caxias,RJ,Sudeste
-643,Marcia Martins Nunes,Uberlandia,MG,Sudeste
-644,Simone Ferreira Silva,Uberlandia,MG,Sudeste
-645,Luana Gomes Araujo,Betim,MG,Sudeste
-646,Lucas Ferreira Vieira,Ceilandia,DF,Centro-oeste
-647,Sandra Martins Araujo,Cabo Frio,RJ,Sudeste
-648,Mariana Nunes Rocha,Sao Jose dos Campos,SP,Sudeste
-649,Priscila Costa Costa,Ilheus,BA,Nordeste
-650,Gabriel Vieira Barbosa,Juiz de Fora,MG,Sudeste
-651,Francisco Oliveira Pereira,Caruaru,PE,Nordeste
-652,Patricia Souza Ribeiro,Novo Hamburgo,RS,Sul
-653,Guilherme Costa Santos,Governador Valadares,MG,Sudeste
-654,Diego Alves Martins,Piracicaba,SP,Sudeste
-655,Francisco Barbosa Barbosa,Sao Jose dos Pinhais,PR,Sul
-656,Tatiane Vieira Ferreira,Gravata,PE,Nordeste
-657,Fernanda Mendes Costa,Canoas,RS,Sul
-658,Lucas Mendes Rodrigues,Guarulhos,SP,Sudeste
-659,Marcelo Carvalho Costa,Cabo Frio,RJ,Sudeste
-660,Jessica Alves Rodrigues,Guarulhos,SP,Sudeste
-661,Rodrigo Barbosa Mendes,Governador Valadares,MG,Sudeste
-662,Amanda Barbosa Silva,Ribeirao Preto,SP,Sudeste
-663,Renata Vieira Nunes,Osasco,SP,Sudeste
-664,Jose Souza Carvalho,Vitoria da Conquista,BA,Nordeste
-665,Francisca Nunes Alves,Angra dos Reis,RJ,Sudeste
-666,Renata Alves Pereira,Petrolina,PE,Nordeste
-667,Rafael Barbosa Costa,Autazes,AM,Norte
-668,Rafael Oliveira Alves,Betim,MG,Sudeste
-669,Marcos Souza Rodrigues,Ribeirao Preto,SP,Sudeste
-670,Vanessa Rodrigues Costa,Ponta Grossa,PR,Sul
-671,Vinicius Pereira Rocha,Teixeira de Freitas,BA,Nordeste
-672,Larissa Nunes Barbosa,Maringa,PR,Sul
-673,Rafael Gomes Santos,Uberaba,MG,Sudeste
-674,Sandra Ferreira Ferreira,Sorocaba,SP,Sudeste
-675,Marcos Martins Ferreira,Vitoria da Conquista,BA,Nordeste
-676,Paulo Nunes Gomes,Ipatinga,MG,Sudeste
-677,Diego Nunes Rocha,Sao Jose dos Pinhais,PR,Sul
-678,Guilherme Barbosa Ribeiro,Parintins,AM,Norte
-679,Leonardo Pereira Barbosa,Samambaia,DF,Centro-oeste
-680,Adriana Lima Alves,Cabo Frio,RJ,Sudeste
-681,Gabriel Vieira Vieira,Governador Valadares,MG,Sudeste
-682,Joao Gomes Martins,Passo Fundo,RS,Sul
-683,Sandra Ferreira Araujo,Contagem,MG,Sudeste
-684,Mateus Rocha Ribeiro,Sao Bernardo do Campo,SP,Sudeste
-685,Jessica Ferreira Nunes,Governador Valadares,MG,Sudeste
-686,Ana Gomes Mendes,Porto Alegre,RS,Sul
-687,Luiz Costa Souza,Porto Alegre,RS,Sul
-688,Beatriz Oliveira Vieira,Paranagua,PR,Sul
-689,Amanda Rocha Mendes,Montes Claros,MG,Sudeste
-690,Juliana Martins Ferreira,Salvador,BA,Nordeste
-691,Ricardo Oliveira Rocha,Taguatinga,DF,Centro-oeste
-692,Gabriel Gomes Lima,Belo Horizonte,MG,Sudeste
-693,Amanda Costa Araujo,Pocos de Caldas,MG,Sudeste
-694,Adriana Nunes Vieira,Igarassu,PE,Nordeste
-695,Carlos Silva Costa,Itapipoca,CE,Nordeste
-696,Camila Ferreira Gomes,Contagem,MG,Sudeste
-697,Carlos Oliveira Araujo,Recife,PE,Nordeste
-698,Vinicius Rocha Mendes,Campinas,SP,Sudeste
-699,Simone Souza Souza,Montes Claros,MG,Sudeste
-700,Mateus Lima Mendes,Samambaia,DF,Centro-oeste
-701,Antonia Mendes Silva,Pocos de Caldas,MG,Sudeste
-702,Antonia Alves Rocha,Caucaia,CE,Nordeste
-703,Bruna Araujo Alves,Feira de Santana,BA,Nordeste
-704,Carlos Costa Martins,Teixeira de Freitas,BA,Nordeste
-705,Felipe Vieira Gomes,Guarapuava,PR,Sul
-706,Luana Costa Martins,Igarassu,PE,Nordeste
-707,Francisca Souza Rodrigues,Uberlandia,MG,Sudeste
-708,Camila Alves Vieira,Sobral,CE,Nordeste
-709,Simone Carvalho Martins,Caninde,CE,Nordeste
-710,Felipe Souza Souza,Belo Horizonte,MG,Sudeste
-711,Claudia Oliveira Costa,Betim,MG,Sudeste
-712,Simone Oliveira Rocha,Quixada,CE,Nordeste
-713,Gabriel Nunes Nunes,Igarassu,PE,Nordeste
-714,Leticia Barbosa Santos,Ipatinga,MG,Sudeste
-715,Rodrigo Carvalho Costa,Guara,DF,Centro-oeste
-716,Marcia Rocha Santos,Gama,DF,Centro-oeste
-717,Joao Mendes Santos,Porto Seguro,BA,Nordeste
-718,Rafael Araujo Martins,Santa Maria,RS,Sul
-719,Rodrigo Oliveira Gomes,Tabatinga,AM,Norte
-720,Mateus Araujo Mendes,Itapipoca,CE,Nordeste
-721,Bruna Mendes Carvalho,Nova Iguacu,RJ,Sudeste
-722,Vinicius Ribeiro Ferreira,Passo Fundo,RS,Sul
-723,Adriana Oliveira Nunes,Sao Jose dos Pinhais,PR,Sul
-724,Carolina Oliveira Mendes,Teresopolis,RJ,Sudeste
-725,Pedro Martins Oliveira,Tabatinga,AM,Norte
-726,Marcos Vieira Rocha,Osasco,SP,Sudeste
-727,Fernanda Barbosa Lima,Manacapuru,AM,Norte
-728,Lucas Rodrigues Gomes,Novo Hamburgo,RS,Sul
-729,Tatiane Ferreira Lima,Petropolis,RJ,Sudeste
-730,Vinicius Gomes Barbosa,Sao Jose dos Campos,SP,Sudeste
-731,Joao Lima Lima,Sao Paulo,SP,Sudeste
-732,Luiz Oliveira Araujo,Contagem,MG,Sudeste
-733,Larissa Souza Rocha,Nova Iguacu,RJ,Sudeste
-734,Vinicius Ribeiro Ribeiro,Pelotas,RS,Sul
-735,Marcos Barbosa Araujo,Tabatinga,AM,Norte
-736,Camila Nunes Araujo,Montes Claros,MG,Sudeste
-737,Claudia Gomes Silva,Colombo,PR,Sul
-738,Rodrigo Martins Souza,Sao Bernardo do Campo,SP,Sudeste
-739,Fabio Pereira Gomes,Recife,PE,Nordeste
-740,Claudia Costa Costa,Betim,MG,Sudeste
-741,Bruno Vieira Nunes,Ipatinga,MG,Sudeste
-742,Daniel Alves Gomes,Contagem,MG,Sudeste
-743,Simone Rodrigues Vieira,Betim,MG,Sudeste
-744,Claudia Ribeiro Gomes,Governador Valadares,MG,Sudeste
-745,Luana Mendes Pereira,Angra dos Reis,RJ,Sudeste
-746,Mateus Ferreira Santos,Uberlandia,MG,Sudeste
-747,Guilherme Souza Silva,Nova Iguacu,RJ,Sudeste
-748,Mateus Lima Gomes,Erechim,RS,Sul
-749,Sandra Alves Araujo,Cascavel,PR,Sul
-750,Raquel Pereira Martins,Guarulhos,SP,Sudeste
-751,Renata Carvalho Alves,Niteroi,RJ,Sudeste
-752,Gabriel Pereira Costa,Ribeirao Preto,SP,Sudeste
-753,Sandra Carvalho Martins,Maringa,PR,Sul
-754,Gabriel Barbosa Rodrigues,Betim,MG,Sudeste
-755,Carlos Costa Lima,Planaltina,DF,Centro-oeste
-756,Gustavo Ferreira Ribeiro,Sao Jose dos Campos,SP,Sudeste
-757,Paulo Santos Costa,Angra dos Reis,RJ,Sudeste
-758,Rodrigo Nunes Costa,Volta Redonda,RJ,Sudeste
-759,Luiz Ferreira Ferreira,Brasilia,DF,Centro-oeste
-760,Marcia Araujo Oliveira,Ribeirao Preto,SP,Sudeste
-761,Antonia Carvalho Martins,Campinas,SP,Sudeste
-762,Priscila Costa Barbosa,Piracicaba,SP,Sudeste
-763,Diego Mendes Rodrigues,Campinas,SP,Sudeste
-764,Bruna Oliveira Carvalho,Rio de Janeiro,RJ,Sudeste
-765,Alexandre Carvalho Gomes,Petrolina,PE,Nordeste
-766,Amanda Souza Martins,Igarassu,PE,Nordeste
-767,Jessica Oliveira Araujo,Jaboatao dos Guararapes,PE,Nordeste
-768,Leticia Pereira Rodrigues,Paranagua,PR,Sul
-769,Vinicius Costa Gomes,Tefe,AM,Norte
-770,Vanessa Oliveira Santos,Jaboatao dos Guararapes,PE,Nordeste
-771,Gabriela Lima Martins,Campinas,SP,Sudeste
-772,Vinicius Ferreira Carvalho,Lauro de Freitas,BA,Nordeste
-773,Leticia Vieira Lima,Teresopolis,RJ,Sudeste
-774,Antonia Araujo Nunes,Santos,SP,Sudeste
-775,Rodrigo Carvalho Vieira,Londrina,PR,Sul
-776,Pedro Souza Silva,Contagem,MG,Sudeste
-777,Mariana Nunes Alves,Iguatu,CE,Nordeste
-778,Gustavo Rodrigues Barbosa,Samambaia,DF,Centro-oeste
-779,Thiago Carvalho Santos,Igarassu,PE,Nordeste
-780,Vanessa Gomes Santos,Recanto das Emas,DF,Centro-oeste
-781,Mariana Costa Pereira,Gama,DF,Centro-oeste
-782,Gustavo Araujo Costa,Recife,PE,Nordeste
-783,Pedro Costa Martins,Gama,DF,Centro-oeste
-784,Renata Barbosa Rodrigues,Juazeiro do Norte,CE,Nordeste
-785,Rodrigo Oliveira Costa,Guara,DF,Centro-oeste
-786,Beatriz Gomes Pereira,Ilheus,BA,Nordeste
-787,Marcia Rocha Santos,Samambaia,DF,Centro-oeste
-788,Beatriz Lima Ribeiro,Pocos de Caldas,MG,Sudeste
-789,Renata Santos Barbosa,Manaus,AM,Norte
-790,Ricardo Souza Alves,Maues,AM,Norte
-791,Rafael Ribeiro Rodrigues,Sao Jose dos Campos,SP,Sudeste
-792,Marcelo Ferreira Oliveira,Pelotas,RS,Sul
-793,Lucas Rodrigues Araujo,Salvador,BA,Nordeste
-794,Joao Rocha Oliveira,Governador Valadares,MG,Sudeste
-795,Jose Rodrigues Mendes,Garanhuns,PE,Nordeste
-796,Mariana Gomes Ribeiro,Taguatinga,DF,Centro-oeste
-797,Ricardo Alves Nunes,Caruaru,PE,Nordeste
-798,Eduardo Ribeiro Carvalho,Caxias do Sul,RS,Sul
-799,Larissa Ribeiro Ferreira,Santa Maria,RS,Sul
-800,Antonia Santos Martins,Rio de Janeiro,RJ,Sudeste
-801,Leticia Gomes Mendes,Recanto das Emas,DF,Centro-oeste
-802,Mariana Vieira Pereira,Gravata,PE,Nordeste
-803,Marcelo Mendes Alves,Garanhuns,PE,Nordeste
-804,Bruno Rodrigues Costa,Tefe,AM,Norte
-805,Simone Carvalho Lima,Iguatu,CE,Nordeste
-806,Carlos Costa Barbosa,Passo Fundo,RS,Sul
-807,Paulo Nunes Martins,Volta Redonda,RJ,Sudeste
-808,Marcelo Rodrigues Souza,Paranagua,PR,Sul
-809,Juliana Mendes Araujo,Ipatinga,MG,Sudeste
-810,Rafael Oliveira Santos,Guara,DF,Centro-oeste
-811,Beatriz Vieira Rodrigues,Juazeiro do Norte,CE,Nordeste
-812,Leonardo Vieira Araujo,Manaus,AM,Norte
-813,Isabela Lima Oliveira,Parintins,AM,Norte
-814,Fernanda Vieira Nunes,Passo Fundo,RS,Sul
-815,Antonia Nunes Ferreira,Guara,DF,Centro-oeste
-816,Carolina Ribeiro Carvalho,Porto Seguro,BA,Nordeste
-817,Mateus Rocha Ribeiro,Cabo Frio,RJ,Sudeste
-818,Paulo Lima Oliveira,Piracicaba,SP,Sudeste
-819,Rodrigo Santos Gomes,Paulista,PE,Nordeste
-820,Thiago Souza Santos,Caninde,CE,Nordeste
-821,Francisco Lima Santos,Angra dos Reis,RJ,Sudeste
-822,Lucas Silva Lima,Itacoatiara,AM,Norte
-823,Leticia Oliveira Rocha,Contagem,MG,Sudeste
-824,Raquel Nunes Barbosa,Belo Horizonte,MG,Sudeste
-825,Beatriz Lima Vieira,Erechim,RS,Sul
-826,Paulo Nunes Mendes,Petropolis,RJ,Sudeste
-827,Luana Araujo Alves,Paranagua,PR,Sul
-828,Gabriel Ribeiro Alves,Belo Horizonte,MG,Sudeste
-829,Gustavo Silva Ferreira,Parintins,AM,Norte
-830,Vanessa Silva Barbosa,Olinda,PE,Nordeste
-831,Antonia Barbosa Martins,Ribeirao Preto,SP,Sudeste
-832,Amanda Alves Oliveira,Passo Fundo,RS,Sul
-833,Andre Vieira Alves,Sao Jose dos Pinhais,PR,Sul
-834,Eduardo Alves Mendes,Taguatinga,DF,Centro-oeste
-835,Fabio Mendes Pereira,Presidente Figueiredo,AM,Norte
-836,Luana Barbosa Silva,Garanhuns,PE,Nordeste
-837,Marcelo Barbosa Costa,Ribeirao Preto,SP,Sudeste
-838,Camila Silva Carvalho,Novo Hamburgo,RS,Sul
-839,Fernanda Ferreira Ribeiro,Iguatu,CE,Nordeste
-840,Tatiane Ribeiro Lima,Salvador,BA,Nordeste
-841,Patricia Oliveira Vieira,Ceilandia,DF,Centro-oeste
-842,Raquel Santos Carvalho,Guarulhos,SP,Sudeste
-843,Ricardo Araujo Oliveira,Guarapuava,PR,Sul
-844,Alexandre Araujo Pereira,Igarassu,PE,Nordeste
-845,Carolina Souza Ribeiro,Samambaia,DF,Centro-oeste
-846,Leonardo Oliveira Mendes,Foz do Iguacu,PR,Sul
-847,Leonardo Barbosa Ferreira,Betim,MG,Sudeste
-848,Ricardo Martins Gomes,Sobral,CE,Nordeste
-849,Rafael Silva Rocha,Bento Goncalves,RS,Sul
-850,Jessica Martins Alves,Itabuna,BA,Nordeste
-851,Rodrigo Barbosa Vieira,Planaltina,DF,Centro-oeste
-852,Francisco Barbosa Santos,Passo Fundo,RS,Sul
-853,Andre Ribeiro Carvalho,Salvador,BA,Nordeste
-854,Eduardo Souza Rodrigues,Sao Paulo,SP,Sudeste
-855,Paulo Pereira Lima,Contagem,MG,Sudeste
-856,Marcos Souza Silva,Santa Maria,RS,Sul
-857,Vinicius Martins Ferreira,Petropolis,RJ,Sudeste
-858,Fernanda Nunes Carvalho,Porto Alegre,RS,Sul
-859,Mariana Nunes Gomes,Maringa,PR,Sul
-860,Luana Costa Alves,Tefe,AM,Norte
-861,Amanda Costa Rocha,Maues,AM,Norte
-862,Guilherme Carvalho Mendes,Maracanau,CE,Nordeste
-863,Bruno Carvalho Mendes,Uberlandia,MG,Sudeste
-864,Rafael Pereira Mendes,Igarassu,PE,Nordeste
-865,Rafael Costa Ribeiro,Maracanau,CE,Nordeste
-866,Amanda Oliveira Gomes,Ponta Grossa,PR,Sul
-867,Rafael Santos Nunes,Cascavel,PR,Sul
-868,Fernanda Vieira Rodrigues,Foz do Iguacu,PR,Sul
-869,Claudia Mendes Silva,Caruaru,PE,Nordeste
-870,Fernanda Costa Pereira,Crato,CE,Nordeste
-871,Pedro Araujo Araujo,Vitoria da Conquista,BA,Nordeste
-872,Sandra Silva Costa,Garanhuns,PE,Nordeste
-873,Camila Mendes Silva,Lauro de Freitas,BA,Nordeste
-874,Raquel Vieira Mendes,Cabo Frio,RJ,Sudeste
-875,Francisco Ribeiro Mendes,Uberlandia,MG,Sudeste
-876,Ana Vieira Costa,Petrolina,PE,Nordeste
-877,Fernando Rocha Oliveira,Santos,SP,Sudeste
-878,Jessica Carvalho Ferreira,Caucaia,CE,Nordeste
-879,Mariana Alves Rodrigues,Uberaba,MG,Sudeste
-880,Gabriela Alves Rocha,Ipatinga,MG,Sudeste
-881,Carolina Pereira Rocha,Itapipoca,CE,Nordeste
-882,Sandra Barbosa Martins,Pelotas,RS,Sul
-883,Leticia Carvalho Ferreira,Pelotas,RS,Sul
-884,Vanessa Gomes Oliveira,Feira de Santana,BA,Nordeste
-885,Simone Ribeiro Araujo,Manaus,AM,Norte
-886,Ricardo Barbosa Carvalho,Sao Paulo,SP,Sudeste
-887,Fabio Rodrigues Ribeiro,Cabo Frio,RJ,Sudeste
-888,Felipe Rodrigues Costa,Ceilandia,DF,Centro-oeste
-889,Eduardo Carvalho Ferreira,Ipatinga,MG,Sudeste
-890,Rodrigo Santos Nunes,Campos dos Goytacazes,RJ,Sudeste
-891,Jose Vieira Silva,Itabuna,BA,Nordeste
-892,Bruno Silva Silva,Petropolis,RJ,Sudeste
-893,Marcelo Souza Ribeiro,Tefe,AM,Norte
-894,Pedro Souza Martins,Salvador,BA,Nordeste
-895,Lucas Oliveira Lima,Novo Hamburgo,RS,Sul
-896,Beatriz Souza Nunes,Gama,DF,Centro-oeste
-897,Priscila Rodrigues Ribeiro,Volta Redonda,RJ,Sudeste
-898,Gabriela Barbosa Carvalho,Brasilia,DF,Centro-oeste
-899,Alexandre Souza Gomes,Santos,SP,Sudeste
-900,Pedro Rodrigues Carvalho,Guara,DF,Centro-oeste
-901,Gabriel Santos Rocha,Gravatai,RS,Sul
-902,Eduardo Santos Pereira,Vitoria da Conquista,BA,Nordeste
-903,Francisca Costa Oliveira,Uberlandia,MG,Sudeste
-904,Claudia Alves Pereira,Maringa,PR,Sul
-905,Paulo Vieira Pereira,Santa Maria,RS,Sul
-906,Rafael Carvalho Carvalho,Presidente Figueiredo,AM,Norte
-907,Claudia Costa Silva,Sobradinho,DF,Centro-oeste
-908,Marcia Lima Carvalho,Gravata,PE,Nordeste
-909,Gabriel Rodrigues Costa,Osasco,SP,Sudeste
-910,Fabio Araujo Carvalho,Ceilandia,DF,Centro-oeste
-911,Raquel Souza Carvalho,Foz do Iguacu,PR,Sul
-912,Tatiane Martins Santos,Fortaleza,CE,Nordeste
-913,Priscila Silva Rodrigues,Ponta Grossa,PR,Sul
-914,Priscila Ferreira Silva,Ceilandia,DF,Centro-oeste
-915,Luana Araujo Ferreira,Tefe,AM,Norte
-916,Bruno Oliveira Souza,Novo Hamburgo,RS,Sul
-917,Paulo Costa Silva,Petrolina,PE,Nordeste
-918,Rafael Ferreira Rodrigues,Angra dos Reis,RJ,Sudeste
-919,Marcia Alves Santos,Itapipoca,CE,Nordeste
-920,Marcia Oliveira Gomes,Volta Redonda,RJ,Sudeste
-921,Beatriz Costa Souza,Brasilia,DF,Centro-oeste
-922,Vinicius Silva Carvalho,Crato,CE,Nordeste
-923,Rafael Ribeiro Ribeiro,Brasilia,DF,Centro-oeste
-924,Adriana Souza Silva,Ceilandia,DF,Centro-oeste
-925,Rodrigo Pereira Martins,Caruaru,PE,Nordeste
-926,Claudia Ribeiro Silva,Erechim,RS,Sul
-927,Leonardo Oliveira Martins,Sao Jose dos Pinhais,PR,Sul
-928,Mariana Rocha Mendes,Duque de Caxias,RJ,Sudeste
-929,Mariana Barbosa Ferreira,Canoas,RS,Sul
-930,Fernando Oliveira Souza,Petrolina,PE,Nordeste
-931,Priscila Costa Souza,Itabuna,BA,Nordeste
-932,Carolina Oliveira Ribeiro,Canoas,RS,Sul
-933,Antonio Souza Oliveira,Gama,DF,Centro-oeste
-934,Bruna Mendes Silva,Novo Hamburgo,RS,Sul
-935,Rafael Rodrigues Rocha,Recife,PE,Nordeste
-936,Camila Rodrigues Gomes,Planaltina,DF,Centro-oeste
-937,Mariana Santos Vieira,Sao Jose dos Pinhais,PR,Sul
-938,Fernanda Costa Gomes,Canoas,RS,Sul
-939,Raquel Ferreira Costa,Tefe,AM,Norte
-940,Andre Martins Carvalho,Ponta Grossa,PR,Sul
-941,Bruna Souza Rodrigues,Juazeiro do Norte,CE,Nordeste
-942,Rodrigo Costa Gomes,Sorocaba,SP,Sudeste
-943,Vinicius Rodrigues Carvalho,Volta Redonda,RJ,Sudeste
-944,Jose Souza Rocha,Caruaru,PE,Nordeste
-945,Daniel Costa Gomes,Iguatu,CE,Nordeste
-946,Leticia Martins Silva,Caninde,CE,Nordeste
-947,Guilherme Mendes Costa,Igarassu,PE,Nordeste
-948,Sandra Mendes Rodrigues,Governador Valadares,MG,Sudeste
-949,Eduardo Nunes Rocha,Nova Iguacu,RJ,Sudeste
-950,Marcia Vieira Ferreira,Rio de Janeiro,RJ,Sudeste
-951,Tatiane Ferreira Oliveira,Cabo Frio,RJ,Sudeste
-952,Eduardo Ferreira Araujo,Coari,AM,Norte
-953,Juliana Mendes Costa,Manacapuru,AM,Norte
-954,Thiago Santos Pereira,Pelotas,RS,Sul
-955,Gabriela Martins Lima,Coari,AM,Norte
-956,Gustavo Ferreira Carvalho,Pocos de Caldas,MG,Sudeste
-957,Diego Lima Alves,Olinda,PE,Nordeste
-958,Jessica Carvalho Silva,Cabo Frio,RJ,Sudeste
-959,Jessica Oliveira Ribeiro,Contagem,MG,Sudeste
-960,Daniel Pereira Carvalho,Sao Jose dos Pinhais,PR,Sul
-961,Rafael Mendes Gomes,Santos,SP,Sudeste
-962,Bruna Ferreira Martins,Itapipoca,CE,Nordeste
-963,Fernando Rocha Rodrigues,Sorocaba,SP,Sudeste
-964,Priscila Vieira Araujo,Caninde,CE,Nordeste
-965,Bruno Rocha Pereira,Paulista,PE,Nordeste
-966,Francisca Pereira Oliveira,Colombo,PR,Sul
-967,Maria Araujo Rocha,Parintins,AM,Norte
-968,Pedro Silva Araujo,Brasilia,DF,Centro-oeste
-969,Paulo Rocha Pereira,Tabatinga,AM,Norte
-970,Daniel Ferreira Martins,Duque de Caxias,RJ,Sudeste
-971,Marcos Alves Silva,Manaus,AM,Norte
-972,Mariana Costa Santos,Foz do Iguacu,PR,Sul
-973,Gustavo Ferreira Carvalho,Maracanau,CE,Nordeste
-974,Luana Rodrigues Araujo,Ponta Grossa,PR,Sul
-975,Luiz Martins Araujo,Quixada,CE,Nordeste
-976,Diego Araujo Silva,Curitiba,PR,Sul
-977,Diego Ribeiro Santos,Londrina,PR,Sul
-978,Andre Rodrigues Ribeiro,Niteroi,RJ,Sudeste
-979,Rafael Rocha Silva,Brasilia,DF,Centro-oeste
-980,Luiz Costa Oliveira,Contagem,MG,Sudeste
-981,Mariana Lima Pereira,Presidente Figueiredo,AM,Norte
-982,Mateus Mendes Rodrigues,Ribeirao Preto,SP,Sudeste
-983,Jessica Silva Vieira,Gravata,PE,Nordeste
-984,Patricia Pereira Ribeiro,Recife,PE,Nordeste
-985,Rafael Lima Martins,Belo Horizonte,MG,Sudeste
-986,Diego Ribeiro Alves,Olinda,PE,Nordeste
-987,Amanda Ribeiro Gomes,Juazeiro,BA,Nordeste
-988,Gabriela Rocha Vieira,Aguas Claras,DF,Centro-oeste
-989,Juliana Vieira Souza,Caucaia,CE,Nordeste
-990,Carolina Ribeiro Gomes,Santos,SP,Sudeste
-991,Rodrigo Lima Nunes,Jaboatao dos Guararapes,PE,Nordeste
-992,Fabio Rocha Silva,Curitiba,PR,Sul
-993,Rodrigo Alves Carvalho,Petropolis,RJ,Sudeste
-994,Bruna Nunes Carvalho,Belo Horizonte,MG,Sudeste
-995,Gabriela Silva Rocha,Ponta Grossa,PR,Sul
-996,Vanessa Souza Ferreira,Curitiba,PR,Sul
-997,Gustavo Lima Rodrigues,Parintins,AM,Norte
-998,Tatiane Vieira Martins,Governador Valadares,MG,Sudeste
-999,Jose Silva Martins,Osasco,SP,Sudeste
-1000,Simone Mendes Souza,Maracanau,CE,Nordeste
-1001,Guilherme Carvalho Rodrigues,Ipatinga,MG,Sudeste
-1002,Felipe Ferreira Ferreira,Curitiba,PR,Sul
-1003,Paulo Carvalho Vieira,Caruaru,PE,Nordeste
-1004,Bruna Souza Rocha,Garanhuns,PE,Nordeste
-1005,Joao Santos Rodrigues,Brasilia,DF,Centro-oeste
-1006,Antonia Nunes Ribeiro,Guara,DF,Centro-oeste
-1007,Andre Rodrigues Pereira,Rio de Janeiro,RJ,Sudeste
-1008,Luiz Souza Rocha,Sao Jose dos Campos,SP,Sudeste
-1009,Rafael Gomes Pereira,Uberlandia,MG,Sudeste
-1010,Luiz Martins Oliveira,Rio de Janeiro,RJ,Sudeste
-1011,Bruno Rocha Ribeiro,Sao Jose dos Pinhais,PR,Sul
-1012,Francisco Lima Costa,Juiz de Fora,MG,Sudeste
-1013,Felipe Costa Oliveira,Uberlandia,MG,Sudeste
-1014,Marcia Carvalho Martins,Serra Talhada,PE,Nordeste
-1015,Vinicius Pereira Carvalho,Maues,AM,Norte
-1016,Patricia Carvalho Oliveira,Nova Iguacu,RJ,Sudeste
-1017,Mateus Silva Martins,Sorocaba,SP,Sudeste
-1018,Mariana Rodrigues Gomes,Canoas,RS,Sul
-1019,Carlos Souza Rodrigues,Campinas,SP,Sudeste
-1020,Beatriz Vieira Ferreira,Nova Iguacu,RJ,Sudeste
-1021,Thiago Araujo Rodrigues,Paranagua,PR,Sul
-1022,Leticia Silva Gomes,Taguatinga,DF,Centro-oeste
-1023,Daniel Araujo Barbosa,Ponta Grossa,PR,Sul
-1024,Aline Oliveira Rocha,Brasilia,DF,Centro-oeste
-1025,Thiago Nunes Vieira,Porto Seguro,BA,Nordeste
-1026,Vinicius Martins Araujo,Volta Redonda,RJ,Sudeste
-1027,Camila Silva Pereira,Nova Iguacu,RJ,Sudeste
-1028,Fabio Gomes Alves,Londrina,PR,Sul
-1029,Gabriela Costa Santos,Sorocaba,SP,Sudeste
-1030,Larissa Alves Ribeiro,Porto Seguro,BA,Nordeste
-1031,Vinicius Rodrigues Silva,Maringa,PR,Sul
-1032,Francisca Oliveira Pereira,Autazes,AM,Norte
-1033,Raquel Ribeiro Barbosa,Aguas Claras,DF,Centro-oeste
-1034,Simone Carvalho Pereira,Uberaba,MG,Sudeste
-1035,Antonia Silva Rodrigues,Angra dos Reis,RJ,Sudeste
-1036,Luiz Ferreira Oliveira,Niteroi,RJ,Sudeste
-1037,Leticia Lima Costa,Guara,DF,Centro-oeste
-1038,Luiz Carvalho Araujo,Camacari,BA,Nordeste
-1039,Amanda Oliveira Araujo,Brasilia,DF,Centro-oeste
-1040,Vanessa Silva Rodrigues,Aguas Claras,DF,Centro-oeste
-1041,Mateus Barbosa Oliveira,Caucaia,CE,Nordeste
-1042,Francisco Carvalho Araujo,Juazeiro,BA,Nordeste
-1043,Rodrigo Costa Souza,Ipatinga,MG,Sudeste
-1044,Camila Mendes Santos,Igarassu,PE,Nordeste
-1045,Mateus Silva Araujo,Uberlandia,MG,Sudeste
-1046,Luiz Barbosa Araujo,Campinas,SP,Sudeste
-1047,Alexandre Gomes Ferreira,Caninde,CE,Nordeste
-1048,Renata Araujo Martins,Teresopolis,RJ,Sudeste
-1049,Fernando Ribeiro Silva,Feira de Santana,BA,Nordeste
-1050,Marcelo Silva Barbosa,Sao Jose dos Campos,SP,Sudeste
-1051,Eduardo Ferreira Vieira,Erechim,RS,Sul
-1052,Rafael Silva Gomes,Iguatu,CE,Nordeste
-1053,Thiago Nunes Araujo,Iguatu,CE,Nordeste
-1054,Leonardo Ferreira Nunes,Sao Jose dos Pinhais,PR,Sul
-1055,Adriana Souza Oliveira,Itapipoca,CE,Nordeste
-1056,Felipe Rocha Mendes,Canoas,RS,Sul
-1057,Antonia Alves Costa,Recife,PE,Nordeste
-1058,Larissa Gomes Lima,Sao Bernardo do Campo,SP,Sudeste
-1059,Carlos Martins Rocha,Aguas Claras,DF,Centro-oeste
-1060,Bruna Alves Vieira,Governador Valadares,MG,Sudeste
-1061,Gabriel Rocha Ferreira,Parintins,AM,Norte
-1062,Bruna Lima Nunes,Rio de Janeiro,RJ,Sudeste
-1063,Alexandre Mendes Rodrigues,Aguas Claras,DF,Centro-oeste
-1064,Juliana Barbosa Martins,Bento Goncalves,RS,Sul
-1065,Adriana Carvalho Lima,Piracicaba,SP,Sudeste
-1066,Fabio Vieira Souza,Uberlandia,MG,Sudeste
-1067,Rafael Alves Carvalho,Angra dos Reis,RJ,Sudeste
-1068,Fernando Araujo Carvalho,Betim,MG,Sudeste
-1069,Priscila Mendes Vieira,Itapipoca,CE,Nordeste
-1070,Marcia Rocha Lima,Manaus,AM,Norte
-1071,Juliana Alves Martins,Contagem,MG,Sudeste
-1072,Juliana Lima Lima,Coari,AM,Norte
-1073,Beatriz Araujo Rocha,Santa Maria,RS,Sul
-1074,Vinicius Mendes Gomes,Iguatu,CE,Nordeste
-1075,Claudia Ribeiro Vieira,Erechim,RS,Sul
-1076,Ricardo Oliveira Barbosa,Aguas Claras,DF,Centro-oeste
-1077,Luana Rocha Martins,Porto Seguro,BA,Nordeste
-1078,Antonio Alves Martins,Sorocaba,SP,Sudeste
-1079,Gabriel Alves Barbosa,Petrolina,PE,Nordeste
-1080,Pedro Souza Nunes,Paulista,PE,Nordeste
-1081,Jose Costa Costa,Angra dos Reis,RJ,Sudeste
-1082,Gabriela Carvalho Pereira,Brasilia,DF,Centro-oeste
-1083,Thiago Carvalho Santos,Campinas,SP,Sudeste
-1084,Vinicius Araujo Gomes,Cabo Frio,RJ,Sudeste
-1085,Jose Carvalho Gomes,Ceilandia,DF,Centro-oeste
-1086,Thiago Silva Rodrigues,Uberlandia,MG,Sudeste
-1087,Adriana Martins Nunes,Campinas,SP,Sudeste
-1088,Francisca Lima Ribeiro,Uberaba,MG,Sudeste
-1089,Gabriel Rodrigues Mendes,Autazes,AM,Norte
-1090,Priscila Costa Lima,Cascavel,PR,Sul
-1091,Eduardo Pereira Alves,Porto Alegre,RS,Sul
-1092,Thiago Carvalho Alves,Sobradinho,DF,Centro-oeste
-1093,Simone Gomes Barbosa,Gravatai,RS,Sul
-1094,Mariana Vieira Rocha,Guarapuava,PR,Sul
-1095,Mariana Mendes Souza,Porto Alegre,RS,Sul
-1096,Joao Costa Rocha,Parintins,AM,Norte
-1097,Carlos Carvalho Rocha,Sobral,CE,Nordeste
-1098,Ricardo Carvalho Araujo,Uberaba,MG,Sudeste
-1099,Beatriz Rocha Araujo,Nova Iguacu,RJ,Sudeste
-1100,Jose Mendes Lima,Ponta Grossa,PR,Sul
-1101,Bruna Carvalho Carvalho,Pelotas,RS,Sul
-1102,Luiz Vieira Gomes,Guara,DF,Centro-oeste
-1103,Renata Pereira Ferreira,Montes Claros,MG,Sudeste
-1104,Joao Costa Araujo,Petropolis,RJ,Sudeste
-1105,Maria Vieira Martins,Passo Fundo,RS,Sul
-1106,Joao Mendes Gomes,Uberlandia,MG,Sudeste
-1107,Diego Ribeiro Barbosa,Sobral,CE,Nordeste
-1108,Thiago Martins Gomes,Duque de Caxias,RJ,Sudeste
-1109,Tatiane Silva Rodrigues,Fortaleza,CE,Nordeste
-1110,Renata Araujo Martins,Duque de Caxias,RJ,Sudeste
-1111,Luana Barbosa Rocha,Serra Talhada,PE,Nordeste
-1112,Aline Gomes Alves,Ceilandia,DF,Centro-oeste
-1113,Gabriela Martins Gomes,Juazeiro do Norte,CE,Nordeste
-1114,Carolina Nunes Ferreira,Curitiba,PR,Sul
-1115,Luiz Mendes Souza,Paulista,PE,Nordeste
-1116,Ana Lima Rodrigues,Duque de Caxias,RJ,Sudeste
-1117,Fernanda Araujo Mendes,Crato,CE,Nordeste
-1118,Tatiane Carvalho Araujo,Planaltina,DF,Centro-oeste
-1119,Priscila Ribeiro Mendes,Governador Valadares,MG,Sudeste
-1120,Luiz Oliveira Gomes,Governador Valadares,MG,Sudeste
-1121,Marcelo Barbosa Ribeiro,Porto Seguro,BA,Nordeste
-1122,Bruno Barbosa Silva,Uberaba,MG,Sudeste
-1123,Gabriela Rocha Martins,Sao Bernardo do Campo,SP,Sudeste
-1124,Joao Barbosa Rocha,Londrina,PR,Sul
-1125,Claudia Gomes Mendes,Teresopolis,RJ,Sudeste
-1126,Renata Santos Alves,Contagem,MG,Sudeste
-1127,Juliana Gomes Gomes,Rio de Janeiro,RJ,Sudeste
-1128,Antonia Rocha Souza,Osasco,SP,Sudeste
-1129,Fabio Souza Gomes,Coari,AM,Norte
-1130,Mariana Vieira Souza,Contagem,MG,Sudeste
-1131,Renata Nunes Alves,Teresopolis,RJ,Sudeste
-1132,Marcos Carvalho Carvalho,Belo Horizonte,MG,Sudeste
-1133,Guilherme Carvalho Silva,Sorocaba,SP,Sudeste
-1134,Diego Barbosa Lima,Manacapuru,AM,Norte
-1135,Larissa Carvalho Rocha,Gama,DF,Centro-oeste
-1136,Adriana Rodrigues Lima,Igarassu,PE,Nordeste
-1137,Gabriela Rocha Rocha,Recanto das Emas,DF,Centro-oeste
-1138,Joao Ferreira Pereira,Crato,CE,Nordeste
-1139,Adriana Pereira Souza,Piracicaba,SP,Sudeste
-1140,Mateus Oliveira Barbosa,Feira de Santana,BA,Nordeste
-1141,Carlos Mendes Nunes,Sobral,CE,Nordeste
-1142,Paulo Araujo Rocha,Nova Iguacu,RJ,Sudeste
-1143,Luana Silva Martins,Vitoria da Conquista,BA,Nordeste
-1144,Raquel Rocha Costa,Tabatinga,AM,Norte
-1145,Vanessa Rodrigues Oliveira,Ceilandia,DF,Centro-oeste
-1146,Sandra Souza Souza,Salvador,BA,Nordeste
-1147,Sandra Lima Carvalho,Cabo Frio,RJ,Sudeste
-1148,Marcelo Vieira Rocha,Teresopolis,RJ,Sudeste
-1149,Aline Silva Santos,Salvador,BA,Nordeste
-1150,Thiago Ribeiro Santos,Feira de Santana,BA,Nordeste
-1151,Carolina Oliveira Nunes,Rio de Janeiro,RJ,Sudeste
-1152,Tatiane Martins Araujo,Sao Paulo,SP,Sudeste
-1153,Mariana Carvalho Silva,Olinda,PE,Nordeste
-1154,Vanessa Rodrigues Souza,Gravatai,RS,Sul
-1155,Patricia Pereira Oliveira,Presidente Figueiredo,AM,Norte
-1156,Maria Pereira Santos,Betim,MG,Sudeste
-1157,Leonardo Pereira Gomes,Niteroi,RJ,Sudeste
-1158,Eduardo Alves Costa,Camacari,BA,Nordeste
-1159,Patricia Rocha Lima,Sorocaba,SP,Sudeste
-1160,Carolina Costa Lima,Santa Maria,RS,Sul
-1161,Rafael Rodrigues Santos,Guarulhos,SP,Sudeste
-1162,Guilherme Carvalho Gomes,Fortaleza,CE,Nordeste
-1163,Jose Pereira Alves,Ribeirao Preto,SP,Sudeste
-1164,Amanda Silva Vieira,Sorocaba,SP,Sudeste
-1165,Bruno Santos Souza,Iguatu,CE,Nordeste
-1166,Simone Rocha Lima,Belo Horizonte,MG,Sudeste
-1167,Aline Oliveira Pereira,Piracicaba,SP,Sudeste
-1168,Fernando Lima Vieira,Maringa,PR,Sul
-1169,Felipe Silva Barbosa,Recife,PE,Nordeste
-1170,Aline Vieira Nunes,Cascavel,PR,Sul
-1171,Juliana Pereira Ferreira,Rio de Janeiro,RJ,Sudeste
-1172,Mariana Barbosa Mendes,Ribeirao Preto,SP,Sudeste
-1173,Mateus Martins Nunes,Niteroi,RJ,Sudeste
-1174,Marcelo Oliveira Pereira,Jaboatao dos Guararapes,PE,Nordeste
-1175,Luiz Rodrigues Silva,Paulista,PE,Nordeste
-1176,Sandra Vieira Silva,Uberaba,MG,Sudeste
-1177,Pedro Ribeiro Rocha,Serra Talhada,PE,Nordeste
-1178,Juliana Carvalho Oliveira,Sobradinho,DF,Centro-oeste
-1179,Antonia Rocha Santos,Crato,CE,Nordeste
-1180,Guilherme Gomes Pereira,Crato,CE,Nordeste
-1181,Leticia Araujo Martins,Volta Redonda,RJ,Sudeste
-1182,Lucas Barbosa Araujo,Novo Hamburgo,RS,Sul
-1183,Juliana Vieira Lima,Campos dos Goytacazes,RJ,Sudeste
-1184,Juliana Mendes Costa,Uberlandia,MG,Sudeste
-1185,Eduardo Costa Souza,Uberlandia,MG,Sudeste
-1186,Larissa Carvalho Araujo,Londrina,PR,Sul
-1187,Luana Ribeiro Mendes,Volta Redonda,RJ,Sudeste
-1188,Tatiane Barbosa Araujo,Sobradinho,DF,Centro-oeste
-1189,Joao Mendes Mendes,Teixeira de Freitas,BA,Nordeste
-1190,Gabriela Lima Souza,Piracicaba,SP,Sudeste
-1191,Gabriela Rocha Araujo,Juiz de Fora,MG,Sudeste
-1192,Isabela Alves Araujo,Volta Redonda,RJ,Sudeste
-1193,Luiz Lima Costa,Sao Jose dos Pinhais,PR,Sul
-1194,Priscila Lima Rodrigues,Belo Horizonte,MG,Sudeste
-1195,Luana Nunes Nunes,Itabuna,BA,Nordeste
-1196,Gabriela Araujo Barbosa,Niteroi,RJ,Sudeste
-1197,Beatriz Lima Oliveira,Nova Iguacu,RJ,Sudeste
-1198,Marcelo Ribeiro Lima,Salvador,BA,Nordeste
-1199,Rodrigo Rocha Ribeiro,Pelotas,RS,Sul
-1200,Lucas Alves Lima,Sobral,CE,Nordeste
-1201,Gustavo Oliveira Rocha,Caninde,CE,Nordeste
-1202,Paulo Santos Araujo,Teixeira de Freitas,BA,Nordeste
-1203,Marcia Gomes Pereira,Serra Talhada,PE,Nordeste
-1204,Sandra Souza Pereira,Itabuna,BA,Nordeste
-1205,Paulo Barbosa Ribeiro,Quixada,CE,Nordeste
-1206,Lucas Silva Gomes,Osasco,SP,Sudeste
-1207,Gabriel Araujo Carvalho,Ribeirao Preto,SP,Sudeste
-1208,Camila Santos Gomes,Manacapuru,AM,Norte
-1209,Leonardo Vieira Ribeiro,Sao Bernardo do Campo,SP,Sudeste
-1210,Camila Martins Nunes,Gravatai,RS,Sul
-1211,Paulo Nunes Carvalho,Porto Seguro,BA,Nordeste
-1212,Patricia Silva Santos,Igarassu,PE,Nordeste
-1213,Luiz Silva Pereira,Garanhuns,PE,Nordeste
-1214,Luana Lima Oliveira,Sao Paulo,SP,Sudeste
-1215,Juliana Souza Mendes,Porto Seguro,BA,Nordeste
-1216,Sandra Lima Barbosa,Petrolina,PE,Nordeste
-1217,Bruno Nunes Lima,Novo Hamburgo,RS,Sul
-1218,Isabela Carvalho Martins,Brasilia,DF,Centro-oeste
-1219,Leticia Martins Costa,Uberlandia,MG,Sudeste
-1220,Fernanda Costa Mendes,Guara,DF,Centro-oeste
-1221,Gabriela Pereira Santos,Vitoria da Conquista,BA,Nordeste
-1222,Guilherme Vieira Araujo,Maues,AM,Norte
-1223,Patricia Ribeiro Barbosa,Campos dos Goytacazes,RJ,Sudeste
-1224,Carlos Silva Ferreira,Caucaia,CE,Nordeste
-1225,Beatriz Ferreira Rocha,Recife,PE,Nordeste
-1226,Luiz Lima Rocha,Betim,MG,Sudeste
-1227,Adriana Vieira Martins,Maracanau,CE,Nordeste
-1228,Isabela Rodrigues Ferreira,Olinda,PE,Nordeste
-1229,Joao Gomes Alves,Crato,CE,Nordeste
-1230,Felipe Vieira Ferreira,Salvador,BA,Nordeste
-1231,Thiago Araujo Mendes,Autazes,AM,Norte
-1232,Francisca Mendes Rodrigues,Sao Jose dos Pinhais,PR,Sul
-1233,Marcelo Mendes Carvalho,Guara,DF,Centro-oeste
-1234,Vinicius Pereira Alves,Ipatinga,MG,Sudeste
-1235,Gustavo Santos Rodrigues,Ilheus,BA,Nordeste
-1236,Patricia Nunes Carvalho,Colombo,PR,Sul
-1237,Luana Vieira Alves,Gravata,PE,Nordeste
-1238,Vinicius Lima Souza,Sorocaba,SP,Sudeste
-1239,Amanda Araujo Alves,Vitoria da Conquista,BA,Nordeste
-1240,Rafael Rocha Alves,Volta Redonda,RJ,Sudeste
-1241,Maria Vieira Lima,Recife,PE,Nordeste
-1242,Aline Santos Mendes,Juazeiro do Norte,CE,Nordeste
-1243,Tatiane Nunes Souza,Juiz de Fora,MG,Sudeste
-1244,Mateus Souza Santos,Cabo Frio,RJ,Sudeste
-1245,Fernanda Vieira Silva,Gama,DF,Centro-oeste
-1246,Fernando Carvalho Araujo,Betim,MG,Sudeste
-1247,Jose Lima Vieira,Belo Horizonte,MG,Sudeste
-1248,Rafael Souza Ribeiro,Niteroi,RJ,Sudeste
-1249,Antonio Ferreira Ribeiro,Sao Jose dos Campos,SP,Sudeste
-1250,Antonio Pereira Gomes,Petrolina,PE,Nordeste
-1251,Guilherme Ribeiro Araujo,Betim,MG,Sudeste
-1252,Aline Oliveira Costa,Maues,AM,Norte
-1253,Marcia Santos Mendes,Paulista,PE,Nordeste
-1254,Adriana Gomes Alves,Cabo Frio,RJ,Sudeste
-1255,Felipe Lima Santos,Ipatinga,MG,Sudeste
-1256,Guilherme Carvalho Mendes,Santos,SP,Sudeste
-1257,Gabriel Souza Ferreira,Itacoatiara,AM,Norte
-1258,Leonardo Barbosa Mendes,Maracanau,CE,Nordeste
-1259,Carolina Ribeiro Costa,Parintins,AM,Norte
-1260,Marcos Mendes Carvalho,Betim,MG,Sudeste
-1261,Larissa Alves Mendes,Duque de Caxias,RJ,Sudeste
-1262,Leticia Carvalho Ferreira,Betim,MG,Sudeste
-1263,Lucas Alves Araujo,Guarulhos,SP,Sudeste
-1264,Andre Nunes Carvalho,Caxias do Sul,RS,Sul
-1265,Alexandre Rodrigues Carvalho,Parintins,AM,Norte
-1266,Diego Mendes Silva,Juazeiro,BA,Nordeste
-1267,Maria Vieira Vieira,Maracanau,CE,Nordeste
-1268,Bruno Oliveira Ribeiro,Betim,MG,Sudeste
-1269,Thiago Costa Santos,Gravata,PE,Nordeste
-1270,Antonio Martins Souza,Uberaba,MG,Sudeste
-1271,Felipe Silva Costa,Petrolina,PE,Nordeste
-1272,Vinicius Barbosa Rocha,Feira de Santana,BA,Nordeste
-1273,Vanessa Carvalho Oliveira,Bento Goncalves,RS,Sul
-1274,Leticia Araujo Santos,Quixada,CE,Nordeste
-1275,Leonardo Martins Lima,Coari,AM,Norte
-1276,Bruno Silva Barbosa,Salvador,BA,Nordeste
-1277,Patricia Ferreira Oliveira,Iguatu,CE,Nordeste
-1278,Felipe Vieira Pereira,Volta Redonda,RJ,Sudeste
-1279,Leonardo Souza Carvalho,Garanhuns,PE,Nordeste
-1280,Diego Lima Oliveira,Sao Jose dos Pinhais,PR,Sul
-1281,Adriana Pereira Santos,Petrolina,PE,Nordeste
-1282,Aline Rocha Santos,Curitiba,PR,Sul
-1283,Vinicius Araujo Rodrigues,Nova Iguacu,RJ,Sudeste
-1284,Gabriel Pereira Oliveira,Aguas Claras,DF,Centro-oeste
-1285,Vanessa Carvalho Costa,Juazeiro,BA,Nordeste
-1286,Mateus Costa Alves,Recife,PE,Nordeste
-1287,Francisca Costa Nunes,Ilheus,BA,Nordeste
-1288,Leticia Barbosa Silva,Gama,DF,Centro-oeste
-1289,Alexandre Silva Gomes,Itacoatiara,AM,Norte
-1290,Mariana Souza Souza,Planaltina,DF,Centro-oeste
-1291,Simone Carvalho Nunes,Planaltina,DF,Centro-oeste
-1292,Tatiane Souza Ribeiro,Novo Hamburgo,RS,Sul
-1293,Sandra Barbosa Ferreira,Tabatinga,AM,Norte
-1294,Priscila Souza Carvalho,Caruaru,PE,Nordeste
-1295,Lucas Rodrigues Vieira,Sorocaba,SP,Sudeste
-1296,Guilherme Costa Oliveira,Autazes,AM,Norte
-1297,Marcia Barbosa Martins,Vitoria da Conquista,BA,Nordeste
-1298,Joao Alves Mendes,Pelotas,RS,Sul
-1299,Antonia Vieira Ribeiro,Sao Paulo,SP,Sudeste
-1300,Mariana Rocha Costa,Parintins,AM,Norte
-1301,Vanessa Silva Barbosa,Sorocaba,SP,Sudeste
-1302,Larissa Barbosa Araujo,Ceilandia,DF,Centro-oeste
-1303,Fernando Ribeiro Rodrigues,Volta Redonda,RJ,Sudeste
-1304,Leticia Costa Pereira,Teixeira de Freitas,BA,Nordeste
-1305,Marcos Vieira Santos,Sao Jose dos Campos,SP,Sudeste
-1306,Renata Gomes Gomes,Sobral,CE,Nordeste
-1307,Renata Rodrigues Rodrigues,Porto Alegre,RS,Sul
-1308,Juliana Mendes Silva,Igarassu,PE,Nordeste
-1309,Amanda Rodrigues Mendes,Igarassu,PE,Nordeste
-1310,Marcelo Costa Ferreira,Itabuna,BA,Nordeste
-1311,Carlos Lima Vieira,Quixada,CE,Nordeste
-1312,Raquel Silva Rocha,Jaboatao dos Guararapes,PE,Nordeste
-1313,Aline Nunes Nunes,Sobradinho,DF,Centro-oeste
-1314,Vinicius Ferreira Pereira,Piracicaba,SP,Sudeste
-1315,Francisca Alves Oliveira,Canoas,RS,Sul
-1316,Gabriela Costa Barbosa,Nova Iguacu,RJ,Sudeste
-1317,Antonio Costa Alves,Guara,DF,Centro-oeste
-1318,Gabriela Araujo Souza,Ribeirao Preto,SP,Sudeste
-1319,Beatriz Ferreira Ribeiro,Cascavel,PR,Sul
-1320,Marcos Nunes Rocha,Ipatinga,MG,Sudeste
-1321,Marcelo Costa Costa,Londrina,PR,Sul
-1322,Fernando Nunes Ferreira,Colombo,PR,Sul
-1323,Marcelo Costa Souza,Vitoria da Conquista,BA,Nordeste
-1324,Adriana Ferreira Ferreira,Maues,AM,Norte
-1325,Jessica Lima Pereira,Betim,MG,Sudeste
-1326,Claudia Ribeiro Barbosa,Recife,PE,Nordeste
-1327,Bruno Martins Rodrigues,Santa Maria,RS,Sul
-1328,Maria Ribeiro Araujo,Erechim,RS,Sul
-1329,Marcos Souza Oliveira,Guara,DF,Centro-oeste
-1330,Bruna Costa Pereira,Campinas,SP,Sudeste
-1331,Aline Nunes Martins,Uberlandia,MG,Sudeste
-1332,Isabela Araujo Rodrigues,Parintins,AM,Norte
-1333,Guilherme Nunes Lima,Uberlandia,MG,Sudeste
-1334,Camila Martins Barbosa,Passo Fundo,RS,Sul
-1335,Fernando Lima Lima,Garanhuns,PE,Nordeste
-1336,Adriana Santos Rocha,Aguas Claras,DF,Centro-oeste
-1337,Mariana Ribeiro Nunes,Niteroi,RJ,Sudeste
-1338,Eduardo Souza Nunes,Samambaia,DF,Centro-oeste
-1339,Jessica Lima Barbosa,Uberaba,MG,Sudeste
-1340,Alexandre Araujo Silva,Aguas Claras,DF,Centro-oeste
-1341,Gabriel Araujo Rodrigues,Maues,AM,Norte
-1342,Simone Mendes Martins,Santa Maria,RS,Sul
-1343,Eduardo Vieira Santos,Juazeiro,BA,Nordeste
-1344,Fernanda Gomes Ferreira,Salvador,BA,Nordeste
-1345,Leticia Souza Carvalho,Guarulhos,SP,Sudeste
-1346,Pedro Carvalho Mendes,Sobradinho,DF,Centro-oeste
-1347,Pedro Souza Costa,Canoas,RS,Sul
-1348,Amanda Costa Lima,Sao Bernardo do Campo,SP,Sudeste
-1349,Mateus Souza Martins,Ponta Grossa,PR,Sul
-1350,Ricardo Carvalho Costa,Contagem,MG,Sudeste
-1351,Juliana Rocha Rodrigues,Piracicaba,SP,Sudeste
-1352,Priscila Gomes Martins,Juiz de Fora,MG,Sudeste
-1353,Isabela Ferreira Martins,Santa Maria,RS,Sul
-1354,Raquel Lima Vieira,Guarulhos,SP,Sudeste
-1355,Juliana Araujo Santos,Juiz de Fora,MG,Sudeste
-1356,Gustavo Pereira Oliveira,Iguatu,CE,Nordeste
-1357,Mateus Vieira Silva,Montes Claros,MG,Sudeste
-1358,Carolina Souza Costa,Bento Goncalves,RS,Sul
-1359,Juliana Pereira Oliveira,Canoas,RS,Sul
-1360,Fernando Gomes Ribeiro,Presidente Figueiredo,AM,Norte
-1361,Juliana Ribeiro Araujo,Recife,PE,Nordeste
-1362,Maria Rodrigues Santos,Piracicaba,SP,Sudeste
-1363,Rafael Alves Mendes,Planaltina,DF,Centro-oeste
-1364,Diego Lima Rocha,Teixeira de Freitas,BA,Nordeste
-1365,Francisco Ribeiro Rocha,Osasco,SP,Sudeste
-1366,Felipe Souza Souza,Paranagua,PR,Sul
-1367,Francisca Rocha Ferreira,Porto Alegre,RS,Sul
-1368,Amanda Rocha Vieira,Osasco,SP,Sudeste
-1369,Renata Rocha Ferreira,Samambaia,DF,Centro-oeste
-1370,Carolina Araujo Alves,Gravata,PE,Nordeste
-1371,Leticia Ribeiro Rodrigues,Coari,AM,Norte
-1372,Carolina Vieira Oliveira,Juazeiro do Norte,CE,Nordeste
-1373,Paulo Araujo Carvalho,Nova Iguacu,RJ,Sudeste
-1374,Daniel Souza Mendes,Foz do Iguacu,PR,Sul
-1375,Larissa Gomes Rocha,Passo Fundo,RS,Sul
-1376,Vanessa Vieira Barbosa,Sao Bernardo do Campo,SP,Sudeste
-1377,Felipe Araujo Mendes,Bento Goncalves,RS,Sul
-1378,Diego Vieira Vieira,Recife,PE,Nordeste
-1379,Alexandre Lima Lima,Petrolina,PE,Nordeste
-1380,Francisco Costa Pereira,Londrina,PR,Sul
-1381,Leonardo Mendes Carvalho,Ceilandia,DF,Centro-oeste
-1382,Tatiane Souza Mendes,Recanto das Emas,DF,Centro-oeste
-1383,Renata Santos Martins,Sao Bernardo do Campo,SP,Sudeste
-1384,Jessica Silva Alves,Duque de Caxias,RJ,Sudeste
-1385,Isabela Barbosa Lima,Santa Maria,RS,Sul
-1386,Camila Barbosa Lima,Porto Seguro,BA,Nordeste
-1387,Marcia Costa Oliveira,Ilheus,BA,Nordeste
-1388,Francisca Carvalho Ribeiro,Santa Maria,RS,Sul
-1389,Gabriel Barbosa Martins,Nova Iguacu,RJ,Sudeste
-1390,Marcelo Nunes Gomes,Ceilandia,DF,Centro-oeste
-1391,Rodrigo Vieira Carvalho,Porto Seguro,BA,Nordeste
-1392,Antonia Gomes Vieira,Fortaleza,CE,Nordeste
-1393,Priscila Lima Silva,Passo Fundo,RS,Sul
-1394,Juliana Silva Gomes,Gravata,PE,Nordeste
-1395,Fernanda Araujo Ferreira,Foz do Iguacu,PR,Sul
-1396,Rafael Pereira Ribeiro,Itabuna,BA,Nordeste
-1397,Antonia Rocha Costa,Camacari,BA,Nordeste
-1398,Guilherme Santos Barbosa,Petropolis,RJ,Sudeste
-1399,Vanessa Santos Martins,Duque de Caxias,RJ,Sudeste
-1400,Gustavo Silva Vieira,Passo Fundo,RS,Sul
-1401,Priscila Gomes Ribeiro,Pocos de Caldas,MG,Sudeste
-1402,Mariana Silva Vieira,Teresopolis,RJ,Sudeste
-1403,Isabela Ferreira Alves,Guarulhos,SP,Sudeste
-1404,Francisco Carvalho Mendes,Montes Claros,MG,Sudeste
-1405,Rafael Ferreira Araujo,Guarapuava,PR,Sul
-1406,Ricardo Oliveira Ribeiro,Piracicaba,SP,Sudeste
-1407,Ana Martins Souza,Sorocaba,SP,Sudeste
-1408,Vinicius Mendes Mendes,Guara,DF,Centro-oeste
-1409,Amanda Souza Rodrigues,Juazeiro do Norte,CE,Nordeste
-1410,Thiago Barbosa Silva,Cascavel,PR,Sul
-1411,Paulo Mendes Rocha,Taguatinga,DF,Centro-oeste
-1412,Leticia Nunes Carvalho,Itabuna,BA,Nordeste
-1413,Thiago Costa Alves,Itapipoca,CE,Nordeste
-1414,Francisca Ribeiro Rocha,Gravata,PE,Nordeste
-1415,Gabriel Rodrigues Barbosa,Garanhuns,PE,Nordeste
-1416,Andre Souza Ribeiro,Paranagua,PR,Sul
-1417,Renata Santos Rocha,Recanto das Emas,DF,Centro-oeste
-1418,Gabriel Santos Nunes,Gravatai,RS,Sul
-1419,Thiago Araujo Rocha,Sao Jose dos Campos,SP,Sudeste
-1420,Paulo Pereira Ribeiro,Recanto das Emas,DF,Centro-oeste
-1421,Daniel Alves Souza,Governador Valadares,MG,Sudeste
-1422,Thiago Carvalho Santos,Planaltina,DF,Centro-oeste
-1423,Renata Gomes Alves,Garanhuns,PE,Nordeste
-1424,Fernanda Costa Lima,Juazeiro do Norte,CE,Nordeste
-1425,Francisca Souza Souza,Tabatinga,AM,Norte
-1426,Aline Carvalho Gomes,Niteroi,RJ,Sudeste
-1427,Luana Alves Oliveira,Manaus,AM,Norte
-1428,Francisco Pereira Santos,Novo Hamburgo,RS,Sul
-1429,Diego Rodrigues Barbosa,Gravatai,RS,Sul
-1430,Juliana Ribeiro Lima,Sao Bernardo do Campo,SP,Sudeste
-1431,Luiz Rocha Oliveira,Fortaleza,CE,Nordeste
-1432,Lucas Vieira Rocha,Tabatinga,AM,Norte
-1433,Antonio Araujo Rocha,Salvador,BA,Nordeste
-1434,Priscila Pereira Silva,Serra Talhada,PE,Nordeste
-1435,Simone Santos Mendes,Aguas Claras,DF,Centro-oeste
-1436,Bruna Barbosa Pereira,Quixada,CE,Nordeste
-1437,Gustavo Martins Pereira,Maringa,PR,Sul
-1438,Jessica Gomes Rodrigues,Novo Hamburgo,RS,Sul
-1439,Amanda Alves Carvalho,Iguatu,CE,Nordeste
-1440,Gabriel Carvalho Rodrigues,Erechim,RS,Sul
-1441,Isabela Vieira Martins,Ponta Grossa,PR,Sul
-1442,Francisco Nunes Barbosa,Canoas,RS,Sul
-1443,Marcia Carvalho Rocha,Novo Hamburgo,RS,Sul
-1444,Aline Mendes Rodrigues,Paulista,PE,Nordeste
-1445,Diego Rodrigues Costa,Niteroi,RJ,Sudeste
-1446,Fabio Santos Ribeiro,Contagem,MG,Sudeste
-1447,Amanda Vieira Ribeiro,Betim,MG,Sudeste
-1448,Eduardo Ferreira Rodrigues,Aguas Claras,DF,Centro-oeste
-1449,Tatiane Costa Lima,Rio de Janeiro,RJ,Sudeste
-1450,Beatriz Carvalho Costa,Itapipoca,CE,Nordeste
-1451,Gustavo Silva Costa,Feira de Santana,BA,Nordeste
-1452,Luiz Carvalho Rodrigues,Londrina,PR,Sul
-1453,Adriana Costa Silva,Ilheus,BA,Nordeste
-1454,Larissa Silva Costa,Cascavel,PR,Sul
-1455,Camila Santos Lima,Manaus,AM,Norte
-1456,Raquel Vieira Silva,Passo Fundo,RS,Sul
-1457,Rodrigo Lima Carvalho,Paulista,PE,Nordeste
-1458,Isabela Lima Nunes,Angra dos Reis,RJ,Sudeste
-1459,Fernando Ribeiro Rocha,Caxias do Sul,RS,Sul
-1460,Carlos Mendes Pereira,Lauro de Freitas,BA,Nordeste
-1461,Ricardo Barbosa Ribeiro,Contagem,MG,Sudeste
-1462,Rodrigo Oliveira Silva,Campinas,SP,Sudeste
-1463,Marcelo Alves Costa,Sobral,CE,Nordeste
-1464,Mariana Santos Barbosa,Contagem,MG,Sudeste
-1465,Eduardo Mendes Alves,Itabuna,BA,Nordeste
-1466,Thiago Mendes Gomes,Novo Hamburgo,RS,Sul
-1467,Isabela Pereira Rocha,Uberlandia,MG,Sudeste
-1468,Rafael Santos Vieira,Volta Redonda,RJ,Sudeste
-1469,Raquel Martins Vieira,Crato,CE,Nordeste
-1470,Luiz Costa Ribeiro,Sorocaba,SP,Sudeste
-1471,Felipe Ribeiro Carvalho,Governador Valadares,MG,Sudeste
-1472,Mariana Rodrigues Ribeiro,Salvador,BA,Nordeste
-1473,Priscila Ferreira Rodrigues,Sao Bernardo do Campo,SP,Sudeste
-1474,Gabriel Alves Silva,Coari,AM,Norte
-1475,Leonardo Costa Araujo,Feira de Santana,BA,Nordeste
-1476,Renata Costa Vieira,Maracanau,CE,Nordeste
-1477,Luiz Ferreira Ribeiro,Taguatinga,DF,Centro-oeste
-1478,Diego Martins Rodrigues,Guarulhos,SP,Sudeste
-1479,Pedro Ribeiro Pereira,Tabatinga,AM,Norte
-1480,Renata Alves Rodrigues,Recanto das Emas,DF,Centro-oeste
-1481,Patricia Costa Mendes,Campos dos Goytacazes,RJ,Sudeste
-1482,Francisca Rocha Costa,Iguatu,CE,Nordeste
-1483,Aline Rodrigues Martins,Sorocaba,SP,Sudeste
-1484,Beatriz Nunes Rodrigues,Sobradinho,DF,Centro-oeste
-1485,Tatiane Alves Vieira,Bento Goncalves,RS,Sul
-1486,Vinicius Carvalho Araujo,Betim,MG,Sudeste
-1487,Ricardo Araujo Oliveira,Gravata,PE,Nordeste
-1488,Simone Ribeiro Souza,Guara,DF,Centro-oeste
-1489,Carlos Ribeiro Silva,Vitoria da Conquista,BA,Nordeste
-1490,Bruna Nunes Silva,Montes Claros,MG,Sudeste
-1491,Ana Gomes Ribeiro,Santos,SP,Sudeste
-1492,Antonio Rodrigues Rodrigues,Volta Redonda,RJ,Sudeste
-1493,Bruno Ribeiro Oliveira,Tefe,AM,Norte
-1494,Renata Rodrigues Nunes,Duque de Caxias,RJ,Sudeste
-1495,Ricardo Nunes Silva,Sao Paulo,SP,Sudeste
-1496,Juliana Rodrigues Rocha,Osasco,SP,Sudeste
-1497,Fernando Araujo Nunes,Canoas,RS,Sul
-1498,Rafael Oliveira Mendes,Pelotas,RS,Sul
-1499,Ricardo Vieira Gomes,Olinda,PE,Nordeste
-1500,Aline Ribeiro Alves,Paranagua,PR,Sul
+114,Tatiane Martins Santos,Caucaia,CE,Nordeste
+115,Carolina Silva Santos,Cabo Frio,RJ,Sudeste
+116,Claudia Pereira Ribeiro,Juiz de Fora,MG,Sudeste
+117,Paulo Souza Silva,Gama,DF,Centro-oeste
+118,Jose Rodrigues Araujo,Crato,CE,Nordeste
+119,Leticia Rocha Pereira,Fortaleza,CE,Nordeste
+120,Mariana Carvalho Araujo,Volta Redonda,RJ,Sudeste
+121,Carlos Lima Vieira,Sobradinho,DF,Centro-oeste
+122,Leonardo Araujo Souza,Igarassu,PE,Nordeste
+123,Thiago Barbosa Carvalho,Ilheus,BA,Nordeste
+124,Priscila Costa Oliveira,Volta Redonda,RJ,Sudeste
+125,Gabriela Nunes Nunes,Porto Seguro,BA,Nordeste
+126,Carolina Gomes Martins,Ipatinga,MG,Sudeste
+127,Amanda Nunes Martins,Gravata,PE,Nordeste
+128,Tatiane Nunes Silva,Betim,MG,Sudeste
+129,Amanda Silva Ferreira,Belo Horizonte,MG,Sudeste
+130,Fernanda Carvalho Araujo,Foz do Iguacu,PR,Sul
+131,Luana Santos Rodrigues,Paranagua,PR,Sul
+132,Felipe Araujo Lima,Jaboatao dos Guararapes,PE,Nordeste
+133,Gabriela Costa Rocha,Brasilia,DF,Centro-oeste
+134,Pedro Rodrigues Lima,Iguatu,CE,Nordeste
+135,Eduardo Pereira Rocha,Recife,PE,Nordeste
+136,Fabio Oliveira Ribeiro,Petrolina,PE,Nordeste
+137,Gabriel Ferreira Vieira,Jaboatao dos Guararapes,PE,Nordeste
+138,Daniel Rocha Oliveira,Vitoria da Conquista,BA,Nordeste
+139,Antonia Rocha Rocha,Caxias do Sul,RS,Sul
+140,Paulo Vieira Rodrigues,Recanto das Emas,DF,Centro-oeste
+141,Luana Mendes Vieira,Caucaia,CE,Nordeste
+142,Luiz Lima Mendes,Paranagua,PR,Sul
+143,Rafael Gomes Oliveira,Igarassu,PE,Nordeste
+144,Adriana Santos Barbosa,Guara,DF,Centro-oeste
+145,Jose Barbosa Souza,Sao Jose dos Campos,SP,Sudeste
+146,Larissa Rocha Vieira,Garanhuns,PE,Nordeste
+147,Ana Ribeiro Oliveira,Cascavel,PR,Sul
+148,Camila Oliveira Mendes,Uberaba,MG,Sudeste
+149,Daniel Ribeiro Rodrigues,Salvador,BA,Nordeste
+150,Pedro Ribeiro Costa,Duque de Caxias,RJ,Sudeste
+151,Vanessa Rocha Santos,Juiz de Fora,MG,Sudeste
+152,Simone Vieira Ferreira,Passo Fundo,RS,Sul
+153,Diego Barbosa Pereira,Gravatai,RS,Sul
+154,Leticia Gomes Carvalho,Erechim,RS,Sul
+155,Ana Costa Martins,Londrina,PR,Sul
+156,Gustavo Rocha Rodrigues,Salvador,BA,Nordeste
+157,Marcelo Martins Pereira,Sorocaba,SP,Sudeste
+158,Tatiane Ribeiro Rodrigues,Ipatinga,MG,Sudeste
+159,Luana Oliveira Silva,Sobradinho,DF,Centro-oeste
+160,Luiz Pereira Gomes,Guara,DF,Centro-oeste
+161,Gustavo Costa Vieira,Betim,MG,Sudeste
+162,Rafael Pereira Mendes,Feira de Santana,BA,Nordeste
+163,Adriana Rocha Nunes,Paulista,PE,Nordeste
+164,Amanda Oliveira Martins,Belo Horizonte,MG,Sudeste
+165,Claudia Ferreira Barbosa,Angra dos Reis,RJ,Sudeste
+166,Jose Alves Santos,Maues,AM,Norte
+167,Ricardo Alves Gomes,Volta Redonda,RJ,Sudeste
+168,Isabela Barbosa Carvalho,Camacari,BA,Nordeste
+169,Isabela Araujo Oliveira,Foz do Iguacu,PR,Sul
+170,Fernando Gomes Gomes,Crato,CE,Nordeste
+171,Mateus Martins Vieira,Paulista,PE,Nordeste
+172,Priscila Ferreira Silva,Uberlandia,MG,Sudeste
+173,Amanda Martins Carvalho,Crato,CE,Nordeste
+174,Antonio Mendes Rodrigues,Ponta Grossa,PR,Sul
+175,Paulo Costa Rocha,Paranagua,PR,Sul
+176,Sandra Costa Alves,Ipatinga,MG,Sudeste
+177,Mariana Ribeiro Martins,Maringa,PR,Sul
+178,Larissa Pereira Souza,Sorocaba,SP,Sudeste
+179,Leticia Nunes Rodrigues,Igarassu,PE,Nordeste
+180,Bruno Mendes Oliveira,Caninde,CE,Nordeste
+181,Thiago Nunes Mendes,Campinas,SP,Sudeste
+182,Paulo Ferreira Ribeiro,Duque de Caxias,RJ,Sudeste
+183,Vanessa Lima Rodrigues,Itacoatiara,AM,Norte
+184,Juliana Ferreira Vieira,Campinas,SP,Sudeste
+185,Simone Mendes Lima,Caninde,CE,Nordeste
+186,Sandra Costa Pereira,Santos,SP,Sudeste
+187,Felipe Alves Ribeiro,Porto Seguro,BA,Nordeste
+188,Larissa Nunes Souza,Paranagua,PR,Sul
+189,Jose Gomes Carvalho,Lauro de Freitas,BA,Nordeste
+190,Paulo Costa Rocha,Campinas,SP,Sudeste
+191,Patricia Alves Mendes,Itapipoca,CE,Nordeste
+192,Joao Souza Araujo,Salvador,BA,Nordeste
+193,Eduardo Alves Martins,Maues,AM,Norte
+194,Leonardo Vieira Souza,Camacari,BA,Nordeste
+195,Fernanda Vieira Rocha,Santos,SP,Sudeste
+196,Larissa Barbosa Rodrigues,Gama,DF,Centro-oeste
+197,Leonardo Gomes Mendes,Itapipoca,CE,Nordeste
+198,Joao Martins Ribeiro,Piracicaba,SP,Sudeste
+199,Ricardo Mendes Mendes,Pocos de Caldas,MG,Sudeste
+200,Bruna Rodrigues Pereira,Guarulhos,SP,Sudeste
+201,Bruno Alves Araujo,Pocos de Caldas,MG,Sudeste
+202,Priscila Costa Rocha,Tabatinga,AM,Norte
+203,Alexandre Lima Vieira,Coari,AM,Norte
+204,Sandra Gomes Alves,Coari,AM,Norte
+205,Fernando Nunes Carvalho,Ribeirao Preto,SP,Sudeste
+206,Felipe Lima Costa,Coari,AM,Norte
+207,Diego Mendes Pereira,Porto Alegre,RS,Sul
+208,Rodrigo Costa Souza,Igarassu,PE,Nordeste
+209,Simone Gomes Ribeiro,Samambaia,DF,Centro-oeste
+210,Mariana Santos Ferreira,Juazeiro do Norte,CE,Nordeste
+211,Maria Gomes Mendes,Caninde,CE,Nordeste
+212,Carlos Rocha Barbosa,Ipatinga,MG,Sudeste
+213,Maria Ribeiro Gomes,Aguas Claras,DF,Centro-oeste
+214,Francisca Carvalho Souza,Porto Alegre,RS,Sul
+215,Felipe Lima Ribeiro,Foz do Iguacu,PR,Sul
+216,Francisco Barbosa Gomes,Duque de Caxias,RJ,Sudeste
+217,Patricia Rodrigues Costa,Gravata,PE,Nordeste
+218,Adriana Alves Pereira,Tabatinga,AM,Norte
+219,Antonia Santos Nunes,Juiz de Fora,MG,Sudeste
+220,Leticia Souza Alves,Fortaleza,CE,Nordeste
+221,Bruno Barbosa Mendes,Sao Bernardo do Campo,SP,Sudeste
+222,Isabela Alves Mendes,Cabo Frio,RJ,Sudeste
+223,Francisca Costa Santos,Paulista,PE,Nordeste
+224,Fabio Carvalho Carvalho,Feira de Santana,BA,Nordeste
+225,Bruna Rocha Rodrigues,Caninde,CE,Nordeste
+226,Claudia Pereira Pereira,Caxias do Sul,RS,Sul
+227,Jessica Vieira Silva,Brasilia,DF,Centro-oeste
+228,Renata Santos Pereira,Manacapuru,AM,Norte
+229,Luiz Pereira Mendes,Santa Maria,RS,Sul
+230,Larissa Pereira Araujo,Gravata,PE,Nordeste
+231,Rafael Carvalho Rocha,Guarapuava,PR,Sul
+232,Beatriz Pereira Pereira,Tefe,AM,Norte
+233,Juliana Carvalho Pereira,Crato,CE,Nordeste
+234,Claudia Alves Santos,Nova Iguacu,RJ,Sudeste
+235,Vanessa Alves Costa,Canoas,RS,Sul
+236,Simone Costa Pereira,Tabatinga,AM,Norte
+237,Eduardo Martins Gomes,Caucaia,CE,Nordeste
+238,Camila Alves Martins,Belo Horizonte,MG,Sudeste
+239,Gabriela Mendes Araujo,Novo Hamburgo,RS,Sul
+240,Beatriz Nunes Ribeiro,Montes Claros,MG,Sudeste
+241,Eduardo Costa Ferreira,Campinas,SP,Sudeste
+242,Jessica Rodrigues Pereira,Maues,AM,Norte
+243,Ricardo Vieira Costa,Tefe,AM,Norte
+244,Diego Lima Nunes,Uberlandia,MG,Sudeste
+245,Patricia Alves Vieira,Jaboatao dos Guararapes,PE,Nordeste
+246,Leticia Mendes Pereira,Campos dos Goytacazes,RJ,Sudeste
+247,Andre Santos Silva,Lauro de Freitas,BA,Nordeste
+248,Raquel Santos Pereira,Curitiba,PR,Sul
+249,Aline Nunes Mendes,Erechim,RS,Sul
+250,Renata Carvalho Oliveira,Aguas Claras,DF,Centro-oeste
+251,Alexandre Rodrigues Oliveira,Caruaru,PE,Nordeste
+252,Alexandre Vieira Vieira,Quixada,CE,Nordeste
+253,Daniel Araujo Ferreira,Planaltina,DF,Centro-oeste
+254,Francisca Lima Rodrigues,Juazeiro,BA,Nordeste
+255,Luiz Barbosa Martins,Governador Valadares,MG,Sudeste
+256,Larissa Araujo Souza,Recanto das Emas,DF,Centro-oeste
+257,Maria Gomes Araujo,Sobradinho,DF,Centro-oeste
+258,Marcia Rodrigues Lima,Petropolis,RJ,Sudeste
+259,Luiz Costa Oliveira,Recanto das Emas,DF,Centro-oeste
+260,Carlos Gomes Silva,Crato,CE,Nordeste
+261,Mariana Vieira Rodrigues,Crato,CE,Nordeste
+262,Camila Gomes Costa,Guarapuava,PR,Sul
+263,Guilherme Alves Mendes,Maracanau,CE,Nordeste
+264,Claudia Oliveira Araujo,Maringa,PR,Sul
+265,Francisca Barbosa Vieira,Tefe,AM,Norte
+266,Rafael Nunes Vieira,Uberaba,MG,Sudeste
+267,Tatiane Carvalho Ribeiro,Ponta Grossa,PR,Sul
+268,Vanessa Mendes Mendes,Itapipoca,CE,Nordeste
+269,Joao Costa Souza,Montes Claros,MG,Sudeste
+270,Vinicius Alves Rocha,Quixada,CE,Nordeste
+271,Jose Souza Silva,Bento Goncalves,RS,Sul
+272,Camila Nunes Araujo,Governador Valadares,MG,Sudeste
+273,Leonardo Alves Barbosa,Canoas,RS,Sul
+274,Adriana Oliveira Mendes,Itabuna,BA,Nordeste
+275,Fernando Costa Rocha,Ceilandia,DF,Centro-oeste
+276,Felipe Vieira Ferreira,Montes Claros,MG,Sudeste
+277,Francisco Ferreira Martins,Taguatinga,DF,Centro-oeste
+278,Paulo Costa Nunes,Maringa,PR,Sul
+279,Felipe Vieira Santos,Novo Hamburgo,RS,Sul
+280,Beatriz Araujo Costa,Teresopolis,RJ,Sudeste
+281,Patricia Gomes Santos,Ipatinga,MG,Sudeste
+282,Simone Costa Nunes,Colombo,PR,Sul
+283,Simone Santos Barbosa,Santa Maria,RS,Sul
+284,Rafael Oliveira Barbosa,Aguas Claras,DF,Centro-oeste
+285,Adriana Alves Alves,Sao Jose dos Pinhais,PR,Sul
+286,Rodrigo Gomes Gomes,Governador Valadares,MG,Sudeste
+287,Mariana Rodrigues Rodrigues,Igarassu,PE,Nordeste
+288,Aline Araujo Carvalho,Coari,AM,Norte
+289,Andre Ribeiro Mendes,Cabo Frio,RJ,Sudeste
+290,Bruno Alves Costa,Presidente Figueiredo,AM,Norte
+291,Beatriz Ribeiro Santos,Petropolis,RJ,Sudeste
+292,Bruno Alves Rodrigues,Ilheus,BA,Nordeste
+293,Gustavo Ferreira Santos,Jaboatao dos Guararapes,PE,Nordeste
+294,Andre Oliveira Rodrigues,Sao Paulo,SP,Sudeste
+295,Mariana Araujo Rodrigues,Niteroi,RJ,Sudeste
+296,Gustavo Gomes Rodrigues,Presidente Figueiredo,AM,Norte
+297,Marcia Barbosa Martins,Guara,DF,Centro-oeste
+298,Francisco Rodrigues Souza,Vitoria da Conquista,BA,Nordeste
+299,Antonio Pereira Nunes,Ribeirao Preto,SP,Sudeste
+300,Larissa Alves Carvalho,Iguatu,CE,Nordeste
+301,Ricardo Vieira Oliveira,Governador Valadares,MG,Sudeste
+302,Eduardo Ferreira Costa,Ribeirao Preto,SP,Sudeste
+303,Jose Carvalho Rocha,Garanhuns,PE,Nordeste
+304,Vanessa Vieira Rodrigues,Manacapuru,AM,Norte
+305,Bruna Mendes Oliveira,Caxias do Sul,RS,Sul
+306,Leonardo Vieira Santos,Santos,SP,Sudeste
+307,Rafael Rocha Rocha,Londrina,PR,Sul
+308,Bruno Lima Rocha,Quixada,CE,Nordeste
+309,Andre Mendes Ferreira,Ceilandia,DF,Centro-oeste
+310,Maria Santos Silva,Olinda,PE,Nordeste
+311,Mariana Santos Nunes,Paulista,PE,Nordeste
+312,Gabriela Martins Souza,Bento Goncalves,RS,Sul
+313,Francisca Barbosa Gomes,Sorocaba,SP,Sudeste
+314,Vinicius Gomes Vieira,Bento Goncalves,RS,Sul
+315,Fabio Araujo Silva,Salvador,BA,Nordeste
+316,Isabela Gomes Souza,Fortaleza,CE,Nordeste
+317,Francisca Santos Pereira,Teresopolis,RJ,Sudeste
+318,Tatiane Carvalho Oliveira,Contagem,MG,Sudeste
+319,Gabriel Carvalho Ribeiro,Nova Iguacu,RJ,Sudeste
+320,Gabriela Souza Rodrigues,Porto Seguro,BA,Nordeste
+321,Simone Alves Barbosa,Petropolis,RJ,Sudeste
+322,Renata Vieira Santos,Gravatai,RS,Sul
+323,Priscila Gomes Lima,Autazes,AM,Norte
+324,Francisco Rodrigues Souza,Novo Hamburgo,RS,Sul
+325,Tatiane Oliveira Mendes,Nova Iguacu,RJ,Sudeste
+326,Francisca Ribeiro Souza,Aguas Claras,DF,Centro-oeste
+327,Daniel Araujo Ferreira,Paranagua,PR,Sul
+328,Leonardo Vieira Pereira,Campinas,SP,Sudeste
+329,Bruno Alves Rocha,Paulista,PE,Nordeste
+330,Beatriz Martins Mendes,Belo Horizonte,MG,Sudeste
+331,Maria Lima Santos,Uberlandia,MG,Sudeste
+332,Aline Nunes Santos,Juiz de Fora,MG,Sudeste
+333,Adriana Martins Mendes,Samambaia,DF,Centro-oeste
+334,Marcia Costa Santos,Osasco,SP,Sudeste
+335,Fabio Vieira Alves,Sao Paulo,SP,Sudeste
+336,Raquel Rodrigues Souza,Serra Talhada,PE,Nordeste
+337,Gabriel Rodrigues Ferreira,Pocos de Caldas,MG,Sudeste
+338,Patricia Mendes Ferreira,Belo Horizonte,MG,Sudeste
+339,Alexandre Mendes Santos,Ceilandia,DF,Centro-oeste
+340,Diego Oliveira Pereira,Teixeira de Freitas,BA,Nordeste
+341,Lucas Oliveira Martins,Igarassu,PE,Nordeste
+342,Luana Araujo Costa,Angra dos Reis,RJ,Sudeste
+343,Priscila Pereira Ferreira,Sorocaba,SP,Sudeste
+344,Francisca Ribeiro Ferreira,Volta Redonda,RJ,Sudeste
+345,Luana Costa Silva,Belo Horizonte,MG,Sudeste
+346,Pedro Araujo Nunes,Caxias do Sul,RS,Sul
+347,Eduardo Costa Rodrigues,Duque de Caxias,RJ,Sudeste
+348,Francisco Silva Alves,Caucaia,CE,Nordeste
+349,Beatriz Costa Lima,Montes Claros,MG,Sudeste
+350,Felipe Santos Lima,Sao Jose dos Pinhais,PR,Sul
+351,Rodrigo Souza Oliveira,Manaus,AM,Norte
+352,Jessica Nunes Costa,Campos dos Goytacazes,RJ,Sudeste
+353,Luana Rocha Mendes,Juiz de Fora,MG,Sudeste
+354,Juliana Santos Araujo,Uberaba,MG,Sudeste
+355,Diego Oliveira Oliveira,Colombo,PR,Sul
+356,Maria Vieira Mendes,Juiz de Fora,MG,Sudeste
+357,Simone Souza Souza,Porto Seguro,BA,Nordeste
+358,Andre Mendes Vieira,Olinda,PE,Nordeste
+359,Renata Carvalho Santos,Sobral,CE,Nordeste
+360,Thiago Gomes Gomes,Betim,MG,Sudeste
+361,Camila Lima Araujo,Maracanau,CE,Nordeste
+362,Simone Rocha Martins,Colombo,PR,Sul
+363,Mateus Rocha Mendes,Sao Jose dos Campos,SP,Sudeste
+364,Fabio Martins Alves,Jaboatao dos Guararapes,PE,Nordeste
+365,Andre Vieira Barbosa,Vitoria da Conquista,BA,Nordeste
+366,Renata Oliveira Gomes,Samambaia,DF,Centro-oeste
+367,Priscila Alves Lima,Juazeiro do Norte,CE,Nordeste
+368,Maria Pereira Lima,Paulista,PE,Nordeste
+369,Felipe Gomes Rocha,Osasco,SP,Sudeste
+370,Carolina Vieira Gomes,Volta Redonda,RJ,Sudeste
+371,Mariana Lima Lima,Porto Alegre,RS,Sul
+372,Gabriel Rodrigues Silva,Garanhuns,PE,Nordeste
+373,Gabriela Alves Ribeiro,Camacari,BA,Nordeste
+374,Claudia Nunes Ferreira,Colombo,PR,Sul
+375,Luana Ribeiro Oliveira,Paulista,PE,Nordeste
+376,Luiz Barbosa Souza,Maracanau,CE,Nordeste
+377,Fernando Carvalho Rocha,Contagem,MG,Sudeste
+378,Guilherme Barbosa Rodrigues,Vitoria da Conquista,BA,Nordeste
+379,Maria Barbosa Lima,Caucaia,CE,Nordeste
+380,Tatiane Araujo Carvalho,Osasco,SP,Sudeste
+381,Maria Ribeiro Rocha,Gravatai,RS,Sul
+382,Daniel Rocha Mendes,Cascavel,PR,Sul
+383,Carolina Rocha Ribeiro,Crato,CE,Nordeste
+384,Fabio Carvalho Silva,Piracicaba,SP,Sudeste
+385,Rafael Santos Carvalho,Rio de Janeiro,RJ,Sudeste
+386,Jessica Barbosa Carvalho,Contagem,MG,Sudeste
+387,Fernando Souza Rocha,Jaboatao dos Guararapes,PE,Nordeste
+388,Antonia Gomes Souza,Colombo,PR,Sul
+389,Bruno Gomes Ferreira,Crato,CE,Nordeste
+390,Fernando Oliveira Souza,Cabo Frio,RJ,Sudeste
+391,Antonia Lima Pereira,Campinas,SP,Sudeste
+392,Mariana Gomes Martins,Sao Paulo,SP,Sudeste
+393,Marcia Ribeiro Martins,Juazeiro,BA,Nordeste
+394,Daniel Barbosa Lima,Uberlandia,MG,Sudeste
+395,Ana Ferreira Souza,Uberaba,MG,Sudeste
+396,Carolina Silva Rodrigues,Fortaleza,CE,Nordeste
+397,Gabriel Silva Rocha,Autazes,AM,Norte
+398,Fernando Pereira Costa,Presidente Figueiredo,AM,Norte
+399,Fabio Ferreira Rocha,Crato,CE,Nordeste
+400,Marcos Santos Rocha,Caxias do Sul,RS,Sul
+401,Guilherme Barbosa Oliveira,Fortaleza,CE,Nordeste
+402,Jose Nunes Nunes,Autazes,AM,Norte
+403,Leticia Ribeiro Martins,Presidente Figueiredo,AM,Norte
+404,Fernando Martins Barbosa,Juazeiro,BA,Nordeste
+405,Amanda Souza Santos,Duque de Caxias,RJ,Sudeste
+406,Francisco Carvalho Alves,Recife,PE,Nordeste
+407,Gustavo Barbosa Barbosa,Osasco,SP,Sudeste
+408,Jessica Mendes Costa,Uberlandia,MG,Sudeste
+409,Carolina Ribeiro Rocha,Guarapuava,PR,Sul
+410,Leticia Rodrigues Rodrigues,Tabatinga,AM,Norte
+411,Fernanda Alves Vieira,Pocos de Caldas,MG,Sudeste
+412,Camila Souza Martins,Coari,AM,Norte
+413,Larissa Souza Silva,Santa Maria,RS,Sul
+414,Priscila Lima Rodrigues,Manaus,AM,Norte
+415,Antonia Vieira Nunes,Bento Goncalves,RS,Sul
+416,Ana Carvalho Carvalho,Ribeirao Preto,SP,Sudeste
+417,Simone Barbosa Pereira,Santa Maria,RS,Sul
+418,Fernando Oliveira Ferreira,Sao Bernardo do Campo,SP,Sudeste
+419,Juliana Ferreira Mendes,Belo Horizonte,MG,Sudeste
+420,Carolina Santos Vieira,Volta Redonda,RJ,Sudeste
+421,Paulo Rocha Oliveira,Tefe,AM,Norte
+422,Gustavo Alves Ribeiro,Sobradinho,DF,Centro-oeste
+423,Claudia Silva Souza,Sorocaba,SP,Sudeste
+424,Antonia Carvalho Lima,Camacari,BA,Nordeste
+425,Jose Gomes Alves,Pocos de Caldas,MG,Sudeste
+426,Antonio Alves Alves,Jaboatao dos Guararapes,PE,Nordeste
+427,Rodrigo Ribeiro Santos,Colombo,PR,Sul
+428,Patricia Lima Araujo,Salvador,BA,Nordeste
+429,Vanessa Silva Vieira,Camacari,BA,Nordeste
+430,Fernando Gomes Vieira,Recife,PE,Nordeste
+431,Lucas Rodrigues Carvalho,Salvador,BA,Nordeste
+432,Juliana Souza Santos,Autazes,AM,Norte
+433,Diego Martins Alves,Juiz de Fora,MG,Sudeste
+434,Aline Alves Souza,Maues,AM,Norte
+435,Fernando Oliveira Lima,Juazeiro,BA,Nordeste
+436,Patricia Souza Gomes,Quixada,CE,Nordeste
+437,Sandra Mendes Rodrigues,Olinda,PE,Nordeste
+438,Vinicius Pereira Araujo,Quixada,CE,Nordeste
+439,Luiz Costa Nunes,Maringa,PR,Sul
+440,Diego Oliveira Oliveira,Samambaia,DF,Centro-oeste
+441,Vanessa Nunes Costa,Planaltina,DF,Centro-oeste
+442,Marcelo Oliveira Carvalho,Taguatinga,DF,Centro-oeste
+443,Paulo Ferreira Mendes,Salvador,BA,Nordeste
+444,Patricia Oliveira Lima,Tabatinga,AM,Norte
+445,Felipe Santos Santos,Sao Jose dos Pinhais,PR,Sul
+446,Bruna Carvalho Martins,Guarapuava,PR,Sul
+447,Amanda Martins Costa,Ipatinga,MG,Sudeste
+448,Marcelo Lima Alves,Ceilandia,DF,Centro-oeste
+449,Gabriel Souza Costa,Recife,PE,Nordeste
+450,Guilherme Mendes Ferreira,Taguatinga,DF,Centro-oeste
+451,Fabio Ferreira Rocha,Londrina,PR,Sul
+452,Andre Costa Ferreira,Taguatinga,DF,Centro-oeste
+453,Aline Ferreira Ribeiro,Novo Hamburgo,RS,Sul
+454,Joao Alves Rocha,Ceilandia,DF,Centro-oeste
+455,Leonardo Vieira Santos,Juazeiro do Norte,CE,Nordeste
+456,Maria Araujo Rocha,Caruaru,PE,Nordeste
+457,Bruna Martins Mendes,Paranagua,PR,Sul
+458,Francisca Gomes Vieira,Sao Paulo,SP,Sudeste
+459,Larissa Silva Carvalho,Feira de Santana,BA,Nordeste
+460,Guilherme Lima Lima,Planaltina,DF,Centro-oeste
+461,Jessica Nunes Nunes,Cascavel,PR,Sul
+462,Rodrigo Carvalho Rodrigues,Nova Iguacu,RJ,Sudeste
+463,Gabriel Nunes Vieira,Petropolis,RJ,Sudeste
+464,Jessica Oliveira Oliveira,Brasilia,DF,Centro-oeste
+465,Bruna Vieira Rocha,Quixada,CE,Nordeste
+466,Fernando Rocha Gomes,Manacapuru,AM,Norte
+467,Jose Martins Pereira,Paulista,PE,Nordeste
+468,Pedro Rocha Silva,Presidente Figueiredo,AM,Norte
+469,Thiago Lima Pereira,Brasilia,DF,Centro-oeste
+470,Marcelo Souza Nunes,Cabo Frio,RJ,Sudeste
+471,Claudia Mendes Lima,Gravatai,RS,Sul
+472,Luana Mendes Silva,Caruaru,PE,Nordeste
+473,Jessica Martins Rocha,Londrina,PR,Sul
+474,Claudia Ribeiro Oliveira,Itabuna,BA,Nordeste
+475,Diego Alves Costa,Canoas,RS,Sul
+476,Claudia Vieira Martins,Itapipoca,CE,Nordeste
+477,Vanessa Santos Costa,Planaltina,DF,Centro-oeste
+478,Alexandre Rocha Lima,Osasco,SP,Sudeste
+479,Eduardo Santos Rocha,Cabo Frio,RJ,Sudeste
+480,Joao Silva Alves,Lauro de Freitas,BA,Nordeste
+481,Marcos Pereira Lima,Ipatinga,MG,Sudeste
+482,Rodrigo Martins Martins,Taguatinga,DF,Centro-oeste
+483,Claudia Souza Lima,Pelotas,RS,Sul
+484,Joao Ferreira Araujo,Teixeira de Freitas,BA,Nordeste
+485,Mateus Mendes Santos,Santa Maria,RS,Sul
+486,Antonia Barbosa Ribeiro,Salvador,BA,Nordeste
+487,Mateus Vieira Alves,Foz do Iguacu,PR,Sul
+488,Beatriz Barbosa Oliveira,Juiz de Fora,MG,Sudeste
+489,Leonardo Mendes Carvalho,Gravatai,RS,Sul
+490,Renata Lima Vieira,Sobradinho,DF,Centro-oeste
+491,Paulo Silva Rodrigues,Pelotas,RS,Sul
+492,Antonio Costa Nunes,Niteroi,RJ,Sudeste
+493,Francisca Carvalho Gomes,Juiz de Fora,MG,Sudeste
+494,Maria Santos Martins,Colombo,PR,Sul
+495,Rodrigo Nunes Ferreira,Autazes,AM,Norte
+496,Beatriz Nunes Pereira,Petrolina,PE,Nordeste
+497,Joao Rocha Rodrigues,Guarulhos,SP,Sudeste
+498,Alexandre Araujo Gomes,Itabuna,BA,Nordeste
+499,Jessica Carvalho Pereira,Santa Maria,RS,Sul
+500,Lucas Rocha Vieira,Caruaru,PE,Nordeste
+501,Luiz Souza Barbosa,Gravatai,RS,Sul
+502,Eduardo Silva Ferreira,Fortaleza,CE,Nordeste
+503,Joao Costa Alves,Teixeira de Freitas,BA,Nordeste
+504,Thiago Rodrigues Santos,Juazeiro do Norte,CE,Nordeste
+505,Aline Carvalho Silva,Porto Alegre,RS,Sul
+506,Alexandre Souza Rocha,Vitoria da Conquista,BA,Nordeste
+507,Vanessa Rocha Souza,Salvador,BA,Nordeste
+508,Patricia Araujo Ribeiro,Caruaru,PE,Nordeste
+509,Gabriela Costa Vieira,Ipatinga,MG,Sudeste
+510,Camila Santos Santos,Petropolis,RJ,Sudeste
+511,Eduardo Martins Barbosa,Betim,MG,Sudeste
+512,Felipe Nunes Gomes,Tabatinga,AM,Norte
+513,Aline Vieira Nunes,Sobral,CE,Nordeste
+514,Leticia Silva Rocha,Samambaia,DF,Centro-oeste
+515,Priscila Nunes Carvalho,Planaltina,DF,Centro-oeste
+516,Gabriel Souza Souza,Juiz de Fora,MG,Sudeste
+517,Andre Alves Souza,Presidente Figueiredo,AM,Norte
+518,Rafael Pereira Vieira,Angra dos Reis,RJ,Sudeste
+519,Diego Araujo Martins,Campinas,SP,Sudeste
+520,Pedro Rocha Souza,Canoas,RS,Sul
+521,Gabriela Ferreira Nunes,Iguatu,CE,Nordeste
+522,Paulo Nunes Carvalho,Guara,DF,Centro-oeste
+523,Vanessa Ribeiro Martins,Samambaia,DF,Centro-oeste
+524,Bruna Nunes Lima,Sao Paulo,SP,Sudeste
+525,Larissa Rodrigues Gomes,Salvador,BA,Nordeste
+526,Larissa Nunes Mendes,Crato,CE,Nordeste
+527,Rafael Mendes Pereira,Aguas Claras,DF,Centro-oeste
+528,Isabela Oliveira Ribeiro,Planaltina,DF,Centro-oeste
+529,Gabriela Carvalho Oliveira,Jaboatao dos Guararapes,PE,Nordeste
+530,Mariana Vieira Silva,Sorocaba,SP,Sudeste
+531,Camila Rocha Pereira,Recanto das Emas,DF,Centro-oeste
+532,Bruno Gomes Carvalho,Itapipoca,CE,Nordeste
+533,Aline Oliveira Carvalho,Caninde,CE,Nordeste
+534,Ricardo Mendes Alves,Caxias do Sul,RS,Sul
+535,Camila Mendes Oliveira,Juazeiro,BA,Nordeste
+536,Leonardo Silva Gomes,Fortaleza,CE,Nordeste
+537,Rafael Rodrigues Oliveira,Curitiba,PR,Sul
+538,Antonia Gomes Barbosa,Manacapuru,AM,Norte
+539,Simone Lima Nunes,Serra Talhada,PE,Nordeste
+540,Paulo Santos Gomes,Fortaleza,CE,Nordeste
+541,Marcos Martins Souza,Gravata,PE,Nordeste
+542,Beatriz Vieira Nunes,Caninde,CE,Nordeste
+543,Fabio Rocha Gomes,Sorocaba,SP,Sudeste
+544,Luiz Pereira Rocha,Osasco,SP,Sudeste
+545,Gabriel Carvalho Rodrigues,Caruaru,PE,Nordeste
+546,Luiz Vieira Ribeiro,Uberaba,MG,Sudeste
+547,Fernanda Rodrigues Gomes,Taguatinga,DF,Centro-oeste
+548,Eduardo Souza Ferreira,Garanhuns,PE,Nordeste
+549,Fabio Lima Rodrigues,Piracicaba,SP,Sudeste
+550,Guilherme Vieira Pereira,Feira de Santana,BA,Nordeste
+551,Mateus Vieira Costa,Juazeiro do Norte,CE,Nordeste
+552,Jose Araujo Silva,Caxias do Sul,RS,Sul
+553,Leticia Vieira Costa,Recife,PE,Nordeste
+554,Bruna Ribeiro Carvalho,Manaus,AM,Norte
+555,Felipe Santos Pereira,Tefe,AM,Norte
+556,Ana Alves Gomes,Juazeiro do Norte,CE,Nordeste
+557,Fabio Santos Rocha,Parintins,AM,Norte
+558,Luana Nunes Rodrigues,Santos,SP,Sudeste
+559,Renata Alves Barbosa,Niteroi,RJ,Sudeste
+560,Tatiane Martins Oliveira,Gravata,PE,Nordeste
+561,Paulo Ribeiro Mendes,Sao Bernardo do Campo,SP,Sudeste
+562,Alexandre Barbosa Gomes,Piracicaba,SP,Sudeste
+563,Andre Costa Nunes,Erechim,RS,Sul
+564,Felipe Oliveira Vieira,Sao Jose dos Pinhais,PR,Sul
+565,Fernanda Santos Ferreira,Belo Horizonte,MG,Sudeste
+566,Sandra Ribeiro Oliveira,Betim,MG,Sudeste
+567,Renata Vieira Mendes,Campinas,SP,Sudeste
+568,Gustavo Carvalho Oliveira,Juazeiro do Norte,CE,Nordeste
+569,Aline Ribeiro Rocha,Brasilia,DF,Centro-oeste
+570,Tatiane Rocha Oliveira,Serra Talhada,PE,Nordeste
+571,Guilherme Vieira Martins,Maues,AM,Norte
+572,Luana Vieira Pereira,Guarulhos,SP,Sudeste
+573,Fernanda Vieira Araujo,Manacapuru,AM,Norte
+574,Renata Gomes Lima,Tabatinga,AM,Norte
+575,Gabriel Ribeiro Carvalho,Gravatai,RS,Sul
+576,Beatriz Costa Santos,Tabatinga,AM,Norte
+577,Jessica Santos Rocha,Sao Jose dos Campos,SP,Sudeste
+578,Adriana Martins Oliveira,Gravata,PE,Nordeste
+579,Bruna Ferreira Vieira,Guarapuava,PR,Sul
+580,Lucas Martins Barbosa,Uberlandia,MG,Sudeste
+581,Simone Alves Oliveira,Itacoatiara,AM,Norte
+582,Andre Rocha Gomes,Contagem,MG,Sudeste
+583,Rodrigo Rocha Souza,Teixeira de Freitas,BA,Nordeste
+584,Alexandre Gomes Silva,Canoas,RS,Sul
+585,Gabriel Barbosa Souza,Rio de Janeiro,RJ,Sudeste
+586,Antonia Alves Nunes,Betim,MG,Sudeste
+587,Antonio Gomes Vieira,Belo Horizonte,MG,Sudeste
+588,Ana Souza Carvalho,Uberaba,MG,Sudeste
+589,Renata Barbosa Vieira,Parintins,AM,Norte
+590,Francisca Barbosa Souza,Canoas,RS,Sul
+591,Carolina Lima Martins,Quixada,CE,Nordeste
+592,Francisco Martins Costa,Recanto das Emas,DF,Centro-oeste
+593,Bruna Souza Ribeiro,Maues,AM,Norte
+594,Patricia Vieira Pereira,Volta Redonda,RJ,Sudeste
+595,Gabriela Araujo Araujo,Uberlandia,MG,Sudeste
+596,Antonia Mendes Vieira,Juazeiro do Norte,CE,Nordeste
+597,Francisca Vieira Souza,Campinas,SP,Sudeste
+598,Luana Mendes Silva,Coari,AM,Norte
+599,Leticia Alves Alves,Paulista,PE,Nordeste
+600,Carolina Rocha Carvalho,Manaus,AM,Norte
+601,Claudia Martins Souza,Aguas Claras,DF,Centro-oeste
+602,Bruna Carvalho Araujo,Contagem,MG,Sudeste
+603,Fabio Martins Araujo,Campinas,SP,Sudeste
+604,Gustavo Costa Araujo,Itapipoca,CE,Nordeste
+605,Leticia Rocha Araujo,Pelotas,RS,Sul
+606,Gabriela Costa Pereira,Gama,DF,Centro-oeste
+607,Gabriela Costa Martins,Pocos de Caldas,MG,Sudeste
+608,Antonio Rocha Vieira,Presidente Figueiredo,AM,Norte
+609,Luana Ribeiro Nunes,Itapipoca,CE,Nordeste
+610,Vinicius Gomes Gomes,Planaltina,DF,Centro-oeste
+611,Gabriela Ferreira Mendes,Paranagua,PR,Sul
+612,Antonio Lima Lima,Curitiba,PR,Sul
+613,Raquel Mendes Rodrigues,Passo Fundo,RS,Sul
+614,Mariana Santos Ribeiro,Iguatu,CE,Nordeste
+615,Felipe Ferreira Alves,Rio de Janeiro,RJ,Sudeste
+616,Andre Gomes Costa,Sobral,CE,Nordeste
+617,Jessica Silva Gomes,Campinas,SP,Sudeste
+618,Mariana Araujo Vieira,Duque de Caxias,RJ,Sudeste
+619,Alexandre Pereira Mendes,Camacari,BA,Nordeste
+620,Claudia Oliveira Silva,Crato,CE,Nordeste
+621,Aline Alves Santos,Samambaia,DF,Centro-oeste
+622,Renata Souza Oliveira,Petropolis,RJ,Sudeste
+623,Fernando Oliveira Barbosa,Uberlandia,MG,Sudeste
+624,Bruna Carvalho Ribeiro,Caucaia,CE,Nordeste
+625,Fernanda Vieira Carvalho,Pocos de Caldas,MG,Sudeste
+626,Ricardo Souza Barbosa,Teresopolis,RJ,Sudeste
+627,Maria Costa Rodrigues,Montes Claros,MG,Sudeste
+628,Larissa Costa Costa,Porto Alegre,RS,Sul
+629,Claudia Costa Souza,Guarapuava,PR,Sul
+630,Tatiane Oliveira Martins,Ponta Grossa,PR,Sul
+631,Bruna Alves Gomes,Angra dos Reis,RJ,Sudeste
+632,Pedro Silva Mendes,Coari,AM,Norte
+633,Claudia Barbosa Silva,Sao Bernardo do Campo,SP,Sudeste
+634,Ricardo Rocha Barbosa,Rio de Janeiro,RJ,Sudeste
+635,Joao Costa Vieira,Belo Horizonte,MG,Sudeste
+636,Antonia Barbosa Vieira,Angra dos Reis,RJ,Sudeste
+637,Patricia Oliveira Alves,Teresopolis,RJ,Sudeste
+638,Thiago Alves Santos,Duque de Caxias,RJ,Sudeste
+639,Marcia Martins Nunes,Uberlandia,MG,Sudeste
+640,Paulo Silva Costa,Teresopolis,RJ,Sudeste
+641,Vinicius Costa Rodrigues,Iguatu,CE,Nordeste
+642,Carolina Santos Vieira,Porto Seguro,BA,Nordeste
+643,Fernanda Souza Rocha,Manacapuru,AM,Norte
+644,Priscila Alves Lima,Quixada,CE,Nordeste
+645,Fabio Santos Santos,Foz do Iguacu,PR,Sul
+646,Simone Barbosa Santos,Belo Horizonte,MG,Sudeste
+647,Francisca Pereira Barbosa,Gravatai,RS,Sul
+648,Camila Pereira Souza,Caxias do Sul,RS,Sul
+649,Ana Araujo Rodrigues,Paulista,PE,Nordeste
+650,Pedro Martins Lima,Brasilia,DF,Centro-oeste
+651,Mateus Barbosa Barbosa,Sao Jose dos Pinhais,PR,Sul
+652,Tatiane Vieira Ferreira,Gravata,PE,Nordeste
+653,Fernanda Mendes Costa,Canoas,RS,Sul
+654,Lucas Mendes Rodrigues,Guarulhos,SP,Sudeste
+655,Marcelo Carvalho Costa,Cabo Frio,RJ,Sudeste
+656,Jessica Alves Rodrigues,Guarulhos,SP,Sudeste
+657,Felipe Mendes Mendes,Olinda,PE,Nordeste
+658,Renata Silva Oliveira,Ribeirao Preto,SP,Sudeste
+659,Renata Vieira Nunes,Osasco,SP,Sudeste
+660,Antonia Carvalho Martins,Vitoria da Conquista,BA,Nordeste
+661,Vanessa Alves Rodrigues,Itapipoca,CE,Nordeste
+662,Simone Pereira Ribeiro,Curitiba,PR,Sul
+663,Felipe Costa Rocha,Coari,AM,Norte
+664,Adriana Oliveira Alves,Betim,MG,Sudeste
+665,Marcos Souza Rodrigues,Ribeirao Preto,SP,Sudeste
+666,Vanessa Rodrigues Costa,Ponta Grossa,PR,Sul
+667,Vinicius Pereira Rocha,Teixeira de Freitas,BA,Nordeste
+668,Larissa Nunes Barbosa,Maringa,PR,Sul
+669,Rafael Gomes Santos,Uberaba,MG,Sudeste
+670,Sandra Ferreira Ferreira,Sorocaba,SP,Sudeste
+671,Marcos Martins Ferreira,Vitoria da Conquista,BA,Nordeste
+672,Paulo Nunes Gomes,Ipatinga,MG,Sudeste
+673,Diego Nunes Rocha,Sao Jose dos Pinhais,PR,Sul
+674,Isabela Barbosa Ribeiro,Parintins,AM,Norte
+675,Leonardo Pereira Barbosa,Samambaia,DF,Centro-oeste
+676,Adriana Lima Alves,Cabo Frio,RJ,Sudeste
+677,Gabriel Vieira Vieira,Governador Valadares,MG,Sudeste
+678,Joao Gomes Martins,Passo Fundo,RS,Sul
+679,Sandra Ferreira Araujo,Contagem,MG,Sudeste
+680,Mateus Rocha Ribeiro,Sao Bernardo do Campo,SP,Sudeste
+681,Eduardo Barbosa Mendes,Colombo,PR,Sul
+682,Thiago Gomes Mendes,Porto Alegre,RS,Sul
+683,Luiz Costa Souza,Porto Alegre,RS,Sul
+684,Beatriz Oliveira Vieira,Paranagua,PR,Sul
+685,Diego Mendes Silva,Montes Claros,MG,Sudeste
+686,Juliana Martins Ferreira,Salvador,BA,Nordeste
+687,Ricardo Oliveira Rocha,Taguatinga,DF,Centro-oeste
+688,Gabriel Gomes Lima,Belo Horizonte,MG,Sudeste
+689,Amanda Costa Araujo,Pocos de Caldas,MG,Sudeste
+690,Adriana Nunes Vieira,Igarassu,PE,Nordeste
+691,Carlos Silva Costa,Itapipoca,CE,Nordeste
+692,Camila Ferreira Gomes,Contagem,MG,Sudeste
+693,Carlos Oliveira Araujo,Recife,PE,Nordeste
+694,Vinicius Rocha Mendes,Campinas,SP,Sudeste
+695,Simone Souza Souza,Montes Claros,MG,Sudeste
+696,Mateus Lima Mendes,Samambaia,DF,Centro-oeste
+697,Antonia Mendes Silva,Pocos de Caldas,MG,Sudeste
+698,Antonia Alves Rocha,Caucaia,CE,Nordeste
+699,Bruna Araujo Alves,Feira de Santana,BA,Nordeste
+700,Carlos Costa Martins,Teixeira de Freitas,BA,Nordeste
+701,Felipe Vieira Gomes,Guarapuava,PR,Sul
+702,Luana Costa Martins,Igarassu,PE,Nordeste
+703,Francisca Souza Rodrigues,Uberlandia,MG,Sudeste
+704,Camila Alves Vieira,Sobral,CE,Nordeste
+705,Simone Carvalho Martins,Caninde,CE,Nordeste
+706,Felipe Souza Souza,Belo Horizonte,MG,Sudeste
+707,Claudia Oliveira Costa,Betim,MG,Sudeste
+708,Simone Oliveira Rocha,Quixada,CE,Nordeste
+709,Gabriel Nunes Nunes,Igarassu,PE,Nordeste
+710,Leticia Barbosa Santos,Ipatinga,MG,Sudeste
+711,Rodrigo Carvalho Costa,Guara,DF,Centro-oeste
+712,Marcia Rocha Santos,Gama,DF,Centro-oeste
+713,Joao Mendes Santos,Porto Seguro,BA,Nordeste
+714,Rafael Araujo Martins,Santa Maria,RS,Sul
+715,Rodrigo Oliveira Gomes,Tabatinga,AM,Norte
+716,Mateus Araujo Mendes,Itapipoca,CE,Nordeste
+717,Bruna Mendes Carvalho,Nova Iguacu,RJ,Sudeste
+718,Vinicius Ribeiro Ferreira,Passo Fundo,RS,Sul
+719,Vanessa Alves Gomes,Erechim,RS,Sul
+720,Gabriela Souza Mendes,Iguatu,CE,Nordeste
+721,Antonio Gomes Rocha,Novo Hamburgo,RS,Sul
+722,Marcelo Barbosa Nunes,Guara,DF,Centro-oeste
+723,Claudia Barbosa Lima,Manacapuru,AM,Norte
+724,Lucas Rodrigues Gomes,Novo Hamburgo,RS,Sul
+725,Tatiane Ferreira Lima,Petropolis,RJ,Sudeste
+726,Vinicius Gomes Barbosa,Sao Jose dos Campos,SP,Sudeste
+727,Joao Lima Lima,Sao Paulo,SP,Sudeste
+728,Luiz Oliveira Araujo,Contagem,MG,Sudeste
+729,Larissa Souza Rocha,Nova Iguacu,RJ,Sudeste
+730,Vinicius Ribeiro Ribeiro,Pelotas,RS,Sul
+731,Marcos Barbosa Araujo,Tabatinga,AM,Norte
+732,Bruno Costa Pereira,Ilheus,BA,Nordeste
+733,Luana Vieira Santos,Tefe,AM,Norte
+734,Renata Martins Souza,Sao Bernardo do Campo,SP,Sudeste
+735,Fabio Pereira Gomes,Recife,PE,Nordeste
+736,Claudia Costa Costa,Betim,MG,Sudeste
+737,Bruno Vieira Nunes,Ipatinga,MG,Sudeste
+738,Pedro Gomes Ribeiro,Bento Goncalves,RS,Sul
+739,Priscila Araujo Ribeiro,Uberaba,MG,Sudeste
+740,Fernanda Oliveira Araujo,Samambaia,DF,Centro-oeste
+741,Raquel Nunes Vieira,Maringa,PR,Sul
+742,Bruno Vieira Lima,Ceilandia,DF,Centro-oeste
+743,Jessica Barbosa Costa,Cascavel,PR,Sul
+744,Bruno Alves Vieira,Governador Valadares,MG,Sudeste
+745,Marcos Pereira Vieira,Rio de Janeiro,RJ,Sudeste
+746,Gabriel Carvalho Alves,Niteroi,RJ,Sudeste
+747,Gabriel Pereira Costa,Ribeirao Preto,SP,Sudeste
+748,Sandra Carvalho Martins,Maringa,PR,Sul
+749,Gabriel Barbosa Rodrigues,Betim,MG,Sudeste
+750,Carlos Costa Lima,Planaltina,DF,Centro-oeste
+751,Gustavo Ferreira Ribeiro,Sao Jose dos Campos,SP,Sudeste
+752,Paulo Santos Costa,Angra dos Reis,RJ,Sudeste
+753,Rodrigo Nunes Costa,Volta Redonda,RJ,Sudeste
+754,Luiz Ferreira Ferreira,Brasilia,DF,Centro-oeste
+755,Marcia Araujo Oliveira,Ribeirao Preto,SP,Sudeste
+756,Guilherme Souza Ribeiro,Quixada,CE,Nordeste
+757,Maria Ribeiro Santos,Porto Alegre,RS,Sul
+758,Jose Oliveira Nunes,Maringa,PR,Sul
+759,Mariana Carvalho Oliveira,Petrolina,PE,Nordeste
+760,Andre Araujo Gomes,Camacari,BA,Nordeste
+761,Gustavo Carvalho Costa,Campos dos Goytacazes,RJ,Sudeste
+762,Jessica Araujo Oliveira,Pelotas,RS,Sul
+763,Tatiane Rocha Oliveira,Sobral,CE,Nordeste
+764,Priscila Gomes Pereira,Parintins,AM,Norte
+765,Larissa Araujo Araujo,Ilheus,BA,Nordeste
+766,Marcelo Silva Souza,Campinas,SP,Sudeste
+767,Sandra Ribeiro Mendes,Vitoria da Conquista,BA,Nordeste
+768,Diego Vieira Lima,Sao Bernardo do Campo,SP,Sudeste
+769,Ricardo Costa Barbosa,Sao Jose dos Pinhais,PR,Sul
+770,Fernando Carvalho Gomes,Caxias do Sul,RS,Sul
+771,Fernanda Silva Alves,Gravata,PE,Nordeste
+772,Alexandre Barbosa Rodrigues,Juiz de Fora,MG,Sudeste
+773,Beatriz Silva Barbosa,Aguas Claras,DF,Centro-oeste
+774,Francisco Araujo Araujo,Guarulhos,SP,Sudeste
+775,Guilherme Vieira Costa,Serra Talhada,PE,Nordeste
+776,Aline Araujo Costa,Recife,PE,Nordeste
+777,Pedro Costa Martins,Gama,DF,Centro-oeste
+778,Renata Barbosa Rodrigues,Juazeiro do Norte,CE,Nordeste
+779,Rodrigo Oliveira Costa,Guara,DF,Centro-oeste
+780,Beatriz Gomes Pereira,Ilheus,BA,Nordeste
+781,Marcia Rocha Santos,Samambaia,DF,Centro-oeste
+782,Beatriz Lima Ribeiro,Pocos de Caldas,MG,Sudeste
+783,Renata Santos Barbosa,Manaus,AM,Norte
+784,Ricardo Souza Alves,Maues,AM,Norte
+785,Rafael Ribeiro Rodrigues,Sao Jose dos Campos,SP,Sudeste
+786,Marcelo Ferreira Oliveira,Pelotas,RS,Sul
+787,Lucas Rodrigues Araujo,Salvador,BA,Nordeste
+788,Joao Rocha Oliveira,Governador Valadares,MG,Sudeste
+789,Jose Rodrigues Mendes,Garanhuns,PE,Nordeste
+790,Isabela Ribeiro Martins,Igarassu,PE,Nordeste
+791,Carolina Vieira Barbosa,Londrina,PR,Sul
+792,Bruna Rodrigues Rocha,Autazes,AM,Norte
+793,Simone Ferreira Silva,Santa Maria,RS,Sul
+794,Antonia Santos Martins,Rio de Janeiro,RJ,Sudeste
+795,Guilherme Silva Barbosa,Samambaia,DF,Centro-oeste
+796,Fernando Mendes Rodrigues,Camacari,BA,Nordeste
+797,Alexandre Martins Barbosa,Niteroi,RJ,Sudeste
+798,Carlos Costa Alves,Serra Talhada,PE,Nordeste
+799,Bruna Lima Mendes,Iguatu,CE,Nordeste
+800,Carlos Costa Barbosa,Passo Fundo,RS,Sul
+801,Paulo Nunes Martins,Volta Redonda,RJ,Sudeste
+802,Marcelo Rodrigues Souza,Paranagua,PR,Sul
+803,Juliana Mendes Araujo,Ipatinga,MG,Sudeste
+804,Rafael Oliveira Santos,Guara,DF,Centro-oeste
+805,Beatriz Vieira Rodrigues,Juazeiro do Norte,CE,Nordeste
+806,Leonardo Vieira Araujo,Manaus,AM,Norte
+807,Tatiane Oliveira Ferreira,Parintins,AM,Norte
+808,Vanessa Mendes Santos,Manaus,AM,Norte
+809,Vanessa Ferreira Silva,Cabo Frio,RJ,Sudeste
+810,Guilherme Santos Costa,Recife,PE,Nordeste
+811,Marcos Oliveira Souza,Juiz de Fora,MG,Sudeste
+812,Juliana Gomes Araujo,Sao Paulo,SP,Sudeste
+813,Gabriel Rodrigues Araujo,Sao Jose dos Campos,SP,Sudeste
+814,Gabriela Pereira Costa,Curitiba,PR,Sul
+815,Bruno Oliveira Costa,Colombo,PR,Sul
+816,Patricia Nunes Rodrigues,Cabo Frio,RJ,Sudeste
+817,Juliana Martins Nunes,Maues,AM,Norte
+818,Felipe Vieira Gomes,Sao Jose dos Pinhais,PR,Sul
+819,Bruna Martins Alves,Pocos de Caldas,MG,Sudeste
+820,Antonio Carvalho Souza,Erechim,RS,Sul
+821,Camila Ribeiro Lima,Itabuna,BA,Nordeste
+822,Camila Silva Rodrigues,Santos,SP,Sudeste
+823,Renata Costa Carvalho,Guarulhos,SP,Sudeste
+824,Thiago Carvalho Vieira,Angra dos Reis,RJ,Sudeste
+825,Leticia Silva Pereira,Teresopolis,RJ,Sudeste
+826,Patricia Pereira Costa,Samambaia,DF,Centro-oeste
+827,Thiago Carvalho Souza,Pocos de Caldas,MG,Sudeste
+828,Gabriela Vieira Mendes,Petropolis,RJ,Sudeste
+829,Mariana Pereira Rocha,Planaltina,DF,Centro-oeste
+830,Maria Araujo Santos,Cabo Frio,RJ,Sudeste
+831,Marcelo Santos Pereira,Crato,CE,Nordeste
+832,Gabriel Oliveira Mendes,Canoas,RS,Sul
+833,Antonio Souza Silva,Ponta Grossa,PR,Sul
+834,Gabriel Santos Ribeiro,Angra dos Reis,RJ,Sudeste
+835,Jose Santos Carvalho,Guarulhos,SP,Sudeste
+836,Ricardo Araujo Oliveira,Guarapuava,PR,Sul
+837,Alexandre Araujo Pereira,Igarassu,PE,Nordeste
+838,Carolina Souza Ribeiro,Samambaia,DF,Centro-oeste
+839,Leonardo Oliveira Mendes,Foz do Iguacu,PR,Sul
+840,Leonardo Barbosa Ferreira,Betim,MG,Sudeste
+841,Ricardo Martins Gomes,Sobral,CE,Nordeste
+842,Rafael Silva Rocha,Bento Goncalves,RS,Sul
+843,Jessica Martins Alves,Itabuna,BA,Nordeste
+844,Leticia Vieira Ribeiro,Paulista,PE,Nordeste
+845,Gustavo Santos Costa,Itapipoca,CE,Nordeste
+846,Diego Ribeiro Carvalho,Salvador,BA,Nordeste
+847,Eduardo Souza Rodrigues,Sao Paulo,SP,Sudeste
+848,Paulo Pereira Lima,Contagem,MG,Sudeste
+849,Marcos Souza Silva,Santa Maria,RS,Sul
+850,Vinicius Martins Ferreira,Petropolis,RJ,Sudeste
+851,Fernanda Nunes Carvalho,Porto Alegre,RS,Sul
+852,Mariana Nunes Gomes,Maringa,PR,Sul
+853,Luana Costa Alves,Tefe,AM,Norte
+854,Marcelo Barbosa Ferreira,Quixada,CE,Nordeste
+855,Tatiane Mendes Santos,Novo Hamburgo,RS,Sul
+856,Gustavo Carvalho Mendes,Uberlandia,MG,Sudeste
+857,Rafael Pereira Mendes,Igarassu,PE,Nordeste
+858,Rafael Costa Ribeiro,Maracanau,CE,Nordeste
+859,Amanda Oliveira Gomes,Ponta Grossa,PR,Sul
+860,Rafael Santos Nunes,Cascavel,PR,Sul
+861,Leonardo Rodrigues Nunes,Porto Seguro,BA,Nordeste
+862,Simone Silva Costa,Canoas,RS,Sul
+863,Guilherme Nunes Barbosa,Novo Hamburgo,RS,Sul
+864,Felipe Nunes Silva,Curitiba,PR,Sul
+865,Claudia Martins Ribeiro,Coari,AM,Norte
+866,Gabriela Santos Rodrigues,Caruaru,PE,Nordeste
+867,Daniel Alves Costa,Londrina,PR,Sul
+868,Eduardo Ferreira Santos,Caxias do Sul,RS,Sul
+869,Lucas Gomes Rocha,Manaus,AM,Norte
+870,Fabio Araujo Carvalho,Igarassu,PE,Nordeste
+871,Gustavo Alves Rodrigues,Uberaba,MG,Sudeste
+872,Gabriela Alves Rocha,Ipatinga,MG,Sudeste
+873,Carolina Pereira Rocha,Itapipoca,CE,Nordeste
+874,Sandra Barbosa Martins,Pelotas,RS,Sul
+875,Leticia Carvalho Ferreira,Pelotas,RS,Sul
+876,Vanessa Gomes Oliveira,Feira de Santana,BA,Nordeste
+877,Simone Ribeiro Araujo,Manaus,AM,Norte
+878,Ricardo Barbosa Carvalho,Sao Paulo,SP,Sudeste
+879,Fabio Rodrigues Ribeiro,Cabo Frio,RJ,Sudeste
+880,Leticia Rodrigues Costa,Ceilandia,DF,Centro-oeste
+881,Eduardo Carvalho Ferreira,Ipatinga,MG,Sudeste
+882,Rodrigo Santos Nunes,Campos dos Goytacazes,RJ,Sudeste
+883,Leonardo Silva Santos,Canoas,RS,Sul
+884,Joao Silva Ribeiro,Petropolis,RJ,Sudeste
+885,Marcelo Souza Ribeiro,Tefe,AM,Norte
+886,Pedro Souza Martins,Salvador,BA,Nordeste
+887,Lucas Oliveira Lima,Novo Hamburgo,RS,Sul
+888,Beatriz Souza Nunes,Gama,DF,Centro-oeste
+889,Simone Rodrigues Ribeiro,Volta Redonda,RJ,Sudeste
+890,Gabriela Barbosa Carvalho,Brasilia,DF,Centro-oeste
+891,Alexandre Souza Gomes,Santos,SP,Sudeste
+892,Pedro Rodrigues Carvalho,Guara,DF,Centro-oeste
+893,Gabriel Santos Rocha,Gravatai,RS,Sul
+894,Eduardo Santos Pereira,Vitoria da Conquista,BA,Nordeste
+895,Francisca Costa Oliveira,Uberlandia,MG,Sudeste
+896,Claudia Alves Pereira,Maringa,PR,Sul
+897,Paulo Vieira Pereira,Santa Maria,RS,Sul
+898,Rafael Carvalho Carvalho,Presidente Figueiredo,AM,Norte
+899,Claudia Costa Silva,Sobradinho,DF,Centro-oeste
+900,Marcia Lima Carvalho,Gravata,PE,Nordeste
+901,Gabriel Rodrigues Costa,Osasco,SP,Sudeste
+902,Fabio Araujo Carvalho,Ceilandia,DF,Centro-oeste
+903,Raquel Souza Carvalho,Foz do Iguacu,PR,Sul
+904,Tatiane Martins Santos,Fortaleza,CE,Nordeste
+905,Priscila Silva Rodrigues,Ponta Grossa,PR,Sul
+906,Priscila Ferreira Silva,Ceilandia,DF,Centro-oeste
+907,Luana Araujo Ferreira,Tefe,AM,Norte
+908,Bruno Oliveira Souza,Novo Hamburgo,RS,Sul
+909,Paulo Costa Silva,Petrolina,PE,Nordeste
+910,Rafael Ferreira Rodrigues,Angra dos Reis,RJ,Sudeste
+911,Marcia Alves Santos,Itapipoca,CE,Nordeste
+912,Marcia Oliveira Gomes,Volta Redonda,RJ,Sudeste
+913,Beatriz Costa Souza,Brasilia,DF,Centro-oeste
+914,Vinicius Silva Carvalho,Crato,CE,Nordeste
+915,Rafael Ribeiro Ribeiro,Brasilia,DF,Centro-oeste
+916,Adriana Souza Silva,Ceilandia,DF,Centro-oeste
+917,Rodrigo Pereira Martins,Caruaru,PE,Nordeste
+918,Claudia Ribeiro Silva,Erechim,RS,Sul
+919,Leonardo Oliveira Martins,Sao Jose dos Pinhais,PR,Sul
+920,Mariana Rocha Mendes,Duque de Caxias,RJ,Sudeste
+921,Leticia Ferreira Barbosa,Canoas,RS,Sul
+922,Priscila Oliveira Souza,Petrolina,PE,Nordeste
+923,Priscila Costa Souza,Itabuna,BA,Nordeste
+924,Carolina Oliveira Ribeiro,Canoas,RS,Sul
+925,Antonio Souza Oliveira,Gama,DF,Centro-oeste
+926,Bruna Mendes Silva,Novo Hamburgo,RS,Sul
+927,Rafael Rodrigues Rocha,Recife,PE,Nordeste
+928,Camila Rodrigues Gomes,Planaltina,DF,Centro-oeste
+929,Mariana Santos Vieira,Sao Jose dos Pinhais,PR,Sul
+930,Fernanda Costa Gomes,Canoas,RS,Sul
+931,Simone Ferreira Costa,Tefe,AM,Norte
+932,Andre Martins Carvalho,Ponta Grossa,PR,Sul
+933,Carlos Ribeiro Mendes,Taguatinga,DF,Centro-oeste
+934,Sandra Rodrigues Alves,Ceilandia,DF,Centro-oeste
+935,Bruno Ferreira Santos,Campinas,SP,Sudeste
+936,Gabriela Araujo Rodrigues,Novo Hamburgo,RS,Sul
+937,Leonardo Ferreira Carvalho,Crato,CE,Nordeste
+938,Antonio Souza Costa,Londrina,PR,Sul
+939,Andre Araujo Gomes,Cabo Frio,RJ,Sudeste
+940,Rodrigo Silva Carvalho,Cabo Frio,RJ,Sudeste
+941,Claudia Souza Alves,Osasco,SP,Sudeste
+942,Antonia Santos Rodrigues,Coari,AM,Norte
+943,Francisco Rocha Gomes,Sao Jose dos Campos,SP,Sudeste
+944,Marcelo Gomes Nunes,Camacari,BA,Nordeste
+945,Larissa Alves Souza,Betim,MG,Sudeste
+946,Carolina Nunes Alves,Aguas Claras,DF,Centro-oeste
+947,Aline Carvalho Ferreira,Olinda,PE,Nordeste
+948,Ricardo Lima Alves,Olinda,PE,Nordeste
+949,Jessica Carvalho Silva,Cabo Frio,RJ,Sudeste
+950,Jessica Oliveira Ribeiro,Contagem,MG,Sudeste
+951,Daniel Pereira Carvalho,Sao Jose dos Pinhais,PR,Sul
+952,Rafael Mendes Gomes,Santos,SP,Sudeste
+953,Bruna Ferreira Martins,Itapipoca,CE,Nordeste
+954,Fernando Rocha Rodrigues,Sorocaba,SP,Sudeste
+955,Jessica Barbosa Ferreira,Cascavel,PR,Sul
+956,Renata Pereira Gomes,Niteroi,RJ,Sudeste
+957,Francisca Ferreira Mendes,Sao Bernardo do Campo,SP,Sudeste
+958,Juliana Costa Costa,Recife,PE,Nordeste
+959,Thiago Silva Araujo,Brasilia,DF,Centro-oeste
+960,Paulo Rocha Pereira,Tabatinga,AM,Norte
+961,Daniel Ferreira Martins,Duque de Caxias,RJ,Sudeste
+962,Marcos Alves Silva,Manaus,AM,Norte
+963,Mariana Costa Santos,Foz do Iguacu,PR,Sul
+964,Gustavo Ferreira Carvalho,Maracanau,CE,Nordeste
+965,Luana Rodrigues Araujo,Ponta Grossa,PR,Sul
+966,Luiz Martins Araujo,Quixada,CE,Nordeste
+967,Diego Araujo Silva,Curitiba,PR,Sul
+968,Diego Ribeiro Santos,Londrina,PR,Sul
+969,Andre Rodrigues Ribeiro,Niteroi,RJ,Sudeste
+970,Rafael Rocha Silva,Brasilia,DF,Centro-oeste
+971,Luiz Costa Oliveira,Contagem,MG,Sudeste
+972,Mariana Lima Pereira,Presidente Figueiredo,AM,Norte
+973,Mateus Mendes Rodrigues,Ribeirao Preto,SP,Sudeste
+974,Jessica Silva Vieira,Gravata,PE,Nordeste
+975,Patricia Pereira Ribeiro,Recife,PE,Nordeste
+976,Rafael Lima Martins,Belo Horizonte,MG,Sudeste
+977,Diego Ribeiro Alves,Olinda,PE,Nordeste
+978,Amanda Ribeiro Gomes,Juazeiro,BA,Nordeste
+979,Gabriela Rocha Vieira,Aguas Claras,DF,Centro-oeste
+980,Juliana Vieira Souza,Caucaia,CE,Nordeste
+981,Carolina Ribeiro Gomes,Santos,SP,Sudeste
+982,Rodrigo Lima Nunes,Jaboatao dos Guararapes,PE,Nordeste
+983,Fabio Rocha Silva,Curitiba,PR,Sul
+984,Rodrigo Alves Carvalho,Petropolis,RJ,Sudeste
+985,Bruna Nunes Carvalho,Belo Horizonte,MG,Sudeste
+986,Gabriela Silva Rocha,Ponta Grossa,PR,Sul
+987,Vanessa Souza Ferreira,Curitiba,PR,Sul
+988,Aline Rodrigues Lima,Parintins,AM,Norte
+989,Tatiane Vieira Martins,Governador Valadares,MG,Sudeste
+990,Jose Silva Martins,Osasco,SP,Sudeste
+991,Diego Carvalho Lima,Gravatai,RS,Sul
+992,Ricardo Carvalho Rodrigues,Ipatinga,MG,Sudeste
+993,Felipe Ferreira Ferreira,Curitiba,PR,Sul
+994,Paulo Carvalho Vieira,Caruaru,PE,Nordeste
+995,Bruna Souza Rocha,Garanhuns,PE,Nordeste
+996,Joao Santos Rodrigues,Brasilia,DF,Centro-oeste
+997,Antonia Nunes Ribeiro,Guara,DF,Centro-oeste
+998,Andre Rodrigues Pereira,Rio de Janeiro,RJ,Sudeste
+999,Luiz Souza Rocha,Sao Jose dos Campos,SP,Sudeste
+1000,Rafael Gomes Pereira,Uberlandia,MG,Sudeste
+1001,Luiz Martins Oliveira,Rio de Janeiro,RJ,Sudeste
+1002,Bruno Rocha Ribeiro,Sao Jose dos Pinhais,PR,Sul
+1003,Francisco Lima Costa,Juiz de Fora,MG,Sudeste
+1004,Felipe Costa Oliveira,Uberlandia,MG,Sudeste
+1005,Marcia Carvalho Martins,Serra Talhada,PE,Nordeste
+1006,Ricardo Pereira Carvalho,Maues,AM,Norte
+1007,Patricia Carvalho Oliveira,Nova Iguacu,RJ,Sudeste
+1008,Mateus Silva Martins,Sorocaba,SP,Sudeste
+1009,Mariana Rodrigues Gomes,Canoas,RS,Sul
+1010,Carlos Souza Rodrigues,Campinas,SP,Sudeste
+1011,Thiago Vieira Ferreira,Nova Iguacu,RJ,Sudeste
+1012,Thiago Araujo Rodrigues,Paranagua,PR,Sul
+1013,Leticia Silva Gomes,Taguatinga,DF,Centro-oeste
+1014,Daniel Araujo Barbosa,Ponta Grossa,PR,Sul
+1015,Aline Oliveira Rocha,Brasilia,DF,Centro-oeste
+1016,Thiago Nunes Vieira,Porto Seguro,BA,Nordeste
+1017,Vinicius Martins Araujo,Volta Redonda,RJ,Sudeste
+1018,Camila Silva Pereira,Nova Iguacu,RJ,Sudeste
+1019,Fabio Gomes Alves,Londrina,PR,Sul
+1020,Gabriela Costa Santos,Sorocaba,SP,Sudeste
+1021,Larissa Alves Ribeiro,Porto Seguro,BA,Nordeste
+1022,Vinicius Rodrigues Silva,Maringa,PR,Sul
+1023,Francisca Oliveira Pereira,Autazes,AM,Norte
+1024,Raquel Ribeiro Barbosa,Aguas Claras,DF,Centro-oeste
+1025,Simone Carvalho Pereira,Uberaba,MG,Sudeste
+1026,Joao Rodrigues Gomes,Crato,CE,Nordeste
+1027,Marcia Oliveira Lima,Petropolis,RJ,Sudeste
+1028,Andre Lima Barbosa,Sorocaba,SP,Sudeste
+1029,Mateus Vieira Rodrigues,Feira de Santana,BA,Nordeste
+1030,Aline Santos Vieira,Uberlandia,MG,Sudeste
+1031,Guilherme Carvalho Oliveira,Teixeira de Freitas,BA,Nordeste
+1032,Luana Barbosa Souza,Caruaru,PE,Nordeste
+1033,Gabriel Ribeiro Vieira,Paranagua,PR,Sul
+1034,Beatriz Rodrigues Alves,Sorocaba,SP,Sudeste
+1035,Fernanda Santos Alves,Maringa,PR,Sul
+1036,Marcos Carvalho Oliveira,Santa Maria,RS,Sul
+1037,Francisca Araujo Ribeiro,Igarassu,PE,Nordeste
+1038,Adriana Ferreira Araujo,Osasco,SP,Sudeste
+1039,Diego Mendes Vieira,Ipatinga,MG,Sudeste
+1040,Gabriel Souza Araujo,Ipatinga,MG,Sudeste
+1041,Pedro Alves Araujo,Gravatai,RS,Sul
+1042,Priscila Mendes Silva,Colombo,PR,Sul
+1043,Tatiane Barbosa Araujo,Gravata,PE,Nordeste
+1044,Paulo Barbosa Araujo,Tefe,AM,Norte
+1045,Fernando Araujo Gomes,Rio de Janeiro,RJ,Sudeste
+1046,Antonia Costa Vieira,Brasilia,DF,Centro-oeste
+1047,Fernanda Pereira Barbosa,Caucaia,CE,Nordeste
+1048,Raquel Barbosa Araujo,Coari,AM,Norte
+1049,Aline Gomes Araujo,Sao Paulo,SP,Sudeste
+1050,Claudia Rocha Vieira,Bento Goncalves,RS,Sul
+1051,Ricardo Carvalho Santos,Governador Valadares,MG,Sudeste
+1052,Jessica Pereira Souza,Colombo,PR,Sul
+1053,Fernanda Oliveira Oliveira,Piracicaba,SP,Sudeste
+1054,Francisca Mendes Carvalho,Contagem,MG,Sudeste
+1055,Eduardo Pereira Carvalho,Petropolis,RJ,Sudeste
+1056,Gabriela Souza Souza,Betim,MG,Sudeste
+1057,Francisca Oliveira Costa,Fortaleza,CE,Nordeste
+1058,Ricardo Oliveira Alves,Juiz de Fora,MG,Sudeste
+1059,Paulo Mendes Vieira,Itapipoca,CE,Nordeste
+1060,Marcia Rocha Lima,Manaus,AM,Norte
+1061,Juliana Alves Martins,Contagem,MG,Sudeste
+1062,Juliana Lima Lima,Coari,AM,Norte
+1063,Beatriz Araujo Rocha,Santa Maria,RS,Sul
+1064,Vinicius Mendes Gomes,Iguatu,CE,Nordeste
+1065,Claudia Ribeiro Vieira,Erechim,RS,Sul
+1066,Ricardo Oliveira Barbosa,Aguas Claras,DF,Centro-oeste
+1067,Luana Rocha Martins,Porto Seguro,BA,Nordeste
+1068,Antonio Alves Martins,Sorocaba,SP,Sudeste
+1069,Fernanda Barbosa Mendes,Petrolina,PE,Nordeste
+1070,Pedro Souza Nunes,Paulista,PE,Nordeste
+1071,Jose Costa Costa,Angra dos Reis,RJ,Sudeste
+1072,Gabriela Carvalho Pereira,Brasilia,DF,Centro-oeste
+1073,Thiago Carvalho Santos,Campinas,SP,Sudeste
+1074,Vinicius Araujo Gomes,Cabo Frio,RJ,Sudeste
+1075,Jose Carvalho Gomes,Ceilandia,DF,Centro-oeste
+1076,Thiago Silva Rodrigues,Uberlandia,MG,Sudeste
+1077,Adriana Martins Nunes,Campinas,SP,Sudeste
+1078,Francisca Lima Ribeiro,Uberaba,MG,Sudeste
+1079,Gabriel Rodrigues Mendes,Autazes,AM,Norte
+1080,Priscila Costa Lima,Cascavel,PR,Sul
+1081,Thiago Pereira Alves,Porto Alegre,RS,Sul
+1082,Daniel Alves Costa,Tabatinga,AM,Norte
+1083,Tatiane Rodrigues Rocha,Igarassu,PE,Nordeste
+1084,Simone Carvalho Alves,Sao Jose dos Pinhais,PR,Sul
+1085,Gustavo Souza Souza,Curitiba,PR,Sul
+1086,Leticia Martins Lima,Caruaru,PE,Nordeste
+1087,Bruno Rocha Ribeiro,Rio de Janeiro,RJ,Sudeste
+1088,Jessica Alves Gomes,Presidente Figueiredo,AM,Norte
+1089,Antonia Santos Pereira,Piracicaba,SP,Sudeste
+1090,Eduardo Souza Lima,Jaboatao dos Guararapes,PE,Nordeste
+1091,Luana Lima Costa,Sao Jose dos Pinhais,PR,Sul
+1092,Antonia Ferreira Rocha,Montes Claros,MG,Sudeste
+1093,Gabriel Barbosa Rodrigues,Salvador,BA,Nordeste
+1094,Luana Oliveira Ferreira,Brasilia,DF,Centro-oeste
+1095,Beatriz Souza Santos,Autazes,AM,Norte
+1096,Simone Souza Souza,Camacari,BA,Nordeste
+1097,Aline Martins Barbosa,Presidente Figueiredo,AM,Norte
+1098,Fernando Rocha Silva,Teixeira de Freitas,BA,Nordeste
+1099,Diego Araujo Martins,Duque de Caxias,RJ,Sudeste
+1100,Leticia Rocha Ferreira,Serra Talhada,PE,Nordeste
+1101,Aline Gomes Alves,Ceilandia,DF,Centro-oeste
+1102,Gabriela Martins Gomes,Juazeiro do Norte,CE,Nordeste
+1103,Carolina Nunes Ferreira,Curitiba,PR,Sul
+1104,Luiz Mendes Souza,Paulista,PE,Nordeste
+1105,Carlos Martins Gomes,Duque de Caxias,RJ,Sudeste
+1106,Fernanda Araujo Mendes,Crato,CE,Nordeste
+1107,Tatiane Carvalho Araujo,Planaltina,DF,Centro-oeste
+1108,Priscila Ribeiro Mendes,Governador Valadares,MG,Sudeste
+1109,Luiz Oliveira Gomes,Governador Valadares,MG,Sudeste
+1110,Marcelo Barbosa Ribeiro,Porto Seguro,BA,Nordeste
+1111,Bruno Barbosa Silva,Uberaba,MG,Sudeste
+1112,Gabriela Rocha Martins,Sao Bernardo do Campo,SP,Sudeste
+1113,Joao Barbosa Rocha,Londrina,PR,Sul
+1114,Claudia Gomes Mendes,Teresopolis,RJ,Sudeste
+1115,Ana Alves Rocha,Pelotas,RS,Sul
+1116,Isabela Silva Costa,Rio de Janeiro,RJ,Sudeste
+1117,Antonia Rocha Souza,Osasco,SP,Sudeste
+1118,Fabio Souza Gomes,Coari,AM,Norte
+1119,Mariana Vieira Souza,Contagem,MG,Sudeste
+1120,Renata Nunes Alves,Teresopolis,RJ,Sudeste
+1121,Marcos Carvalho Carvalho,Belo Horizonte,MG,Sudeste
+1122,Guilherme Carvalho Silva,Sorocaba,SP,Sudeste
+1123,Diego Barbosa Lima,Manacapuru,AM,Norte
+1124,Larissa Carvalho Rocha,Gama,DF,Centro-oeste
+1125,Adriana Rodrigues Lima,Igarassu,PE,Nordeste
+1126,Gabriela Rocha Rocha,Recanto das Emas,DF,Centro-oeste
+1127,Joao Ferreira Pereira,Crato,CE,Nordeste
+1128,Adriana Pereira Souza,Piracicaba,SP,Sudeste
+1129,Mateus Oliveira Barbosa,Feira de Santana,BA,Nordeste
+1130,Ricardo Mendes Nunes,Sobral,CE,Nordeste
+1131,Paulo Araujo Rocha,Nova Iguacu,RJ,Sudeste
+1132,Luana Silva Martins,Vitoria da Conquista,BA,Nordeste
+1133,Thiago Alves Mendes,Sobradinho,DF,Centro-oeste
+1134,Leticia Araujo Carvalho,Coari,AM,Norte
+1135,Lucas Santos Vieira,Cascavel,PR,Sul
+1136,Francisca Ferreira Gomes,Presidente Figueiredo,AM,Norte
+1137,Leonardo Santos Nunes,Sao Paulo,SP,Sudeste
+1138,Pedro Ribeiro Santos,Sao Jose dos Campos,SP,Sudeste
+1139,Guilherme Vieira Santos,Maues,AM,Norte
+1140,Jose Souza Santos,Igarassu,PE,Nordeste
+1141,Luana Pereira Silva,Aguas Claras,DF,Centro-oeste
+1142,Ana Carvalho Carvalho,Angra dos Reis,RJ,Sudeste
+1143,Luana Martins Martins,Canoas,RS,Sul
+1144,Patricia Araujo Nunes,Campinas,SP,Sudeste
+1145,Paulo Gomes Santos,Maringa,PR,Sul
+1146,Fernando Souza Oliveira,Crato,CE,Nordeste
+1147,Luiz Martins Nunes,Foz do Iguacu,PR,Sul
+1148,Ana Martins Araujo,Pelotas,RS,Sul
+1149,Diego Nunes Alves,Passo Fundo,RS,Sul
+1150,Maria Costa Santos,Londrina,PR,Sul
+1151,Leonardo Carvalho Costa,Sao Jose dos Campos,SP,Sudeste
+1152,Fernando Araujo Nunes,Tabatinga,AM,Norte
+1153,Simone Ribeiro Lima,Aguas Claras,DF,Centro-oeste
+1154,Raquel Santos Souza,Iguatu,CE,Nordeste
+1155,Simone Rocha Lima,Belo Horizonte,MG,Sudeste
+1156,Aline Oliveira Pereira,Piracicaba,SP,Sudeste
+1157,Fernando Lima Vieira,Maringa,PR,Sul
+1158,Felipe Silva Barbosa,Recife,PE,Nordeste
+1159,Aline Vieira Nunes,Cascavel,PR,Sul
+1160,Juliana Pereira Ferreira,Rio de Janeiro,RJ,Sudeste
+1161,Mariana Barbosa Mendes,Ribeirao Preto,SP,Sudeste
+1162,Mateus Martins Nunes,Niteroi,RJ,Sudeste
+1163,Marcelo Oliveira Pereira,Jaboatao dos Guararapes,PE,Nordeste
+1164,Juliana Silva Ribeiro,Teixeira de Freitas,BA,Nordeste
+1165,Marcia Martins Santos,Teresopolis,RJ,Sudeste
+1166,Larissa Rocha Mendes,Governador Valadares,MG,Sudeste
+1167,Raquel Pereira Mendes,Parintins,AM,Norte
+1168,Carolina Costa Rocha,Erechim,RS,Sul
+1169,Camila Pereira Martins,Passo Fundo,RS,Sul
+1170,Rafael Nunes Rocha,Iguatu,CE,Nordeste
+1171,Claudia Rodrigues Nunes,Planaltina,DF,Centro-oeste
+1172,Francisco Oliveira Araujo,Pelotas,RS,Sul
+1173,Francisco Araujo Lima,Sao Bernardo do Campo,SP,Sudeste
+1174,Francisca Rodrigues Rocha,Governador Valadares,MG,Sudeste
+1175,Luiz Souza Ribeiro,Campinas,SP,Sudeste
+1176,Raquel Araujo Barbosa,Uberaba,MG,Sudeste
+1177,Gustavo Silva Mendes,Teixeira de Freitas,BA,Nordeste
+1178,Gabriela Lima Souza,Piracicaba,SP,Sudeste
+1179,Gabriela Rocha Araujo,Juiz de Fora,MG,Sudeste
+1180,Isabela Alves Araujo,Volta Redonda,RJ,Sudeste
+1181,Luiz Lima Costa,Sao Jose dos Pinhais,PR,Sul
+1182,Priscila Lima Rodrigues,Belo Horizonte,MG,Sudeste
+1183,Luana Nunes Nunes,Itabuna,BA,Nordeste
+1184,Gabriela Araujo Barbosa,Niteroi,RJ,Sudeste
+1185,Beatriz Lima Oliveira,Nova Iguacu,RJ,Sudeste
+1186,Marcelo Ribeiro Lima,Salvador,BA,Nordeste
+1187,Rodrigo Rocha Ribeiro,Pelotas,RS,Sul
+1188,Lucas Alves Lima,Sobral,CE,Nordeste
+1189,Gustavo Oliveira Rocha,Caninde,CE,Nordeste
+1190,Paulo Santos Araujo,Teixeira de Freitas,BA,Nordeste
+1191,Marcia Gomes Pereira,Serra Talhada,PE,Nordeste
+1192,Sandra Souza Pereira,Itabuna,BA,Nordeste
+1193,Felipe Ribeiro Souza,Itapipoca,CE,Nordeste
+1194,Maria Gomes Lima,Tabatinga,AM,Norte
+1195,Jessica Carvalho Barbosa,Paranagua,PR,Sul
+1196,Thiago Santos Gomes,Manacapuru,AM,Norte
+1197,Carolina Vieira Ribeiro,Sao Bernardo do Campo,SP,Sudeste
+1198,Camila Martins Nunes,Gravatai,RS,Sul
+1199,Paulo Nunes Carvalho,Porto Seguro,BA,Nordeste
+1200,Patricia Silva Santos,Igarassu,PE,Nordeste
+1201,Luiz Silva Pereira,Garanhuns,PE,Nordeste
+1202,Luana Lima Oliveira,Sao Paulo,SP,Sudeste
+1203,Juliana Souza Mendes,Porto Seguro,BA,Nordeste
+1204,Sandra Lima Barbosa,Petrolina,PE,Nordeste
+1205,Bruno Nunes Lima,Novo Hamburgo,RS,Sul
+1206,Isabela Carvalho Martins,Brasilia,DF,Centro-oeste
+1207,Leticia Martins Costa,Uberlandia,MG,Sudeste
+1208,Fernanda Costa Mendes,Guara,DF,Centro-oeste
+1209,Gabriela Pereira Santos,Vitoria da Conquista,BA,Nordeste
+1210,Guilherme Vieira Araujo,Maues,AM,Norte
+1211,Patricia Ribeiro Barbosa,Campos dos Goytacazes,RJ,Sudeste
+1212,Alexandre Silva Ferreira,Caucaia,CE,Nordeste
+1213,Beatriz Ferreira Rocha,Recife,PE,Nordeste
+1214,Luiz Lima Rocha,Betim,MG,Sudeste
+1215,Adriana Vieira Martins,Maracanau,CE,Nordeste
+1216,Isabela Rodrigues Ferreira,Olinda,PE,Nordeste
+1217,Joao Gomes Alves,Crato,CE,Nordeste
+1218,Felipe Vieira Ferreira,Salvador,BA,Nordeste
+1219,Thiago Araujo Mendes,Autazes,AM,Norte
+1220,Carlos Souza Alves,Pocos de Caldas,MG,Sudeste
+1221,Bruna Ribeiro Mendes,Pelotas,RS,Sul
+1222,Fernanda Oliveira Vieira,Sorocaba,SP,Sudeste
+1223,Ana Rodrigues Rocha,Colombo,PR,Sul
+1224,Daniel Carvalho Carvalho,Camacari,BA,Nordeste
+1225,Claudia Alves Ferreira,Sobral,CE,Nordeste
+1226,Jessica Martins Ferreira,Caruaru,PE,Nordeste
+1227,Raquel Alves Carvalho,Crato,CE,Nordeste
+1228,Guilherme Gomes Ribeiro,Piracicaba,SP,Sudeste
+1229,Marcos Costa Carvalho,Brasilia,DF,Centro-oeste
+1230,Tatiane Barbosa Costa,Sorocaba,SP,Sudeste
+1231,Renata Rodrigues Ferreira,Guarulhos,SP,Sudeste
+1232,Mateus Nunes Lima,Vitoria da Conquista,BA,Nordeste
+1233,Amanda Rocha Silva,Bento Goncalves,RS,Sul
+1234,Francisca Ferreira Barbosa,Tefe,AM,Norte
+1235,Claudia Silva Gomes,Teixeira de Freitas,BA,Nordeste
+1236,Francisca Mendes Barbosa,Petropolis,RJ,Sudeste
+1237,Maria Ferreira Silva,Nova Iguacu,RJ,Sudeste
+1238,Tatiane Alves Rodrigues,Betim,MG,Sudeste
+1239,Jessica Pereira Alves,Paranagua,PR,Sul
+1240,Rafael Mendes Martins,Belo Horizonte,MG,Sudeste
+1241,Eduardo Mendes Alves,Camacari,BA,Nordeste
+1242,Adriana Lima Oliveira,Sobral,CE,Nordeste
+1243,Larissa Ferreira Costa,Lauro de Freitas,BA,Nordeste
+1244,Luana Santos Ribeiro,Governador Valadares,MG,Sudeste
+1245,Ricardo Souza Ferreira,Itacoatiara,AM,Norte
+1246,Leonardo Barbosa Mendes,Maracanau,CE,Nordeste
+1247,Carolina Ribeiro Costa,Parintins,AM,Norte
+1248,Marcos Mendes Carvalho,Betim,MG,Sudeste
+1249,Larissa Alves Mendes,Duque de Caxias,RJ,Sudeste
+1250,Leticia Carvalho Ferreira,Betim,MG,Sudeste
+1251,Lucas Alves Araujo,Guarulhos,SP,Sudeste
+1252,Andre Nunes Carvalho,Caxias do Sul,RS,Sul
+1253,Alexandre Rodrigues Carvalho,Parintins,AM,Norte
+1254,Diego Mendes Silva,Juazeiro,BA,Nordeste
+1255,Maria Vieira Vieira,Maracanau,CE,Nordeste
+1256,Bruno Oliveira Ribeiro,Betim,MG,Sudeste
+1257,Thiago Costa Santos,Gravata,PE,Nordeste
+1258,Antonio Martins Souza,Uberaba,MG,Sudeste
+1259,Felipe Silva Costa,Petrolina,PE,Nordeste
+1260,Adriana Barbosa Rocha,Feira de Santana,BA,Nordeste
+1261,Vanessa Carvalho Oliveira,Bento Goncalves,RS,Sul
+1262,Leticia Araujo Santos,Quixada,CE,Nordeste
+1263,Leonardo Martins Lima,Coari,AM,Norte
+1264,Bruno Silva Barbosa,Salvador,BA,Nordeste
+1265,Patricia Ferreira Oliveira,Iguatu,CE,Nordeste
+1266,Felipe Vieira Pereira,Volta Redonda,RJ,Sudeste
+1267,Leonardo Souza Carvalho,Garanhuns,PE,Nordeste
+1268,Diego Lima Oliveira,Sao Jose dos Pinhais,PR,Sul
+1269,Adriana Pereira Santos,Petrolina,PE,Nordeste
+1270,Fernando Santos Vieira,Sao Bernardo do Campo,SP,Sudeste
+1271,Bruno Rodrigues Lima,Nova Iguacu,RJ,Sudeste
+1272,Gabriel Pereira Oliveira,Aguas Claras,DF,Centro-oeste
+1273,Daniel Costa Nunes,Teixeira de Freitas,BA,Nordeste
+1274,Diego Costa Alves,Recife,PE,Nordeste
+1275,Tatiane Costa Nunes,Ilheus,BA,Nordeste
+1276,Leticia Barbosa Silva,Gama,DF,Centro-oeste
+1277,Alexandre Silva Gomes,Itacoatiara,AM,Norte
+1278,Mariana Souza Souza,Planaltina,DF,Centro-oeste
+1279,Simone Carvalho Nunes,Planaltina,DF,Centro-oeste
+1280,Tatiane Souza Ribeiro,Novo Hamburgo,RS,Sul
+1281,Sandra Barbosa Ferreira,Tabatinga,AM,Norte
+1282,Priscila Souza Carvalho,Caruaru,PE,Nordeste
+1283,Juliana Vieira Vieira,Sorocaba,SP,Sudeste
+1284,Guilherme Costa Oliveira,Autazes,AM,Norte
+1285,Marcia Barbosa Martins,Vitoria da Conquista,BA,Nordeste
+1286,Joao Alves Mendes,Pelotas,RS,Sul
+1287,Antonia Vieira Ribeiro,Sao Paulo,SP,Sudeste
+1288,Beatriz Carvalho Oliveira,Sobradinho,DF,Centro-oeste
+1289,Thiago Santos Gomes,Maues,AM,Norte
+1290,Antonia Rodrigues Lima,Paulista,PE,Nordeste
+1291,Adriana Costa Alves,Quixada,CE,Nordeste
+1292,Camila Gomes Barbosa,Brasilia,DF,Centro-oeste
+1293,Luiz Silva Pereira,Maringa,PR,Sul
+1294,Beatriz Barbosa Gomes,Planaltina,DF,Centro-oeste
+1295,Lucas Silva Alves,Foz do Iguacu,PR,Sul
+1296,Larissa Carvalho Costa,Sobradinho,DF,Centro-oeste
+1297,Bruna Costa Ferreira,Recife,PE,Nordeste
+1298,Luiz Alves Pereira,Gravatai,RS,Sul
+1299,Fabio Silva Rocha,Jaboatao dos Guararapes,PE,Nordeste
+1300,Aline Nunes Nunes,Sobradinho,DF,Centro-oeste
+1301,Vinicius Ferreira Pereira,Piracicaba,SP,Sudeste
+1302,Francisca Alves Oliveira,Canoas,RS,Sul
+1303,Gabriela Costa Barbosa,Nova Iguacu,RJ,Sudeste
+1304,Antonio Costa Alves,Guara,DF,Centro-oeste
+1305,Gabriela Araujo Souza,Ribeirao Preto,SP,Sudeste
+1306,Beatriz Ferreira Ribeiro,Cascavel,PR,Sul
+1307,Marcos Nunes Rocha,Ipatinga,MG,Sudeste
+1308,Marcelo Costa Costa,Londrina,PR,Sul
+1309,Fernando Nunes Ferreira,Colombo,PR,Sul
+1310,Marcelo Costa Souza,Vitoria da Conquista,BA,Nordeste
+1311,Adriana Ferreira Ferreira,Maues,AM,Norte
+1312,Simone Lima Pereira,Betim,MG,Sudeste
+1313,Claudia Ribeiro Barbosa,Recife,PE,Nordeste
+1314,Bruno Martins Rodrigues,Santa Maria,RS,Sul
+1315,Maria Ribeiro Araujo,Erechim,RS,Sul
+1316,Marcos Souza Oliveira,Guara,DF,Centro-oeste
+1317,Bruna Costa Pereira,Campinas,SP,Sudeste
+1318,Aline Nunes Martins,Uberlandia,MG,Sudeste
+1319,Isabela Araujo Rodrigues,Parintins,AM,Norte
+1320,Guilherme Nunes Lima,Uberlandia,MG,Sudeste
+1321,Amanda Barbosa Alves,Crato,CE,Nordeste
+1322,Rodrigo Lima Lima,Garanhuns,PE,Nordeste
+1323,Adriana Santos Rocha,Aguas Claras,DF,Centro-oeste
+1324,Mariana Ribeiro Nunes,Niteroi,RJ,Sudeste
+1325,Eduardo Souza Nunes,Samambaia,DF,Centro-oeste
+1326,Jessica Lima Barbosa,Uberaba,MG,Sudeste
+1327,Alexandre Araujo Silva,Aguas Claras,DF,Centro-oeste
+1328,Gabriel Araujo Rodrigues,Maues,AM,Norte
+1329,Gabriela Martins Mendes,Maringa,PR,Sul
+1330,Leonardo Santos Rodrigues,Itabuna,BA,Nordeste
+1331,Paulo Araujo Lima,Ipatinga,MG,Sudeste
+1332,Bruna Silva Barbosa,Iguatu,CE,Nordeste
+1333,Daniel Mendes Souza,Petropolis,RJ,Sudeste
+1334,Andre Vieira Martins,Cabo Frio,RJ,Sudeste
+1335,Marcelo Souza Barbosa,Jaboatao dos Guararapes,PE,Nordeste
+1336,Luiz Oliveira Araujo,Fortaleza,CE,Nordeste
+1337,Luana Ribeiro Santos,Pocos de Caldas,MG,Sudeste
+1338,Andre Santos Santos,Aguas Claras,DF,Centro-oeste
+1339,Paulo Rocha Rodrigues,Guarulhos,SP,Sudeste
+1340,Ricardo Martins Lima,Salvador,BA,Nordeste
+1341,Mateus Rodrigues Araujo,Juiz de Fora,MG,Sudeste
+1342,Gustavo Pereira Oliveira,Iguatu,CE,Nordeste
+1343,Mateus Vieira Silva,Montes Claros,MG,Sudeste
+1344,Leonardo Souza Costa,Bento Goncalves,RS,Sul
+1345,Juliana Pereira Oliveira,Canoas,RS,Sul
+1346,Fernando Gomes Ribeiro,Presidente Figueiredo,AM,Norte
+1347,Juliana Ribeiro Araujo,Recife,PE,Nordeste
+1348,Maria Rodrigues Santos,Piracicaba,SP,Sudeste
+1349,Rafael Alves Mendes,Planaltina,DF,Centro-oeste
+1350,Diego Lima Rocha,Teixeira de Freitas,BA,Nordeste
+1351,Francisco Ribeiro Rocha,Osasco,SP,Sudeste
+1352,Felipe Souza Souza,Paranagua,PR,Sul
+1353,Francisca Rocha Ferreira,Porto Alegre,RS,Sul
+1354,Amanda Rocha Vieira,Osasco,SP,Sudeste
+1355,Renata Rocha Ferreira,Samambaia,DF,Centro-oeste
+1356,Carolina Araujo Alves,Gravata,PE,Nordeste
+1357,Leticia Ribeiro Rodrigues,Coari,AM,Norte
+1358,Carolina Vieira Oliveira,Juazeiro do Norte,CE,Nordeste
+1359,Paulo Araujo Carvalho,Nova Iguacu,RJ,Sudeste
+1360,Daniel Souza Mendes,Foz do Iguacu,PR,Sul
+1361,Larissa Gomes Rocha,Passo Fundo,RS,Sul
+1362,Vanessa Vieira Barbosa,Sao Bernardo do Campo,SP,Sudeste
+1363,Felipe Araujo Mendes,Bento Goncalves,RS,Sul
+1364,Diego Vieira Vieira,Recife,PE,Nordeste
+1365,Aline Lima Lima,Feira de Santana,BA,Nordeste
+1366,Vinicius Costa Pereira,Londrina,PR,Sul
+1367,Claudia Mendes Carvalho,Ceilandia,DF,Centro-oeste
+1368,Tatiane Souza Mendes,Recanto das Emas,DF,Centro-oeste
+1369,Renata Santos Martins,Sao Bernardo do Campo,SP,Sudeste
+1370,Maria Alves Mendes,Guarapuava,PR,Sul
+1371,Mariana Lima Martins,Fortaleza,CE,Nordeste
+1372,Ricardo Lima Ferreira,Paulista,PE,Nordeste
+1373,Mariana Oliveira Ribeiro,Ilheus,BA,Nordeste
+1374,Francisca Carvalho Ribeiro,Santa Maria,RS,Sul
+1375,Vinicius Barbosa Martins,Nova Iguacu,RJ,Sudeste
+1376,Marcelo Nunes Gomes,Ceilandia,DF,Centro-oeste
+1377,Rodrigo Vieira Carvalho,Porto Seguro,BA,Nordeste
+1378,Antonia Gomes Vieira,Fortaleza,CE,Nordeste
+1379,Priscila Lima Silva,Passo Fundo,RS,Sul
+1380,Luiz Pereira Silva,Autazes,AM,Norte
+1381,Paulo Rocha Mendes,Foz do Iguacu,PR,Sul
+1382,Rafael Pereira Ribeiro,Itabuna,BA,Nordeste
+1383,Antonia Rocha Costa,Camacari,BA,Nordeste
+1384,Guilherme Santos Barbosa,Petropolis,RJ,Sudeste
+1385,Vanessa Santos Martins,Duque de Caxias,RJ,Sudeste
+1386,Gustavo Silva Vieira,Passo Fundo,RS,Sul
+1387,Priscila Gomes Ribeiro,Pocos de Caldas,MG,Sudeste
+1388,Joao Vieira Santos,Ceilandia,DF,Centro-oeste
+1389,Paulo Alves Pereira,Caucaia,CE,Nordeste
+1390,Daniel Mendes Carvalho,Vitoria da Conquista,BA,Nordeste
+1391,Paulo Araujo Lima,Caruaru,PE,Nordeste
+1392,Ricardo Oliveira Ribeiro,Piracicaba,SP,Sudeste
+1393,Ana Martins Souza,Sorocaba,SP,Sudeste
+1394,Vinicius Mendes Mendes,Guara,DF,Centro-oeste
+1395,Amanda Souza Rodrigues,Juazeiro do Norte,CE,Nordeste
+1396,Thiago Barbosa Silva,Cascavel,PR,Sul
+1397,Paulo Mendes Rocha,Taguatinga,DF,Centro-oeste
+1398,Leticia Nunes Carvalho,Itabuna,BA,Nordeste
+1399,Thiago Costa Alves,Itapipoca,CE,Nordeste
+1400,Francisca Ribeiro Rocha,Gravata,PE,Nordeste
+1401,Carlos Barbosa Alves,Garanhuns,PE,Nordeste
+1402,Andre Souza Ribeiro,Paranagua,PR,Sul
+1403,Renata Santos Rocha,Recanto das Emas,DF,Centro-oeste
+1404,Gabriel Santos Nunes,Gravatai,RS,Sul
+1405,Thiago Araujo Rocha,Sao Jose dos Campos,SP,Sudeste
+1406,Paulo Pereira Ribeiro,Recanto das Emas,DF,Centro-oeste
+1407,Daniel Alves Souza,Governador Valadares,MG,Sudeste
+1408,Thiago Carvalho Santos,Planaltina,DF,Centro-oeste
+1409,Renata Gomes Alves,Garanhuns,PE,Nordeste
+1410,Fernanda Costa Lima,Juazeiro do Norte,CE,Nordeste
+1411,Francisco Souza Ferreira,Vitoria da Conquista,BA,Nordeste
+1412,Renata Carvalho Gomes,Niteroi,RJ,Sudeste
+1413,Luana Alves Oliveira,Manaus,AM,Norte
+1414,Francisco Pereira Santos,Novo Hamburgo,RS,Sul
+1415,Diego Rodrigues Barbosa,Gravatai,RS,Sul
+1416,Juliana Ribeiro Lima,Sao Bernardo do Campo,SP,Sudeste
+1417,Luiz Rocha Oliveira,Fortaleza,CE,Nordeste
+1418,Lucas Vieira Rocha,Tabatinga,AM,Norte
+1419,Antonio Araujo Rocha,Salvador,BA,Nordeste
+1420,Priscila Pereira Silva,Serra Talhada,PE,Nordeste
+1421,Simone Santos Mendes,Aguas Claras,DF,Centro-oeste
+1422,Bruna Barbosa Pereira,Quixada,CE,Nordeste
+1423,Gustavo Martins Pereira,Maringa,PR,Sul
+1424,Jessica Gomes Rodrigues,Novo Hamburgo,RS,Sul
+1425,Amanda Alves Carvalho,Iguatu,CE,Nordeste
+1426,Gabriel Carvalho Rodrigues,Erechim,RS,Sul
+1427,Isabela Vieira Martins,Ponta Grossa,PR,Sul
+1428,Francisco Nunes Barbosa,Canoas,RS,Sul
+1429,Marcia Carvalho Rocha,Novo Hamburgo,RS,Sul
+1430,Aline Mendes Rodrigues,Paulista,PE,Nordeste
+1431,Diego Rodrigues Costa,Niteroi,RJ,Sudeste
+1432,Fabio Santos Ribeiro,Contagem,MG,Sudeste
+1433,Amanda Vieira Ribeiro,Betim,MG,Sudeste
+1434,Eduardo Ferreira Rodrigues,Aguas Claras,DF,Centro-oeste
+1435,Tatiane Costa Lima,Rio de Janeiro,RJ,Sudeste
+1436,Beatriz Carvalho Costa,Itapipoca,CE,Nordeste
+1437,Gustavo Silva Costa,Feira de Santana,BA,Nordeste
+1438,Luiz Carvalho Rodrigues,Londrina,PR,Sul
+1439,Adriana Costa Silva,Ilheus,BA,Nordeste
+1440,Larissa Silva Costa,Cascavel,PR,Sul
+1441,Camila Santos Lima,Manaus,AM,Norte
+1442,Raquel Vieira Silva,Passo Fundo,RS,Sul
+1443,Rodrigo Lima Carvalho,Paulista,PE,Nordeste
+1444,Isabela Lima Nunes,Angra dos Reis,RJ,Sudeste
+1445,Raquel Ribeiro Rocha,Caxias do Sul,RS,Sul
+1446,Carlos Mendes Pereira,Lauro de Freitas,BA,Nordeste
+1447,Ricardo Barbosa Ribeiro,Contagem,MG,Sudeste
+1448,Rodrigo Oliveira Silva,Campinas,SP,Sudeste
+1449,Marcelo Alves Costa,Sobral,CE,Nordeste
+1450,Ana Barbosa Ferreira,Santa Maria,RS,Sul
+1451,Gabriela Alves Souza,Pelotas,RS,Sul
+1452,Gabriela Gomes Vieira,Petrolina,PE,Nordeste
+1453,Larissa Silva Lima,Angra dos Reis,RJ,Sudeste
+1454,Ana Vieira Araujo,Volta Redonda,RJ,Sudeste
+1455,Raquel Martins Vieira,Crato,CE,Nordeste
+1456,Luiz Costa Ribeiro,Sorocaba,SP,Sudeste
+1457,Felipe Ribeiro Carvalho,Governador Valadares,MG,Sudeste
+1458,Mariana Rodrigues Ribeiro,Salvador,BA,Nordeste
+1459,Priscila Ferreira Rodrigues,Sao Bernardo do Campo,SP,Sudeste
+1460,Gabriel Alves Silva,Coari,AM,Norte
+1461,Leonardo Costa Araujo,Feira de Santana,BA,Nordeste
+1462,Renata Costa Vieira,Maracanau,CE,Nordeste
+1463,Luiz Ferreira Ribeiro,Taguatinga,DF,Centro-oeste
+1464,Diego Martins Rodrigues,Guarulhos,SP,Sudeste
+1465,Pedro Ribeiro Pereira,Tabatinga,AM,Norte
+1466,Renata Alves Rodrigues,Recanto das Emas,DF,Centro-oeste
+1467,Patricia Costa Mendes,Campos dos Goytacazes,RJ,Sudeste
+1468,Francisca Rocha Costa,Iguatu,CE,Nordeste
+1469,Aline Rodrigues Martins,Sorocaba,SP,Sudeste
+1470,Beatriz Nunes Rodrigues,Sobradinho,DF,Centro-oeste
+1471,Tatiane Alves Vieira,Bento Goncalves,RS,Sul
+1472,Vinicius Carvalho Araujo,Betim,MG,Sudeste
+1473,Ricardo Araujo Oliveira,Gravata,PE,Nordeste
+1474,Simone Ribeiro Souza,Guara,DF,Centro-oeste
+1475,Carlos Ribeiro Silva,Vitoria da Conquista,BA,Nordeste
+1476,Bruna Nunes Silva,Montes Claros,MG,Sudeste
+1477,Ana Gomes Ribeiro,Santos,SP,Sudeste
+1478,Antonio Rodrigues Rodrigues,Volta Redonda,RJ,Sudeste
+1479,Bruno Ribeiro Oliveira,Tefe,AM,Norte
+1480,Vanessa Oliveira Alves,Canoas,RS,Sul
+1481,Vanessa Silva Santos,Canoas,RS,Sul
+1482,Juliana Rocha Ribeiro,Coari,AM,Norte
+1483,Rodrigo Araujo Nunes,Canoas,RS,Sul
+1484,Rafael Oliveira Mendes,Pelotas,RS,Sul
+1485,Ricardo Vieira Gomes,Olinda,PE,Nordeste
+1486,Aline Ribeiro Alves,Paranagua,PR,Sul
+1487,Ricardo Rocha Carvalho,Jaboatao dos Guararapes,PE,Nordeste
+1488,Guilherme Gomes Alves,Sao Jose dos Campos,SP,Sudeste
+1489,Claudia Lima Alves,Pelotas,RS,Sul
+1490,Diego Carvalho Ribeiro,Quixada,CE,Nordeste
+1491,Adriana Pereira Oliveira,Brasilia,DF,Centro-oeste
+1492,Raquel Silva Gomes,Rio de Janeiro,RJ,Sudeste
+1493,Pedro Araujo Martins,Curitiba,PR,Sul
+1494,Marcos Barbosa Alves,Belo Horizonte,MG,Sudeste
+1495,Lucas Barbosa Mendes,Guara,DF,Centro-oeste
+1496,Juliana Alves Oliveira,Guarulhos,SP,Sudeste
+1497,Jessica Ferreira Silva,Paranagua,PR,Sul
+1498,Maria Lima Alves,Piracicaba,SP,Sudeste
+1499,Renata Costa Pereira,Gama,DF,Centro-oeste
+1500,Vanessa Ferreira Martins,Juazeiro,BA,Nordeste

@@ -142,14 +142,14 @@ def main():
         max_d = max(fact_dates_series)
         log(f"  Data minima: {min_d}")
         log(f"  Data maxima: {max_d}")
-        log(f"  Range esperado: 2023-01-01 a 2024-12-31")
+        log(f"  Range esperado: 2025-01-01 a 2026-12-31")
 
-        if min_d >= pd.Timestamp("2023-01-01").date():
+        if min_d >= pd.Timestamp("2025-01-01").date():
             log(f"  {PASS} Data minima dentro do range esperado.")
         else:
             log(f"  {FAIL} Data minima FORA do range esperado.")
 
-        if max_d <= pd.Timestamp("2024-12-31").date():
+        if max_d <= pd.Timestamp("2026-12-31").date():
             log(f"  {PASS} Data maxima dentro do range esperado.")
         else:
             log(f"  {FAIL} Data maxima FORA do range esperado.")

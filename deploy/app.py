@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BI E-Commerce Dashboard — Streamlit Professional
+Nexus Dashboard — Streamlit Professional
 4 pages, dark theme, brand colors, calendar-aware, HF Spaces / Render / Streamlit Cloud
 """
 import streamlit as st
@@ -9,7 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import os
 
-st.set_page_config(page_title="BI E-Commerce", page_icon="🛒", layout="wide")
+st.set_page_config(page_title="Nexus", page_icon="📊", layout="wide")
 
 # =====================================================================
 # CSS — BRANDED DARK THEME
@@ -135,7 +135,7 @@ if len(fact) == 0:
 # SIDEBAR
 # =====================================================================
 with st.sidebar:
-    st.markdown("## 🛒 BI E-Commerce")
+    st.markdown("## 📊 Nexus")
     st.caption("Dashboard de Vendas")
     st.markdown("---")
 
@@ -203,7 +203,7 @@ data_max = all_dates.max().strftime("%d/%m/%Y")
 st.markdown(f"""
 <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0 12px 0;">
     <div>
-        <span style="font-size:1.5rem;font-weight:700;color:{C['text']};">🛒 BI E-Commerce</span>
+        <span style="font-size:1.5rem;font-weight:700;color:{C['text']};">📊 Nexus</span>
         <span style="color:{C['text_sec']};font-size:0.8rem;margin-left:16px;">Período: {data_min} — {data_max}</span>
     </div>
     <div style="display:flex;gap:24px;">
@@ -469,6 +469,6 @@ elif pagina == "Geografica":
 # FOOTER
 # =====================================================================
 st.markdown("---")
-st.caption(f"Dados simulados — Pipeline Medallion (Bronze → Silver → Gold → Star Schema) | "
+st.caption(f"Nexus — Dados simulados (2025–2026) | Pipeline Medallion | "
            f"250 produtos · 1.500 clientes · 8.000 pedidos · Faturamento: {fmt(fat_total)} | "
            f"[GitHub](https://github.com/Nagalli01/bi-ecommerce-dashboard)")

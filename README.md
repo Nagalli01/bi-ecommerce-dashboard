@@ -1,4 +1,4 @@
-﻿# 🛒 BI E-Commerce — Pipeline ETL + Dashboard
+﻿# 📊 Nexus — Pipeline ETL + Dashboard
 
 Projeto acadêmico de Engenharia de Dados e Business Intelligence para e-commerce de eletrônicos.
 
@@ -16,7 +16,7 @@ Medallion (Bronze -> Silver -> Gold -> Star Schema), pandas + pyarrow, MySQL/SQL
 | Produtos  | 250       | Catálogo de eletrônicos |
 | Pedidos   | 8.000     | Transações de venda |
 
-Faturamento: R\$ 179,6M | Pipeline: 3,9s end-to-end
+Faturamento: R$ 31,5 Mi | Pipeline: 3,9s end-to-end
 
 ## Execução Rápida
 

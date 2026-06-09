@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-00_generate_data.py - Geracao de Dados Sinteticos para BI E-Commerce
+    00_generate_data.py - Geracao de Dados Sinteticos para Nexus
 
 Gera dados sinteticos realistas para o pipeline de BI:
 - 1500 clientes
@@ -137,7 +137,7 @@ def generate_clientes(n=1500):
         estado = random.choice(list(CITIES_BY_STATE.keys()))
         cidade = random.choice(CITIES_BY_STATE[estado])
         regiao = STATE_TO_REGION[estado]
-        data_cadastro = random_date(datetime.date(2021, 1, 1), datetime.date(2024, 12, 31))
+        data_cadastro = random_date(datetime.date(2023, 1, 1), datetime.date(2026, 6, 30))
         data.append({
             "cliente_id": cliente_id,
             "nome": nome,
@@ -164,7 +164,7 @@ def generate_produtos(n=250):
         categoria = categorias[(i - 1) % len(categorias)]
         subcategoria = generate_subcategoria(categoria)
         nome_produto = f"{subcategoria} {random.randint(100, 999)}"
-        preco_venda = round(random.uniform(50.0, 8000.0), 2)
+        preco_venda = round(random.uniform(30.0, 3000.0), 2)
         preco_custo = round(preco_venda * random.uniform(0.55, 0.80), 2)
         estoque = random.randint(0, 500)
         data.append({
@@ -185,8 +185,8 @@ def generate_pedidos(clientes_df, produtos_df, n=8000):
     skus = produtos_df["sku"].tolist()
     estados = list(CITIES_BY_STATE.keys())
 
-    start_date = datetime.date(2023, 1, 1)
-    end_date = datetime.date(2024, 12, 31)
+    start_date = datetime.date(2025, 1, 1)
+    end_date = datetime.date(2026, 6, 9)
 
     # Power-law: alguns clientes compram mais
     weights = [1.0 / (i ** 0.5) for i in range(1, len(cliente_ids) + 1)]
@@ -198,8 +198,8 @@ def generate_pedidos(clientes_df, produtos_df, n=8000):
         cliente_id = random.choices(cliente_ids, weights=probs, k=1)[0]
         sku = random.choice(skus)
         data_pedido = random_date(start_date, end_date)
-        quantidade = random.randint(1, 10)
-        valor_frete = round(random.uniform(5.0, 50.0), 2)
+        quantidade = random.randint(1, 4)
+        valor_frete = round(random.uniform(5.0, 35.0), 2)
         estado = random.choice(estados)
         municipio = random.choice(CITIES_BY_STATE[estado])
         regiao = STATE_TO_REGION[estado]

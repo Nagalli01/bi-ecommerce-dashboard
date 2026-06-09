@@ -1,13 +1,13 @@
 ---
-title: BI E-Commerce Dashboard
-emoji: 🛒
+title: Nexus Dashboard
+emoji: 📊
 colorFrom: blue
 colorTo: indigo
 sdk: docker
 pinned: false
 ---
 
-# BI E-Commerce Dashboard
+# Nexus Dashboard
 
 Dashboard profissional de BI para analise de vendas de e-commerce.
 
