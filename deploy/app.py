@@ -18,15 +18,31 @@ st.set_page_config(page_title="Nexus", layout="wide")
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
     .stApp * { font-family: 'Inter', sans-serif; }
     .stApp, .main { background-color: #0B1120; padding-top: 0 !important; margin-top: 0 !important; }
     header[data-testid="stHeader"] { display: none; }
+
+    /* ---- sidebar ---- */
     [data-testid="stSidebar"] { background-color: #111827; border-right: 1px solid #1E293B; overflow: hidden; }
+    section[data-testid="stSidebar"] { padding-top: 0 !important; }
+    [data-testid="stSidebar"] > div:first-child { padding-top: 0.8rem !important; }
     [data-testid="stSidebar"] * { font-family: 'Inter', sans-serif; color: #94A3B8; }
-    [data-testid="stSidebarContent"] { padding-top: 12px; overflow-y: hidden !important; }
+    [data-testid="stSidebarContent"] { padding-top: 10px; overflow-y: hidden !important; }
+
+    /* ---- collapse button ---- */
+    [data-testid="collapsedControl"] { top: 14px !important; left: 10px !important; font-size: 0 !important; color: transparent !important; }
+    [data-testid="collapsedControl"]::before { content: "\25C0"; font-size: 14px !important; color: #A78BFA !important; }
+    [data-testid="stSidebarCollapsedControl"] { font-size: 0 !important; color: transparent !important; }
+    [data-testid="stSidebarCollapsedControl"]::before { content: "\25B6"; font-size: 14px !important; color: #A78BFA !important; }
+
+    /* ---- nav radio (remove red, use violet) ---- */
+    [data-testid="stSidebar"] .stRadio [data-baseweb="radio"] div:first-child { border-color: #7C3AED !important; background-color: #7C3AED !important; }
+    [data-testid="stSidebar"] .stRadio [aria-checked="true"] div:first-child { background-color: #7C3AED !important; border-color: #7C3AED !important; box-shadow: 0 0 0 3px rgba(124,58,237,0.2) !important; }
+    [data-testid="stSidebar"] .stRadio label:hover { background: rgba(124,58,237,0.08) !important; border-radius: 8px !important; cursor: pointer; }
+
     [data-testid="stToolbar"] { display: none; }
-    [data-testid="collapsedControl"] { top: 12px !important; left: 8px !important; }
     #MainMenu, footer { display: none; }
     [data-testid="stDecoration"] { display: none; }
     [data-testid="stDataFrameResizable"] { display: none; }
