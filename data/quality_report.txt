@@ -1,5 +1,5 @@
 QUALITY REPORT - BI E-COMMERCE
-Gerado em: 2026-06-09 17:08:25
+Gerado em: 2026-06-09 18:23:46
 ============================================================
 
 ========================================
@@ -67,9 +67,9 @@ Gerado em: 2026-06-09 17:08:25
 ========================================
   Data minima: 2025-01-01
   Data maxima: 2026-06-09
-  Range esperado: 2023-01-01 a 2024-12-31
+  Range esperado: 2025-01-01 a 2026-12-31
   [PASS] Data minima dentro do range esperado.
-  [FAIL] Data maxima FORA do range esperado.
+  [PASS] Data maxima dentro do range esperado.
 
 ========================================
 5. METRICAS DE NEGOCIO

@@ -134,7 +134,7 @@ def main():
     print(f"  Banco:    {DB_NAME}")
     print(f"  Usuario:  {MYSQL_USER}")
     print(f"  Senha:    {MYSQL_PASS}")
-    print(f"\n  Power BI → Obter Dados → Banco de Dados MySQL")
+    print(f"\n  Power BI -> Obter Dados -> Banco de Dados MySQL")
     print(f"  Digite servidor: {MYSQL_HOST}:{MYSQL_PORT}")
     print(f"  Digite banco: {DB_NAME}")
     print(f"  Selecione as 5 tabelas e clique em Carregar")
