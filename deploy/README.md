@@ -1,6 +1,5 @@
 ---
 title: Nexus Dashboard
-emoji: 📊
 colorFrom: blue
 colorTo: indigo
 sdk: docker
@@ -22,7 +21,7 @@ Dashboard profissional de BI para analise de vendas de e-commerce.
 | Pagina | Conteudo |
 |--------|----------|
 | **Visao Executiva** | KPIs (Fat. / Pedidos / Ticket / Vendedores), Fat. por Estado + Regiao, Top 10 Municipios, Ranking Vendedores, Evolucao Mensal com crescimento MoM |
-| **Vendedores** | Melhor Vendedor, Ranking completo com medalhas (🥇🥈🥉), Participacao % (Donut), Barras Empilhadas por regiao |
+| **Vendedores** | Melhor Vendedor, Ranking completo, Participacao % (Donut), Barras Empilhadas por regiao |
 | **Produtos** | Categorias / Preco Medio / Produtos Vendidos, Fat. por Categoria, Top 10 Produtos, Detalhamento |
 | **Geografica** | Fat. por Estado, Fat. por Regiao, Top 15 Municipios |
 
