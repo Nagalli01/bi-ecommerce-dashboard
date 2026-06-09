@@ -46,46 +46,27 @@ header[data-testid="stHeader"] { display: none !important; }
     border-radius: 6px !important;
 }
 
-/* ---------- SIDEBAR: RADIO NAV ---------- */
-[data-testid="stSidebar"] .stRadio [data-baseweb="radio"] {
-    background: transparent !important;
-}
-[data-testid="stSidebar"] .stRadio [data-baseweb="radio"] div:first-child {
-    border-color: #6D28D9 !important;
-    background-color: #6D28D9 !important;
-    width: 14px !important;
-    height: 14px !important;
-}
-[data-testid="stSidebar"] .stRadio label {
+/* ---------- SIDEBAR: NAV BUTTONS ---------- */
+.nav-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    padding: 7px 10px !important;
+    margin: 1px 0 !important;
     border-radius: 8px !important;
-    padding: 7px 12px 7px 8px !important;
     font-size: 0.8rem !important;
     font-weight: 500 !important;
     color: #64748B !important;
+    background: transparent !important;
+    border: none !important;
     cursor: pointer !important;
-    transition: all 0.15s ease !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    margin: 1px 0 !important;
-    width: 100% !important;
+    transition: all 0.12s ease !important;
+    text-align: left !important;
+    font-family: 'Inter', sans-serif !important;
 }
-[data-testid="stSidebar"] .stRadio [data-baseweb="radio"] {
-    display: flex !important;
-    align-items: center !important;
-}
-[data-testid="stSidebar"] .stRadio label:hover {
-    background: rgba(109,40,217,0.1) !important;
-    color: #A78BFA !important;
-}
-[data-testid="stSidebar"] .stRadio div[data-testid="stMarkdownContainer"] p {
-    color: inherit !important;
-}
-[data-testid="stSidebar"] .stRadio [aria-checked="true"] + label,
-[data-testid="stSidebar"] .stRadio label[data-selected="true"] {
-    background: rgba(109,40,217,0.15) !important;
-    color: #C4B5FD !important;
-}
+.nav-btn:hover { background: rgba(109,40,217,0.12) !important; color: #A78BFA !important; }
+.nav-btn.nav-active { background: rgba(109,40,217,0.18) !important; color: #C4B5FD !important; }
 
 /* ---------- INPUTS ---------- */
 div[data-baseweb="select"] > div {
@@ -428,10 +409,21 @@ with st.sidebar:
 
     # Navigation
     sidebar_section("Navegacao")
-    st.markdown('<div style="padding:0 8px;">', unsafe_allow_html=True)
-    pagina = st.radio("nav", [
-        "Visao Executiva", "Vendedores", "Produtos", "Geografica"
-    ], label_visibility="collapsed")
+    st.markdown('<div style="padding:4px 8px;">', unsafe_allow_html=True)
+
+    if "nav_page" not in st.session_state:
+        st.session_state.nav_page = "Visao Executiva"
+
+    pages = ["Visao Executiva", "Vendedores", "Produtos", "Geografica"]
+    for p in pages:
+        active = "nav-active" if st.session_state.nav_page == p else ""
+        if st.button(p, key=f"nav_{p}", use_container_width=True,
+                     type="secondary",
+                     help=""):
+            st.session_state.nav_page = p
+            st.rerun()
+
+    pagina = st.session_state.nav_page
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown(f'<hr style="border:none;border-top:1px solid {C["border"]};margin:10px 0 4px 0;">', unsafe_allow_html=True)
