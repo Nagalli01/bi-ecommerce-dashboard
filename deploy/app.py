@@ -47,23 +47,18 @@ header[data-testid="stHeader"] { display: none !important; }
 }
 
 /* ---------- SIDEBAR: RADIO NAV ---------- */
-[data-testid="stSidebar"] .stRadio > label { display: none !important; }
 [data-testid="stSidebar"] .stRadio [data-baseweb="radio"] {
     background: transparent !important;
-    padding: 2px 0 !important;
-    margin: 0 !important;
 }
 [data-testid="stSidebar"] .stRadio [data-baseweb="radio"] div:first-child {
     border-color: #6D28D9 !important;
     background-color: #6D28D9 !important;
-    width: 0px !important;
-    height: 0px !important;
-    border: none !important;
-    box-shadow: none !important;
+    width: 14px !important;
+    height: 14px !important;
 }
 [data-testid="stSidebar"] .stRadio label {
     border-radius: 8px !important;
-    padding: 7px 12px !important;
+    padding: 7px 12px 7px 8px !important;
     font-size: 0.8rem !important;
     font-weight: 500 !important;
     color: #64748B !important;
@@ -71,13 +66,20 @@ header[data-testid="stHeader"] { display: none !important; }
     transition: all 0.15s ease !important;
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 10px !important;
     margin: 1px 0 !important;
     width: 100% !important;
+}
+[data-testid="stSidebar"] .stRadio [data-baseweb="radio"] {
+    display: flex !important;
+    align-items: center !important;
 }
 [data-testid="stSidebar"] .stRadio label:hover {
     background: rgba(109,40,217,0.1) !important;
     color: #A78BFA !important;
+}
+[data-testid="stSidebar"] .stRadio div[data-testid="stMarkdownContainer"] p {
+    color: inherit !important;
 }
 [data-testid="stSidebar"] .stRadio [aria-checked="true"] + label,
 [data-testid="stSidebar"] .stRadio label[data-selected="true"] {
