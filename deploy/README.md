@@ -3,9 +3,7 @@ title: BI E-Commerce Dashboard
 emoji: 🛒
 colorFrom: blue
 colorTo: indigo
-sdk: streamlit
-sdk_version: 1.30.0
-app_file: app.py
+sdk: docker
 pinned: false
 ---
 
@@ -13,7 +11,7 @@ pinned: false
 
 Dashboard interativo de analise de vendas de e-commerce.
 
-## Dataset Simulado
+## Dataset
 
 - 1500 clientes, 250 produtos, 8000 pedidos
 - Faturamento: R$ 179,6M

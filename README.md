@@ -1,103 +1,53 @@
-﻿# 🛒 BI E-Commerce — Arquitetura Medalhão com PySpark + Delta Lake
+﻿# 🛒 BI E-Commerce — Pipeline ETL + Dashboard
 
-Projeto acadêmico de Engenharia de Dados e Business Intelligence para uma empresa de e-commerce de eletrônicos.
+Projeto acadêmico de Engenharia de Dados e Business Intelligence para e-commerce de eletrônicos.
 
-## 🎯 Objetivo
+**Dashboard online:** https://Nagalli-01-bi-ecommerce-dashboard.hf.space
 
-Transformar dados transacionais de **clientes, produtos e pedidos** em um **modelo dimensional (Star Schema)** e um **dashboard executivo no Power BI**, utilizando **Arquitetura Medalhão (Bronze → Silver → Gold)**.
+## Arquitetura
 
-## 🏗️ Arquitetura
+Medallion (Bronze -> Silver -> Gold -> Star Schema), pandas + pyarrow, MySQL/SQLite.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    ARQUITETURA MEDALHÃO                          │
-│                                                                 │
-│  ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐  │
-│  │  BRONZE  │ →  │  SILVER  │ →  │   GOLD   │ →  │  POWER   │  │
-│  │  ─────── │    │  ─────── │    │  ─────── │    │   BI     │  │
-│  │  Parquet │    │  Delta   │    │  Delta   │    │ Dashboar │  │
-│  │  Dados   │    │  Curados │    │  Star    │    │  3 Págs  │  │
-│  │  Brutos  │    │  Limpos  │    │  Schema  │    │          │  │
-│  └──────────┘    └──────────┘    └──────────┘    └──────────┘  │
-│                                                                 │
-│  3 tabelas       3 tabelas       4 dims +         Medidas DAX   │
-│  origem          transformadas   1 fato          Visuais        │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-## 📊 Dados
+## Dados
 
 | Entidade  | Registros | Descrição |
 |-----------|-----------|-----------|
-| Clientes  | 1.500     | Cadastro de clientes com localização |
-| Produtos  | 250       | Catálogo de produtos eletrônicos |
-| Pedidos   | 8.000     | Transações de venda (itens de pedido) |
+| Clientes  | 1.500     | Cadastro com localização |
+| Produtos  | 250       | Catálogo de eletrônicos |
+| Pedidos   | 8.000     | Transações de venda |
 
-**Período:** 2 anos de dados (calendário com ~730 dias)
+Faturamento: R\$ 179,6M | Pipeline: 3,9s end-to-end
 
-## 🚀 Execução Rápida
+## Execução Rápida
 
 ```bash
-# 1. Instalar dependências
 pip install -r requirements.txt
-
-# 2. Gerar dados e executar pipeline completo
-python src/run_pipeline.py
-
-# 3. Verificar qualidade
-python src/40_quality_checks.py
-
-# 4. (Opcional) Abrir notebooks
-jupyter notebook notebooks/
+python src/run_pipeline.py        # pipeline completo
+streamlit run src/dashboard_app.py # dashboard local
+# ou: run_dashboard.bat
 ```
 
-## 📁 Estrutura do Projeto
+## Estrutura
 
 ```
 bi_ecommerce/
-├── data/
-│   ├── raw/             # Dados gerados (Parquet)
-│   │   ├── clientes.parquet
-│   │   ├── produtos.parquet
-│   │   └── pedidos.parquet
-│   ├── bronze/          # Camada Bronze (Delta)
-│   │   ├── clientes/
-│   │   ├── produtos/
-│   │   └── pedidos/
-│   ├── silver/          # Camada Silver (Delta)
-│   │   ├── clientes/
-│   │   ├── produtos/
-│   │   └── pedidos/
-│   └── gold/            # Camada Gold | Star Schema (Delta)
-│       ├── dim_clientes/
-│       ├── dim_produtos/
-│       ├── dim_calendario/
-│       ├── dim_vendedores/
-│       └── fact_vendas/
-├── src/                 # Scripts Python do pipeline
-│   ├── 00_generate_data.py
-│   ├── 01_validate_inputs.py
-│   ├── 10_bronze_ingestion.py
-│   ├── 20_silver_transform.py
-│   ├── 30_gold_model.py
-│   ├── 40_quality_checks.py
-│   └── run_pipeline.py
-├── notebooks/           # Jupyter Notebooks PySpark
-├── diagrams/            # Diagramas (Mermaid)
-│   ├── architecture_medallion.md
-│   ├── dimensional_model.md
-│   ├── pipeline_flow.md
-│   └── dashboard_layout.md
-├── powerbi/             # Especificação do Dashboard
-│   ├── dax_measures.txt
-│   ├── model_relationships.txt
-│   └── dashboard_spec.txt
-├── sql/                 # Scripts SQL de referência
-│   ├── create_tables.sql
-│   └── validation_queries.sql
-├── docs/                # Documentação técnica e funcional
-├── requirements.txt     # Dependências Python
-└── README.md            # Este arquivo
+├── src/              # Pipeline ETL + Dashboard
+│   ├── *.py          # 00 a 40 pipeline scripts
+│   ├── run_pipeline.py
+│   ├── dashboard_app.py   # Streamlit (MySQL)
+│   ├── dashboard_web.py   # Streamlit (SQLite)
+│   ├── setup_mysql.py
+│   └── export_sqlite.py
+├── deploy/           # Deploy Hugging Face Spaces
+│   ├── app.py, Dockerfile, requirements.txt
+│   └── bi_ecommerce.db
+├── data/             # Dados gerados
+├── notebooks/        # Jupyter Notebooks
+├── diagrams/         # Diagramas Mermaid
+├── powerbi/          # Especificacao Power BI
+├── docs/             # Documentacao
+├── sql/              # Scripts DDL
+└── requirements.txt
 ```
 
 ## 🔗 Modelo Dimensional (Star Schema)
@@ -159,48 +109,48 @@ bi_ecommerce/
 | **Total Vendedores** | `DISTINCTCOUNT(id_vendedor)` | Força de vendas (15) |
 | **Crescimento MoM** | Variação mês a mês | Tendência mensal |
 
-## 📊 Dashboard (Power BI)
+## Dashboard (Streamlit)
 
-### Página 1 — Visão Executiva
-- 4 KPI Cards (Faturamento, Pedidos, Ticket Médio, Vendedores)
-- Faturamento por Estado e Região (barras horizontais)
-- Top 10 Municípios e Ranking de Vendedores
-- Evolução Mensal (gráfico de área)
+3 páginas com KPIs, filtros interativos e gráficos Plotly:
+Dark theme (#1B1B1B / #2D2D2D / #4A90D9).
 
-### Página 2 — Vendedores
-- Melhor Vendedor e Faturamento Médio
-- Ranking completo (15 vendedores)
-- Participação % (gráfico de rosca) e Faturamento por Região
+| Página | Conteúdo |
+|--------|----------|
+| Visão Executiva | Faturamento, Pedidos, Ticket, Vendedores, por Estado, Ranking, Evolução |
+| Vendedores | Performance individual, participação %, ranking completo, por região |
+| Produtos | Faturamento por categoria, top 10 produtos, detalhamento |
 
-### Página 3 — Geográfica
-- Faturamento por Estado e Região
-- Top 15 Municípios
+**Online:** https://Nagalli-01-bi-ecommerce-dashboard.hf.space
+**GitHub:** https://github.com/Nagalli01/bi-ecommerce-dashboard
 
-**Tema:** Dark mode (#262626 fundo, #323130 visuais, branco texto, Segoe UI)
+## Dashboard Online
 
-## 🛠️ Tecnologias
+**URL:** https://Nagalli-01-bi-ecommerce-dashboard.hf.space
 
-| Tecnologia | Versão | Uso |
-|-----------|--------|-----|
-| **PySpark** | 3.4+ | Processamento distribuído (modo local) |
-| **Delta Lake** | 3.0+ | Armazenamento transacional ACID |
-| **Python** | 3.10+ | Orquestração do pipeline |
-| **Pandas** | 2.0+ | Manipulação de dados auxiliar |
-| **Faker** | 22.0+ | Geração de dados sintéticos |
-| **Power BI Desktop** | — | Visualização e dashboard |
+3 páginas: Visão Executiva | Vendedores | Produtos & Categorias
+Dark theme, filtros por ano/região/estado/categoria, Plotly interativo.
 
-## 🔄 Pipeline de Dados
+## Deploy
 
-| Etapa | Script | Entrada | Saída |
-|-------|--------|---------|-------|
-| Geração | `00_generate_data.py` | — | `data/raw/*.parquet` |
-| Validação | `01_validate_inputs.py` | `data/raw/` | `validation_log.txt` |
-| Bronze | `10_bronze_ingestion.py` | `data/raw/` | `data/bronze/*/` (Delta) |
-| Silver | `20_silver_transform.py` | `data/bronze/` | `data/silver/*/` (Delta) |
-| Gold | `30_gold_model.py` | `data/silver/` | `data/gold/*/` (Delta) |
-| Qualidade | `40_quality_checks.py` | `data/gold/` | `quality_report.txt` |
+O deploy foi feito no Hugging Face Spaces (Docker + Streamlit).
+Para deploy próprio, veja `docs/DEPLOY_GUIDE.md`.
 
-## 📚 Documentação
+## Tecnologias
+
+Python, pandas, pyarrow, Streamlit, Plotly, SQLite, MySQL.
+
+## Pipeline
+
+| Etapa | Script |
+|-------|--------|
+| Geração | `00_generate_data.py` |
+| Validação | `01_validate_inputs.py` |
+| Bronze | `10_bronze_ingestion.py` |
+| Silver | `20_silver_transform.py` |
+| Gold | `30_gold_model.py` |
+| Qualidade | `40_quality_checks.py` |
+
+## Documentação
 
 | Documento | Conteúdo |
 |-----------|----------|
