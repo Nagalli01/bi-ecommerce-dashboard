@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Nexus Dashboard — Streamlit Professional
-4 pages, dark theme, brand colors, calendar-aware, HF Spaces / Render / Streamlit Cloud
+Nexus Dashboard — SaaS Enterprise Edition
+4 pages, monochromatic violet brand, Inter font, dark slate layers
 """
 import streamlit as st
 import pandas as pd
@@ -12,65 +12,103 @@ import os
 st.set_page_config(page_title="Nexus", layout="wide")
 
 # =====================================================================
-# CSS — BRANDED DARK THEME
+# CSS — ENTERPRISE DARK THEME (Inter, layers, shadows, ghost buttons)
 # =====================================================================
 st.markdown("""
 <style>
-    /* ---- base ---- */
-    .stApp, .main { background-color: #262626; }
-    header[data-testid="stHeader"] { background-color: #1E1E1E; border-bottom: 1px solid #333333; }
-    [data-testid="stSidebar"] { background-color: #1E1E1E; border-right: 1px solid #333333; }
-    [data-testid="stSidebar"] * { color: #CCCCCC; }
-    h1, h2, h3, h4 { color: #FFFFFF; font-family: 'Segoe UI', sans-serif; }
-    p, span, label, caption { color: #B0B0B0; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* ---- base layers ---- */
+    .stApp, .main { background-color: #0F172A; padding-top: 0 !important; margin-top: 0 !important; }
+    header[data-testid="stHeader"] { display: none; }
+    [data-testid="stSidebar"] { background-color: #0B1320; border-right: 1px solid #1E293B; overflow: hidden; }
+    [data-testid="stSidebar"] * { font-family: 'Inter', sans-serif; color: #94A3B8; }
+    [data-testid="stSidebarContent"] { padding-top: 12px; overflow-y: hidden !important; }
+    .stApp * { font-family: 'Inter', sans-serif; }
+
+    /* ---- reset streamlit artifacts ---- */
+    *:focus { outline: none !important; box-shadow: none !important; }
+    [data-testid="stDecoration"] { display: none; }
+    [data-testid="stDataFrameResizable"] { display: none; }
+    [data-testid="stToolbar"] { display: none; }
+    [data-testid="collapsedControl"] { top: 12px !important; left: 8px !important; }
+    #MainMenu, footer { display: none; }
+    .stAlert { background-color: #1E293B !important; border: 1px solid #334155 !important; border-radius: 8px !important; color: #94A3B8 !important; }
+    .stAlert [data-testid="stNotification"] { color: #F1F5F9 !important; }
+    .block-container { padding-top: 1rem; padding-bottom: 0.5rem; }
+
+    /* ---- typography ---- */
+    h1, h2, h3, h4, h5, h6 { color: #F1F5F9; font-weight: 600; letter-spacing: -0.02em; }
+    p, span, label, caption { color: #94A3B8; }
 
     /* ---- select / multiselect ---- */
-    div[data-baseweb="select"] > div { background-color: #323130; border-color: #444444; color: #FFFFFF; border-radius: 6px; }
-    .stSelectbox label, .stMultiselect label { color: #A0A0A0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    div[data-baseweb="select"] > div {
+        background-color: #1E293B; border: 1px solid #334155; color: #F1F5F9;
+        border-radius: 8px; font-size: 0.82rem;
+    }
+    div[data-baseweb="select"] > div:hover { border-color: #475569; }
+    .stSelectbox label, .stMultiselect label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.6px; color: #64748B; font-weight: 500; }
 
-    /* ---- metric cards ---- */
-    [data-testid="stMetric"] { background-color: #323130; border: 1px solid #1A1A1A; border-radius: 8px; padding: 14px 16px; }
-    [data-testid="stMetric"] label { color: #9B9B9B; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.8px; }
-    [data-testid="stMetric"] div[data-testid="stMetricValue"] { font-size: 1.6rem; font-weight: 700; }
+    /* ---- buttons (ghost style) ---- */
+    .stButton button {
+        background-color: transparent; color: #A78BFA;
+        border: 1px solid #5B21B6; border-radius: 8px;
+        padding: 6px 20px; font-size: 0.78rem; font-weight: 500;
+        transition: all 0.15s ease;
+    }
+    .stButton button:hover { background-color: rgba(124,58,237,0.12); border-color: #7C3AED; color: #C4B5FD; }
+    .stButton button:active { background-color: rgba(124,58,237,0.18); }
 
-    /* ---- dataframe / table ---- */
-    [data-testid="stTable"] { background-color: #323130; border-radius: 8px; overflow: hidden; }
-    .dataframe { font-family: 'Segoe UI', sans-serif; font-size: 0.82rem; }
+    /* ---- radio pills ---- */
+    div[data-testid="stRadio"] label { padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; font-weight: 500; cursor: pointer; }
+    div[data-testid="stRadio"] label[data-selected="true"] { background-color: rgba(124,58,237,0.15); color: #A78BFA; }
+
+    /* ---- dataframes (zebra + mono numbers) ---- */
+    [data-testid="stDataFrame"] { border: 1px solid #1E293B; border-radius: 8px; overflow: hidden; }
+    .dataframe { font-size: 0.78rem; }
+    .dataframe thead th { background-color: #1E293B; color: #64748B; font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 14px; border-bottom: 1px solid #334155; }
+    .dataframe tbody td { padding: 8px 14px; color: #CBD5E1; border-bottom: 1px solid rgba(30,41,59,0.5); }
+    .dataframe tbody tr:nth-child(even) td { background-color: rgba(124,58,237,0.02); }
+    .dataframe tbody tr:hover td { background-color: rgba(124,58,237,0.06); }
 
     /* ---- divider ---- */
-    hr { border-color: #3A3A3A; margin: 0.5rem 0; }
+    hr { border-color: #1E293B; margin: 0.4rem 0; }
 
-    /* ---- buttons ---- */
-    .stButton button { background-color: #323130; color: #CCCCCC; border: 1px solid #444444; border-radius: 6px; padding: 4px 14px; font-size: 0.78rem; }
-    .stButton button:hover { border-color: #4A90D9; color: #FFFFFF; }
+    /* ---- scrollbar ---- */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0F172A; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+    /* ---- responsive ---- */
+    @media (max-width: 1024px) {
+        [data-testid="column"] { min-width: 100% !important; }
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # =====================================================================
-# COLOR CONSTANTS
+# COLOR SYSTEM — VIOLET MONOCHROMATIC BRAND
 # =====================================================================
 C = {
-    "blue":      "#4A90D9",
-    "green":     "#50B86C",
-    "orange":    "#E8A838",
-    "purple":    "#8B5CF6",
-    "red":       "#E05A5A",
-    "gold":      "#FFD700",
-    "silver":    "#C0C0C0",
-    "bronze":    "#CD7F32",
-    "bg":        "#262626",
-    "card":      "#323130",
-    "border":    "#1A1A1A",
-    "text":      "#FFFFFF",
-    "text_sec":  "#B0B0B0",
-    "grid":      "#3A3A3A",
+    "brand":       "#7C3AED",
+    "brand_light": "#A78BFA",
+    "brand_muted": "#5B21B6",
+    "brand_bg":    "rgba(124,58,237,0.12)",
+    "brand_ghost": "rgba(124,58,237,0.06)",
+    "bg":          "#0F172A",
+    "surface":     "#1E293B",
+    "border":      "#334155",
+    "text":        "#F1F5F9",
+    "text_sec":    "#94A3B8",
+    "text_muted":  "#64748B",
+    "positive":    "#34D399",
+    "negative":    "#F87171",
 }
-PALETTE_15 = ["#4A90D9","#50B86C","#E8A838","#E05A5A","#8B5CF6",
-              "#06B6D4","#F59E0B","#EC4899","#10B981","#6366F1",
-              "#F97316","#14B8A6","#EF4444","#8B5CF6","#22D3EE"]
+CHART_COLORS = ["#7C3AED", "#8B5CF6", "#A78BFA", "#C4B5FD", "#DDD6FE"]
 
 # =====================================================================
-# DATABASE
+# DATABASE (CSV)
 # =====================================================================
 @st.cache_data(ttl=600)
 def load_csv(table):
@@ -100,27 +138,64 @@ def fmt(v):
 def fmt_int(v):
     return f"{int(v):,}".replace(",", ".")
 
-def chart_layout(fig, height=380, showlegend=False):
+def tooltip_pt():
+    return dict(
+        bgcolor=C["surface"],
+        bordercolor=C["border"],
+        font=dict(family="Inter", size=12, color=C["text"]),
+    )
+
+def chart_config(fig, height=360, showlegend=False):
     fig.update_layout(
-        paper_bgcolor=C["bg"], plot_bgcolor=C["bg"], font_color=C["text_sec"],
-        font_family="Segoe UI", height=height,
-        margin=dict(l=0, r=24, t=0, b=0),
-        xaxis=dict(gridcolor=C["grid"], zeroline=False),
-        yaxis=dict(gridcolor=C["grid"], zeroline=False),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font_family="Inter",
+        font_color=C["text_sec"],
+        font_size=11,
+        height=height,
+        margin=dict(l=0, r=0, t=0, b=0),
+        xaxis=dict(showgrid=False, zeroline=False, tickfont_size=10),
+        yaxis=dict(showgrid=False, zeroline=False, tickfont_size=10),
         showlegend=showlegend,
+        hoverlabel=dict(bgcolor=C["surface"], bordercolor=C["border"], font_family="Inter", font_color=C["text"]),
+    )
+    fig.update_traces(
+        hovertemplate=(
+            "<b>%{x:,.2f}</b><br>"
+            "%{y}<extra></extra>"
+        ),
+        marker=dict(line=dict(width=0)),
     )
     return fig
 
-def kpi_section(color_hex, label, value):
-    return st.markdown(f"""
-    <div style="background:{C['card']};border:1px solid {C['border']};border-radius:8px;padding:12px 16px;position:relative;">
-        <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:{color_hex};border-radius:8px 0 0 8px;"></div>
-        <div style="margin-left:6px;">
-            <div style="color:{C['text_sec']};font-size:0.68rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:4px;">{label}</div>
-            <div style="color:{C['text']};font-size:1.55rem;font-weight:700;">{value}</div>
+def kpi_card(icon_html, label, value, delta=None, delta_color=None):
+    delta_html = ""
+    if delta:
+        col = C["positive"] if delta_color == "up" else C["negative"] if delta_color == "down" else C["text_sec"]
+        delta_html = f'<div style="font-size:0.72rem;font-weight:500;color:{col};margin-top:6px;">{delta}</div>'
+    st.markdown(f"""
+    <div style="background:{C['surface']};border:1px solid {C['border']};border-radius:12px;padding:18px 20px;box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+            {icon_html}
+            <span style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.8px;color:{C['text_muted']};font-weight:500;">{label}</span>
         </div>
+        <div style="font-size:1.55rem;font-weight:700;color:{C['text']};letter-spacing:-0.03em;">{value}</div>
+        {delta_html}
     </div>
     """, unsafe_allow_html=True)
+
+SVG = {
+    "fat":   '<svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#7C3AED"/></svg>',
+    "ped":   '<svg width="12" height="12"><rect x="1" y="1" width="10" height="10" rx="2" fill="#A78BFA"/></svg>',
+    "tkt":   '<svg width="12" height="12"><polygon points="6,1 11,11 1,11" fill="#8B5CF6"/></svg>',
+    "vend":  '<svg width="12" height="12"><polygon points="6,1 11,5 11,11 1,11 1,5" fill="#C4B5FD"/></svg>',
+    "cat":   '<svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#8B5CF6"/></svg>',
+    "preco": '<svg width="12" height="12"><rect x="1" y="1" width="10" height="10" rx="2" fill="#A78BFA"/></svg>',
+    "star":  '<svg width="12" height="12"><polygon points="6,1 7.8,4.5 11.7,5.1 8.8,8 9.5,12 6,10.2 2.5,12 3.2,8 0.3,5.1 4.2,4.5" fill="#A78BFA"/></svg>',
+}
+
+def section_title(text):
+    st.markdown(f'<div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.8px;color:{C["text_muted"]};font-weight:600;margin:0 0 6px 0;">{text}</div>', unsafe_allow_html=True)
 
 # =====================================================================
 # LOAD DATA
@@ -128,14 +203,21 @@ def kpi_section(color_hex, label, value):
 fact, dim_vend, dim_prod, dim_cal = load_all()
 
 if len(fact) == 0:
-    st.error("Banco de dados nao encontrado. Execute o pipeline primeiro.")
+    st.markdown(f"""
+    <div style="text-align:center;padding:60px 20px;">
+        <div style="font-size:3rem;margin-bottom:16px;color:{C['text_muted']};">&#9888;</div>
+        <h3 style="color:{C['text']};">Base de dados indisponivel</h3>
+        <p style="color:{C['text_sec']};">Execute o pipeline primeiro para gerar os dados.</p>
+        <code style="background:{C['surface']};padding:6px 14px;border-radius:6px;color:{C['brand_light']};">python src/run_pipeline.py</code>
+    </div>
+    """, unsafe_allow_html=True)
     st.stop()
 
 # =====================================================================
 # SIDEBAR
 # =====================================================================
 with st.sidebar:
-    st.markdown("## Nexus")
+    st.markdown(f'<div style="font-size:1.4rem;font-weight:700;color:{C["brand"]};letter-spacing:-0.03em;margin-top:-8px;">NEXUS</div>', unsafe_allow_html=True)
     st.caption("Dashboard de Vendas")
     st.markdown("---")
 
@@ -143,27 +225,33 @@ with st.sidebar:
                        label_visibility="collapsed")
 
     st.markdown("---")
-    st.markdown("#### Filtros")
+    st.markdown(f'<div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.8px;color:{C["text_muted"]};font-weight:600;margin-bottom:8px;">Filtros</div>', unsafe_allow_html=True)
 
     anos_uniq = sorted(fact["data_pedido"].apply(lambda x: str(x)[:4]).unique())
     ano_sel = st.selectbox("Ano", ["Todos"] + anos_uniq)
 
     regioes_uniq = sorted(fact["regiao"].unique())
-    regiao_sel = st.multiselect("Regiao", regioes_uniq, default=regioes_uniq,
-                                placeholder="Todas")
+    regiao_sel = st.multiselect("Regiao", regioes_uniq, default=[], placeholder="Todas")
 
     estados_uniq = sorted(fact["estado"].unique())
-    estado_sel = st.multiselect("Estado", estados_uniq, default=[],
-                                placeholder="Todos")
+    estado_sel = st.multiselect("Estado", estados_uniq, default=[], placeholder="Todos")
 
     cats_uniq = sorted(dim_prod["categoria"].unique())
-    cat_sel = st.multiselect("Categoria", cats_uniq, default=[],
-                             placeholder="Todas")
+    cat_sel = st.multiselect("Categoria", cats_uniq, default=[], placeholder="Todas")
 
+    st.markdown(f'<div style="margin-top:8px;"></div>', unsafe_allow_html=True)
+    st.markdown(f'<div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.8px;color:{C["text_muted"]};font-weight:600;margin-bottom:8px;">Periodo</div>', unsafe_allow_html=True)
+
+    all_dates_raw = pd.to_datetime(fact["data_pedido"])
+    data_min_global = all_dates_raw.min().date()
+    data_max_global = all_dates_raw.max().date()
+
+    data_ini = st.date_input("Data inicial", value=data_min_global, min_value=data_min_global, max_value=data_max_global)
+    data_fim = st.date_input("Data final", value=data_max_global, min_value=data_min_global, max_value=data_max_global)
+
+    st.markdown(f'<div style="margin-top:12px;"></div>', unsafe_allow_html=True)
     if st.button("Limpar filtros", use_container_width=True):
         st.rerun()
-
-    st.markdown("---")
 
 # =====================================================================
 # FILTER LOGIC
@@ -178,12 +266,21 @@ def filtrar(df):
     if cat_sel:
         prods = dim_prod[dim_prod["categoria"].isin(cat_sel)]["id_produto"].tolist()
         df = df[df["id_produto"].isin(prods)]
+    df["_data_dt"] = pd.to_datetime(df["data_pedido"])
+    df = df[(df["_data_dt"] >= pd.Timestamp(data_ini)) & (df["_data_dt"] <= pd.Timestamp(data_fim))]
+    df = df.drop(columns=["_data_dt"])
     return df
 
 ff = filtrar(fact)
 
 if len(ff) == 0:
-    st.warning("Nenhum dado para os filtros selecionados.")
+    st.markdown(f"""
+    <div style="text-align:center;padding:40px 20px;">
+        <div style="font-size:2.5rem;margin-bottom:12px;color:{C['text_muted']};">&#128269;</div>
+        <p style="color:{C['text_sec']};font-size:0.95rem;">Nenhum dado para os filtros selecionados.</p>
+        <p style="color:{C['text_muted']};font-size:0.78rem;">Tente ampliar os criterios de busca.</p>
+    </div>
+    """, unsafe_allow_html=True)
     st.stop()
 
 # shared KPIs
@@ -192,123 +289,83 @@ ped_total = ff["pedido_id"].nunique()
 tkt_medio = fat_total / ped_total if ped_total > 0 else 0
 vend_total = ff["id_vendedor"].nunique()
 
-# date range for header
-all_dates = pd.to_datetime(ff["data_pedido"])
-data_min = all_dates.min().strftime("%d/%m/%Y")
-data_max = all_dates.max().strftime("%d/%m/%Y")
-
-# =====================================================================
-# HEADER
-# =====================================================================
-st.markdown(f"""
-<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0 12px 0;">
-    <div>
-        <span style="font-size:1.5rem;font-weight:700;color:{C['text']};">Nexus</span>
-        <span style="color:{C['text_sec']};font-size:0.8rem;margin-left:16px;">Período: {data_min} — {data_max}</span>
-    </div>
-    <div style="display:flex;gap:24px;">
-        <div><span style="color:{C['text_sec']};font-size:0.65rem;text-transform:uppercase;">Faturamento</span><br><span style="color:{C['blue']};font-weight:700;">{fmt(fat_total)}</span></div>
-        <div><span style="color:{C['text_sec']};font-size:0.65rem;text-transform:uppercase;">Pedidos</span><br><span style="color:{C['text']};font-weight:700;">{fmt_int(ped_total)}</span></div>
-        <div><span style="color:{C['text_sec']};font-size:0.65rem;text-transform:uppercase;">Ticket Medio</span><br><span style="color:{C['green']};font-weight:700;">{fmt(tkt_medio)}</span></div>
-    </div>
-</div>
-""", unsafe_allow_html=True)
-st.markdown("---")
-
 # =====================================================================
 # PAGE 1 — VISÃO EXECUTIVA
 # =====================================================================
 if pagina == "Visao Executiva":
 
-    # ---- ROW 0: KPI CARDS ----
     c1, c2, c3, c4 = st.columns(4)
-    with c1: kpi_section(C["blue"],   "Faturamento",      fmt(fat_total))
-    with c2: kpi_section(C["green"],  "Total Pedidos",    fmt_int(ped_total))
-    with c3: kpi_section(C["blue"],   "Ticket Medio",     fmt(tkt_medio))
-    with c4: kpi_section(C["orange"], "Vendedores",       vend_total)
+    with c1: kpi_card(SVG["fat"],  "Faturamento",   fmt(fat_total))
+    with c2: kpi_card(SVG["ped"],  "Total Pedidos", fmt_int(ped_total))
+    with c3: kpi_card(SVG["tkt"],  "Ticket Medio",  fmt(tkt_medio))
+    with c4: kpi_card(SVG["vend"], "Vendedores",    vend_total)
 
-    # ---- ROW 1: FAT. ESTADO + FAT. REGIÃO ----
-    st.markdown("---")
+    st.markdown('<div style="height:8px;"></div>', unsafe_allow_html=True)
+
     cr, cl = st.columns([1, 1])
     with cr:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Faturamento por Estado</h4>", unsafe_allow_html=True)
+        section_title("Faturamento por Estado")
         dfe = ff.groupby("estado", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=False)
         fig = px.bar(dfe, x="total_pedido", y="estado", orientation="h",
-                     color_discrete_sequence=[C["blue"]],
-                     labels={"total_pedido": "", "estado": ""})
-        chart_layout(fig, height=420)
+                     color_discrete_sequence=[C["brand"]], labels={"total_pedido": "", "estado": ""})
+        chart_config(fig, height=380)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
     with cl:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Faturamento por Regiao</h4>", unsafe_allow_html=True)
+        section_title("Faturamento por Regiao")
         dfr = ff.groupby("regiao", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=False)
         fig = px.bar(dfr, x="total_pedido", y="regiao", orientation="h",
-                     color_discrete_sequence=[C["green"]],
-                     labels={"total_pedido": "", "regiao": ""})
-        chart_layout(fig, height=420)
+                     color_discrete_sequence=[C["brand_muted"]], labels={"total_pedido": "", "regiao": ""})
+        chart_config(fig, height=380)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # ---- ROW 2: TOP 10 MUNICIPIOS + RANKING VENDEDORES (TABLE) ----
-    st.markdown("---")
+    st.markdown('<div style="height:4px;"></div>', unsafe_allow_html=True)
+
     c1, c2 = st.columns([1, 1])
     with c1:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Top 10 Municipios</h4>", unsafe_allow_html=True)
+        section_title("Top 10 Municipios")
         dm = ff.groupby("municipio", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=True).tail(10)
-        fig = go.Figure(go.Bar(y=dm["municipio"], x=dm["total_pedido"], orientation="h",
-                               marker=dict(color=C["orange"]),
-                               text=[fmt(v) for v in dm["total_pedido"]],
-                               textposition="outside", textfont=dict(color=C["text_sec"], size=9)))
-        chart_layout(fig, height=380)
+        fig = go.Figure(go.Bar(y=dm["municipio"], x=dm["total_pedido"], orientation="h", marker=dict(color=C["brand"])))
+        chart_config(fig, height=350)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
     with c2:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Ranking Vendedores</h4>", unsafe_allow_html=True)
+        section_title("Ranking Vendedores")
         dv_r = ff.merge(dim_vend, on="id_vendedor", how="left", suffixes=("_v", "_d"))
         rank = dv_r.groupby(["nome", "regiao_d"], as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=False)
         rank.insert(0, "#", range(1, len(rank)+1))
         rank["Faturamento"] = rank["total_pedido"].apply(fmt)
         rank["%"] = (rank["total_pedido"] / rank["total_pedido"].sum() * 100).apply(lambda x: f"{x:.1f}%")
-        display = rank[["#", "nome", "regiao_d", "Faturamento", "%"]].rename(
-            columns={"nome": "Vendedor", "regiao_d": "Regiao"})
-        st.dataframe(display, use_container_width=True, hide_index=True, height=380)
+        display = rank[["#", "nome", "regiao_d", "Faturamento", "%"]].rename(columns={"nome": "Vendedor", "regiao_d": "Regiao"})
+        st.dataframe(display, use_container_width=True, hide_index=True, height=350)
 
-    # ---- ROW 3: EVOLUÇÃO MENSAL (FULL WIDTH) ----
-    st.markdown("---")
-    st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Evolucao Mensal do Faturamento</h4>", unsafe_allow_html=True)
+    st.markdown('<div style="height:4px;"></div>', unsafe_allow_html=True)
 
-    ff_dates = pd.to_datetime(ff["data_pedido"])
-    cal = dim_cal[["data", "nome_mes", "mes_num", "ano"]].copy()
-    cal["data"] = pd.to_datetime(cal["data"])
+    section_title("Evolucao Mensal do Faturamento")
     fe = ff.copy()
-    fe["data_pedido_dt"] = ff_dates
+    fe["data_pedido_dt"] = pd.to_datetime(ff["data_pedido"])
     fe["ano_mes"] = fe["data_pedido_dt"].dt.to_period("M").astype(str)
-
     dmes = fe.groupby("ano_mes", as_index=False).agg(
-        total=("total_pedido", "sum"),
-        pedidos=("pedido_id", "nunique"),
-        min_dt=("data_pedido_dt", "min"),
+        total=("total_pedido", "sum"), pedidos=("pedido_id", "nunique"), min_dt=("data_pedido_dt", "min")
     ).sort_values("ano_mes")
     dmes["label"] = dmes["min_dt"].dt.strftime("%b/%y")
     dmes["cresc"] = dmes["total"].pct_change()
 
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=dmes["label"], y=dmes["total"], mode="lines+markers+text",
-                             line=dict(color=C["blue"], width=2.5),
-                             fill="tozeroy", fillcolor="rgba(74,144,217,0.10)",
-                             marker=dict(size=6, color=C["blue"]),
-                             text=[fmt(v) for v in dmes["total"]],
-                             textposition="top center", textfont=dict(color=C["text_sec"], size=8)))
-    chart_layout(fig, height=320)
+    fig.add_trace(go.Scatter(x=dmes["label"], y=dmes["total"], mode="lines+markers",
+                             line=dict(color=C["brand"], width=2.2),
+                             fill="tozeroy", fillcolor=C["brand_ghost"],
+                             marker=dict(size=4, color=C["brand"])))
+    chart_config(fig, height=300)
     fig.update_xaxes(tickangle=-30, tickfont_size=9)
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # MoM indicator
     if len(dmes) >= 2:
         last_cresc = dmes["cresc"].iloc[-1]
         if pd.notna(last_cresc):
-            ccor = C["green"] if last_cresc >= 0 else C["red"]
-            ss = "▲" if last_cresc >= 0 else "▼"
-            st.caption(f"Crescimento mensal: {ss} {abs(last_cresc)*100:.1f}% vs mes anterior")
+            direction = "up" if last_cresc >= 0 else "down"
+            arr = "+" if last_cresc >= 0 else ""
+            kpi_card(SVG["fat"], "Crescimento vs mes anterior", f"{arr}{last_cresc*100:.1f}%")
 
 # =====================================================================
 # PAGE 2 — VENDEDORES
@@ -316,61 +373,48 @@ if pagina == "Visao Executiva":
 elif pagina == "Vendedores":
 
     dv = ff.merge(dim_vend, on="id_vendedor", how="left", suffixes=("_v", "_d"))
-    dvf = dv.groupby(["id_vendedor", "nome", "regiao_d"], as_index=False)["total_pedido"].sum() \
-            .sort_values("total_pedido", ascending=False)
+    dvf = dv.groupby(["id_vendedor", "nome", "regiao_d"], as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=False)
     dvf["rank"] = range(1, len(dvf)+1)
     top1 = dvf.iloc[0] if len(dvf) > 0 else None
     fat_med = fat_total / vend_total if vend_total > 0 else 0
 
-    # ---- ROW 0: 2 KPIs ----
     c1, c2 = st.columns(2)
     with c1:
         nome_top = top1["nome"] if top1 is not None else "-"
-        kpi_section(C["gold"], "Melhor Vendedor", f"{nome_top} — {fmt(top1['total_pedido']) if top1 is not None else ''}")
+        val_top = fmt(top1["total_pedido"]) if top1 is not None else ""
+        kpi_card(SVG["star"], "Melhor Vendedor", f"{nome_top} — {val_top}")
     with c2:
-        kpi_section(C["green"], "Fat. Medio por Vendedor", fmt(fat_med))
+        kpi_card(SVG["tkt"], "Fat. Medio por Vendedor", fmt(fat_med))
 
-    # ---- ROW 1: RANKING COMPLETO (FULL WIDTH, CONDITIONAL FORMAT) ----
-    st.markdown("---")
-    st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Ranking Completo</h4>", unsafe_allow_html=True)
+    st.markdown('<div style="height:8px;"></div>', unsafe_allow_html=True)
 
-    def medal(r):
-        return str(r)
-
+    section_title("Ranking Completo")
     rank_display = dvf.copy()
     rank_display["Faturamento"] = rank_display["total_pedido"].apply(fmt)
     rank_display["%"] = (rank_display["total_pedido"] / rank_display["total_pedido"].sum() * 100).apply(lambda x: f"{x:.1f}%")
-    rank_display["#"] = rank_display["rank"].apply(medal)
-    tbl = rank_display[["#", "nome", "regiao_d", "Faturamento", "%"]].rename(
-        columns={"#": "#", "nome": "Vendedor", "regiao_d": "Regiao"})
+    tbl = rank_display[["rank", "nome", "regiao_d", "Faturamento", "%"]].rename(
+        columns={"rank": "#", "nome": "Vendedor", "regiao_d": "Regiao"})
+    st.dataframe(tbl, use_container_width=True, hide_index=True, height=520)
 
-    st.dataframe(tbl, use_container_width=True, hide_index=True, height=520,
-                 column_config={"#": st.column_config.TextColumn(width="small"),
-                                "Vendedor": st.column_config.TextColumn(width="large"),
-                                "Regiao": st.column_config.TextColumn(width="medium"),
-                                "Faturamento": st.column_config.TextColumn(width="medium"),
-                                "%": st.column_config.TextColumn(width="small")})
+    st.markdown('<div style="height:8px;"></div>', unsafe_allow_html=True)
 
-    # ---- ROW 2: DONUT + BARRAS EMPILHADAS ----
-    st.markdown("---")
     cd, cr2 = st.columns([1, 1])
     with cd:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Participacao %</h4>", unsafe_allow_html=True)
-        fig = go.Figure(go.Pie(labels=dvf["nome"], values=dvf["total_pedido"], hole=0.55,
-                               textinfo="percent", textfont=dict(size=10, color=C["text"]),
-                               marker=dict(colors=PALETTE_15)))
-        chart_layout(fig, height=380)
-        fig.update_layout(margin=dict(l=0, r=0, t=0, b=0))
+        section_title("Participacao %")
+        fig = go.Figure(go.Pie(labels=dvf["nome"], values=dvf["total_pedido"], hole=0.6,
+                               textinfo="percent", textfont=dict(size=10, color=C["text"], family="Inter"),
+                               marker=dict(colors=CHART_COLORS * 3, line=dict(width=0))))
+        chart_config(fig, height=340)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
     with cr2:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Fat. por Regiao do Vendedor</h4>", unsafe_allow_html=True)
+        section_title("Fat. por Regiao do Vendedor")
         dv_stacked = dvf.groupby(["regiao_d", "nome"], as_index=False)["total_pedido"].sum()
         fig = px.bar(dv_stacked, x="total_pedido", y="regiao_d", color="nome",
-                     orientation="h", color_discrete_sequence=PALETTE_15,
+                     orientation="h", color_discrete_sequence=CHART_COLORS * 3,
                      labels={"total_pedido": "", "regiao_d": ""})
-        chart_layout(fig, height=380, showlegend=True)
-        fig.update_layout(legend=dict(orientation="h", yanchor="top", y=-0.2, font_size=8, title_text=""))
+        chart_config(fig, height=340, showlegend=True)
+        fig.update_layout(legend=dict(orientation="h", yanchor="top", y=-0.15, font_size=8, title_text="", itemclick=False, itemdoubleclick=False))
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 # =====================================================================
@@ -380,92 +424,72 @@ elif pagina == "Produtos":
 
     fc = ff.merge(dim_prod, on="id_produto", how="left")
 
-    # ---- ROW 0: KPIs ----
     c1, c2, c3 = st.columns(3)
-    with c1: kpi_section(C["purple"], "Categorias", dim_prod["categoria"].nunique())
-    with c2: kpi_section(C["purple"], "Preco Medio", fmt(dim_prod["preco_venda"].mean()))
-    with c3: kpi_section(C["purple"], "Produtos Vendidos", ff["id_produto"].nunique())
+    with c1: kpi_card(SVG["cat"],   "Categorias",       dim_prod["categoria"].nunique())
+    with c2: kpi_card(SVG["preco"], "Preco Medio",      fmt(dim_prod["preco_venda"].mean()))
+    with c3: kpi_card(SVG["ped"],   "Produtos Vendidos", ff["id_produto"].nunique())
 
-    # ---- ROW 1: FAT. CATEGORIA + TOP 10 PRODUTOS ----
-    st.markdown("---")
+    st.markdown('<div style="height:8px;"></div>', unsafe_allow_html=True)
+
     cc, cp = st.columns([1, 1])
     with cc:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Faturamento por Categoria</h4>", unsafe_allow_html=True)
+        section_title("Faturamento por Categoria")
         dc = fc.groupby("categoria", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=True)
-        fig = go.Figure(go.Bar(y=dc["categoria"], x=dc["total_pedido"], orientation="h",
-                               marker=dict(color=C["purple"]),
-                               text=[fmt(v) for v in dc["total_pedido"]],
-                               textposition="outside", textfont=dict(color=C["text_sec"], size=10)))
-        chart_layout(fig, height=380)
+        fig = go.Figure(go.Bar(y=dc["categoria"], x=dc["total_pedido"], orientation="h", marker=dict(color=C["brand"])))
+        chart_config(fig, height=360)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
     with cp:
-        st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Top 10 Produtos</h4>", unsafe_allow_html=True)
+        section_title("Top 10 Produtos")
         dpt = fc.groupby("nome_produto", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=True).tail(10)
-        fig = go.Figure(go.Bar(y=dpt["nome_produto"], x=dpt["total_pedido"], orientation="h",
-                               marker=dict(color=C["purple"]),
-                               text=[fmt(v) for v in dpt["total_pedido"]],
-                               textposition="outside", textfont=dict(color=C["text_sec"], size=9)))
-        chart_layout(fig, height=380)
+        fig = go.Figure(go.Bar(y=dpt["nome_produto"], x=dpt["total_pedido"], orientation="h", marker=dict(color=C["brand_light"])))
+        chart_config(fig, height=360)
         st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # ---- ROW 2: DETALHAMENTO ----
-    st.markdown("---")
-    st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Detalhamento por Categoria</h4>", unsafe_allow_html=True)
+    st.markdown('<div style="height:8px;"></div>', unsafe_allow_html=True)
+
+    section_title("Detalhamento por Categoria")
     dd = fc.groupby("categoria").agg(
-        Faturamento=("total_pedido", "sum"),
-        Pedidos=("pedido_id", "nunique"),
-        Ticket=("total_pedido", "mean"),
-        Quantidade=("quantidade", "sum"),
+        Faturamento=("total_pedido", "sum"), Pedidos=("pedido_id", "nunique"),
+        Ticket=("total_pedido", "mean"), Quantidade=("quantidade", "sum"),
     ).reset_index()
     dd["Fat. Formatado"] = dd["Faturamento"].apply(fmt)
     dd["Ticket Formatado"] = dd["Ticket"].apply(fmt)
     st.dataframe(dd[["categoria", "Fat. Formatado", "Pedidos", "Ticket Formatado", "Quantidade"]].rename(
-        columns={"categoria": "Categoria", "Fat. Formatado": "Faturamento",
-                 "Ticket Formatado": "Ticket Medio", "Quantidade": "Qtd. Vendida"}),
+        columns={"categoria": "Categoria", "Fat. Formatado": "Faturamento", "Ticket Formatado": "Ticket Medio", "Quantidade": "Qtd. Vendida"}),
         use_container_width=True, hide_index=True, height=280)
 
 # =====================================================================
-# PAGE 4 — GEOGRÁFICA (NEW)
+# PAGE 4 — GEOGRÁFICA
 # =====================================================================
 elif pagina == "Geografica":
 
-    # ---- FAT. POR ESTADO (FULL WIDTH) ----
-    st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Faturamento por Estado</h4>", unsafe_allow_html=True)
+    section_title("Faturamento por Estado")
     dfe2 = ff.groupby("estado", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=False)
-    fig = go.Figure(go.Bar(y=dfe2["estado"], x=dfe2["total_pedido"], orientation="h",
-                           marker=dict(color=C["blue"]),
-                           text=[fmt(v) for v in dfe2["total_pedido"]],
-                           textposition="outside", textfont=dict(color=C["text_sec"], size=10)))
-    chart_layout(fig, height=380)
+    fig = go.Figure(go.Bar(y=dfe2["estado"], x=dfe2["total_pedido"], orientation="h", marker=dict(color=C["brand"])))
+    chart_config(fig, height=360)
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # ---- FAT. POR REGIAO (FULL WIDTH) ----
-    st.markdown("---")
-    st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Faturamento por Regiao</h4>", unsafe_allow_html=True)
+    st.markdown('<div style="height:6px;"></div>', unsafe_allow_html=True)
+
+    section_title("Faturamento por Regiao")
     dfr2 = ff.groupby("regiao", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=False)
-    fig = go.Figure(go.Bar(y=dfr2["regiao"], x=dfr2["total_pedido"], orientation="h",
-                           marker=dict(color=C["green"]),
-                           text=[fmt(v) for v in dfr2["total_pedido"]],
-                           textposition="outside", textfont=dict(color=C["text_sec"], size=11)))
-    chart_layout(fig, height=340)
+    fig = go.Figure(go.Bar(y=dfr2["regiao"], x=dfr2["total_pedido"], orientation="h", marker=dict(color=C["brand_muted"])))
+    chart_config(fig, height=320)
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-    # ---- TOP 15 MUNICIPIOS (FULL WIDTH) ----
-    st.markdown("---")
-    st.markdown(f"<h4 style='color:{C['text']};margin:0 0 8px 0;'>Top 15 Municipios</h4>", unsafe_allow_html=True)
+    st.markdown('<div style="height:6px;"></div>', unsafe_allow_html=True)
+
+    section_title("Top 15 Municipios")
     dm2 = ff.groupby("municipio", as_index=False)["total_pedido"].sum().sort_values("total_pedido", ascending=True).tail(15)
-    fig = go.Figure(go.Bar(y=dm2["municipio"], x=dm2["total_pedido"], orientation="h",
-                           marker=dict(color=C["orange"]),
-                           text=[fmt(v) for v in dm2["total_pedido"]],
-                           textposition="outside", textfont=dict(color=C["text_sec"], size=9)))
-    chart_layout(fig, height=460)
+    fig = go.Figure(go.Bar(y=dm2["municipio"], x=dm2["total_pedido"], orientation="h", marker=dict(color=C["brand_light"])))
+    chart_config(fig, height=420)
     st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 # =====================================================================
 # FOOTER
 # =====================================================================
 st.markdown("---")
-st.caption(f"Nexus — Dados simulados (2025–2026) | Pipeline Medallion | "
+st.caption(f"Nexus — Dados simulados (2025–2026) | "
            f"250 produtos · 1.500 clientes · 8.000 pedidos · Faturamento: {fmt(fat_total)} | "
            f"[GitHub](https://github.com/Nagalli01/bi-ecommerce-dashboard)")
