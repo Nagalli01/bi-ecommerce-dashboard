@@ -80,7 +80,27 @@ def get_conn():
         path = os.path.join(os.path.dirname(__file__), "data", "bi_ecommerce.db")
     if not os.path.exists(path):
         path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "bi_ecommerce.db")
-    return sqlite3.connect(path, check_same_thread=False) if os.path.exists(path) else None
+
+    if not os.path.exists(path):
+        path = os.path.join(os.path.dirname(__file__), "bi_ecommerce.db")
+        download_db(path)
+
+    if not os.path.exists(path):
+        return None
+
+    return sqlite3.connect(path, check_same_thread=False)
+
+def download_db(save_path):
+    try:
+        from huggingface_hub import hf_hub_download
+        hf_hub_download(
+            repo_id="Nagalli-01/bi-ecommerce-dashboard",
+            filename="bi_ecommerce.db",
+            repo_type="space",
+            local_dir=os.path.dirname(save_path),
+        )
+    except Exception:
+        pass
 
 @st.cache_data(ttl=60)
 def q(sql):
