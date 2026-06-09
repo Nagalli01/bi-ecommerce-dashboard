@@ -163,8 +163,8 @@ if pagina == "Visao Executiva":
 # =====================================================================
 elif pagina == "Vendedores":
     st.markdown('<h2 style="color:#4A90D9;">Analise de Vendedores</h2>', unsafe_allow_html=True)
-    dv = ff.merge(dim_vend, on="id_vendedor", how="left")
-    dvf = dv.groupby(["id_vendedor", "nome", "regiao"])["total_pedido"].sum().reset_index().sort_values("total_pedido", ascending=False)
+    dv = ff.merge(dim_vend, on="id_vendedor", how="left", suffixes=("_venda", "_vendedor"))
+    dvf = dv.groupby(["id_vendedor", "nome", "regiao_vendedor"])["total_pedido"].sum().reset_index().sort_values("total_pedido", ascending=False).rename(columns={"regiao_vendedor": "regiao"})
     melhor = dvf.iloc[0] if len(dvf) > 0 else None
     fat_med = fat / vend if vend > 0 else 0
     
