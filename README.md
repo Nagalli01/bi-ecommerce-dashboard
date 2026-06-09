@@ -111,14 +111,15 @@ bi_ecommerce/
 
 ## Dashboard (Streamlit)
 
-3 páginas com KPIs, filtros interativos e gráficos Plotly:
-Dark theme (#1B1B1B / #2D2D2D / #4A90D9).
+4 páginas profissionais com KPIs, filtros interativos e gráficos Plotly.
+Dark theme (#262626 / #323130), paleta de cores por tipo de gráfico.
 
 | Página | Conteúdo |
 |--------|----------|
-| Visão Executiva | Faturamento, Pedidos, Ticket, Vendedores, por Estado, Ranking, Evolução |
-| Vendedores | Performance individual, participação %, ranking completo, por região |
-| Produtos | Faturamento por categoria, top 10 produtos, detalhamento |
+| Visão Executiva | 4 KPIs + Fat. Estado/Região + Top 10 Municípios + Ranking Vendedores + Evolução Mensal (MoM) |
+| Vendedores | 2 KPIs + Ranking com medalhas 🥇🥈🥉 + Donut + Barras Empilhadas por Região |
+| Produtos | 3 KPIs + Fat. Categoria + Top 10 Produtos + Detalhamento |
+| Geográfica | Fat. Estado + Fat. Região + Top 15 Municípios |
 
 **Online:** https://Nagalli-01-bi-ecommerce-dashboard.hf.space
 **GitHub:** https://github.com/Nagalli01/bi-ecommerce-dashboard

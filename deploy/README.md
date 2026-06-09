@@ -9,22 +9,32 @@ pinned: false
 
 # BI E-Commerce Dashboard
 
-Dashboard interativo de analise de vendas de e-commerce.
+Dashboard profissional de BI para analise de vendas de e-commerce.
 
-## Dataset
+## Dataset Simulado
 
-- 1500 clientes, 250 produtos, 8000 pedidos
-- Faturamento: R$ 179,6M
-- 5 tabelas em Star Schema (SQLite)
+- 1.500 clientes · 250 produtos · 8.000 pedidos · R$ 179,6 Mi em faturamento
+- Arquitetura Medallion: Bronze -> Silver -> Gold -> Star Schema
+- 5 tabelas em SQLite, pipeline ETL completo
 
-## Paginas
+## 4 Paginas
 
-1. **Visao Executiva** — KPIs, faturamento por estado, ranking vendedores, evolucao mensal
-2. **Vendedores** — performance individual, participacao, ranking completo
-3. **Produtos & Categorias** — faturamento por categoria, top produtos, detalhamento
+| Pagina | Conteudo |
+|--------|----------|
+| **Visao Executiva** | KPIs (Fat. / Pedidos / Ticket / Vendedores), Fat. por Estado + Regiao, Top 10 Municipios, Ranking Vendedores, Evolucao Mensal com crescimento MoM |
+| **Vendedores** | Melhor Vendedor, Ranking completo com medalhas (🥇🥈🥉), Participacao % (Donut), Barras Empilhadas por regiao |
+| **Produtos** | Categorias / Preco Medio / Produtos Vendidos, Fat. por Categoria, Top 10 Produtos, Detalhamento |
+| **Geografica** | Fat. por Estado, Fat. por Regiao, Top 15 Municipios |
+
+## Funcionalidades
+
+- Tema dark profissional com paleta de cores por tipo de grafico
+- Header com KPIs flutuantes e range de datas
+- Filtros na sidebar: ano, regiao, estado, categoria
+- Loading states e tratamento de dados vazios
+- Metricas de crescimento mensal (MoM)
+- Graficos interativos (Plotly)
 
 ## Tech Stack
 
-- Python + Streamlit + Plotly
-- SQLite (portatil, sem banco externo)
-- Dark theme (#1B1B1B / #4A90D9)
+Python · Streamlit · Plotly · Pandas · SQLite · Docker
