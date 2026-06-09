@@ -1,0 +1,259 @@
+# =====================================================================
+# SCRIPTS PYTHON PARA MAPAS E VISUAIS (TEMA PROFISSIONAL OLIST)
+# =====================================================================
+# Conectado ao banco: bi_ecommerce
+# Arquivo GeoJSON de suporte: C:\dev\projetoInt\bi_ecommerce\data\brazil_states.geojson
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# VISUAL 1 (Esquerda): MAPA COROPLÉTICO DE FATURAMENTO POR ESTADO
+# ---------------------------------------------------------------------
+# No Power BI, use o visual do Python (Py) e arraste os seguintes campos:
+#   - bi_ecommerce fact_vendas[estado]
+#   - bi_ecommerce fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import numpy as np
+
+# 1. Detectar colunas automaticamente
+col_estado = next((c for c in ['estado', 'Estado'] if c in dataset.columns), None)
+col_valor = next((c for c in ['total_pedido', 'Faturamento', 'total_pedido (Soma)', 'total_pedido (Sum)'] if c in dataset.columns), None)
+
+if not col_estado or not col_valor:
+    raise KeyError("Arraste 'estado' e 'total_pedido' para o visual.")
+
+# 2. Carregar GeoJSON local (Offline e ultra rápido)
+geojson_path = r'C:\dev\projetoInt\bi_ecommerce\data\brazil_states.geojson'
+gdf = gpd.read_file(geojson_path)
+
+# 3. Agrupar dados
+df_grouped = dataset.groupby(col_estado)[col_valor].sum().reset_index()
+
+# 4. Merge dos dados com o mapa
+gdf_merged = gdf.merge(df_grouped, left_on='sigla', right_on=col_estado, how='left')
+gdf_merged[col_valor] = gdf_merged[col_valor].fillna(0)
+
+# 5. Plotar Mapa Dark Mode
+fig, ax = plt.subplots(figsize=(8, 8), facecolor='#262626')
+ax.set_facecolor('#262626')
+
+# Plot com escala de vermelhos
+gdf_merged.plot(
+    column=col_valor,
+    cmap='Reds',
+    linewidth=0.5,
+    ax=ax,
+    edgecolor='#1A1A1A',
+    legend=True,
+    legend_kwds={
+        'label': "Faturamento Total (R$)",
+        'orientation': "horizontal",
+        'pad': 0.02,
+        'shrink': 0.6
+    }
+)
+
+# Estilizar Legenda
+fig.axes[-1].tick_params(colors='#FFFFFF', labelsize=8)
+fig.axes[-1].xaxis.label.set_color('#FFFFFF')
+fig.axes[-1].xaxis.label.set_fontsize(9)
+
+ax.axis('off')
+plt.title("Distribuição do Faturamento por Estado", fontsize=12, color='#FFFFFF', pad=10, weight='bold', family='Segoe UI')
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 2 (Centro): MAPA COROPLÉTICO DE MÉDIA DE FRETE POR ESTADO
+# ---------------------------------------------------------------------
+# No Power BI, use o visual do Python (Py) e arraste os seguintes campos:
+#   - bi_ecommerce fact_vendas[estado]
+#   - bi_ecommerce fact_vendas[valor_frete]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import numpy as np
+
+# 1. Detectar colunas
+col_estado = next((c for c in ['estado', 'Estado'] if c in dataset.columns), None)
+col_valor = next((c for c in ['valor_frete', 'valor_frete (Média)', 'valor_frete (Average)'] if c in dataset.columns), None)
+
+if not col_estado or not col_valor:
+    raise KeyError("Arraste 'estado' e 'valor_frete' para o visual.")
+
+# 2. Carregar GeoJSON
+geojson_path = r'C:\dev\projetoInt\bi_ecommerce\data\brazil_states.geojson'
+gdf = gpd.read_file(geojson_path)
+
+# 3. Agrupar pela Média (mean) do frete
+df_grouped = dataset.groupby(col_estado)[col_valor].mean().reset_index()
+
+# 4. Merge
+gdf_merged = gdf.merge(df_grouped, left_on='sigla', right_on=col_estado, how='left')
+gdf_merged[col_valor] = gdf_merged[col_valor].fillna(0)
+
+# 5. Plotar Mapa Dark Mode
+fig, ax = plt.subplots(figsize=(8, 8), facecolor='#262626')
+ax.set_facecolor('#262626')
+
+# Plot com escala de azuis/vermelhos (YlOrRd)
+gdf_merged.plot(
+    column=col_valor,
+    cmap='YlOrRd',
+    linewidth=0.5,
+    ax=ax,
+    edgecolor='#1A1A1A',
+    legend=True,
+    legend_kwds={
+        'label': "Frete Médio (R$)",
+        'orientation': "horizontal",
+        'pad': 0.02,
+        'shrink': 0.6
+    }
+)
+
+# Estilizar Legenda
+fig.axes[-1].tick_params(colors='#FFFFFF', labelsize=8)
+fig.axes[-1].xaxis.label.set_color('#FFFFFF')
+fig.axes[-1].xaxis.label.set_fontsize(9)
+
+ax.axis('off')
+plt.title("Média de Frete por Estado (Logística)", fontsize=12, color='#FFFFFF', pad=10, weight='bold', family='Segoe UI')
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 3 (Direita): TOP MUNICÍPIOS POR MÉDIA DE FRETE (Barras Horizontais)
+# ---------------------------------------------------------------------
+# No Power BI, use o visual do Python (Py) e arraste os seguintes campos:
+#   - bi_ecommerce fact_vendas[municipio]
+#   - bi_ecommerce fact_vendas[valor_frete]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+col_muni = next((c for c in ['municipio', 'Municipio'] if c in dataset.columns), None)
+col_frete = next((c for c in ['valor_frete', 'valor_frete (Média)', 'valor_frete (Average)'] if c in dataset.columns), None)
+
+if not col_muni or not col_frete:
+    raise KeyError("Arraste 'municipio' e 'valor_frete' para o visual.")
+
+plt.figure(figsize=(10, 6), facecolor='#262626')
+ax = plt.axes()
+ax.set_facecolor('#262626')
+
+# Agrupar pela média e pegar top 15 municípios com maior frete médio
+df_muni = dataset.groupby(col_muni)[col_frete].mean().reset_index().sort_values(col_frete, ascending=False).head(15)
+
+colors = sns.color_palette("YlOrRd_r", len(df_muni))
+
+bars = sns.barplot(
+    data=df_muni,
+    y=col_muni,
+    x=col_frete,
+    palette=colors,
+    ax=ax,
+    hue=col_muni,
+    legend=False
+)
+
+plt.title("Média do Valor de Frete por Município (R$)", fontsize=12, color='#FFFFFF', pad=15, weight='bold', family='Segoe UI')
+ax.tick_params(colors='#FFFFFF', labelsize=10)
+ax.spines['bottom'].set_color('#444444')
+ax.spines['left'].set_color('#444444')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.grid(True, axis='x', color='#444444', linestyle='--', alpha=0.3)
+
+# Rótulos nas pontas das barras (R$ XX.XX)
+for bar in bars.patches:
+    width = bar.get_width()
+    ax.text(
+        width + (df_muni[col_frete].max() * 0.01), 
+        bar.get_y() + bar.get_height()/2,
+        f"R$ {width:.2f}", 
+        va='center', 
+        ha='left', 
+        color='#FFFFFF', 
+        fontsize=9,
+        weight='bold',
+        family='Segoe UI'
+    )
+
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 4 (Inferior): TOP MUNICÍPIOS POR FATURAMENTO (Barras Horizontais)
+# ---------------------------------------------------------------------
+# No Power BI, use o visual do Python (Py) e arraste os seguintes campos:
+#   - bi_ecommerce fact_vendas[municipio]
+#   - bi_ecommerce fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+col_muni = next((c for c in ['municipio', 'Municipio'] if c in dataset.columns), None)
+col_valor = next((c for c in ['total_pedido', 'Faturamento', 'total_pedido (Soma)', 'total_pedido (Sum)'] if c in dataset.columns), None)
+
+if not col_muni or not col_valor:
+    raise KeyError("Arraste 'municipio' e 'total_pedido' para o visual.")
+
+plt.figure(figsize=(10, 6), facecolor='#262626')
+ax = plt.axes()
+ax.set_facecolor('#262626')
+
+# Agrupar por faturamento e pegar os 15 maiores
+df_muni = dataset.groupby(col_muni)[col_valor].sum().reset_index().sort_values(col_valor, ascending=False).head(15)
+
+colors = sns.color_palette("Blues_r", len(df_muni))
+
+bars = sns.barplot(
+    data=df_muni,
+    y=col_muni,
+    x=col_valor,
+    palette=colors,
+    ax=ax,
+    hue=col_muni,
+    legend=False
+)
+
+plt.title("Faturamento por Município (R$)", fontsize=12, color='#FFFFFF', pad=15, weight='bold', family='Segoe UI')
+ax.tick_params(colors='#FFFFFF', labelsize=10)
+ax.spines['bottom'].set_color('#444444')
+ax.spines['left'].set_color('#444444')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.grid(True, axis='x', color='#444444', linestyle='--', alpha=0.3)
+
+# Rótulos nas pontas das barras (R$ XX.XM)
+for bar in bars.patches:
+    width = bar.get_width()
+    ax.text(
+        width + (df_muni[col_valor].max() * 0.01), 
+        bar.get_y() + bar.get_height()/2,
+        f"R$ {width/1e6:.2f}M", 
+        va='center', 
+        ha='left', 
+        color='#FFFFFF', 
+        fontsize=9,
+        weight='bold',
+        family='Segoe UI'
+    )
+
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,458 @@
+// ===========================================
+// MEDIDAS DAX — BI E-COMMERCE
+// ===========================================
+// Todas as medidas devem ser criadas no Power BI,
+// preferencialmente na tabela fact_vendas ou em
+// uma tabela de medidas separada.
+
+// ===========================================
+// 1. KPIs PRINCIPAIS
+// ===========================================
+
+// --- Faturamento Total ---
+// Soma do valor total de todos os pedidos.
+// Uso: KPI Card principal (Página 1), eixo de gráficos de barra.
+Faturamento = 
+SUM(fact_vendas[total_pedido])
+
+// --- Total de Pedidos ---
+// Contagem de linhas da tabela fato (cada linha = 1 item de pedido).
+// Para pedidos únicos, usar DISTINCTCOUNT(fact_vendas[pedido_id]).
+// Uso: KPI Card (Página 1).
+Total Pedidos = 
+COUNTROWS(fact_vendas)
+
+// --- Total de Pedidos Únicos ---
+// Contagem distinta de pedidos (considerando que cada pedido pode ter múltiplos itens).
+// Uso: Cálculo de Ticket Médio e métricas por pedido.
+Total Pedidos Unicos = 
+DISTINCTCOUNT(fact_vendas[pedido_id])
+
+// --- Ticket Médio ---
+// Valor médio por pedido único.
+// Uso: KPI Card (Página 1).
+Ticket Medio = 
+DIVIDE(
+    [Faturamento],
+    DISTINCTCOUNT(fact_vendas[pedido_id]),
+    0
+)
+
+// --- Total de Vendedores ---
+// Contagem distinta de vendedores que realizaram vendas.
+// Uso: KPI Card (Página 1).
+Total Vendedores = 
+DISTINCTCOUNT(fact_vendas[id_vendedor])
+
+// --- Faturamento Médio por Pedido ---
+// Média do total_pedido agregado por pedido_id.
+// Uso: Métrica complementar.
+Faturamento Medio Pedido = 
+AVERAGEX(
+    VALUES(fact_vendas[pedido_id]),
+    CALCULATE(SUM(fact_vendas[total_pedido]))
+)
+
+// ===========================================
+// 2. MEDIDAS DE VENDEDOR
+// ===========================================
+
+// --- Faturamento Médio por Vendedor ---
+// Média do faturamento distribuído entre os vendedores.
+// Uso: KPI Card (Página 2).
+Faturamento Medio Vendedor = 
+DIVIDE(
+    [Faturamento],
+    [Total Vendedores],
+    0
+)
+
+// --- Ranking do Vendedor ---
+// Classificação dos vendedores por faturamento (1 = maior faturamento).
+// Usa Dense para não pular posições em caso de empate.
+// Uso: Coluna "Ranking" na tabela de vendedores (Páginas 1 e 2).
+Ranking Vendedor = 
+RANKX(
+    ALL(dim_vendedores),
+    [Faturamento],
+    ,
+    DESC,
+    Dense
+)
+
+// --- Melhor Vendedor (Nome) ---
+// Retorna o nome do vendedor com maior faturamento.
+// Uso: KPI Card "Melhor Vendedor" (Página 2).
+Melhor Vendedor Nome = 
+MAXX(
+    TOPN(
+        1,
+        VALUES(dim_vendedores[nome]),
+        [Faturamento],
+        DESC
+    ),
+    dim_vendedores[nome]
+)
+
+// --- Melhor Vendedor (Faturamento) ---
+// Retorna o faturamento do melhor vendedor.
+// Uso: Valor do KPI Card "Melhor Vendedor" (Página 2).
+Melhor Vendedor Fat = 
+MAXX(
+    TOPN(
+        1,
+        VALUES(dim_vendedores[nome]),
+        [Faturamento],
+        DESC
+    ),
+    [Faturamento]
+)
+
+// --- Participação % do Vendedor ---
+// Percentual de participação do vendedor no faturamento total.
+// Uso: Gráfico de Rosca/Donut (Página 2).
+Participacao Vendedor = 
+DIVIDE(
+    [Faturamento],
+    CALCULATE([Faturamento], ALL(dim_vendedores)),
+    0
+)
+
+// --- Participação % Formatada ---
+// Versão formatada para exibição em tabelas.
+Participacao Vendedor % = 
+FORMAT(
+    [Participacao Vendedor],
+    "0.00%"
+)
+
+// ===========================================
+// 3. MEDIDAS TEMPORAIS
+// ===========================================
+
+// --- Faturamento Mês Anterior ---
+// Faturamento do mesmo período no mês anterior.
+// Uso: Cálculo de crescimento MoM (Página 1 — Evolução Mensal).
+Faturamento Mes Anterior = 
+CALCULATE(
+    [Faturamento],
+    DATEADD(dim_calendario[data], -1, MONTH)
+)
+
+// --- Crescimento Mês a Mês (MoM) ---
+// Variação percentual do faturamento em relação ao mês anterior.
+// Uso: Indicador de tendência.
+Crescimento MoM = 
+DIVIDE(
+    [Faturamento] - [Faturamento Mes Anterior],
+    [Faturamento Mes Anterior],
+    0
+)
+
+// --- Faturamento Ano Anterior ---
+// Faturamento do mesmo período no ano anterior.
+// Uso: Comparação YoY.
+Faturamento Ano Anterior = 
+CALCULATE(
+    [Faturamento],
+    SAMEPERIODLASTYEAR(dim_calendario[data])
+)
+
+// --- Crescimento Ano a Ano (YoY) ---
+// Variação percentual do faturamento em relação ao ano anterior.
+Crescimento YoY = 
+DIVIDE(
+    [Faturamento] - [Faturamento Ano Anterior],
+    [Faturamento Ano Anterior],
+    0
+)
+
+// --- Faturamento Acumulado no Ano (YTD) ---
+// Soma acumulada do faturamento desde o início do ano.
+// Uso: Gráfico de evolução acumulada.
+Faturamento YTD = 
+TOTALYTD(
+    [Faturamento],
+    dim_calendario[data]
+)
+
+// --- Faturamento Acumulado Ano Anterior (YTD LY) ---
+// YTD do ano anterior para comparação.
+Faturamento YTD LY = 
+TOTALYTD(
+    [Faturamento Ano Anterior],
+    dim_calendario[data]
+)
+
+// --- Crescimento YTD ---
+// Variação percentual do YTD atual vs ano anterior.
+Crescimento YTD = 
+DIVIDE(
+    [Faturamento YTD] - [Faturamento YTD LY],
+    [Faturamento YTD LY],
+    0
+)
+
+// --- Média Móvel 3 Meses ---
+// Média móvel de 3 meses para suavizar tendências.
+Media Movel 3M = 
+AVERAGEX(
+    DATESINPERIOD(
+        dim_calendario[data],
+        LASTDATE(dim_calendario[data]),
+        -3,
+        MONTH
+    ),
+    [Faturamento]
+)
+
+// ===========================================
+// 4. MEDIDAS POR LOCALIZAÇÃO
+// ===========================================
+
+// --- Faturamento por Estado ---
+// Utilizado nos gráficos de barras por estado.
+// Uso: Eixo de valor nos gráficos de estado (Páginas 1 e 3).
+// NOTA: Esta medida usa o contexto de filtro natural do visual.
+// O eixo do gráfico (estado) já fornece o contexto de linha.
+
+// --- Top N Estados ---
+// Retorna faturamento apenas para os top N estados.
+// Uso: Filtrar gráficos para mostrar apenas top estados.
+Top 5 Estados Fat = 
+CALCULATE(
+    [Faturamento],
+    TOPN(
+        5,
+        VALUES(fact_vendas[estado]),
+        [Faturamento],
+        DESC
+    )
+)
+
+// --- Faturamento Top 10 Municípios ---
+// Filtra o faturamento para os 10 municípios com maior valor.
+// Uso: Gráfico Top 10 Municípios (Página 1).
+Faturamento Top 10 Municipios = 
+CALCULATE(
+    [Faturamento],
+    KEEPFILTERS(
+        TOPN(
+            10,
+            VALUES(fact_vendas[municipio]),
+            [Faturamento],
+            DESC
+        )
+    )
+)
+
+// --- Faturamento Top 15 Municípios ---
+// Versão para a Página 3 (Geográfica).
+Faturamento Top 15 Municipios = 
+CALCULATE(
+    [Faturamento],
+    KEEPFILTERS(
+        TOPN(
+            15,
+            VALUES(fact_vendas[municipio]),
+            [Faturamento],
+            DESC
+        )
+    )
+)
+
+// --- Quantidade de Municípios Atendidos ---
+// Métrica auxiliar para análise geográfica.
+Total Municipios = 
+DISTINCTCOUNT(fact_vendas[municipio])
+
+// --- Quantidade de Estados Atendidos ---
+Total Estados = 
+DISTINCTCOUNT(fact_vendas[estado])
+
+// --- Faturamento por Região (Medida Explícita) ---
+// Embora o contexto natural resolva, esta medida é útil para
+// cálculos onde ALLEXCEPT é necessário.
+Faturamento Regiao = 
+CALCULATE(
+    [Faturamento],
+    ALLEXCEPT(fact_vendas, fact_vendas[regiao])
+)
+
+// ===========================================
+// 5. MEDIDAS DE PRODUTO
+// ===========================================
+
+// --- Quantidade de Produtos Vendidos ---
+Total Produtos Vendidos = 
+SUM(fact_vendas[quantidade])
+
+// --- Quantidade Média por Pedido ---
+Media Itens Pedido = 
+AVERAGEX(
+    VALUES(fact_vendas[pedido_id]),
+    CALCULATE(SUM(fact_vendas[quantidade]))
+)
+
+// --- Ticket Médio por Produto ---
+// Faturamento médio por produto (entre todos os produtos do catálogo).
+// Uso: Análise de rentabilidade por produto.
+Ticket Medio Produto = 
+AVERAGEX(
+    dim_produtos,
+    [Faturamento]
+)
+
+// --- Preço Médio de Venda ---
+// Média do preço de venda dos produtos.
+Preco Medio Venda = 
+AVERAGE(dim_produtos[preco_venda])
+
+// --- Produtos por Categoria ---
+// Contagem de produtos distintos por categoria.
+Produtos Categoria = 
+DISTINCTCOUNT(dim_produtos[id_produto])
+
+// --- Faturamento por Categoria ---
+// Usado para análise de categorias mais rentáveis.
+Faturamento Categoria = 
+CALCULATE(
+    [Faturamento],
+    ALLEXCEPT(dim_produtos, dim_produtos[categoria])
+)
+
+// --- Produto Mais Vendido (Nome) ---
+Produto Top 1 Nome = 
+MAXX(
+    TOPN(
+        1,
+        VALUES(dim_produtos[nome_produto]),
+        [Faturamento],
+        DESC
+    ),
+    dim_produtos[nome_produto]
+)
+
+// ===========================================
+// 6. MEDIDAS DE QUALIDADE E FRETE
+// ===========================================
+
+// --- Total de Frete ---
+// Soma do valor de frete de todos os pedidos.
+Total Frete = 
+SUM(fact_vendas[valor_frete])
+
+// --- % de Pedidos com Frete > 0 ---
+// Percentual de pedidos que pagaram frete.
+// Uso: Indicador de qualidade/logística.
+% Pedidos com Frete = 
+DIVIDE(
+    COUNTROWS(FILTER(fact_vendas, fact_vendas[valor_frete] > 0)),
+    [Total Pedidos Unicos],
+    0
+)
+
+// --- Frete Médio ---
+// Valor médio de frete por pedido.
+Frete Medio = 
+DIVIDE(
+    [Total Frete],
+    [Total Pedidos Unicos],
+    0
+)
+
+// --- % Frete sobre Faturamento ---
+// Relação entre frete e valor total dos pedidos.
+% Frete Faturamento = 
+DIVIDE(
+    [Total Frete],
+    [Faturamento],
+    0
+)
+
+// --- Ticket Médio sem Frete ---
+// Valor médio do pedido excluindo o valor do frete.
+Ticket Medio Sem Frete = 
+DIVIDE(
+    [Faturamento] - [Total Frete],
+    [Total Pedidos Unicos],
+    0
+)
+
+// ===========================================
+// 7. MEDIDAS DE CLIENTE
+// ===========================================
+
+// --- Total de Clientes ---
+Total Clientes = 
+DISTINCTCOUNT(fact_vendas[id_cliente])
+
+// --- Faturamento Médio por Cliente ---
+Faturamento Medio Cliente = 
+DIVIDE(
+    [Faturamento],
+    [Total Clientes],
+    0
+)
+
+// --- Pedidos por Cliente ---
+// Média de pedidos por cliente.
+Pedidos Cliente = 
+DIVIDE(
+    [Total Pedidos Unicos],
+    [Total Clientes],
+    0
+)
+
+// --- Clientes por Estado ---
+Clientes Estado = 
+DISTINCTCOUNT(fact_vendas[id_cliente])
+
+// ===========================================
+// 8. MEDIDAS PARA TOOLTIPS
+// ===========================================
+
+// --- Tooltip: Estado ---
+// Informações exibidas ao passar mouse sobre barra de estado.
+Tooltip Estado Pedidos = 
+DISTINCTCOUNT(fact_vendas[pedido_id])
+
+Tooltip Estado Ticket = 
+DIVIDE([Faturamento], DISTINCTCOUNT(fact_vendas[pedido_id]), 0)
+
+// --- Tooltip: Vendedor ---
+Tooltip Vendedor Regiao = 
+SELECTEDVALUE(dim_vendedores[regiao])
+
+// --- Tooltip: Mês ---
+Tooltip Mes Pedidos = 
+DISTINCTCOUNT(fact_vendas[pedido_id])
+
+Tooltip Mes Crescimento = 
+[Media Movel 3M]
+
+// ===========================================
+// 9. MEDIDAS DE FORMATAÇÃO
+// ===========================================
+
+// --- Faturamento Formatado ---
+// Exibição com símbolo de moeda e separadores.
+Faturamento Fmt = 
+FORMAT([Faturamento], "R$ #,##0.00")
+
+// --- Ticket Médio Formatado ---
+Ticket Medio Fmt = 
+FORMAT([Ticket Medio], "R$ #,##0.00")
+
+// --- Crescimento Formatado ---
+Crescimento MoM Fmt = 
+FORMAT([Crescimento MoM], "+0.00%;-0.00%")
+
+// ===========================================
+// 10. MEDIDAS PARA ORDENAÇÃO
+// ===========================================
+
+// --- Ordenar Meses ---
+// Medida auxiliar para ordenar nome_mes corretamente.
+Ordem Mes = 
+MIN(dim_calendario[mes_num])

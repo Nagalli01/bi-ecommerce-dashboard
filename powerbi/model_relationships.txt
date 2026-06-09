@@ -1,0 +1,224 @@
+MODELO SEMÂNTICO — BI E-COMMERCE
+=================================
+
+Tabelas importadas de data/gold/:
+1. dim_clientes    (Parquet/Delta, ~1500 rows)
+2. dim_produtos    (Parquet/Delta, ~250 rows)  
+3. dim_calendario  (Parquet/Delta, ~730 rows [2 anos])
+4. dim_vendedores  (Parquet/Delta, 15 rows)
+5. fact_vendas     (Parquet/Delta, ~8000 rows)
+
+FORMATO DE IMPORTAÇÃO
+---------------------
+Opção 1 (Recomendado): Importar os arquivos Parquet do diretório data/gold/
+Opção 2: Conectar via Delta Lake (requer driver/connector específico)
+Opção 3: Exportar como CSV/Parquet flat files e importar
+
+Para Delta Lake no Power BI:
+- Usar o conector "Azure Data Lake Storage Gen2" ou
+- Exportar as tabelas Delta como Parquet flat:
+  spark.read.table("gold.dim_clientes").write.mode("overwrite").parquet("export/dim_clientes")
+
+
+RELACIONAMENTOS
+---------------
+
+-- Relacionamento 1: Clientes → Vendas --
+Tabela Origem:  fact_vendas
+Coluna Origem:  id_cliente
+Tabela Destino: dim_clientes
+Coluna Destino: id_cliente
+Cardinalidade: Muitos para Um (*:1)
+Direção Filtro Cruzado: Simples (dim → fact)
+Ativo: Sim
+Comportamento de Segurança: Ambos sentido
+
+-- Relacionamento 2: Produtos → Vendas --
+Tabela Origem:  fact_vendas
+Coluna Origem:  id_produto
+Tabela Destino: dim_produtos
+Coluna Destino: id_produto
+Cardinalidade: Muitos para Um (*:1)
+Direção Filtro Cruzado: Simples (dim → fact)
+Ativo: Sim
+Comportamento de Segurança: Ambos sentido
+
+-- Relacionamento 3: Calendário → Vendas --
+Tabela Origem:  fact_vendas
+Coluna Origem:  data_pedido
+Tabela Destino: dim_calendario
+Coluna Destino: data
+Cardinalidade: Muitos para Um (*:1)
+Direção Filtro Cruzado: Simples (dim → fact)
+Ativo: Sim
+Comportamento de Segurança: Ambos sentido
+
+-- Relacionamento 4: Vendedores → Vendas --
+Tabela Origem:  fact_vendas
+Coluna Origem:  id_vendedor
+Tabela Destino: dim_vendedores
+Coluna Destino: id_vendedor
+Cardinalidade: Muitos para Um (*:1)
+Direção Filtro Cruzado: Simples (dim → fact)
+Ativo: Sim
+Comportamento de Segurança: Ambos sentido
+
+
+CONFIGURAÇÕES DAS TABELAS
+--------------------------
+
+-- dim_calendario --
+- Marcar como Tabela de Data (Date Table: coluna "data")
+  No Power BI Desktop:
+    Selecionar tabela dim_calendario → Ferramentas de Tabela → 
+    Marcar como Tabela de Data → Coluna de data: "data"
+- Ordenar coluna "nome_mes" pela coluna "mes_num":
+    Selecionar coluna "nome_mes" → Ferramentas de Coluna → 
+    Ordenar por Coluna → "mes_num"
+- Ordenar coluna "trimestre" por ordem numérica natural (já é número)
+- Ocultar coluna "mes_num" (não é necessária para visualização, 
+  apenas para ordenação)
+
+-- dim_clientes --
+- Colunas visíveis: nome, cidade, estado, regiao
+- Ocultar coluna: id_cliente (PK não precisa ficar visível)
+
+-- dim_produtos --
+- Colunas visíveis: nome_produto, categoria, preco_venda
+- Ocultar coluna: id_produto
+
+-- dim_vendedores --
+- Colunas visíveis: nome, regiao
+- Ocultar coluna: id_vendedor
+
+-- fact_vendas --
+- Colunas visíveis: quantidade, valor_frete, total_pedido, 
+  municipio, estado, regiao
+- Ocultar colunas: id_cliente, id_produto, data_pedido, id_vendedor
+  (chaves estrangeiras — o Power BI navega pelos relacionamentos)
+- Não ocultar pedido_id (útil para DISTINCTCOUNT)
+
+
+FORMATAÇÃO DE COLUNAS
+----------------------
+
+-- Formatação Numérica --
+┌─────────────────────┬──────────────┬──────────────────────┐
+│ Coluna              │ Formato      │ Exemplo              │
+├─────────────────────┼──────────────┼──────────────────────┤
+│ total_pedido        │ Moeda (R$)   │ R$ 1.234,56          │
+│ valor_frete         │ Moeda (R$)   │ R$ 25,90             │
+│ preco_venda         │ Moeda (R$)   │ R$ 2.999,00          │
+│ quantidade          │ Número Int.  │ 3                    │
+└─────────────────────┴──────────────┴──────────────────────┘
+
+-- Formatação de Medidas --
+┌─────────────────────────────┬──────────────┬──────────────────┐
+│ Medida                      │ Formato      │ Exemplo          │
+├─────────────────────────────┼──────────────┼──────────────────┤
+│ Faturamento                 │ Moeda (R$)   │ R$ 850.320,50    │
+│ Ticket Medio                │ Moeda (R$)   │ R$ 428,15        │
+│ Total Pedidos               │ Número Int.  │ 8.000            │
+│ Total Vendedores            │ Número Int.  │ 15               │
+│ Participacao Vendedor       │ Porcentagem  │ 12,50%           │
+│ Crescimento MoM             │ Porcentagem  │ +5,23%           │
+│ Crescimento YoY             │ Porcentagem  │ +18,40%          │
+│ % Pedidos com Frete         │ Porcentagem  │ 68,75%           │
+│ % Frete Faturamento         │ Porcentagem  │ 3,25%            │
+└─────────────────────────────┴──────────────┴──────────────────┘
+
+
+CONFIGURAÇÕES DO ARQUIVO .PBIT (TEMPLATE)
+------------------------------------------
+Para criar um template reutilizável:
+1. Configurar todos os relacionamentos e formatações
+2. Configurar o tema escuro
+3. Salvar como .pbit (Power BI Template)
+4. Ao abrir o .pbit, o Power BI solicitará a fonte de dados
+5. Apontar para o diretório data/gold/
+
+
+POWER QUERY (TRANSFORMAÇÕES)
+-----------------------------
+Não é necessário aplicar transformações no Power Query, pois os dados 
+já chegam limpos e modelados da camada Gold.
+
+Se necessário, configurações opcionais no Power Query:
+- Definir tipo de dados de cada coluna
+- Remover colunas desnecessárias
+- Filtrar anos específicos (ex: apenas 2025)
+
+Exemplo de script Power Query (opcional):
+```
+let
+    Fonte = Parquet.Document(File.Contents("C:\...\data\gold\fact_vendas\*.parquet")),
+    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{
+        {"pedido_id", Int64.Type},
+        {"id_cliente", Int64.Type},
+        {"id_produto", type text},
+        {"data_pedido", type date},
+        {"id_vendedor", Int64.Type},
+        {"quantidade", Int64.Type},
+        {"valor_frete", type number},
+        {"total_pedido", type number},
+        {"municipio", type text},
+        {"estado", type text},
+        {"regiao", type text}
+    })
+in
+    #"Tipo Alterado"
+```
+
+
+CONFIGURAÇÕES AVANÇADAS
+------------------------
+
+-- Agregações Automáticas --
+- Ativado por padrão no Power BI
+- Permite consultas mais rápidas em grandes volumes
+- Para este projeto (~8000 linhas), não é essencial
+
+-- Modo de Armazenamento --
+- Import (recomendado): Dados carregados em memória
+- DirectQuery: Não recomendado (depende de fonte compatível)
+- Dual: Não aplicável
+
+-- Atualização Programada --
+- Local: Manual (abrir .pbix e clicar Atualizar)
+- Power BI Service: Configurar gateway e agendamento
+- Para este projeto acadêmico, atualização manual é suficiente
+
+
+DIAGRAMA DE RELACIONAMENTOS (ESQUEMA)
+--------------------------------------
+
+        ┌─────────────────┐
+        │  dim_clientes   │
+        │  ─────────────  │
+        │  PK: id_cliente │──────┐
+        └─────────────────┘      │
+                                 │ (N:1)
+        ┌─────────────────┐      │
+        │  dim_produtos   │      │
+        │  ─────────────  │      │
+        │  PK: id_produto │──────┤
+        └─────────────────┘      │
+                                 │
+        ┌─────────────────┐      │    ┌─────────────────┐
+        │ dim_calendario  │      │    │   fact_vendas    │
+        │  ─────────────  │      ├───▶│  ─────────────  │
+        │  PK: data       │──────┘    │  pedido_id       │
+        └─────────────────┘           │  id_cliente (FK) │
+                                      │  id_produto (FK) │
+        ┌─────────────────┐           │  data_pedido (FK)│
+        │ dim_vendedores  │           │  id_vendedor (FK)│
+        │  ─────────────  │           │  quantidade      │
+        │ PK: id_vendedor │──────────▶│  valor_frete     │
+        └─────────────────┘           │  total_pedido    │
+                                      │  municipio       │
+                                      │  estado          │
+                                      │  regiao          │
+                                      └─────────────────┘
+
+Todas as dimensões têm relação 1:N com a fato (Uma dimensão → Muitas fatos).
+Filtro sempre no sentido: Dimensão → Fato.

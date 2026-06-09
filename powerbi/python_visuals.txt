@@ -1,0 +1,260 @@
+# =====================================================================
+# SCRIPTS PYTHON PARA VISUAIS DO POWER BI (DARK MODE PROFISSIONAL)
+# =====================================================================
+# Tema do Painel: Dark Mode
+# Fundo da Página: #262626 (Cinza Escuro)
+# Fundo dos Gráficos: #323130 (Cinza Médio)
+# Fonte: Segoe UI (Padrão Windows/Power BI)
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# VISUAL 1: EVOLUÇÃO MENSAL DE VENDAS (Gráfico de Linha + Área)
+# ---------------------------------------------------------------------
+# No Power BI, arraste os seguintes campos para a área de valores do visual Python:
+#   - dim_calendario[mes_num]
+#   - dim_calendario[nome_mes]
+#   - fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+# Configuração de Estilo Dark
+plt.figure(figsize=(10, 5), facecolor='#323130')
+ax = plt.axes()
+ax.set_facecolor('#323130')
+
+# Agrupar e ordenar os dados por mês
+# Power BI fornece os dados no DataFrame 'dataset'
+df_grouped = dataset.groupby(['mes_num', 'nome_mes'])['total_pedido'].sum().reset_index()
+df_grouped = df_grouped.sort_values('mes_num')
+
+# Plotar Linha e Área Sombreada
+sns.lineplot(
+    data=df_grouped, 
+    x='nome_mes', 
+    y='total_pedido', 
+    color='#4A90D9', 
+    linewidth=3, 
+    marker='o', 
+    markersize=8,
+    ax=ax
+)
+plt.fill_between(
+    df_grouped['nome_mes'], 
+    df_grouped['total_pedido'], 
+    color='#4A90D9', 
+    alpha=0.15
+)
+
+# Títulos e Rótulos estilizados
+plt.title("Evolução Mensal de Faturamento (R$)", fontsize=14, color='#FFFFFF', pad=20, weight='bold', family='Segoe UI')
+plt.xlabel("Mês", fontsize=11, color='#FFFFFF', labelpad=10, family='Segoe UI')
+plt.ylabel("Faturamento (R$)", fontsize=11, color='#FFFFFF', labelpad=10, family='Segoe UI')
+
+# Customização dos Eixos (Cores, Grades, Fontes)
+ax.tick_params(colors='#FFFFFF', labelsize=10)
+ax.spines['bottom'].set_color('#444444')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('#444444')
+ax.grid(True, color='#444444', linestyle='--', alpha=0.3)
+
+# Rótulos de Valores nos Pontos
+for i, txt in enumerate(df_grouped['total_pedido']):
+    ax.annotate(
+        f"R$ {txt/1e6:.1f}M", 
+        (df_grouped['nome_mes'].iloc[i], df_grouped['total_pedido'].iloc[i]),
+        textcoords="offset points", 
+        xytext=(0,10), 
+        ha='center', 
+        color='#FFFFFF', 
+        fontsize=9,
+        weight='semibold',
+        family='Segoe UI'
+    )
+
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 2: FATURAMENTO POR ESTADO (Barras Horizontais Profissionais)
+# ---------------------------------------------------------------------
+# No Power BI, arraste para o visual Python:
+#   - fact_vendas[estado]
+#   - fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 5), facecolor='#323130')
+ax = plt.axes()
+ax.set_facecolor('#323130')
+
+# Agrupar e ordenar
+df_state = dataset.groupby('estado')['total_pedido'].sum().reset_index()
+df_state = df_state.sort_values('total_pedido', ascending=False)
+
+# Paleta Degradê Azul
+colors = sns.color_palette("Blues_r", len(df_state))
+
+# Plotar Barras Horizontais
+bars = sns.barplot(
+    data=df_state,
+    y='estado',
+    x='total_pedido',
+    palette=colors,
+    ax=ax,
+    hue='estado',
+    legend=False
+)
+
+# Títulos e Rótulos
+plt.title("Faturamento por Estado (R$)", fontsize=14, color='#FFFFFF', pad=20, weight='bold', family='Segoe UI')
+plt.xlabel("Faturamento (R$)", fontsize=11, color='#FFFFFF', labelpad=10, family='Segoe UI')
+plt.ylabel("Estado", fontsize=11, color='#FFFFFF', labelpad=10, family='Segoe UI')
+
+# Customização
+ax.tick_params(colors='#FFFFFF', labelsize=10)
+ax.spines['bottom'].set_color('#444444')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('#444444')
+ax.grid(True, axis='x', color='#444444', linestyle='--', alpha=0.3)
+
+# Adicionar rótulos com valores exatos nas pontas das barras
+for bar in bars.patches:
+    width = bar.get_width()
+    ax.text(
+        width + (df_state['total_pedido'].max() * 0.01), 
+        bar.get_y() + bar.get_height()/2,
+        f"R$ {width/1e6:.1f}M",
+        va='center', 
+        ha='left', 
+        color='#FFFFFF', 
+        fontsize=9,
+        weight='semibold',
+        family='Segoe UI'
+    )
+
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 3: FATURAMENTO POR REGIÃO (Gráfico de Rosca Estilizado)
+# ---------------------------------------------------------------------
+# No Power BI, arraste para o visual Python:
+#   - fact_vendas[regiao]
+#   - fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(7, 7), facecolor='#323130')
+ax = plt.axes()
+ax.set_facecolor('#323130')
+
+# Agrupar
+df_region = dataset.groupby('regiao')['total_pedido'].sum().reset_index()
+df_region = df_region.sort_values('total_pedido', ascending=False)
+
+# Cores Modernas do Painel
+colors = ['#4A90D9', '#50B86C', '#E8A838', '#E05D5D', '#9B5DE5']
+
+# Gráfico de Pizza
+wedges, texts, autotexts = ax.pie(
+    df_region['total_pedido'],
+    labels=df_region['regiao'],
+    autopct='%1.1f%%',
+    startangle=90,
+    colors=colors,
+    pctdistance=0.75,
+    textprops=dict(color='#FFFFFF', fontsize=11, family='Segoe UI')
+)
+
+# Transformar em Rosca (Donut Chart)
+centre_circle = plt.Circle((0,0), 0.55, fc='#323130')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Estilizar rótulos de porcentagem internos
+for autotext in autotexts:
+    autotext.set_color('#FFFFFF')
+    autotext.set_fontsize(10)
+    autotext.set_weight('bold')
+
+plt.title("Participação por Região", fontsize=14, color='#FFFFFF', pad=20, weight='bold', family='Segoe UI')
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 4: TOP 10 MUNICÍPIOS (Gráfico de Barras com Destaque)
+# ---------------------------------------------------------------------
+# No Power BI, arraste para o visual Python:
+#   - fact_vendas[municipio]
+#   - fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(10, 5), facecolor='#323130')
+ax = plt.axes()
+ax.set_facecolor('#323130')
+
+# Agrupar, ordenar e pegar Top 10
+df_muni = dataset.groupby('municipio')['total_pedido'].sum().reset_index()
+df_muni = df_muni.sort_values('total_pedido', ascending=False).head(10)
+
+# Destacar o 1º colocado com cor diferente, demais em degradê
+colors = ['#E8A838'] + sns.color_palette("YlOrBr_r", len(df_muni)-1)
+
+bars = sns.barplot(
+    data=df_muni,
+    y='municipio',
+    x='total_pedido',
+    palette=colors,
+    ax=ax,
+    hue='municipio',
+    legend=False
+)
+
+# Títulos e Rótulos
+plt.title("Top 10 Municípios por Faturamento", fontsize=14, color='#FFFFFF', pad=20, weight='bold', family='Segoe UI')
+plt.xlabel("Faturamento (R$)", fontsize=11, color='#FFFFFF', labelpad=10, family='Segoe UI')
+plt.ylabel("Município", fontsize=11, color='#FFFFFF', labelpad=10, family='Segoe UI')
+
+# Customização
+ax.tick_params(colors='#FFFFFF', labelsize=10)
+ax.spines['bottom'].set_color('#444444')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('#444444')
+ax.grid(True, axis='x', color='#444444', linestyle='--', alpha=0.3)
+
+# Adicionar rótulos nas pontas das barras
+for bar in bars.patches:
+    width = bar.get_width()
+    ax.text(
+        width + (df_muni['total_pedido'].max() * 0.01), 
+        bar.get_y() + bar.get_height()/2,
+        f"R$ {width/1e6:.1f}M",
+        va='center', 
+        ha='left', 
+        color='#FFFFFF', 
+        fontsize=9,
+        weight='semibold',
+        family='Segoe UI'
+    )
+
+plt.tight_layout()
+plt.show()

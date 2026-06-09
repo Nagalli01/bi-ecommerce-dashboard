@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+*.key
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data generated
+data/silver/*
+data/gold/*
+data/bronze/*
+
+# SQLite (included in repo intentionally for deployment)
+# data/bi_ecommerce.db
+# deploy/bi_ecommerce.db

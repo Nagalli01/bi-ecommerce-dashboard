@@ -1,0 +1,93 @@
+# =====================================================================
+# PÁGINA 2 — VENDEDORES (2 VISUAIS PYTHON)
+# =====================================================================
+# Tema: Dark Mode (#1B1B1B fundo | #2D2D2D cards | #4A90D9 azul)
+# Banco: bi_ecommerce (MySQL)
+# =====================================================================
+
+# =====================================================================
+# VISUAL 2.1 — PARTICIPAÇÃO % DOS VENDEDORES (GRÁFICO DE ROSCA)
+# =====================================================================
+# Arraste: nome (dim_vendedores) + total_pedido (fact_vendas)
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+col_nome  = next((c for c in dataset.columns if 'nome' in c.lower() or 'vendedor' in c.lower()), None)
+col_valor = next((c for c in dataset.columns if 'total' in c.lower() or 'faturamento' in c.lower() or 'pedido' in c.lower()), None)
+
+if not col_nome or not col_valor:
+    raise KeyError(f"Colunas: {list(dataset.columns)}. Arraste 'nome' e 'total_pedido'.")
+
+df = dataset.groupby(col_nome)[col_valor].sum().reset_index().sort_values(col_valor, ascending=False)
+
+total = df[col_valor].sum()
+df['pct'] = df[col_valor] / total * 100
+df['label'] = df.apply(lambda r: f"{r[col_nome][:12]}\n({r['pct']:.1f}%)", axis=1)
+
+cores = ['#4A90D9', '#357ABD', '#5BA0E8', '#2E6DA4', '#4682B4',
+         '#6BA5D6', '#3D7EC0', '#5294CC', '#2A5F8F', '#6098C8',
+         '#4075B0', '#558DC4', '#31649A', '#4B83BC', '#386CA8']
+
+fig, ax = plt.subplots(figsize=(7, 7), facecolor='#1B1B1B')
+ax.set_facecolor('#1B1B1B')
+
+wedges, texts, autotexts = ax.pie(
+    df[col_valor], labels=df['label'], autopct='',
+    startangle=140, colors=cores, pctdistance=0.82,
+    textprops={'color': '#AAAAAA', 'fontsize': 7.5, 'family': 'Segoe UI'}
+)
+
+centro = plt.Circle((0, 0), 0.48, fc='#1B1B1B')
+ax.add_artist(centro)
+
+ax.text(0, 0, f'{total/1e6:.1f}M', ha='center', va='center',
+        fontsize=20, color='#FFFFFF', weight='bold', family='Segoe UI')
+ax.text(0, -0.18, 'Faturamento\nTotal', ha='center', va='center',
+        fontsize=8, color='#AAAAAA', family='Segoe UI')
+
+plt.title('Participação por Vendedor', fontsize=11, color='#FFFFFF', pad=12,
+          weight='bold', family='Segoe UI')
+plt.tight_layout()
+plt.show()
+
+
+# =====================================================================
+# VISUAL 2.2 — FATURAMENTO POR REGIÃO DO VENDEDOR
+# =====================================================================
+# Arraste: regiao (dim_vendedores) + total_pedido (fact_vendas)
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+col_regiao = next((c for c in dataset.columns if 'regiao' in c.lower()), None)
+col_valor  = next((c for c in dataset.columns if 'total' in c.lower() or 'faturamento' in c.lower() or 'pedido' in c.lower()), None)
+
+if not col_regiao or not col_valor:
+    raise KeyError(f"Colunas: {list(dataset.columns)}. Arraste 'regiao' e 'total_pedido'.")
+
+df = dataset.groupby(col_regiao)[col_valor].sum().reset_index().sort_values(col_valor, ascending=True)
+
+fig, ax = plt.subplots(figsize=(11, 4), facecolor='#1B1B1B')
+ax.set_facecolor('#1B1B1B')
+plt.subplots_adjust(left=0.18, right=0.92, top=0.88, bottom=0.12)
+
+bars = ax.barh(df[col_regiao], df[col_valor], color='#4A90D9', height=0.5, zorder=3)
+
+ax.set_title('Faturamento por Região', fontsize=10, color='#FFFFFF',
+             pad=8, weight='bold', family='Segoe UI')
+ax.tick_params(colors='#AAAAAA', labelsize=9)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('#3A3A3A')
+ax.spines['bottom'].set_color('#3A3A3A')
+ax.grid(axis='x', color='#3A3A3A', linestyle='--', alpha=0.5, zorder=0)
+
+for bar in bars:
+    w = bar.get_width()
+    pct = w / df[col_valor].sum() * 100
+    ax.text(w + df[col_valor].max() * 0.015, bar.get_y() + bar.get_height()/2,
+            f'R$ {w/1e6:.1f}M ({pct:.0f}%)', va='center', color='#CCCCCC',
+            fontsize=8.5, weight='bold', family='Segoe UI')
+
+plt.show()

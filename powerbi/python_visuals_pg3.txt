@@ -1,0 +1,83 @@
+# =====================================================================
+# PÁGINA 3 — PRODUTOS & CATEGORIAS (2 VISUAIS PYTHON)
+# =====================================================================
+# Tema: Dark Mode (#1B1B1B fundo | #2D2D2D cards | #4A90D9 azul)
+# Banco: bi_ecommerce (MySQL)
+# =====================================================================
+
+# =====================================================================
+# VISUAL 3.1 — FATURAMENTO POR CATEGORIA
+# =====================================================================
+# Arraste: categoria (dim_produtos) + total_pedido (fact_vendas)
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+col_cat   = next((c for c in dataset.columns if 'categoria' in c.lower()), None)
+col_valor = next((c for c in dataset.columns if 'total' in c.lower() or 'faturamento' in c.lower() or 'pedido' in c.lower()), None)
+
+if not col_cat or not col_valor:
+    raise KeyError(f"Colunas: {list(dataset.columns)}. Arraste 'categoria' e 'total_pedido'.")
+
+df = dataset.groupby(col_cat)[col_valor].sum().reset_index().sort_values(col_valor, ascending=True)
+
+fig, ax = plt.subplots(figsize=(10, 3.8), facecolor='#1B1B1B')
+ax.set_facecolor('#1B1B1B')
+plt.subplots_adjust(left=0.22, right=0.92, top=0.88, bottom=0.12)
+
+bars = ax.barh(df[col_cat], df[col_valor], color='#4A90D9', height=0.55, zorder=3)
+
+ax.set_title('Faturamento por Categoria', fontsize=10, color='#FFFFFF',
+             pad=8, weight='bold', family='Segoe UI')
+ax.tick_params(colors='#AAAAAA', labelsize=8.5)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('#3A3A3A')
+ax.spines['bottom'].set_color('#3A3A3A')
+ax.grid(axis='x', color='#3A3A3A', linestyle='--', alpha=0.5, zorder=0)
+
+for bar in bars:
+    w = bar.get_width()
+    ax.text(w + df[col_valor].max() * 0.015, bar.get_y() + bar.get_height()/2,
+            f'R$ {w/1e6:.1f}M', va='center', color='#CCCCCC', fontsize=8, weight='bold', family='Segoe UI')
+
+plt.show()
+
+
+# =====================================================================
+# VISUAL 3.2 — TOP 10 PRODUTOS MAIS VENDIDOS (POR FATURAMENTO)
+# =====================================================================
+# Arraste: nome_produto (dim_produtos) + total_pedido (fact_vendas)
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+col_prod  = next((c for c in dataset.columns if 'nome_produto' in c.lower() or 'produto' in c.lower()), None)
+col_valor = next((c for c in dataset.columns if 'total' in c.lower() or 'faturamento' in c.lower() or 'pedido' in c.lower()), None)
+
+if not col_prod or not col_valor:
+    raise KeyError(f"Colunas: {list(dataset.columns)}. Arraste 'nome_produto' e 'total_pedido'.")
+
+df = dataset.groupby(col_prod)[col_valor].sum().reset_index().sort_values(col_valor, ascending=True).tail(10)
+
+fig, ax = plt.subplots(figsize=(11, 4), facecolor='#1B1B1B')
+ax.set_facecolor('#1B1B1B')
+plt.subplots_adjust(left=0.26, right=0.92, top=0.88, bottom=0.12)
+
+bars = ax.barh(df[col_prod], df[col_valor], color='#4A90D9', height=0.55, zorder=3)
+
+ax.set_title('Top 10 Produtos por Faturamento', fontsize=10, color='#FFFFFF',
+             pad=8, weight='bold', family='Segoe UI')
+ax.tick_params(colors='#AAAAAA', labelsize=8)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['left'].set_color('#3A3A3A')
+ax.spines['bottom'].set_color('#3A3A3A')
+ax.grid(axis='x', color='#3A3A3A', linestyle='--', alpha=0.5, zorder=0)
+
+for bar in bars:
+    w = bar.get_width()
+    ax.text(w + df[col_valor].max() * 0.015, bar.get_y() + bar.get_height()/2,
+            f'R$ {w/1e6:.1f}M', va='center', color='#CCCCCC', fontsize=7.5, weight='bold', family='Segoe UI')
+
+plt.show()

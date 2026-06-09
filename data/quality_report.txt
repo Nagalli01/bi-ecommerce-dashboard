@@ -1,0 +1,112 @@
+QUALITY REPORT - BI E-COMMERCE
+Gerado em: 2026-06-09 13:38:53
+============================================================
+
+========================================
+1. CONTAGENS POR CAMADA
+========================================
+  Silver Clientes     :   1500  (esperado: > 0)
+  Silver Produtos     :    250  (esperado: > 0)
+  Silver Pedidos      :   8000  (esperado: > 0)
+  dim_clientes        :   1500  (esperado: <= 1500)
+  dim_produtos        :    250  (esperado: <= 250)
+  dim_calendario      :    731  (esperado: > 0)
+  dim_vendedores      :     15  (esperado: == 15)
+  fact_vendas         :   8000  (esperado: <= 8000)
+
+========================================
+2. ANALISE DE NULOS (% nas colunas-chave)
+========================================
+
+  [dim_clientes]
+    id_cliente          :   0.00%  [PASS]
+    nome                :   0.00%  [PASS]
+    cidade              :   0.00%  [PASS]
+    estado              :   0.00%  [PASS]
+    regiao              :   0.00%  [PASS]
+
+  [dim_produtos]
+    id_produto          :   0.00%  [PASS]
+    nome_produto        :   0.00%  [PASS]
+    categoria           :   0.00%  [PASS]
+    preco_venda         :   0.00%  [PASS]
+
+  [dim_calendario]
+    data                :   0.00%  [PASS]
+    dia                 :   0.00%  [PASS]
+    mes                 :   0.00%  [PASS]
+    nome_mes            :   0.00%  [PASS]
+    trimestre           :   0.00%  [PASS]
+    ano                 :   0.00%  [PASS]
+
+  [dim_vendedores]
+    id_vendedor         :   0.00%  [PASS]
+    nome                :   0.00%  [PASS]
+    regiao              :   0.00%  [PASS]
+
+  [fact_vendas]
+    pedido_id           :   0.00%  [PASS]
+    id_cliente          :   0.00%  [PASS]
+    id_produto          :   0.00%  [PASS]
+    data_pedido         :   0.00%  [PASS]
+    id_vendedor         :   0.00%  [PASS]
+    total_pedido        :   0.00%  [PASS]
+
+========================================
+3. INTEGRIDADE REFERENCIAL (ORFAOS)
+========================================
+  [PASS] fact_vendas.id_cliente -> dim_clientes: 0 orfaos
+  [PASS] fact_vendas.id_produto -> dim_produtos: 0 orfaos
+  [PASS] fact_vendas.id_vendedor -> dim_vendedores: 0 orfaos
+  [PASS] fact_vendas.data_pedido -> dim_calendario: 0 datas orfas
+
+  >>> Integridade referencial 100% OK.
+
+========================================
+4. VALIDACAO DE DATAS
+========================================
+  Data minima: 2023-01-01
+  Data maxima: 2024-12-31
+  Range esperado: 2023-01-01 a 2024-12-31
+  [PASS] Data minima dentro do range esperado.
+  [PASS] Data maxima dentro do range esperado.
+
+========================================
+5. METRICAS DE NEGOCIO
+========================================
+  Faturamento Total   : R$ 179,578,466.40
+  Total Pedidos       : 8,000
+  Ticket Medio        : R$ 22,447.31
+  Total Vendedores    : 15
+  Clientes Ativos     : 1464
+  Produtos Vendidos   : 250
+  [PASS] Metricas validas.
+
+========================================
+6. DISTRIBUICAO
+========================================
+
+  Top 5 Estados por Faturamento:
+    RJ: R$ 19,054,657.60
+    SP: R$ 18,889,708.32
+    PE: R$ 18,571,760.42
+    DF: R$ 18,289,527.44
+    BA: R$ 18,003,087.70
+
+  Faturamento por Regiao:
+    Sudeste: R$ 55,080,054.62
+    Nordeste: R$ 53,796,590.15
+    Sul: R$ 35,375,976.65
+    Centro-Oeste: R$ 18,289,527.44
+    Norte: R$ 17,036,317.54
+
+  Top 5 Vendedores:
+    Juliana Alves: R$ 12,749,136.19
+    Mariana Costa: R$ 12,683,349.41
+    Roberto Nunes: R$ 12,545,957.02
+    Paulo Cesar: R$ 12,396,933.07
+    Camila Rocha: R$ 12,336,402.93
+
+========================================
+RELATORIO SALVO EM: C:\dev\projetoInt\bi_ecommerce\data\quality_report.txt
+========================================

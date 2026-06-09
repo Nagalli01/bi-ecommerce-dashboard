@@ -1,0 +1,453 @@
+DASHBOARD BI E-COMMERCE — ESPECIFICAÇÃO DE CONSTRUÇÃO
+======================================================
+
+TEMA
+----
+- Modo: Dark
+- Fundo da página: #262626
+- Fundo dos cartões/visuais: #323130
+- Cor da fonte: #FFFFFF (branco)
+- Fonte: Segoe UI
+- Tamanho título: 12pt
+- Tamanho valor: 24pt (cards), 10pt (tabelas)
+
+Para aplicar o tema, criar arquivo JSON de tema personalizado:
+{
+  "name": "BI E-Commerce Dark",
+  "dataColors": ["#4A90D9", "#50B86C", "#E8A838", "#E05A5A", "#8B5CF6", "#F59E0B", "#06B6D4", "#EC4899"],
+  "background": "#262626",
+  "foreground": "#FFFFFF",
+  "tableAccent": "#323130",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#323130"}}}],
+        "border": [{"color": {"solid": {"color": "#1A1A1A"}}, "radius": 5}]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#262626"}}}]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [{"color": {"solid": {"color": "#FFFFFF"}}}],
+        "categoryLabels": [{"color": {"solid": {"color": "#A0A0A0"}}}]
+      }
+    }
+  }
+}
+
+
+PÁGINA 1 — VISÃO EXECUTIVA
+===========================
+
+POSIÇÃO: Primeira aba do dashboard (índice 0)
+NOME: "Visão Executiva"
+ÍCONE: 📊
+
+LINHA 1 (Cards — altura: 120px cada, largura: 25% da página cada)
+┌─────────────────┬─────────────────┬─────────────────┬─────────────────┐
+│   FATURAMENTO   │  TOTAL PEDIDOS  │  TICKET MÉDIO   │   VENDEDORES    │
+│   ──────────    │  ────────────   │  ────────────   │   ──────────    │
+│                 │                 │                 │                 │
+│  R$ X.XXX,XX    │     X.XXX       │   R$ XXX,XX     │       15        │
+│                 │                 │                 │                 │
+│  ──────────     │  ────────────   │  ────────────   │   ──────────    │
+│  Cor fundo:     │  Cor fundo:     │  Cor fundo:     │  Cor fundo:     │
+│  #323130        │  #323130        │  #323130        │  #323130        │
+└─────────────────┴─────────────────┴─────────────────┴─────────────────┘
+
+Configuração dos Cards:
+- Visual: "Cartão" (Card)
+- Campos → Dados: Medida correspondente
+- Rótulo de Categoria: Desligado (usar Caixa de Texto para título)
+- Alternativa: Usar visual "Cartão Multilinha" com título manual
+
+Card 1 — Faturamento:
+  Medida: Faturamento
+  Título manual (Caixa de Texto sobre o card): "FATURAMENTO"
+  Cor do valor: #4A90D9 (azul)
+
+Card 2 — Total Pedidos:
+  Medida: Total Pedidos Unicos (DISTINCTCOUNT)
+  Título manual: "TOTAL PEDIDOS"
+  Cor do valor: Branca
+
+Card 3 — Ticket Médio:
+  Medida: Ticket Medio
+  Título manual: "TICKET MÉDIO"
+  Cor do valor: #50B86C (verde)
+
+Card 4 — Total Vendedores:
+  Medida: Total Vendedores
+  Título manual: "VENDEDORES"
+  Cor do valor: #E8A838 (laranja)
+
+
+LINHA 2 (altura: 300px, largura: 50% cada)
+┌──────────────────────────────┬──────────────────────────────┐
+│   FATURAMENTO POR ESTADO     │   FATURAMENTO POR REGIÃO     │
+│   ───────────────────────    │   ───────────────────────    │
+│                              │                              │
+│   Eixo Y: estado             │   Eixo Y: regiao             │
+│   Eixo X: Faturamento        │   Eixo X: Faturamento        │
+│   Ordenar: decrescente       │   Ordenar: decrescente       │
+│   Cor da barra: #4A90D9      │   Cor da barra: #50B86C      │
+│   Título ativado: Sim        │   Título ativado: Sim        │
+│   Rótulo de dados: Sim       │   Rótulo de dados: Sim       │
+│   Formato rótulo: Moeda      │   Formato rótulo: Moeda      │
+└──────────────────────────────┴──────────────────────────────┘
+
+Gráfico 1 — Faturamento por Estado:
+  Visual: Gráfico de Barras Empilhadas (horizontal)
+  Eixo: dim_clientes[estado] ou fact_vendas[estado]
+  Valores: [Faturamento]
+  Ordenar por: [Faturamento] descendente
+  Tamanho mínimo de fonte do eixo: 10pt
+  Altura da barra: automática
+
+Gráfico 2 — Faturamento por Região:
+  Visual: Gráfico de Barras Empilhadas (horizontal)
+  Eixo: dim_clientes[regiao] ou fact_vendas[regiao]
+  Valores: [Faturamento]
+  Ordenar por: [Faturamento] descendente
+  Cores: cada região com uma cor diferente da paleta
+
+
+LINHA 3 (altura: 300px, largura: 50% cada)
+┌──────────────────────────────┬──────────────────────────────┐
+│   TOP 10 MUNICÍPIOS          │   RANKING DE VENDEDORES      │
+│   ────────────────           │   ─────────────────────      │
+│                              │                              │
+│   Eixo Y: municipio          │   Tabela com colunas:        │
+│   Eixo X: Faturamento        │   1. Ranking (número)        │
+│   Filtro visual:             │   2. Nome (texto)            │
+│     Top N = 10               │   3. Região (texto)          │
+│     Por valor: Faturamento   │   4. Faturamento (moeda)     │
+│   Ordenar: decrescente       │   Ordenar: Ranking ASC       │
+│   Cor da barra: #E8A838      │   Cor cabeçalho: #323130     │
+│   Título: ativado            │   Cor fonte: branca          │
+│   Rótulo de dados: Sim       │   Título: ativado            │
+└──────────────────────────────┴──────────────────────────────┘
+
+Gráfico 3 — Top 10 Municípios:
+  Visual: Gráfico de Barras Empilhadas (horizontal)
+  Eixo: fact_vendas[municipio]
+  Valores: [Faturamento]
+  Filtros neste visual → Top N: 10 por [Faturamento]
+  Ordenar por: [Faturamento] descendente
+
+Tabela 4 — Ranking de Vendedores:
+  Visual: Tabela (Table)
+  Colunas:
+    - Ranking: Medida [Ranking Vendedor]
+    - Nome: dim_vendedores[nome]
+    - Região: dim_vendedores[regiao]
+    - Faturamento: Medida [Faturamento]
+  Ordenar por: [Ranking Vendedor] ascendente
+  Formato condicional no Ranking:
+    - Fundo #4A90D9 para Top 3
+    - Fundo #323130 para demais
+  Estilo da tabela: "Nenhum" (para usar cores personalizadas)
+  Tamanho da fonte: 10pt
+  Largura das colunas:
+    - Ranking: 60px
+    - Nome: 200px
+    - Região: 120px
+    - Faturamento: 150px
+
+
+LINHA 4 (altura: 250px, largura: 100%)
+┌──────────────────────────────────────────────────────────────┐
+│   EVOLUÇÃO MENSAL DO FATURAMENTO                              │
+│   ─────────────────────────────────                          │
+│                                                              │
+│   Visual: Gráfico de Área (Area Chart)                       │
+│   Eixo X: dim_calendario[nome_mes]                           │
+│   Eixo Y: [Faturamento]                                     │
+│   Legenda: dim_calendario[ano] (opcional)                    │
+│   Ordenar Eixo X: por dim_calendario[mes_num]                │
+│   Cor da área: #4A90D9                                       │
+│   Transparência da área: 60% (alpha = 40%)                   │
+│   Cor da linha: #4A90D9                                      │
+│   Espessura da linha: 2px                                    │
+│   Eixo Y: exibir rótulos em formato Moeda                    │
+│   Título: ativado                                            │
+│   Marcadores de dados: ativados (círculo em cada ponto)      │
+└──────────────────────────────────────────────────────────────┘
+
+Configuração — Gráfico de Evolução Mensal:
+  Visual: Gráfico de Área (Area Chart)
+  Eixo Compartilhado: dim_calendario[nome_mes]
+    → Ordenar por coluna: dim_calendario[mes_num]
+  Valores: [Faturamento]
+  Dica de ferramenta (tooltip): adicionar [Tooltip Mes Pedidos]
+    e [Tooltip Mes Crescimento]
+  Formato do eixo Y: Moeda
+
+
+PÁGINA 2 — VENDEDORES
+======================
+
+POSIÇÃO: Segunda aba do dashboard (índice 1)
+NOME: "Vendedores"
+ÍCONE: 👥
+
+LINHA 1 (Cards — altura: 120px, largura: 50% cada)
+┌────────────────────────────────┬────────────────────────────────┐
+│     MELHOR VENDEDOR            │   FATURAMENTO MÉDIO VENDEDOR    │
+│     ──────────────             │   ──────────────────────────    │
+│                                │                                 │
+│   [Nome do Top 1]              │   R$ XX.XXX,XX                  │
+│   R$ XX.XXX,XX                 │                                 │
+│                                │                                 │
+│   Cor fundo: #323130           │   Cor fundo: #323130            │
+└────────────────────────────────┴────────────────────────────────┘
+
+Card 1 — Melhor Vendedor:
+  Visual: Cartão Multilinha (Multi-row Card)
+  Campos:
+    - [Melhor Vendedor Nome]
+    - [Melhor Vendedor Fat]
+  Ou:
+  Usar 2 cards simples:
+    - Card 1a: Medida [Melhor Vendedor Nome] (título "MELHOR VENDEDOR")
+    - Card 1b: Medida [Melhor Vendedor Fat] (título "FATURAMENTO")
+
+Card 2 — Faturamento Médio Vendedor:
+  Visual: Cartão (Card)
+  Campos: [Faturamento Medio Vendedor]
+  Título manual: "FAT. MÉDIO VENDEDOR"
+
+
+LINHA 2 (altura: 350px, largura: 100%)
+┌──────────────────────────────────────────────────────────────────┐
+│   RANKING COMPLETO DE VENDEDORES                                  │
+│   ─────────────────────────────                                  │
+│                                                                  │
+│   Visual: Tabela                                                 │
+│   Colunas:                                                       │
+│   ┌────────┬───────────────────────┬─────────────┬─────────────┐ │
+│   │Ranking │ Nome                  │ Região      │ Faturamento │ │
+│   ├────────┼───────────────────────┼─────────────┼─────────────┤ │
+│   │   1    │ Vendedor A            │ Sudeste     │ R$ XXX.XXX  │ │
+│   │   2    │ Vendedor B            │ Sul         │ R$ XXX.XXX  │ │
+│   │  ...   │ ...                   │ ...         │ ...         │ │
+│   │  15    │ Vendedor O            │ Norte       │ R$ XXX.XXX  │ │
+│   └────────┴───────────────────────┴─────────────┴─────────────┘ │
+│                                                                  │
+│   Ordenar por: Ranking ASC                                       │
+│   Formato condicional: destaque para Top 3                       │
+│   Altura: 350px | Largura: 100%                                  │
+│   Número de linhas visíveis (sem scroll): ~20                    │
+└──────────────────────────────────────────────────────────────────┘
+
+Configuração da Tabela:
+  Coluna 1: [Ranking Vendedor] — largura 80px
+  Coluna 2: dim_vendedores[nome] — largura 250px
+  Coluna 3: dim_vendedores[regiao] — largura 150px
+  Coluna 4: [Faturamento] — largura 200px
+  Formatação condicional na coluna Ranking:
+    - Se valor = 1 → fundo #FFD700 (ouro), fonte #262626
+    - Se valor = 2 → fundo #C0C0C0 (prata), fonte #262626
+    - Se valor = 3 → fundo #CD7F32 (bronze), fonte #262626
+    - Demais → fundo #323130, fonte #FFFFFF
+  Tamanho da fonte: 10pt
+  Alinhamento: Ranking centralizado, Nome à esquerda, Valores à direita
+
+
+LINHA 3 (altura: 300px, largura: 50% cada)
+┌──────────────────────────────────┬──────────────────────────────┐
+│ PARTICIPAÇÃO % POR VENDEDOR      │ FAT. POR REGIÃO DO VENDEDOR  │
+│ ──────────────────────────       │ ──────────────────────────   │
+│                                  │                              │
+│ Visual: Gráfico de Rosca (Donut) │ Visual: Barras Empilhadas    │
+│ Legenda: dim_vendedores[nome]    │ Eixo: dim_vendedores[regiao] │
+│ Valores: [Participacao Vendedor] │ Legenda: dim_vendedores[nome]│
+│ Formato rótulo: Porcentagem      │ Valores: [Faturamento]      │
+│ Cor: paleta variada              │ Rótulos: ativados            │
+│ Furo central: 40%                │                              │
+└──────────────────────────────────┴──────────────────────────────┘
+
+Gráfico 5 — Participação % (Rosca):
+  Visual: Gráfico de Rosca (Donut Chart)
+  Legenda: dim_vendedores[nome]
+  Valores: [Participacao Vendedor] → formatar como %
+  Raio interno: 60% (furo = 40%)
+  Rótulos de dados: ativados, formato porcentagem
+  Ordenar legenda por: [Faturamento] descendente
+
+Gráfico 6 — Faturamento por Região do Vendedor:
+  Visual: Gráfico de Barras Empilhadas (horizontal)
+  Eixo: dim_vendedores[regiao]
+  Legenda: dim_vendedores[nome]
+  Valores: [Faturamento]
+  Ordenar por: [Faturamento] descendente
+  Rótulos de dados: não (para evitar poluição visual)
+  Barras com cores diferentes por vendedor
+
+
+PÁGINA 3 — GEOGRÁFICA
+======================
+
+POSIÇÃO: Terceira aba do dashboard (índice 2)
+NOME: "Geográfica"
+ÍCONE: 🌎
+
+LINHA 1 (altura: 300px, largura: 100%)
+┌──────────────────────────────────────────────────────────────┐
+│   FATURAMENTO POR ESTADO                                      │
+│   ───────────────────────                                    │
+│                                                              │
+│   Visual: Gráfico de Barras Empilhadas (horizontal)          │
+│   Eixo Y: fact_vendas[estado]                                │
+│   Eixo X: [Faturamento]                                     │
+│   Ordenar por: [Faturamento] descendente                    │
+│   Cor da barra: #4A90D9                                     │
+│   Rótulo de dados: Sim (formato Moeda)                       │
+│   Título: ativado                                            │
+└──────────────────────────────────────────────────────────────┘
+
+LINHA 2 (altura: 300px, largura: 100%)
+┌──────────────────────────────────────────────────────────────┐
+│   FATURAMENTO POR REGIÃO                                      │
+│   ───────────────────────                                    │
+│                                                              │
+│   Visual: Gráfico de Barras Empilhadas (horizontal)          │
+│   Eixo Y: fact_vendas[regiao]                                │
+│   Eixo X: [Faturamento]                                     │
+│   Ordenar por: [Faturamento] descendente                    │
+│   Cor da barra: #50B86C (verde)                              │
+│   Espaçamento entre barras: 20px                             │
+│   Título: ativado                                            │
+│   Rótulo de dados: Sim                                       │
+└──────────────────────────────────────────────────────────────┘
+
+LINHA 3 (altura: 300px, largura: 100%)
+┌──────────────────────────────────────────────────────────────┐
+│   TOP 15 MUNICÍPIOS POR FATURAMENTO                           │
+│   ──────────────────────────────────                         │
+│                                                              │
+│   Visual: Gráfico de Barras Empilhadas (horizontal)          │
+│   Eixo Y: fact_vendas[municipio]                             │
+│   Eixo X: [Faturamento]                                     │
+│   Filtro Visual → Top N = 15 por [Faturamento]              │
+│   Ordenar por: [Faturamento] descendente                    │
+│   Cor da barra: #E8A838 (laranja)                            │
+│   Título: ativado                                            │
+│   Rótulo de dados: Sim                                       │
+│   Barras com altura: mínima 30px                             │
+└──────────────────────────────────────────────────────────────┘
+
+
+FILTROS GLOBAIS (PAINEL DE FILTROS)
+------------------------------------
+
+Configurar no painel "Filtros" → "Filtros em todas as páginas":
+
+Filtro 1 — Ano:
+  Tipo: Filtro de lista (dropdown com checkbox)
+  Campo: dim_calendario[ano]
+  Posição: Canto superior esquerdo (sobreposto à página)
+  Seleção padrão: Ambos os anos marcados
+  Aparência: Fundo #323130, fonte branca
+
+Filtro 2 — Região:
+  Tipo: Filtro de lista
+  Campo: dim_clientes[regiao] (ou fact_vendas[regiao])
+  Posição: Abaixo do filtro de ano
+  Seleção padrão: Todas as regiões
+
+Filtro 3 — Estado:
+  Tipo: Filtro de lista
+  Campo: dim_clientes[estado] (ou fact_vendas[estado])
+  Posição: Abaixo do filtro de região
+  Seleção padrão: Todos os estados
+
+Filtro 4 — Categoria:
+  Tipo: Filtro de lista
+  Campo: dim_produtos[categoria]
+  Posição: Abaixo do filtro de estado
+  Seleção padrão: Todas as categorias
+
+Alternativa de layout:
+  Posicionar os filtros como segmentações (Slicers) no topo de cada página,
+  lado a lado, com altura ~50px, sincronizados entre páginas.
+  
+  Para sincronizar segmentações entre páginas:
+    Selecionar segmentação → Exibir (Sincronizar Segmentações) → 
+    Marcar páginas onde deve aparecer.
+
+
+INTERAÇÕES E CROSS-FILTERING
+-----------------------------
+
+Configuração padrão (recomendada):
+- Todos os visuais interagem entre si
+- Cross-filtering ativado
+- Cross-highlighting ativado
+
+Interações específicas a ajustar:
+1. Cards (Linha 1) → Editar Interações:
+   - Desmarcar "Filtrar" em outros cards (cards não filtram cards)
+   - Permitir filtrar gráficos e tabelas
+
+2. Tabela de Ranking de Vendedores:
+   - Selecionar um vendedor → destaca nos gráficos de faturamento
+   - Selecionar múltiplos → filtra para o conjunto
+
+3. Gráfico de Evolução Mensal:
+   - Selecionar um mês → filtra período nos cards
+   - Selecionar intervalo (brush) → filtra período
+
+4. Tooltips Personalizadas:
+   - Criar página de tooltip (oculta) com informações detalhadas
+   - Configurar tamanho: 320px × 240px
+   - Ativar em gráficos de barra e área
+
+
+PALETA DE CORES COMPLETA
+-------------------------
+
+Cores para o tema escuro:
+┌───────────────────────┬──────────┬────────────────────────────────┐
+│ Elemento              │ Código   │ Uso                            │
+├───────────────────────┼──────────┼────────────────────────────────┤
+│ Fundo página          │ #262626  │ Todas as páginas               │
+│ Fundo visual          │ #323130  │ Todos os visuais               │
+│ Borda visual          │ #1A1A1A  │ Borda de 2px em todos visuais  │
+│ Texto primário        │ #FFFFFF  │ Títulos, valores, eixos        │
+│ Texto secundário      │ #A0A0A0  │ Subtítulos, labels secundários │
+│ Azul principal        │ #4A90D9  │ Estado, área, linha evolução   │
+│ Verde                 │ #50B86C  │ Região, Ticket Médio           │
+│ Laranja               │ #E8A838  │ Municípios, Vendedores         │
+│ Vermelho              │ #E05A5A  │ Alertas, valores negativos     │
+│ Roxo                  │ #8B5CF6  │ Elementos de destaque opcional │
+│ Ouro (Top 1)          │ #FFD700  │ Ranking posição 1              │
+│ Prata (Top 2)         │ #C0C0C0  │ Ranking posição 2              │
+│ Bronze (Top 3)        │ #CD7F32  │ Ranking posição 3              │
+└───────────────────────┴──────────┴────────────────────────────────┘
+
+
+CHECKLIST DE CONSTRUÇÃO
+------------------------
+
+☐ 1. Abrir Power BI Desktop
+☐ 2. Importar 5 tabelas do diretório data/gold/
+☐ 3. Configurar 4 relacionamentos (detalhes em model_relationships.txt)
+☐ 4. Marcar dim_calendario como Tabela de Data
+☐ 5. Ordenar nome_mes por mes_num
+☐ 6. Ocultar colunas FK nas tabelas dimensão
+☐ 7. Aplicar formatação de colunas (Moeda, Número)
+☐ 8. Criar todas as medidas DAX (detalhes em dax_measures.txt)
+☐ 9. Aplicar tema escuro personalizado
+☐ 10. Criar Página 1 — Visão Executiva (4 linhas)
+☐ 11. Criar Página 2 — Vendedores (3 linhas)
+☐ 12. Criar Página 3 — Geográfica (3 linhas)
+☐ 13. Configurar filtros globais / segmentações
+☐ 14. Configurar interações entre visuais
+☐ 15. Revisar tooltips e formatação
+☐ 16. Testar filtros e cross-filtering
+☐ 17. Salvar como .pbix e exportar .pbit (template)

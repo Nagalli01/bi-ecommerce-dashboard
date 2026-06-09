@@ -1,0 +1,100 @@
+// =====================================================================
+// MEDIDAS DAX CORRIGIDAS — BANCO MYSQL (PREFIXO 'bi_ecommerce')
+// =====================================================================
+# Use aspas simples (') ao redor dos nomes das tabelas devido ao espaço.
+# =====================================================================
+
+// --- KPIs Principais ---
+
+Faturamento = 
+SUM('bi_ecommerce fact_vendas'[total_pedido])
+
+
+Total Pedidos = 
+COUNTROWS('bi_ecommerce fact_vendas')
+
+
+Ticket Medio = 
+DIVIDE([Faturamento], [Total Pedidos], 0)
+
+
+Total Vendedores = 
+DISTINCTCOUNT('bi_ecommerce fact_vendas'[id_vendedor])
+
+
+// --- Métricas de Vendedores ---
+
+Faturamento Medio Vendedor = 
+DIVIDE([Faturamento], [Total Vendedores], 0)
+
+
+Ranking Vendedor = 
+RANKX(
+    ALL('bi_ecommerce dim_vendedores'),
+    [Faturamento],
+    ,
+    DESC,
+    Dense
+)
+
+
+Melhor Vendedor = 
+CONCATENATEX(
+    TOPN(
+        1,
+        VALUES('bi_ecommerce dim_vendedores'[nome]),
+        [Faturamento],
+        DESC
+    ),
+    'bi_ecommerce dim_vendedores'[nome],
+    ", "
+)
+
+
+Participacao Vendedor = 
+DIVIDE(
+    [Faturamento],
+    CALCULATE([Faturamento], ALL('bi_ecommerce dim_vendedores')),
+    0
+)
+
+
+// --- Métricas Temporais ---
+
+Faturamento Mes Anterior = 
+CALCULATE(
+    [Faturamento],
+    DATEADD('bi_ecommerce dim_calendario'[data], -1, MONTH)
+)
+
+
+Crescimento MoM = 
+DIVIDE(
+    [Faturamento] - [Faturamento Mes Anterior],
+    [Faturamento Mes Anterior],
+    0
+)
+
+
+Faturamento YTD = 
+TOTALYTD(
+    [Faturamento],
+    'bi_ecommerce dim_calendario'[data]
+)
+
+
+// --- Métricas de Produto e Distribuição ---
+
+% Pedidos com Frete = 
+DIVIDE(
+    COUNTROWS(FILTER('bi_ecommerce fact_vendas', 'bi_ecommerce fact_vendas'[valor_frete] > 0)),
+    [Total Pedidos],
+    0
+)
+
+
+Ticket Medio por Produto = 
+AVERAGEX(
+    'bi_ecommerce dim_produtos',
+    [Faturamento]
+)

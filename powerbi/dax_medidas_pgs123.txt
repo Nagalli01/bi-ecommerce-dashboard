@@ -1,0 +1,112 @@
+// =====================================================================
+// MEDIDAS DAX — 3 PÁGINAS (BANCO MYSQL bi_ecommerce)
+// =====================================================================
+// Copie cada medida: botão direito em 'bi_ecommerce fact_vendas' > Nova Medida
+// Todas as tabelas têm prefixo 'bi_ecommerce ' (com espaço). Use aspas simples.
+// =====================================================================
+
+// ========================
+// PÁGINA 1 — VISÃO EXECUTIVA
+// ========================
+
+// KPI Card 1 — Faturamento Total
+Faturamento = 
+SUM('bi_ecommerce fact_vendas'[total_pedido])
+
+// KPI Card 2 — Total de Pedidos
+Total Pedidos = 
+COUNTROWS('bi_ecommerce fact_vendas')
+
+// KPI Card 3 — Ticket Médio
+Ticket Medio = 
+DIVIDE([Faturamento], [Total Pedidos], 0)
+
+// KPI Card 4 — Total Vendedores Ativos
+Total Vendedores = 
+DISTINCTCOUNT('bi_ecommerce fact_vendas'[id_vendedor])
+
+
+// ========================
+// PÁGINA 2 — VENDEDORES
+// ========================
+
+// KPI Card 1 — Nome do Melhor Vendedor
+Melhor Vendedor = 
+CONCATENATEX(
+    TOPN(1, VALUES('bi_ecommerce dim_vendedores'[nome]), [Faturamento], DESC),
+    'bi_ecommerce dim_vendedores'[nome],
+    ", "
+)
+
+// KPI Card 2 — Faturamento Médio por Vendedor
+Faturamento Medio Vendedor = 
+DIVIDE([Faturamento], [Total Vendedores], 0)
+
+// Medida auxiliar — Participação % do Vendedor
+Participacao Vendedor = 
+DIVIDE(
+    [Faturamento],
+    CALCULATE([Faturamento], ALL('bi_ecommerce dim_vendedores')),
+    0
+)
+
+// Medida para tabela — Ranking do Vendedor
+Ranking Vendedor = 
+RANKX(
+    ALL('bi_ecommerce dim_vendedores'),
+    [Faturamento],
+    ,
+    DESC,
+    Dense
+)
+
+
+// ========================
+// PÁGINA 3 — PRODUTOS & CATEGORIAS
+// ========================
+
+// KPI Card 1 — Total de Categorias
+Total Categorias = 
+DISTINCTCOUNT('bi_ecommerce dim_produtos'[categoria])
+
+// KPI Card 2 — Preço Médio dos Produtos
+Preco Medio = 
+AVERAGE('bi_ecommerce dim_produtos'[preco_venda])
+
+// KPI Card 3 — Ticket Médio por Categoria
+Ticket Medio Categoria = 
+AVERAGEX(
+    VALUES('bi_ecommerce dim_produtos'[categoria]),
+    [Faturamento]
+)
+
+// Medida auxiliar — Quantidade Total Vendida
+Quantidade Vendida = 
+SUM('bi_ecommerce fact_vendas'[quantidade])
+
+
+// ========================
+// MEDIDAS TEMPORAIS (auxiliares)
+// ========================
+
+// Faturamento Mês Anterior (MoM)
+Faturamento Mes Anterior = 
+CALCULATE(
+    [Faturamento],
+    DATEADD('bi_ecommerce dim_calendario'[data], -1, MONTH)
+)
+
+// Crescimento Mês a Mês (%)
+Crescimento MoM = 
+DIVIDE(
+    [Faturamento] - [Faturamento Mes Anterior],
+    [Faturamento Mes Anterior],
+    0
+)
+
+// Faturamento Acumulado no Ano (YTD)
+Faturamento YTD = 
+TOTALYTD(
+    [Faturamento],
+    'bi_ecommerce dim_calendario'[data]
+)

@@ -1,0 +1,138 @@
+# =====================================================================
+# ATUALIZAÇÃO DOS SCRIPTS PYTHON (VENDEDORES E GEOGRAFIA)
+# =====================================================================
+# Banco de dados: bi_ecommerce
+# Arquivo GeoJSON de suporte: C:\dev\projetoInt\bi_ecommerce\data\brazil_states.geojson
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# VISUAL 3 (Direita): VENDEDORES QUE MAIS VENDERAM (TOP VENDEDORES)
+# ---------------------------------------------------------------------
+# No Power BI, use o visual do Python (Py) e arraste os seguintes campos:
+#   - bi_ecommerce dim_vendedores[nome]
+#   - bi_ecommerce fact_vendas[total_pedido]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+# 1. Busca inteligente por colunas (independentemente dos prefixos das tabelas no Power BI)
+col_nome = next((c for c in dataset.columns if 'nome' in c.lower() or 'vendedor' in c.lower()), None)
+col_valor = next((c for c in dataset.columns if 'total_pedido' in c.lower() or 'total' in c.lower() or 'pedido' in c.lower() or 'faturamento' in c.lower()), None)
+
+if not col_nome or not col_valor:
+    raise KeyError(f"Campos no visual: {list(dataset.columns)}. Certifique-se de arrastar o 'nome' do vendedor e o 'total_pedido' (Faturamento) para o visual.")
+
+plt.figure(figsize=(10, 6), facecolor='#262626')
+ax = plt.axes()
+ax.set_facecolor('#262626')
+
+# 2. Agrupar por vendedor e somar o faturamento
+df_vendedores = dataset.groupby(col_nome)[col_valor].sum().reset_index()
+df_vendedores = df_vendedores.sort_values(col_valor, ascending=False)
+
+# Paleta degradê de verde/azul para destacar os top vendedores
+colors = sns.color_palette("GnBu_r", len(df_vendedores))
+
+# Plotar as barras
+bars = sns.barplot(
+    data=df_vendedores,
+    y=col_nome,
+    x=col_valor,
+    palette=colors,
+    ax=ax,
+    hue=col_nome,
+    legend=False
+)
+
+# Estilizar eixos e títulos
+plt.title("Ranking de Vendedores por Faturamento (R$)", fontsize=12, color='#FFFFFF', pad=15, weight='bold', family='Segoe UI')
+ax.tick_params(colors='#FFFFFF', labelsize=10)
+ax.spines['bottom'].set_color('#444444')
+ax.spines['left'].set_color('#444444')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.grid(True, axis='x', color='#444444', linestyle='--', alpha=0.3)
+
+# Rótulos nas pontas das barras com valores em Milhões (R$ X.XM)
+for bar in bars.patches:
+    width = bar.get_width()
+    ax.text(
+        width + (df_vendedores[col_valor].max() * 0.01), 
+        bar.get_y() + bar.get_height()/2,
+        f"R$ {width/1e6:.2f}M", 
+        va='center', 
+        ha='left', 
+        color='#FFFFFF', 
+        fontsize=9,
+        weight='bold',
+        family='Segoe UI'
+    )
+
+plt.tight_layout()
+plt.show()
+
+
+# ---------------------------------------------------------------------
+# VISUAL 2 (Centro): MAPA DE QUANTIDADE DE VENDEDORES ATIVOS POR ESTADO
+# ---------------------------------------------------------------------
+# No Power BI, use o visual do Python (Py) e arraste os seguintes campos:
+#   - bi_ecommerce fact_vendas[estado]
+#   - bi_ecommerce fact_vendas[id_vendedor]
+#
+# Copie e cole o código abaixo:
+
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import numpy as np
+
+# 1. Busca inteligente por colunas
+col_estado = next((c for c in dataset.columns if 'estado' in c.lower() or 'uf' in c.lower() or 'sigla' in c.lower()), None)
+col_vendedor = next((c for c in dataset.columns if 'id_vendedor' in c.lower() or 'vendedor' in c.lower() or 'id' in c.lower()), None)
+
+if not col_estado or not col_vendedor:
+    raise KeyError(f"Campos no visual: {list(dataset.columns)}. Certifique-se de arrastar o 'estado' e o 'id_vendedor' para o visual.")
+
+# 2. Carregar GeoJSON local do Brasil
+geojson_path = r'C:\dev\projetoInt\bi_ecommerce\data\brazil_states.geojson'
+gdf = gpd.read_file(geojson_path)
+
+# 3. Contar quantidade de vendedores únicos (nunique) ativos por estado
+df_grouped = dataset.groupby(col_estado)[col_vendedor].nunique().reset_index()
+df_grouped = df_grouped.rename(columns={col_vendedor: 'qtd_vendedores'})
+
+# 4. Fazer merge com o mapa
+gdf_merged = gdf.merge(df_grouped, left_on='sigla', right_on=col_estado, how='left')
+gdf_merged['qtd_vendedores'] = gdf_merged['qtd_vendedores'].fillna(0).astype(int)
+
+# 5. Plotar Mapa Dark Mode
+fig, ax = plt.subplots(figsize=(8, 8), facecolor='#262626')
+ax.set_facecolor('#262626')
+
+# Escala de cores quentes/laranja-vermelho (YlOrRd)
+gdf_merged.plot(
+    column='qtd_vendedores',
+    cmap='YlOrRd',
+    linewidth=0.5,
+    ax=ax,
+    edgecolor='#1A1A1A',
+    legend=True,
+    legend_kwds={
+        'label': "Quantidade de Vendedores Ativos",
+        'orientation': "horizontal",
+        'pad': 0.02,
+        'shrink': 0.6
+    }
+)
+
+# Estilizar Legenda
+fig.axes[-1].tick_params(colors='#FFFFFF', labelsize=8)
+fig.axes[-1].xaxis.label.set_color('#FFFFFF')
+fig.axes[-1].xaxis.label.set_fontsize(9)
+
+ax.axis('off')
+plt.title("Distribuição de Vendedores por Estado", fontsize=12, color='#FFFFFF', pad=10, weight='bold', family='Segoe UI')
+plt.tight_layout()
+plt.show()
